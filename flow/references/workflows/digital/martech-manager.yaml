@@ -1,0 +1,77 @@
+---
+name: martech-manager
+description: "营销技术经理工作流：技术栈评估→工具选型→数据打通→自动化→归因"
+
+daily:
+  - skill: /monitor
+    trigger: "监控MarTech堆栈运行状态、数据管道健康"
+    output: "技术仪表盘"
+    time: "10min"
+  - skill: /new-info
+    trigger: "扫描新工具、API更新、数据合规动态"
+    output: "MarTech情报"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记技术债务、集成机会、数据异常"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "MarTech技术栈审计"
+    flow:
+      - skill: /analyze
+        step: "1. 现有工具链审计（CDP/MA/CRM/BI）"
+        output: "技术栈审计"
+        time: "3h"
+      - skill: /tech-compare
+        step: "2. 工具选型对比"
+        output: "选型矩阵"
+        time: "3h"
+      - skill: /process
+        step: "3. 数据流与集成方案"
+        output: "集成方案"
+        time: "2h"
+      - skill: /plan
+        step: "4. 实施路线图"
+        output: "实施计划"
+        time: "2h"
+    total: "1-2天"
+  - name: "营销自动化搭建"
+    flow:
+      - skill: /process
+        step: "1. 触发规则与旅程设计"
+        output: "自动化规则"
+        time: "3h"
+      - skill: /create
+        step: "2. 自动化内容（邮件/短信/推送）"
+        output: "自动化内容"
+        time: "3h"
+      - skill: /experiment
+        step: "3. A/B测试优化"
+        output: "测试报告"
+        time: "2h"
+      - skill: /review
+        step: "4. 自动化效果复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /monitor
+  - /new-info
+  - /mark
+  - /analyze
+  - /tech-compare
+  - /process
+  - /plan
+  - /create
+  - /experiment
+  - /review
+
+output:
+  - "技术栈审计报告"
+  - "工具选型矩阵"
+  - "数据集成方案"
+  - "自动化规则设计"
+  - "自动化内容"
+  - "测试报告"

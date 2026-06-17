@@ -1,0 +1,118 @@
+---
+name: teacher
+description: "教师工作流：备课→授课→作业→评估→辅导"
+
+daily:
+  - skill: /execute
+    trigger: "授课、答疑、批改"
+    output: "教学日志"
+    time: "持续"
+  - skill: /monitor
+    trigger: "跟踪学生出勤、表现、进度"
+    output: "班级监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记学生问题、亮点、改进"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "课程设计"
+    flow:
+      - skill: /create
+        step: "1. 课程大纲"
+        output: "课程大纲"
+        time: "2h"
+      - skill: /create
+        step: "2. 课件制作"
+        output: "课件素材"
+        time: "3h"
+      - skill: /experiment
+        step: "3. 教学方法设计"
+        output: "教学方案"
+        time: "2h"
+      - skill: /review
+        step: "4. 课程评审"
+        output: "评审意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "课堂教学"
+    flow:
+      - skill: /execute
+        step: "1. 课堂授课"
+        output: "授课记录"
+        time: "持续"
+      - skill: /execute
+        step: "2. 课堂互动"
+        output: "互动记录"
+        time: "持续"
+      - skill: /execute
+        step: "3. 课堂管理"
+        output: "管理记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "作业评估"
+    flow:
+      - skill: /execute
+        step: "1. 作业布置"
+        output: "作业记录"
+        time: "1h"
+      - skill: /execute
+        step: "2. 作业批改"
+        output: "批改记录"
+        time: "3h"
+      - skill: /analyze
+        step: "3. 成绩分析"
+        output: "成绩分析"
+        time: "2h"
+      - skill: /review
+        step: "4. 反馈与改进"
+        output: "反馈报告"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "学生辅导"
+    flow:
+      - skill: /interview
+        step: "1. 学生沟通"
+        output: "沟通记录"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 学情分析"
+        output: "学情分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 辅导方案"
+        output: "辅导方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 辅导执行"
+        output: "辅导记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /create
+  - /experiment
+  - /review
+  - /interview
+  - /analyze
+  - /mark
+
+output:
+  - "课程大纲"
+  - "课件素材"
+  - "教学方案"
+  - "授课记录"
+  - "互动记录"
+  - "作业记录"
+  - "批改记录"
+  - "成绩分析"
+  - "反馈报告"
+  - "沟通记录"
+  - "学情分析"
+  - "辅导方案"

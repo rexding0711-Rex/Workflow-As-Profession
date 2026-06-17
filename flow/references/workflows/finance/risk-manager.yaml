@@ -1,0 +1,119 @@
+---
+name: risk-manager
+description: "风控经理工作流：风险模型→合规→政策→数据分析→审批"
+
+daily:
+  - skill: /monitor
+    trigger: "监控风险指标、异常交易、合规事件"
+    output: "风险仪表盘"
+    time: "15min"
+  - skill: /new-info
+    trigger: "扫描监管动态、政策变化、市场异常"
+    output: "监管情报"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记风险事件、合规缺口、预警信号"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "风险模型建设"
+    flow:
+      - skill: /modeling
+        step: "1. 风险模型开发（VaR/ES/压力测试）"
+        output: "风险模型"
+        time: "3天"
+      - skill: /analyze
+        step: "2. 历史数据回测与验证"
+        output: "验证报告"
+        time: "2天"
+      - skill: /experiment
+        step: "3. 模型A/B测试"
+        output: "测试结果"
+        time: "1周"
+      - skill: /review
+        step: "4. 模型上线与监控"
+        output: "上线报告"
+        time: "1天"
+    total: "1-2周"
+
+  - name: "合规管理"
+    flow:
+      - skill: /policy
+        step: "1. 监管政策跟踪与解读"
+        output: "政策解读"
+        time: "2h"
+      - skill: /process
+        step: "2. 合规流程与制度设计"
+        output: "合规制度"
+        time: "2h"
+      - skill: /dd
+        step: "3. 内部合规审计"
+        output: "审计报告"
+        time: "2天"
+      - skill: /execute
+        step: "4. 合规整改执行"
+        output: "整改计划"
+        time: "持续"
+    total: "持续"
+
+  - name: "风险审批"
+    flow:
+      - skill: /analyze
+        step: "1. 交易/项目风险分析"
+        output: "风险分析"
+        time: "1h"
+      - skill: /modeling
+        step: "2. 风险量化与限额检查"
+        output: "量化报告"
+        time: "1h"
+      - skill: /decide
+        step: "3. 审批决策（通过/拒绝/条件）"
+        output: "审批意见"
+        time: "30min"
+      - skill: /mark
+        step: "4. 风险事件归档"
+        output: "风险档案"
+        time: "30min"
+    total: "1天"
+
+  - name: "压力测试"
+    flow:
+      - skill: /modeling
+        step: "1. 压力测试情景设计"
+        output: "测试情景"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 压力测试执行与分析"
+        output: "测试报告"
+        time: "1天"
+      - skill: /pitch
+        step: "3. 管理层汇报"
+        output: "汇报材料"
+        time: "2h"
+    total: "1-2天"
+
+skills:
+  - /modeling
+  - /analyze
+  - /policy
+  - /process
+  - /dd
+  - /execute
+  - /decide
+  - /experiment
+  - /review
+  - /pitch
+  - /new-info
+  - /monitor
+  - /mark
+
+output:
+  - "风险模型"
+  - "验证报告"
+  - "合规制度"
+  - "审计报告"
+  - "审批意见"
+  - "压力测试报告"
+  - "风险档案"
+  - "管理层汇报"

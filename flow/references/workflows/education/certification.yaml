@@ -1,0 +1,124 @@
+---
+name: certification
+description: "认证管理工作流：标准→开发→运营→维护→推广"
+
+daily:
+  - skill: /execute
+    trigger: "管理认证流程、审核、维护"
+    output: "认证日志"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪认证质量、进度、反馈"
+    output: "认证监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记认证问题、标准、机会"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "标准制定"
+    flow:
+      - skill: /analyze
+        step: "1. 需求分析"
+        output: "需求分析"
+        time: "2h"
+      - skill: /policy
+        step: "2. 标准研究"
+        output: "标准研究"
+        time: "2h"
+      - skill: /create
+        step: "3. 标准制定"
+        output: "标准制定"
+        time: "3h"
+      - skill: /review
+        step: "4. 标准评审"
+        output: "评审意见"
+        time: "1h"
+    total: "2-3天"
+
+  - name: "认证开发"
+    flow:
+      - skill: /create
+        step: "1. 考试设计"
+        output: "考试设计"
+        time: "3h"
+      - skill: /create
+        step: "2. 题库开发"
+        output: "题库开发"
+        time: "3h"
+      - skill: /experiment
+        step: "3. 测试验证"
+        output: "测试报告"
+        time: "2h"
+      - skill: /review
+        step: "4. 审核发布"
+        output: "审核记录"
+        time: "1h"
+    total: "2-3天"
+
+  - name: "认证运营"
+    flow:
+      - skill: /plan
+        step: "1. 运营计划"
+        output: "运营计划"
+        time: "2h"
+      - skill: /execute
+        step: "2. 考试运营"
+        output: "运营记录"
+        time: "持续"
+      - skill: /monitor
+        step: "3. 运营监控"
+        output: "监控记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 运营复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "认证推广"
+    flow:
+      - skill: /analyze
+        step: "1. 市场分析"
+        output: "市场分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 推广方案"
+        output: "推广方案"
+        time: "2h"
+      - skill: /execute
+        step: "3. 推广执行"
+        output: "执行记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 推广评估"
+        output: "评估报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /analyze
+  - /policy
+  - /create
+  - /review
+  - /plan
+  - /experiment
+  - /mark
+
+output:
+  - "需求分析"
+  - "标准研究"
+  - "标准制定"
+  - "考试设计"
+  - "题库开发"
+  - "测试报告"
+  - "运营计划"
+  - "运营记录"
+  - "监控记录"
+  - "市场分析"
+  - "推广方案"
+  - "执行记录"
+  - "评估报告"

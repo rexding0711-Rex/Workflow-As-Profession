@@ -1,0 +1,128 @@
+---
+name: recruiter
+description: "招聘专员工作流：需求→寻访→面试→Offer→入职"
+
+daily:
+  - skill: /execute
+    trigger: "跟踪招聘进度、面试安排、候选人"
+    output: "招聘日报"
+    time: "15min"
+  - skill: /monitor
+    trigger: "监控招聘渠道、转化率、周期"
+    output: "招聘监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记优质候选人、问题、改进"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "需求分析"
+    flow:
+      - skill: /interview
+        step: "1. 用人部门访谈"
+        output: "访谈记录"
+        time: "1h"
+      - skill: /analyze
+        step: "2. 岗位需求分析"
+        output: "需求分析"
+        time: "1h"
+      - skill: /create
+        step: "3. JD撰写"
+        output: "JD文档"
+        time: "1h"
+      - skill: /review
+        step: "4. JD审核"
+        output: "审核意见"
+        time: "30min"
+    total: "半天"
+
+  - name: "人才寻访"
+    flow:
+      - skill: /market-search
+        step: "1. 人才市场调研"
+        output: "市场调研"
+        time: "2h"
+      - skill: /execute
+        step: "2. 渠道发布"
+        output: "发布记录"
+        time: "1h"
+      - skill: /execute
+        step: "3. 简历筛选"
+        output: "筛选记录"
+        time: "2h"
+      - skill: /interview
+        step: "4. 初步沟通"
+        output: "沟通记录"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "面试流程"
+    flow:
+      - skill: /plan
+        step: "1. 面试安排"
+        output: "面试安排"
+        time: "1h"
+      - skill: /interview
+        step: "2. 面试执行"
+        output: "面试记录"
+        time: "3h"
+      - skill: /analyze
+        step: "3. 面试评估"
+        output: "评估报告"
+        time: "1h"
+      - skill: /decide
+        step: "4. 录用决策"
+        output: "决策记录"
+        time: "30min"
+    total: "1-2天"
+
+  - name: "Offer与入职"
+    flow:
+      - skill: /create
+        step: "1. Offer方案"
+        output: "Offer方案"
+        time: "1h"
+      - skill: /negotiate
+        step: "2. Offer谈判"
+        output: "谈判记录"
+        time: "1h"
+      - skill: /execute
+        step: "3. 入职安排"
+        output: "入职安排"
+        time: "1h"
+      - skill: /review
+        step: "4. 入职跟踪"
+        output: "跟踪报告"
+        time: "30min"
+    total: "半天"
+
+skills:
+  - /execute
+  - /monitor
+  - /interview
+  - /analyze
+  - /create
+  - /review
+  - /market-search
+  - /plan
+  - /decide
+  - /negotiate
+  - /mark
+
+output:
+  - "访谈记录"
+  - "需求分析"
+  - "JD文档"
+  - "市场调研"
+  - "发布记录"
+  - "筛选记录"
+  - "沟通记录"
+  - "面试安排"
+  - "面试记录"
+  - "评估报告"
+  - "决策记录"
+  - "Offer方案"
+  - "谈判记录"
+  - "入职安排"
+  - "跟踪报告"

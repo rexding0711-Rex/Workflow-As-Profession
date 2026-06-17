@@ -1,0 +1,76 @@
+---
+name: supply-planner
+description: "供应计划员工作流：产能规划→物料计划→生产排程→供应网络→约束管理"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪产能利用率、物料齐套率、供应偏差"
+    output: "供应监控"
+    time: "15min"
+  - skill: /execute
+    trigger: "处理供应异常、紧急插单、产能调整"
+    output: "供应协调"
+    time: "持续"
+  - skill: /mark
+    trigger: "标记产能瓶颈、物料短缺、供应风险"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "供应网络优化"
+    flow:
+      - skill: /analyze
+        step: "1. 供应网络现状分析"
+        output: "网络分析"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 多工厂/多DC产能模型"
+        output: "产能模型"
+        time: "3h"
+      - skill: /tech-compare
+        step: "3. 自制vs外包决策"
+        output: "外包分析"
+        time: "2h"
+      - skill: /decide
+        step: "4. 供应网络配置决策"
+        output: "供应方案"
+        time: "1h"
+    total: "1-2天"
+  - name: "物料需求计划"
+    flow:
+      - skill: /analyze
+        step: "1. BOM展开与物料需求计算"
+        output: "MRP运算"
+        time: "2h"
+      - skill: /sourcing
+        step: "2. 关键物料供应风险评估"
+        output: "供应风险"
+        time: "2h"
+      - skill: /plan
+        step: "3. 物料采购计划"
+        output: "采购计划"
+        time: "1h"
+      - skill: /execute
+        step: "4. 采购订单跟进"
+        output: "订单跟踪"
+        time: "持续"
+    total: "每周期"
+
+skills:
+  - /monitor
+  - /execute
+  - /mark
+  - /analyze
+  - /modeling
+  - /tech-compare
+  - /decide
+  - /sourcing
+  - /plan
+
+output:
+  - "供应网络分析"
+  - "产能模型"
+  - "MRP运算结果"
+  - "供应风险评估"
+  - "采购计划"
+  - "供应方案"

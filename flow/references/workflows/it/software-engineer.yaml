@@ -1,0 +1,114 @@
+---
+name: software-engineer
+description: "软件工程师工作流：需求→设计→编码→测试→发布"
+
+daily:
+  - skill: /execute
+    trigger: "编写代码、调试、修复Bug"
+    output: "代码提交"
+    time: "持续"
+  - skill: /monitor
+    trigger: "跟踪CI/CD状态、测试、性能"
+    output: "系统监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记技术问题、方案、学习"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "需求开发"
+    flow:
+      - skill: /analyze
+        step: "1. 需求分析"
+        output: "需求分析"
+        time: "2h"
+      - skill: /design
+        step: "2. 技术设计"
+        output: "设计文档"
+        time: "2h"
+      - skill: /execute
+        step: "3. 编码实现"
+        output: "代码记录"
+        time: "3h"
+      - skill: /experiment
+        step: "4. 单元测试"
+        output: "测试报告"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "Code Review"
+    flow:
+      - skill: /review
+        step: "1. 代码审查"
+        output: "审查意见"
+        time: "2h"
+      - skill: /execute
+        step: "2. 修改优化"
+        output: "修改记录"
+        time: "2h"
+      - skill: /experiment
+        step: "3. 集成测试"
+        output: "测试报告"
+        time: "2h"
+    total: "1天"
+
+  - name: "系统优化"
+    flow:
+      - skill: /analyze
+        step: "1. 性能分析"
+        output: "性能分析"
+        time: "2h"
+      - skill: /tech-compare
+        step: "2. 优化方案对比"
+        output: "方案对比"
+        time: "1h"
+      - skill: /execute
+        step: "3. 优化实施"
+        output: "实施记录"
+        time: "3h"
+      - skill: /monitor
+        step: "4. 效果监控"
+        output: "监控记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "技术文档"
+    flow:
+      - skill: /create
+        step: "1. 文档编写"
+        output: "技术文档"
+        time: "2h"
+      - skill: /review
+        step: "2. 文档审核"
+        output: "审核意见"
+        time: "1h"
+      - skill: /execute
+        step: "3. 文档发布"
+        output: "发布记录"
+        time: "30min"
+    total: "半天"
+
+skills:
+  - /execute
+  - /monitor
+  - /analyze
+  - /design
+  - /experiment
+  - /review
+  - /tech-compare
+  - /create
+  - /mark
+
+output:
+  - "需求分析"
+  - "设计文档"
+  - "代码记录"
+  - "测试报告"
+  - "审查意见"
+  - "修改记录"
+  - "性能分析"
+  - "方案对比"
+  - "实施记录"
+  - "技术文档"
+  - "审核意见"

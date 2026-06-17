@@ -1,0 +1,127 @@
+---
+name: healthcare-consultant
+description: "医疗咨询工作流：诊断→规划→实施→评估→优化"
+
+daily:
+  - skill: /analyze
+    trigger: "分析客户问题、数据、流程"
+    output: "咨询分析"
+    time: "15min"
+  - skill: /new-info
+    trigger: "跟踪医疗政策、趋势、最佳实践"
+    output: "咨询情报"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记咨询机会、风险、建议"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "医疗诊断"
+    flow:
+      - skill: /interview
+        step: "1. 客户访谈"
+        output: "访谈记录"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 问题诊断"
+        output: "诊断报告"
+        time: "3h"
+      - skill: /dd
+        step: "3. 数据尽调"
+        output: "尽调报告"
+        time: "2h"
+      - skill: /create
+        step: "4. 诊断方案"
+        output: "诊断方案"
+        time: "2h"
+    total: "2-3天"
+
+  - name: "医疗规划"
+    flow:
+      - skill: /analyze
+        step: "1. 需求分析"
+        output: "需求分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 解决方案"
+        output: "解决方案"
+        time: "3h"
+      - skill: /modeling
+        step: "3. 效果预测"
+        output: "预测模型"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 方案汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "实施支持"
+    flow:
+      - skill: /plan
+        step: "1. 实施计划"
+        output: "实施计划"
+        time: "2h"
+      - skill: /execute
+        step: "2. 实施辅导"
+        output: "辅导记录"
+        time: "持续"
+      - skill: /workshop
+        step: "3. 培训工作坊"
+        output: "工作坊记录"
+        time: "3h"
+      - skill: /monitor
+        step: "4. 实施监控"
+        output: "监控记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "效果评估"
+    flow:
+      - skill: /analyze
+        step: "1. 效果分析"
+        output: "效果分析"
+        time: "2h"
+      - skill: /modeling
+        step: "2. ROI计算"
+        output: "ROI报告"
+        time: "2h"
+      - skill: /create
+        step: "3. 评估报告"
+        output: "评估报告"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 评估汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /analyze
+  - /new-info
+  - /interview
+  - /dd
+  - /create
+  - /modeling
+  - /pitch
+  - /plan
+  - /execute
+  - /workshop
+  - /monitor
+  - /mark
+
+output:
+  - "访谈记录"
+  - "诊断报告"
+  - "尽调报告"
+  - "诊断方案"
+  - "需求分析"
+  - "解决方案"
+  - "预测模型"
+  - "实施计划"
+  - "辅导记录"
+  - "工作坊记录"
+  - "效果分析"
+  - "ROI报告"
+  - "评估报告"

@@ -1,0 +1,103 @@
+---
+name: general-manager
+description: "总经理工作流：业务管理→团队建设→资源协调→业绩达成"
+
+daily:
+  - skill: /execute
+    trigger: "业务指标、团队状态、客户动态"
+    output: "业务仪表盘"
+    time: "15min"
+  - skill: /monitor
+    trigger: "市场动态、竞品、供应链"
+    output: "监控摘要"
+    time: "10min"
+  - skill: /mark
+    trigger: "关键决策、风险、承诺"
+    output: "标签"
+    time: "5min"
+
+projects:
+  - name: "年度经营计划"
+    flow:
+      - skill: /analyze
+        step: "1. 历史数据分析"
+        output: "分析报告"
+        time: "2h"
+      - skill: /market-search
+        step: "2. 市场机会分析"
+        output: "市场分析"
+        time: "2h"
+      - skill: /modeling
+        step: "3. 财务预测与预算"
+        output: "预算模型"
+        time: "2h"
+      - skill: /plan
+        step: "4. 经营计划制定"
+        output: "经营计划"
+        time: "2h"
+      - skill: /pitch
+        step: "5. 计划汇报"
+        output: "汇报材料"
+        time: "2h"
+    total: "1-2天"
+  - name: "团队管理"
+    flow:
+      - skill: /professional
+        step: "1. 团队诊断与激励"
+        output: "团队诊断"
+        time: "2h"
+      - skill: /interview
+        step: "2. 关键人才评估"
+        output: "评估报告"
+        time: "2h"
+      - skill: /process
+        step: "3. 管理流程标准化"
+        output: "管理SOP"
+        time: "2h"
+      - skill: /workshop
+        step: "4. 团队建设活动"
+        output: "活动方案"
+        time: "2h"
+    total: "持续"
+  - name: "业绩冲刺"
+    flow:
+      - skill: /analyze
+        step: "1. 业绩差距分析"
+        output: "差距分析"
+        time: "1h"
+      - skill: /execute
+        step: "2. 冲刺计划与资源调配"
+        output: "冲刺计划"
+        time: "2h"
+      - skill: /sales
+        step: "3. 大客户攻坚"
+        output: "攻坚方案"
+        time: "2h"
+      - skill: /review
+        step: "4. 冲刺复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "1周"
+
+skills:
+  - /execute
+  - /monitor
+  - /analyze
+  - /market-search
+  - /modeling
+  - /plan
+  - /pitch
+  - /professional
+  - /interview
+  - /process
+  - /workshop
+  - /sales
+  - /review
+  - /mark
+
+output:
+  - "经营计划"
+  - "预算模型"
+  - "团队诊断"
+  - "业绩冲刺计划"
+  - "复盘报告"

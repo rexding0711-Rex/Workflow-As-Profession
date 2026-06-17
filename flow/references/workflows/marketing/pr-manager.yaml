@@ -1,0 +1,120 @@
+---
+name: pr-manager
+description: "公关经理工作流：PR→内容→媒体关系→危机→GEO"
+
+daily:
+  - skill: /new-info
+    trigger: "扫描舆情、媒体动态、竞品新闻"
+    output: "舆情监控"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪媒体报道、品牌声量、危机信号"
+    output: "PR仪表盘"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记媒体机会、风险信号、关键信息"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "媒体关系"
+    flow:
+      - skill: /network
+        step: "1. 媒体关系梳理与维护"
+        output: "媒体清单"
+        time: "2h"
+      - skill: /create
+        step: "2. 新闻稿与媒体包"
+        output: "新闻稿"
+        time: "2h"
+      - skill: /geo
+        step: "3. 媒体SEO策略"
+        output: "GEO方案"
+        time: "1h"
+      - skill: /pitch
+        step: "4. 媒体 pitch"
+        output: "pitch材料"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "危机公关"
+    flow:
+      - skill: /analyze
+        step: "1. 危机监测与影响评估"
+        output: "危机评估"
+        time: "1h"
+      - skill: /create
+        step: "2. 危机声明与回应"
+        output: "声明稿"
+        time: "2h"
+      - skill: /network
+        step: "3. 媒体沟通与关系管理"
+        output: "沟通计划"
+        time: "1h"
+      - skill: /execute
+        step: "4. 危机执行与跟踪"
+        output: "执行记录"
+        time: "持续"
+    total: "1-2天"
+
+  - name: "品牌传播"
+    flow:
+      - skill: /create
+        step: "1. 品牌故事与内容"
+        output: "品牌内容"
+        time: "3h"
+      - skill: /event-manager
+        step: "2. 品牌活动策划"
+        output: "活动方案"
+        time: "2h"
+      - skill: /network
+        step: "3. 媒体/KOL合作"
+        output: "合作计划"
+        time: "2h"
+      - skill: /review
+        step: "4. 传播效果复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "舆情管理"
+    flow:
+      - skill: /analyze
+        step: "1. 舆情数据分析"
+        output: "舆情报告"
+        time: "2h"
+      - skill: /policy
+        step: "2. 舆情政策与合规"
+        output: "合规分析"
+        time: "1h"
+      - skill: /execute
+        step: "3. 舆情应对执行"
+        output: "应对计划"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /new-info
+  - /monitor
+  - /network
+  - /create
+  - /geo
+  - /pitch
+  - /analyze
+  - /event-manager
+  - /review
+  - /policy
+  - /execute
+  - /mark
+
+output:
+  - "媒体清单"
+  - "新闻稿"
+  - "GEO方案"
+  - "pitch材料"
+  - "危机评估"
+  - "声明稿"
+  - "品牌内容"
+  - "活动方案"
+  - "舆情报告"
+  - "复盘报告"

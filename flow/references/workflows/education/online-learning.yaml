@@ -1,0 +1,125 @@
+---
+name: online-learning
+description: "在线学习工作流：平台→内容→运营→数据→体验"
+
+daily:
+  - skill: /execute
+    trigger: "维护平台、更新内容、运营活动"
+    output: "在线学习日志"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪学习数据、活跃度、技术"
+    output: "在线学习监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记技术问题、内容、体验"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "平台管理"
+    flow:
+      - skill: /tech-compare
+        step: "1. 平台选型"
+        output: "平台选型"
+        time: "2h"
+      - skill: /execute
+        step: "2. 平台搭建"
+        output: "搭建记录"
+        time: "3h"
+      - skill: /experiment
+        step: "3. 平台测试"
+        output: "测试报告"
+        time: "2h"
+      - skill: /monitor
+        step: "4. 平台运维"
+        output: "运维记录"
+        time: "持续"
+    total: "2-3天"
+
+  - name: "内容运营"
+    flow:
+      - skill: /create
+        step: "1. 内容策划"
+        output: "内容策划"
+        time: "2h"
+      - skill: /create
+        step: "2. 内容制作"
+        output: "内容制作"
+        time: "3h"
+      - skill: /execute
+        step: "3. 内容发布"
+        output: "发布记录"
+        time: "1h"
+      - skill: /monitor
+        step: "4. 内容监控"
+        output: "监控记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "学习运营"
+    flow:
+      - skill: /plan
+        step: "1. 运营计划"
+        output: "运营计划"
+        time: "2h"
+      - skill: /execute
+        step: "2. 活动运营"
+        output: "活动记录"
+        time: "持续"
+      - skill: /user-research
+        step: "3. 用户运营"
+        output: "用户运营"
+        time: "持续"
+      - skill: /review
+        step: "4. 运营复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "体验优化"
+    flow:
+      - skill: /user-research
+        step: "1. 体验调研"
+        output: "体验调研"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 数据分析"
+        output: "数据分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 优化方案"
+        output: "优化方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 优化执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /tech-compare
+  - /experiment
+  - /create
+  - /plan
+  - /user-research
+  - /analyze
+  - /review
+  - /mark
+
+output:
+  - "平台选型"
+  - "搭建记录"
+  - "测试报告"
+  - "运维记录"
+  - "内容策划"
+  - "内容制作"
+  - "发布记录"
+  - "运营计划"
+  - "活动记录"
+  - "体验调研"
+  - "数据分析"
+  - "优化方案"
+  - "执行记录"

@@ -1,0 +1,125 @@
+---
+name: regional-director
+description: "区域总监工作流：战略→业绩→渠道→团队→合规"
+
+daily:
+  - skill: /execute
+    trigger: "管理区域、推进业务、协调资源"
+    output: "区域总监日志"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪区域业绩、市场、团队"
+    output: "区域总监监控"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记区域机会、风险、问题"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "区域战略"
+    flow:
+      - skill: /analyze
+        step: "1. 区域分析"
+        output: "区域分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 区域战略"
+        output: "区域战略"
+        time: "3h"
+      - skill: /pitch
+        step: "3. 战略汇报"
+        output: "汇报材料"
+        time: "2h"
+      - skill: /review
+        step: "4. 战略评估"
+        output: "评估报告"
+        time: "1h"
+    total: "2-3天"
+
+  - name: "业绩管理"
+    flow:
+      - skill: /analyze
+        step: "1. 业绩分析"
+        output: "业绩分析"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 预测模型"
+        output: "预测模型"
+        time: "2h"
+      - skill: /create
+        step: "3. 业绩提升"
+        output: "提升方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 方案执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "渠道管理"
+    flow:
+      - skill: /analyze
+        step: "1. 渠道分析"
+        output: "渠道分析"
+        time: "2h"
+      - skill: /network
+        step: "2. 渠道建设"
+        output: "渠道建设"
+        time: "2h"
+      - skill: /execute
+        step: "3. 渠道维护"
+        output: "维护记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 渠道评估"
+        output: "评估报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "团队管理"
+    flow:
+      - skill: /analyze
+        step: "1. 团队分析"
+        output: "团队分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 培养计划"
+        output: "培养计划"
+        time: "2h"
+      - skill: /execute
+        step: "3. 绩效管理"
+        output: "绩效记录"
+        time: "持续"
+      - skill: /interview
+        step: "4. 团队沟通"
+        output: "沟通记录"
+        time: "2h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /analyze
+  - /create
+  - /pitch
+  - /review
+  - /modeling
+  - /network
+  - /interview
+  - /mark
+
+output:
+  - "区域分析"
+  - "区域战略"
+  - "汇报材料"
+  - "业绩分析"
+  - "预测模型"
+  - "提升方案"
+  - "渠道分析"
+  - "渠道建设"
+  - "维护记录"
+  - "团队分析"
+  - "培养计划"
+  - "绩效记录"
+  - "沟通记录"

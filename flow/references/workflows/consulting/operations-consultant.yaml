@@ -1,0 +1,124 @@
+---
+name: operations-consultant
+description: "运营顾问工作流：诊断→流程→优化→执行→监控"
+
+daily:
+  - skill: /analyze
+    trigger: "分析运营数据、效率指标、成本结构"
+    output: "运营仪表盘"
+    time: "15min"
+  - skill: /monitor
+    trigger: "监控运营流程、KPI、异常"
+    output: "运营监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记运营洞察、效率问题、改进点"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "运营诊断"
+    flow:
+      - skill: /interview
+        step: "1. 运营团队访谈"
+        output: "访谈记录"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 运营数据分析"
+        output: "运营分析"
+        time: "3h"
+      - skill: /process
+        step: "3. 运营流程梳理"
+        output: "流程梳理"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 诊断汇报"
+        output: "诊断汇报"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "精益运营"
+    flow:
+      - skill: /process
+        step: "1. 价值流分析"
+        output: "价值流"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 浪费识别与分析"
+        output: "浪费分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 精益方案设计"
+        output: "精益方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 精益执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "供应链优化"
+    flow:
+      - skill: /analyze
+        step: "1. 供应链数据分析"
+        output: "供应链分析"
+        time: "3h"
+      - skill: /modeling
+        step: "2. 供应链网络优化"
+        output: "优化模型"
+        time: "3h"
+      - skill: /create
+        step: "3. 供应链方案"
+        output: "供应链方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 方案执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "运营汇报"
+    flow:
+      - skill: /analyze
+        step: "1. 运营数据汇总"
+        output: "数据汇总"
+        time: "2h"
+      - skill: /visual
+        step: "2. 运营可视化"
+        output: "可视化报告"
+        time: "2h"
+      - skill: /pitch
+        step: "3. 管理层汇报"
+        output: "汇报材料"
+        time: "1h"
+      - skill: /review
+        step: "4. 复盘与迭代"
+        output: "复盘报告"
+        time: "1h"
+    total: "1天"
+
+skills:
+  - /analyze
+  - /monitor
+  - /interview
+  - /process
+  - /pitch
+  - /create
+  - /execute
+  - /modeling
+  - /visual
+  - /review
+  - /mark
+
+output:
+  - "访谈记录"
+  - "运营分析"
+  - "流程梳理"
+  - "诊断汇报"
+  - "价值流"
+  - "浪费分析"
+  - "精益方案"
+  - "供应链分析"
+  - "优化模型"
+  - "可视化报告"
+  - "汇报材料"

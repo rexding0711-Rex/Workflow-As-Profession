@@ -1,0 +1,120 @@
+---
+name: copywriter
+description: "文案工作流：需求→创意→文案→修改→交付"
+
+daily:
+  - skill: /new-info
+    trigger: "扫描行业动态、竞品文案、创意趋势"
+    output: "创意灵感"
+    time: "10min"
+  - skill: /create
+    trigger: "创作文案、标题、脚本"
+    output: "文案草稿"
+    time: "持续"
+  - skill: /mark
+    trigger: "标记文案亮点、问题、用户反馈"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "广告文案"
+    flow:
+      - skill: /user-research
+        step: "1. 目标受众分析"
+        output: "受众分析"
+        time: "1h"
+      - skill: /create
+        step: "2. 创意概念"
+        output: "创意概念"
+        time: "2h"
+      - skill: /create
+        step: "3. 文案创作"
+        output: "文案方案"
+        time: "3h"
+      - skill: /review
+        step: "4. 文案审核"
+        output: "审核意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "品牌文案"
+    flow:
+      - skill: /analyze
+        step: "1. 品牌调性分析"
+        output: "品牌分析"
+        time: "1h"
+      - skill: /create
+        step: "2. 品牌故事"
+        output: "品牌故事"
+        time: "3h"
+      - skill: /create
+        step: "3. 品牌口号"
+        output: "品牌口号"
+        time: "2h"
+      - skill: /review
+        step: "4. 品牌文案审核"
+        output: "审核意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "社媒文案"
+    flow:
+      - skill: /market-search
+        step: "1. 平台趋势分析"
+        output: "趋势分析"
+        time: "1h"
+      - skill: /create
+        step: "2. 内容策划"
+        output: "内容策划"
+        time: "2h"
+      - skill: /create
+        step: "3. 文案创作"
+        output: "文案方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 发布与互动"
+        output: "发布记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "销售文案"
+    flow:
+      - skill: /analyze
+        step: "1. 产品卖点分析"
+        output: "卖点分析"
+        time: "1h"
+      - skill: /create
+        step: "2. 销售话术"
+        output: "销售话术"
+        time: "2h"
+      - skill: /create
+        step: "3. 详情页文案"
+        output: "详情页文案"
+        time: "3h"
+      - skill: /review
+        step: "4. 效果评估"
+        output: "评估报告"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /new-info
+  - /create
+  - /user-research
+  - /analyze
+  - /review
+  - /market-search
+  - /execute
+  - /mark
+
+output:
+  - "受众分析"
+  - "创意概念"
+  - "文案方案"
+  - "品牌故事"
+  - "品牌口号"
+  - "趋势分析"
+  - "内容策划"
+  - "卖点分析"
+  - "销售话术"
+  - "详情页文案"

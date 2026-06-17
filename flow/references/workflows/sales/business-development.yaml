@@ -1,0 +1,99 @@
+---
+name: business-development
+description: "BD工作流：合作→谈判→提案→市场→关系"
+
+daily:
+  - skill: /network
+    trigger: "维护合作伙伴关系、发现新合作机会"
+    output: "关系提醒"
+    time: "10min"
+  - skill: /new-info
+    trigger: "扫描行业合作动态、竞品联盟"
+    output: "合作情报"
+    time: "5min"
+  - skill: /mark
+    trigger: "标记合作机会、谈判要点、风险信号"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "合作机会发现"
+    flow:
+      - skill: /market-search
+        step: "1. 合作伙伴市场分析"
+        output: "市场分析"
+        time: "2h"
+      - skill: /graph-builder
+        step: "2. 产业生态与合作关系图谱"
+        output: "生态图谱"
+        time: "1h"
+      - skill: /network
+        step: "3. 潜在合作伙伴识别与接触"
+        output: "合作清单"
+        time: "2h"
+      - skill: /decide
+        step: "4. 合作优先级决策"
+        output: "优先级"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "合作谈判"
+    flow:
+      - skill: /sales
+        step: "1. 合作方案设计（JV/OEM/分销）"
+        output: "合作方案"
+        time: "3h"
+      - skill: /pricing
+        step: "2. 合作定价与分成模型"
+        output: "定价模型"
+        time: "2h"
+      - skill: /deal
+        step: "3. 合同条款谈判"
+        output: "谈判策略"
+        time: "2h"
+      - skill: /modeling
+        step: "4. 合作ROI测算"
+        output: "ROI模型"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "合作落地"
+    flow:
+      - skill: /process
+        step: "1. 合作流程与SOP设计"
+        output: "合作SOP"
+        time: "2h"
+      - skill: /execute
+        step: "2. 合作执行与跟踪"
+        output: "执行计划"
+        time: "持续"
+      - skill: /review
+        step: "3. 合作复盘与优化"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /network
+  - /market-search
+  - /graph-builder
+  - /decide
+  - /sales
+  - /pricing
+  - /deal
+  - /modeling
+  - /process
+  - /execute
+  - /review
+  - /new-info
+  - /mark
+
+output:
+  - "市场分析"
+  - "生态图谱"
+  - "合作方案"
+  - "定价模型"
+  - "谈判策略"
+  - "ROI模型"
+  - "合作SOP"
+  - "复盘报告"

@@ -1,0 +1,125 @@
+---
+name: fund-manager
+description: "基金经理工作流：研究→建模→政策→宏观→资产配置"
+
+daily:
+  - skill: /new-info
+    trigger: "扫描市场动态、宏观数据、政策变化"
+    output: "市场情报"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪持仓表现、行业轮动、风险指标"
+    output: "持仓摘要"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记关键数据、观点变化、交易信号"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "行业与公司研究"
+    flow:
+      - skill: /learn
+        step: "1. 行业快速认知"
+        output: "认知地图"
+        time: "2h"
+      - skill: /market-search
+        step: "2. 行业与公司分析"
+        output: "分析报告"
+        time: "3h"
+      - skill: /dd
+        step: "3. 公司基本面尽调"
+        output: "尽调报告"
+        time: "2-3天"
+      - skill: /modeling
+        step: "4. 财务建模与估值"
+        output: "估值模型"
+        time: "2天"
+      - skill: /analyze
+        step: "5. 盈利预测与情景分析"
+        output: "预测报告"
+        time: "1天"
+    total: "3-5天"
+
+  - name: "宏观与策略"
+    flow:
+      - skill: /learn
+        step: "1. 宏观经济趋势跟踪"
+        output: "宏观报告"
+        time: "2h"
+      - skill: /policy
+        step: "2. 政策与货币政策分析"
+        output: "政策分析"
+        time: "2h"
+      - skill: /professional
+        step: "3. 资产配置策略（战略/战术）"
+        output: "配置策略"
+        time: "2h"
+      - skill: /decide
+        step: "4. 行业轮动与持仓决策"
+        output: "决策矩阵"
+        time: "1h"
+    total: "1天"
+
+  - name: "交易执行"
+    flow:
+      - skill: /modeling
+        step: "1. 交易模型与时机分析"
+        output: "交易模型"
+        time: "1h"
+      - skill: /analyze
+        step: "2. 风险与回撤分析"
+        output: "风险分析"
+        time: "1h"
+      - skill: /execute
+        step: "3. 交易执行与跟踪"
+        output: "执行记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 交易复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "组合报告"
+    flow:
+      - skill: /analyze
+        step: "1. 组合业绩归因分析"
+        output: "归因报告"
+        time: "2h"
+      - skill: /visual
+        step: "2. 业绩可视化"
+        output: "图表"
+        time: "2h"
+      - skill: /pitch
+        step: "3. 投资人汇报"
+        output: "汇报材料"
+        time: "2h"
+    total: "1天"
+
+skills:
+  - /learn
+  - /market-search
+  - /dd
+  - /modeling
+  - /analyze
+  - /policy
+  - /professional
+  - /decide
+  - /execute
+  - /review
+  - /visual
+  - /pitch
+  - /new-info
+  - /monitor
+  - /mark
+
+output:
+  - "行业研究报告"
+  - "估值模型"
+  - "宏观策略报告"
+  - "资产配置方案"
+  - "交易执行记录"
+  - "组合归因报告"
+  - "投资人汇报"
+  - "复盘报告"

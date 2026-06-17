@@ -1,0 +1,100 @@
+---
+name: head-of-digital
+description: "数字业务负责人工作流：数字战略→团队→预算→增长→创新"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪数字业务核心KPI（收入/用户/ROI/市场份额）"
+    output: "数字业务看板"
+    time: "15min"
+  - skill: /new-info
+    trigger: "扫描数字行业趋势、竞品动态、技术创新"
+    output: "数字情报"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记战略机会、组织问题、关键决策"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "数字战略规划"
+    flow:
+      - skill: /professional
+        step: "1. 数字业务全景分析"
+        output: "全景分析"
+        time: "3h"
+      - skill: /benchmarking
+        step: "2. 对标行业最佳"
+        output: "对标分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 数字战略方案"
+        output: "战略方案"
+        time: "3h"
+      - skill: /pitch
+        step: "4. 董事会/管理层汇报"
+        output: "汇报材料"
+        time: "2h"
+    total: "1-2天"
+  - name: "增长与创新"
+    flow:
+      - skill: /analyze
+        step: "1. 增长机会扫描"
+        output: "机会分析"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 新业务财务模型"
+        output: "财务模型"
+        time: "3h"
+      - skill: /experiment
+        step: "3. MVP验证"
+        output: "验证报告"
+        time: "持续"
+      - skill: /decide
+        step: "4. 投资/暂停/转向决策"
+        output: "决策建议"
+        time: "1h"
+    total: "持续"
+  - name: "团队与组织"
+    flow:
+      - skill: /analyze
+        step: "1. 数字能力差距分析"
+        output: "能力分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 组织设计与招聘计划"
+        output: "组织方案"
+        time: "2h"
+      - skill: /workshop
+        step: "3. 数字文化工作坊"
+        output: "工作坊记录"
+        time: "3h"
+      - skill: /execute
+        step: "4. 组织变革推进"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /monitor
+  - /new-info
+  - /mark
+  - /professional
+  - /benchmarking
+  - /create
+  - /pitch
+  - /analyze
+  - /modeling
+  - /experiment
+  - /decide
+  - /workshop
+  - /execute
+
+output:
+  - "数字战略方案"
+  - "董事会汇报材料"
+  - "增长机会分析"
+  - "财务模型"
+  - "MVP验证报告"
+  - "能力差距分析"
+  - "组织设计方案"

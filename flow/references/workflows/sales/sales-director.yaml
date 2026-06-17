@@ -1,0 +1,189 @@
+---
+name: sales-director
+description: "销售总监工作流：市场洞察→客户开发→提案报价→谈判成交→客户成功→团队管理"
+
+daily:
+  - skill: /crm
+    trigger: "查看今日跟进提醒与客户状态"
+    output: "Pipeline更新 + 待办清单"
+    time: "10min"
+  - skill: /new-info
+    trigger: "扫描客户动态、竞品动作、行业新闻"
+    output: "1页情报摘要"
+    time: "5min"
+  - skill: /mark
+    trigger: "标记今日关键决策、承诺、风险"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "新市场开拓"
+    flow:
+      - skill: /learn
+        step: "1. 快速学习新市场"
+        output: "认知地图"
+        time: "2h"
+      - skill: /market-search
+        step: "2. 市场细分与客户画像"
+        output: "ICP"
+        time: "3h"
+      - skill: /tech-compare
+        step: "3. 技术/产品定位对比"
+        output: "对比矩阵"
+        time: "2h"
+      - skill: /graph-builder
+        step: "4. 构建目标客户图谱"
+        output: "客户地图"
+        time: "2h"
+      - skill: /policy
+        step: "5. 政策与准入分析"
+        output: "政策影响"
+        time: "1h"
+      - skill: /professional
+        step: "6. 竞争策略"
+        output: "竞争策略"
+        time: "2h"
+      - skill: /decide
+        step: "7. 是否进入决策"
+        output: "决策矩阵"
+        time: "1h"
+    total: "1-2天"
+  - name: "客户开发"
+    flow:
+      - skill: /market-search
+        step: "1. 客户画像与决策链"
+        output: "客户卡片"
+        time: "1h"
+      - skill: /network
+        step: "2. 寻找共同连接"
+        output: "引荐策略"
+        time: "30min"
+      - skill: /create
+        step: "3. 定制化破冰内容"
+        output: "个性化内容"
+        time: "1h"
+      - skill: /crm
+        step: "4. 建立客户档案"
+        output: "Pipeline"
+        time: "30min"
+    total: "3-4h"
+  - name: "销售提案"
+    flow:
+      - skill: /user-research
+        step: "1. 深度理解需求"
+        output: "需求清单"
+        time: "2h"
+      - skill: /sales
+        step: "2. 制作Solution Proposal"
+        output: "提案书"
+        time: "4h"
+      - skill: /tech-compare
+        step: "3. 技术方案对比"
+        output: "技术对比"
+        time: "2h"
+      - skill: /pricing
+        step: "4. 定价与报价"
+        output: "报价单"
+        time: "2h"
+      - skill: /visual
+        step: "5. 可视化优化"
+        output: "图表"
+        time: "2h"
+      - skill: /pitch
+        step: "6. 客户汇报设计"
+        output: "汇报结构"
+        time: "2h"
+    total: "1-2天"
+  - name: "谈判成交"
+    flow:
+      - skill: /sales
+        step: "1. 谈判准备"
+        output: "谈判策略"
+        time: "2h"
+      - skill: /pricing
+        step: "2. 折扣与锚定"
+        output: "价格方案"
+        time: "1h"
+      - skill: /deal
+        step: "3. 合同审查"
+        output: "条款审查"
+        time: "1h"
+      - skill: /modeling
+        step: "4. LTV/CAC测算"
+        output: "客户价值"
+        time: "1h"
+    total: "1-2天"
+  - name: "客户成功"
+    flow:
+      - skill: /crm
+        step: "1. 客户健康度监控"
+        output: "健康度评分"
+        time: "持续"
+      - skill: /experiment
+        step: "2. A/B测试策略"
+        output: "实验结果"
+        time: "2周"
+      - skill: /sales
+        step: "3. 增购/续约方案"
+        output: "增购提案"
+        time: "2h"
+      - skill: /network
+        step: "4. 转介绍策略"
+        output: "推荐话术"
+        time: "1h"
+    total: "持续"
+  - name: "团队管理"
+    flow:
+      - skill: /execute
+        step: "1. 目标分解与Pipeline"
+        output: "团队Pipeline"
+        time: "2h/周"
+      - skill: /process
+        step: "2. 销售流程标准化"
+        output: "销售手册"
+        time: "持续"
+      - skill: /workshop
+        step: "3. 销售培训"
+        output: "培训材料"
+        time: "4h/月"
+      - skill: /review
+        step: "4. 月度复盘"
+        output: "经验卡片"
+        time: "2h/月"
+    total: "持续"
+
+skills:
+  - /sales
+  - /pricing
+  - /crm
+  - /market-search
+  - /tech-compare
+  - /pitch
+  - /visual
+  - /new-info
+  - /policy
+  - /network
+  - /user-research
+  - /experiment
+  - /process
+  - /execute
+  - /mark
+  - /modeling
+
+  - /create
+  - /deal
+  - /decide
+  - /graph-builder
+  - /learn
+  - /professional
+  - /review
+  - /workshop
+output:
+  - "客户画像"
+  - "销售提案书"
+  - "报价单"
+  - "Pipeline预测"
+  - "谈判策略"
+  - "客户成功计划"
+  - "销售SOP"
+  - "月度复盘报告"

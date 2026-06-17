@@ -1,0 +1,109 @@
+---
+name: travel-manager
+description: "差旅管理工作流：政策→预订→报销→优化→安全"
+
+daily:
+  - skill: /execute
+    trigger: "处理差旅申请、预订、报销"
+    output: "差旅日志"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪差旅费用、合规、安全"
+    output: "差旅监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记差旅问题、成本、风险"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "差旅政策"
+    flow:
+      - skill: /policy
+        step: "1. 政策制定"
+        output: "差旅政策"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 成本分析"
+        output: "成本分析"
+        time: "2h"
+      - skill: /execute
+        step: "3. 政策发布"
+        output: "发布记录"
+        time: "1h"
+    total: "半天"
+
+  - name: "差旅预订"
+    flow:
+      - skill: /execute
+        step: "1. 申请审核"
+        output: "审核记录"
+        time: "1h"
+      - skill: /tech-compare
+        step: "2. 票务比价"
+        output: "比价记录"
+        time: "1h"
+      - skill: /execute
+        step: "3. 预订执行"
+        output: "预订记录"
+        time: "1h"
+    total: "半天"
+
+  - name: "差旅报销"
+    flow:
+      - skill: /execute
+        step: "1. 单据收集"
+        output: "收集记录"
+        time: "1h"
+      - skill: /analyze
+        step: "2. 费用审核"
+        output: "审核记录"
+        time: "2h"
+      - skill: /execute
+        step: "3. 报销处理"
+        output: "报销记录"
+        time: "1h"
+    total: "半天"
+
+  - name: "差旅优化"
+    flow:
+      - skill: /analyze
+        step: "1. 数据分析"
+        output: "数据分析"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 优化模型"
+        output: "优化模型"
+        time: "2h"
+      - skill: /create
+        step: "3. 优化方案"
+        output: "优化方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 优化执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /policy
+  - /analyze
+  - /tech-compare
+  - /modeling
+  - /create
+  - /mark
+
+output:
+  - "差旅政策"
+  - "成本分析"
+  - "发布记录"
+  - "审核记录"
+  - "比价记录"
+  - "预订记录"
+  - "收集记录"
+  - "报销记录"
+  - "数据分析"
+  - "优化模型"
+  - "优化方案"

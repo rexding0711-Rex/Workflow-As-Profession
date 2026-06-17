@@ -1,0 +1,126 @@
+---
+name: it-product-manager
+description: "IT产品工作流：需求→规划→开发→运营→迭代"
+
+daily:
+  - skill: /execute
+    trigger: "推进产品、协调开发、跟踪进度"
+    output: "产品日志"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪产品数据、用户、反馈"
+    output: "产品监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记产品问题、机会、优化"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "需求管理"
+    flow:
+      - skill: /user-research
+        step: "1. 用户调研"
+        output: "用户调研"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 需求分析"
+        output: "需求分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 需求文档"
+        output: "需求文档"
+        time: "2h"
+      - skill: /review
+        step: "4. 需求评审"
+        output: "评审意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "产品设计"
+    flow:
+      - skill: /design
+        step: "1. 产品架构"
+        output: "产品架构"
+        time: "2h"
+      - skill: /create
+        step: "2. 功能设计"
+        output: "功能设计"
+        time: "3h"
+      - skill: /visual
+        step: "3. 原型设计"
+        output: "原型设计"
+        time: "2h"
+      - skill: /review
+        step: "4. 设计评审"
+        output: "评审意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "产品开发"
+    flow:
+      - skill: /plan
+        step: "1. 迭代计划"
+        output: "迭代计划"
+        time: "2h"
+      - skill: /execute
+        step: "2. 开发跟踪"
+        output: "跟踪记录"
+        time: "持续"
+      - skill: /experiment
+        step: "3. 测试验收"
+        output: "测试报告"
+        time: "2h"
+      - skill: /execute
+        step: "4. 上线发布"
+        output: "发布记录"
+        time: "1h"
+    total: "持续"
+
+  - name: "产品运营"
+    flow:
+      - skill: /analyze
+        step: "1. 数据分析"
+        output: "数据分析"
+        time: "2h"
+      - skill: /user-research
+        step: "2. 用户反馈"
+        output: "反馈报告"
+        time: "2h"
+      - skill: /create
+        step: "3. 迭代方案"
+        output: "迭代方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 迭代执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /user-research
+  - /analyze
+  - /create
+  - /design
+  - /visual
+  - /review
+  - /plan
+  - /experiment
+  - /mark
+
+output:
+  - "用户调研"
+  - "需求分析"
+  - "需求文档"
+  - "产品架构"
+  - "功能设计"
+  - "原型设计"
+  - "迭代计划"
+  - "跟踪记录"
+  - "测试报告"
+  - "发布记录"
+  - "数据分析"
+  - "反馈报告"
+  - "迭代方案"

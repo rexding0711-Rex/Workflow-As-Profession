@@ -1,0 +1,124 @@
+---
+name: network-engineer
+description: "网络工程师工作流：设计→搭建→监控→安全→优化"
+
+daily:
+  - skill: /execute
+    trigger: "维护网络、处理故障、优化性能"
+    output: "网络日志"
+    time: "持续"
+  - skill: /monitor
+    trigger: "跟踪网络状态、流量、安全"
+    output: "网络监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记网络问题、瓶颈、优化"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "网络设计"
+    flow:
+      - skill: /analyze
+        step: "1. 需求分析"
+        output: "需求分析"
+        time: "2h"
+      - skill: /design
+        step: "2. 网络架构"
+        output: "网络架构"
+        time: "3h"
+      - skill: /tech-compare
+        step: "3. 设备选型"
+        output: "设备选型"
+        time: "2h"
+      - skill: /review
+        step: "4. 设计评审"
+        output: "评审意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "网络搭建"
+    flow:
+      - skill: /execute
+        step: "1. 设备配置"
+        output: "配置记录"
+        time: "3h"
+      - skill: /execute
+        step: "2. 网络调试"
+        output: "调试记录"
+        time: "2h"
+      - skill: /experiment
+        step: "3. 连通测试"
+        output: "测试报告"
+        time: "2h"
+      - skill: /review
+        step: "4. 上线验收"
+        output: "验收记录"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "网络监控"
+    flow:
+      - skill: /monitor
+        step: "1. 监控配置"
+        output: "监控配置"
+        time: "2h"
+      - skill: /execute
+        step: "2. 流量分析"
+        output: "流量分析"
+        time: "2h"
+      - skill: /execute
+        step: "3. 故障处理"
+        output: "处理记录"
+        time: "持续"
+      - skill: /analyze
+        step: "4. 性能优化"
+        output: "优化报告"
+        time: "2h"
+    total: "持续"
+
+  - name: "网络安全"
+    flow:
+      - skill: /policy
+        step: "1. 安全策略"
+        output: "安全策略"
+        time: "2h"
+      - skill: /execute
+        step: "2. 防火墙配置"
+        output: "配置记录"
+        time: "2h"
+      - skill: /execute
+        step: "3. 入侵检测"
+        output: "检测记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 安全审计"
+        output: "审计报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /analyze
+  - /design
+  - /tech-compare
+  - /experiment
+  - /review
+  - /policy
+  - /mark
+
+output:
+  - "需求分析"
+  - "网络架构"
+  - "设备选型"
+  - "配置记录"
+  - "调试记录"
+  - "测试报告"
+  - "监控配置"
+  - "流量分析"
+  - "处理记录"
+  - "优化报告"
+  - "安全策略"
+  - "检测记录"
+  - "审计报告"

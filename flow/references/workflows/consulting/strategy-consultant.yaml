@@ -1,0 +1,129 @@
+---
+name: strategy-consultant
+description: "战略顾问工作流：分析→诊断→方案→Roadmap→实施"
+
+daily:
+  - skill: /new-info
+    trigger: "扫描行业动态、客户业务、竞争格局"
+    output: "行业情报"
+    time: "15min"
+  - skill: /analyze
+    trigger: "分析客户数据、市场趋势、战略指标"
+    output: "战略仪表盘"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记战略洞察、诊断发现、机会点"
+    output: "结构化标签"
+    time: "10min"
+
+projects:
+  - name: "战略诊断"
+    flow:
+      - skill: /interview
+        step: "1. 高管访谈与诊断"
+        output: "诊断报告"
+        time: "4h"
+      - skill: /analyze
+        step: "2. 业务与财务分析"
+        output: "业务分析"
+        time: "4h"
+      - skill: /market-search
+        step: "3. 市场与竞争分析"
+        output: "市场分析"
+        time: "3h"
+      - skill: /dd
+        step: "4. 运营与组织能力尽调"
+        output: "尽调报告"
+        time: "3h"
+    total: "2-3天"
+
+  - name: "战略制定"
+    flow:
+      - skill: /modeling
+        step: "1. 战略假设与场景建模"
+        output: "战略模型"
+        time: "3h"
+      - skill: /decide
+        step: "2. 战略方向决策"
+        output: "决策记录"
+        time: "2h"
+      - skill: /create
+        step: "3. 战略规划文档"
+        output: "战略规划"
+        time: "4h"
+      - skill: /workshop
+        step: "4. 战略工作坊与对齐"
+        output: "工作坊方案"
+        time: "3h"
+    total: "2-3天"
+
+  - name: "战略执行"
+    flow:
+      - skill: /plan
+        step: "1. 战略拆解与里程碑"
+        output: "执行计划"
+        time: "3h"
+      - skill: /execute
+        step: "2. 变革管理与执行"
+        output: "执行记录"
+        time: "持续"
+      - skill: /monitor
+        step: "3. 战略执行监控"
+        output: "监控报告"
+        time: "持续"
+      - skill: /review
+        step: "4. 战略复盘"
+        output: "复盘报告"
+        time: "2h"
+    total: "持续"
+
+  - name: "战略汇报"
+    flow:
+      - skill: /analyze
+        step: "1. 数据汇总与洞察提炼"
+        output: "数据汇总"
+        time: "2h"
+      - skill: /visual
+        step: "2. 战略可视化"
+        output: "可视化报告"
+        time: "2h"
+      - skill: /pitch
+        step: "3. 董事会/高管汇报"
+        output: "汇报材料"
+        time: "2h"
+      - skill: /review
+        step: "4. 反馈与迭代"
+        output: "迭代记录"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /new-info
+  - /analyze
+  - /interview
+  - /market-search
+  - /dd
+  - /modeling
+  - /decide
+  - /create
+  - /workshop
+  - /plan
+  - /execute
+  - /monitor
+  - /review
+  - /visual
+  - /pitch
+  - /mark
+
+output:
+  - "诊断报告"
+  - "业务分析"
+  - "市场分析"
+  - "尽调报告"
+  - "战略模型"
+  - "战略规划"
+  - "工作坊方案"
+  - "执行计划"
+  - "监控报告"
+  - "复盘报告"
+  - "汇报材料"

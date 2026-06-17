@@ -1,0 +1,119 @@
+---
+name: bi-analyst
+description: "BI分析师工作流：数据→报表→可视化→仪表盘→分析"
+
+daily:
+  - skill: /analyze
+    trigger: "跟踪BI数据、报表、仪表盘状态"
+    output: "BI监控"
+    time: "10min"
+  - skill: /monitor
+    trigger: "监控数据质量、刷新状态、异常"
+    output: "数据监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记数据洞察、报表需求、问题"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "报表开发"
+    flow:
+      - skill: /interview
+        step: "1. 报表需求访谈"
+        output: "需求访谈"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 数据模型设计"
+        output: "数据模型"
+        time: "2h"
+      - skill: /visual
+        step: "3. 报表设计"
+        output: "报表设计"
+        time: "3h"
+      - skill: /experiment
+        step: "4. 报表测试"
+        output: "测试报告"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "仪表盘建设"
+    flow:
+      - skill: /design
+        step: "1. 仪表盘设计"
+        output: "仪表盘设计"
+        time: "3h"
+      - skill: /visual
+        step: "2. 可视化开发"
+        output: "可视化报告"
+        time: "3h"
+      - skill: /monitor
+        step: "3. 仪表盘监控"
+        output: "监控记录"
+        time: "持续"
+    total: "1-2天"
+
+  - name: "数据分析"
+    flow:
+      - skill: /analyze
+        step: "1. 业务数据收集"
+        output: "数据收集"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 数据分析与挖掘"
+        output: "数据挖掘"
+        time: "3h"
+      - skill: /visual
+        step: "3. 分析可视化"
+        output: "可视化报告"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 分析汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "自助分析"
+    flow:
+      - skill: /user-research
+        step: "1. 业务用户需求分析"
+        output: "需求分析"
+        time: "2h"
+      - skill: /design
+        step: "2. 自助分析设计"
+        output: "设计方案"
+        time: "2h"
+      - skill: /execute
+        step: "3. 自助分析实施"
+        output: "实施记录"
+        time: "3h"
+      - skill: /workshop
+        step: "4. 用户培训"
+        output: "培训方案"
+        time: "2h"
+    total: "2-3天"
+
+skills:
+  - /analyze
+  - /visual
+  - /interview
+  - /design
+  - /experiment
+  - /monitor
+  - /user-research
+  - /execute
+  - /workshop
+  - /pitch
+  - /mark
+
+output:
+  - "需求访谈"
+  - "数据模型"
+  - "报表设计"
+  - "测试报告"
+  - "仪表盘设计"
+  - "可视化报告"
+  - "数据收集"
+  - "数据挖掘"
+  - "汇报材料"
+  - "培训方案"

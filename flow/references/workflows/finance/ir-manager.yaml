@@ -1,0 +1,112 @@
+---
+name: ir-manager
+description: "IR投资者关系工作流：汇报→财务→内容→GEO→会议"
+
+daily:
+  - skill: /new-info
+    trigger: "扫描公司新闻、行业动态、投资者情绪"
+    output: "舆情摘要"
+    time: "10min"
+  - skill: /monitor
+    trigger: "跟踪股价、投资者提问、分析师评级"
+    output: "投资者监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记关键信息、投资者反馈、风险信号"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "财报发布"
+    flow:
+      - skill: /analyze
+        step: "1. 财报数据准备与分析"
+        output: "财报分析"
+        time: "1天"
+      - skill: /create
+        step: "2. 新闻稿与投资者沟通材料"
+        output: "沟通材料"
+        time: "3h"
+      - skill: /geo
+        step: "3. SEO/GEO优化"
+        output: "优化方案"
+        time: "1h"
+      - skill: /pitch
+        step: "4. 财报电话会PPT与Q&A"
+        output: "电话会材料"
+        time: "2h"
+    total: "2天"
+
+  - name: "投资者路演"
+    flow:
+      - skill: /pitch
+        step: "1. 路演PPT与演讲稿"
+        output: "路演材料"
+        time: "3h"
+      - skill: /modeling
+        step: "2. 财务数据与估值更新"
+        output: "数据更新"
+        time: "2h"
+      - skill: /visual
+        step: "3. 数据可视化"
+        output: "图表"
+        time: "2h"
+      - skill: /network
+        step: "4. 投资者关系维护"
+        output: "关系计划"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "投资者问答"
+    flow:
+      - skill: /analyze
+        step: "1. 常见问题库更新"
+        output: "Q&A库"
+        time: "1h"
+      - skill: /create
+        step: "2. 投资者问答回复"
+        output: "回复材料"
+        time: "2h"
+      - skill: /monitor
+        step: "3. 投资者反馈跟踪"
+        output: "反馈报告"
+        time: "持续"
+    total: "持续"
+
+  - name: "年度股东大会"
+    flow:
+      - skill: /pitch
+        step: "1. 年度汇报材料"
+        output: "汇报材料"
+        time: "3h"
+      - skill: /process
+        step: "2. 股东大会流程设计"
+        output: "流程方案"
+        time: "2h"
+      - skill: /network
+        step: "3. 股东沟通与邀请"
+        output: "沟通计划"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /analyze
+  - /create
+  - /geo
+  - /pitch
+  - /modeling
+  - /visual
+  - /network
+  - /process
+  - /monitor
+  - /new-info
+  - /mark
+
+output:
+  - "财报分析"
+  - "沟通材料"
+  - "路演材料"
+  - "Q&A库"
+  - "汇报材料"
+  - "流程方案"
+  - "投资者反馈报告"

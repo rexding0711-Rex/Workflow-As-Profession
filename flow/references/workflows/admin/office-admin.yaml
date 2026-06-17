@@ -1,0 +1,109 @@
+---
+name: office-admin
+description: "行政专员工作流：事务→文档→接待→采购→后勤"
+
+daily:
+  - skill: /execute
+    trigger: "处理日常行政、文档、接待"
+    output: "行政日报"
+    time: "15min"
+  - skill: /monitor
+    trigger: "监控办公物资、环境、安全"
+    output: "行政监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记行政问题、需求、改进"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "日常事务"
+    flow:
+      - skill: /execute
+        step: "1. 文档处理"
+        output: "文档记录"
+        time: "2h"
+      - skill: /execute
+        step: "2. 会议支持"
+        output: "会议支持"
+        time: "2h"
+      - skill: /execute
+        step: "3. 快递与文件"
+        output: "快递记录"
+        time: "1h"
+    total: "持续"
+
+  - name: "接待管理"
+    flow:
+      - skill: /plan
+        step: "1. 接待安排"
+        output: "接待安排"
+        time: "1h"
+      - skill: /execute
+        step: "2. 接待执行"
+        output: "接待记录"
+        time: "2h"
+      - skill: /review
+        step: "3. 接待复盘"
+        output: "复盘记录"
+        time: "30min"
+    total: "半天"
+
+  - name: "采购后勤"
+    flow:
+      - skill: /analyze
+        step: "1. 物资需求"
+        output: "需求记录"
+        time: "1h"
+      - skill: /tech-compare
+        step: "2. 供应商比价"
+        output: "比价记录"
+        time: "1h"
+      - skill: /execute
+        step: "3. 采购执行"
+        output: "采购记录"
+        time: "1h"
+      - skill: /execute
+        step: "4. 入库管理"
+        output: "入库记录"
+        time: "1h"
+    total: "半天"
+
+  - name: "资产管理"
+    flow:
+      - skill: /analyze
+        step: "1. 资产盘点"
+        output: "盘点记录"
+        time: "2h"
+      - skill: /execute
+        step: "2. 资产维护"
+        output: "维护记录"
+        time: "持续"
+      - skill: /monitor
+        step: "3. 资产监控"
+        output: "监控记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /plan
+  - /analyze
+  - /tech-compare
+  - /review
+  - /mark
+
+output:
+  - "文档记录"
+  - "会议支持"
+  - "快递记录"
+  - "接待安排"
+  - "接待记录"
+  - "复盘记录"
+  - "需求记录"
+  - "比价记录"
+  - "采购记录"
+  - "入库记录"
+  - "盘点记录"
+  - "维护记录"

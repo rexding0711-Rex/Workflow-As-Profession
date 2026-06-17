@@ -1,0 +1,126 @@
+---
+name: regulatory-affairs-manager
+description: "法规事务经理工作流：政策→合规→申报→关系→危机"
+
+daily:
+  - skill: /new-info
+    trigger: "跟踪法规变化、政策导向、行业动态"
+    output: "法规情报"
+    time: "15min"
+  - skill: /execute
+    trigger: "管理合规项目、审批申报、协调关系"
+    output: "法规日志"
+    time: "持续"
+  - skill: /mark
+    trigger: "标记合规风险、政策机会、申报节点"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "政策监测"
+    flow:
+      - skill: /policy
+        step: "1. 政策扫描"
+        output: "政策扫描"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 影响分析"
+        output: "影响分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 应对策略"
+        output: "应对策略"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 内部汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "合规管理"
+    flow:
+      - skill: /policy
+        step: "1. 合规政策"
+        output: "合规政策"
+        time: "2h"
+      - skill: /execute
+        step: "2. 合规检查"
+        output: "检查记录"
+        time: "2h"
+      - skill: /review
+        step: "3. 合规审计"
+        output: "审计报告"
+        time: "2h"
+      - skill: /create
+        step: "4. 改进方案"
+        output: "改进方案"
+        time: "2h"
+    total: "持续"
+
+  - name: "申报审批"
+    flow:
+      - skill: /plan
+        step: "1. 申报计划"
+        output: "申报计划"
+        time: "2h"
+      - skill: /create
+        step: "2. 申报资料"
+        output: "申报资料"
+        time: "3h"
+      - skill: /execute
+        step: "3. 申报提交"
+        output: "提交记录"
+        time: "1h"
+      - skill: /execute
+        step: "4. 审评跟进"
+        output: "跟进记录"
+        time: "持续"
+    total: "2-3天"
+
+  - name: "政府关系"
+    flow:
+      - skill: /network
+        step: "1. 关系建设"
+        output: "关系计划"
+        time: "2h"
+      - skill: /interview
+        step: "2. 政府沟通"
+        output: "沟通记录"
+        time: "2h"
+      - skill: /execute
+        step: "3. 会议参与"
+        output: "会议记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 关系评估"
+        output: "评估报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /new-info
+  - /execute
+  - /policy
+  - /analyze
+  - /create
+  - /pitch
+  - /plan
+  - /network
+  - /interview
+  - /review
+  - /mark
+
+output:
+  - "政策扫描"
+  - "影响分析"
+  - "应对策略"
+  - "合规政策"
+  - "检查记录"
+  - "审计报告"
+  - "申报计划"
+  - "申报资料"
+  - "提交记录"
+  - "关系计划"
+  - "沟通记录"
+  - "会议记录"
+  - "评估报告"

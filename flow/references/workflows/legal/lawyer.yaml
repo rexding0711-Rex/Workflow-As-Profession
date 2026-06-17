@@ -1,0 +1,126 @@
+---
+name: lawyer
+description: "律师工作流：咨询→研究→文书→谈判→诉讼"
+
+daily:
+  - skill: /execute
+    trigger: "处理案件、起草文书、客户沟通"
+    output: "工作日志"
+    time: "持续"
+  - skill: /new-info
+    trigger: "跟踪法规、案例、行业动态"
+    output: "法律情报"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记法律风险、策略、期限"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "案件咨询"
+    flow:
+      - skill: /interview
+        step: "1. 客户咨询"
+        output: "咨询记录"
+        time: "1h"
+      - skill: /analyze
+        step: "2. 法律分析"
+        output: "法律分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 法律意见"
+        output: "法律意见"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 方案汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "合同审查"
+    flow:
+      - skill: /analyze
+        step: "1. 合同分析"
+        output: "合同分析"
+        time: "2h"
+      - skill: /review
+        step: "2. 风险审查"
+        output: "审查意见"
+        time: "2h"
+      - skill: /create
+        step: "3. 修改建议"
+        output: "修改建议"
+        time: "2h"
+      - skill: /negotiate
+        step: "4. 合同谈判"
+        output: "谈判记录"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "诉讼代理"
+    flow:
+      - skill: /plan
+        step: "1. 诉讼策略"
+        output: "诉讼策略"
+        time: "3h"
+      - skill: /create
+        step: "2. 文书起草"
+        output: "诉讼文书"
+        time: "3h"
+      - skill: /execute
+        step: "3. 出庭代理"
+        output: "出庭记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 诉讼复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "尽职调查"
+    flow:
+      - skill: /dd
+        step: "1. 资料收集"
+        output: "资料清单"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 法律审查"
+        output: "法律审查"
+        time: "3h"
+      - skill: /create
+        step: "3. 调查报告"
+        output: "调查报告"
+        time: "3h"
+      - skill: /pitch
+        step: "4. 报告汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "2-3天"
+
+skills:
+  - /execute
+  - /new-info
+  - /interview
+  - /analyze
+  - /create
+  - /pitch
+  - /review
+  - /negotiate
+  - /plan
+  - /dd
+  - /mark
+
+output:
+  - "咨询记录"
+  - "法律分析"
+  - "法律意见"
+  - "合同分析"
+  - "审查意见"
+  - "修改建议"
+  - "诉讼策略"
+  - "诉讼文书"
+  - "出庭记录"
+  - "资料清单"
+  - "调查报告"
+  - "汇报材料"
+  - "复盘报告"

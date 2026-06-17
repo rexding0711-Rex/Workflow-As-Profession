@@ -1,0 +1,76 @@
+---
+name: import-export-specialist
+description: "进出口专员工作流：单证→报关→物流→关税→合规"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪在途货物状态、清关进度、单证异常"
+    output: "进出口监控"
+    time: "15min"
+  - skill: /execute
+    trigger: "处理报关单证、税号归类、原产地证"
+    output: "单证处理"
+    time: "持续"
+  - skill: /mark
+    trigger: "标记清关延误、关税异常、单证错误"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "进出口流程优化"
+    flow:
+      - skill: /analyze
+        step: "1. 进出口流程分析"
+        output: "流程分析"
+        time: "2h"
+      - skill: /process
+        step: "2. 标准化SOP"
+        output: "进出口SOP"
+        time: "2h"
+      - skill: /pricing
+        step: "3. 关税优化（FTA/加工贸易/保税）"
+        output: "关税优化"
+        time: "2h"
+      - skill: /execute
+        step: "4. 报关行KPI管理"
+        output: "KPI管理"
+        time: "持续"
+    total: "持续"
+  - name: "新市场准入"
+    flow:
+      - skill: /policy
+        step: "1. 目标国进口法规调研"
+        output: "法规调研"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 关税与物流成本分析"
+        output: "成本分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 市场准入方案"
+        output: "准入方案"
+        time: "2h"
+      - skill: /plan
+        step: "4. 首批发运计划"
+        output: "发运计划"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /monitor
+  - /execute
+  - /mark
+  - /analyze
+  - /process
+  - /pricing
+  - /policy
+  - /create
+  - /plan
+
+output:
+  - "流程分析报告"
+  - "进出口SOP"
+  - "关税优化方案"
+  - "法规调研"
+  - "成本分析"
+  - "市场准入方案"

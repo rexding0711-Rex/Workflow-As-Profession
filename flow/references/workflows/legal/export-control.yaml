@@ -1,0 +1,122 @@
+---
+name: export-control
+description: "出口管制工作流：分类→许可→筛查→合规→审计"
+
+daily:
+  - skill: /execute
+    trigger: "审查出口、申请许可、监控合规"
+    output: "出口管制日志"
+    time: "持续"
+  - skill: /new-info
+    trigger: "跟踪管制清单、法规、制裁"
+    output: "出口管制情报"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记管制风险、合规、事件"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "商品分类"
+    flow:
+      - skill: /analyze
+        step: "1. 产品分析"
+        output: "产品分析"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 分类判定"
+        output: "分类判定"
+        time: "2h"
+      - skill: /create
+        step: "3. 分类文档"
+        output: "分类文档"
+        time: "2h"
+      - skill: /review
+        step: "4. 分类审核"
+        output: "审核意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "许可申请"
+    flow:
+      - skill: /plan
+        step: "1. 许可计划"
+        output: "许可计划"
+        time: "2h"
+      - skill: /create
+        step: "2. 申请文件"
+        output: "申请文件"
+        time: "3h"
+      - skill: /execute
+        step: "3. 申请提交"
+        output: "提交记录"
+        time: "1h"
+      - skill: /execute
+        step: "4. 许可跟进"
+        output: "跟进记录"
+        time: "持续"
+    total: "2-3天"
+
+  - name: "交易筛查"
+    flow:
+      - skill: /execute
+        step: "1. 名单筛查"
+        output: "筛查记录"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 风险分析"
+        output: "风险分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 筛查报告"
+        output: "筛查报告"
+        time: "1h"
+      - skill: /review
+        step: "4. 放行审核"
+        output: "审核记录"
+        time: "1h"
+    total: "持续"
+
+  - name: "合规审计"
+    flow:
+      - skill: /execute
+        step: "1. 内部检查"
+        output: "检查记录"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 审计分析"
+        output: "审计分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 改进方案"
+        output: "改进方案"
+        time: "2h"
+      - skill: /review
+        step: "4. 合规报告"
+        output: "合规报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /new-info
+  - /analyze
+  - /create
+  - /review
+  - /plan
+  - /mark
+
+output:
+  - "产品分析"
+  - "分类判定"
+  - "分类文档"
+  - "许可计划"
+  - "申请文件"
+  - "提交记录"
+  - "筛查记录"
+  - "风险分析"
+  - "筛查报告"
+  - "检查记录"
+  - "审计分析"
+  - "改进方案"
+  - "合规报告"

@@ -1,0 +1,110 @@
+---
+name: document-management
+description: "文档管理工作流：归档→检索→版本→安全→销毁"
+
+daily:
+  - skill: /execute
+    trigger: "整理文档、归档、更新索引"
+    output: "文档日志"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪文档状态、访问、安全"
+    output: "文档监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记文档问题、更新、风险"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "文档归档"
+    flow:
+      - skill: /process
+        step: "1. 分类标准"
+        output: "分类标准"
+        time: "2h"
+      - skill: /execute
+        step: "2. 文档归档"
+        output: "归档记录"
+        time: "2h"
+      - skill: /review
+        step: "3. 归档审核"
+        output: "审核记录"
+        time: "1h"
+    total: "半天"
+
+  - name: "文档检索"
+    flow:
+      - skill: /analyze
+        step: "1. 检索需求"
+        output: "需求分析"
+        time: "1h"
+      - skill: /create
+        step: "2. 索引建设"
+        output: "索引方案"
+        time: "2h"
+      - skill: /execute
+        step: "3. 检索服务"
+        output: "检索记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "版本管理"
+    flow:
+      - skill: /process
+        step: "1. 版本流程"
+        output: "版本流程"
+        time: "2h"
+      - skill: /execute
+        step: "2. 版本控制"
+        output: "版本记录"
+        time: "持续"
+      - skill: /monitor
+        step: "3. 版本监控"
+        output: "监控记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "文档安全"
+    flow:
+      - skill: /policy
+        step: "1. 安全政策"
+        output: "安全政策"
+        time: "2h"
+      - skill: /execute
+        step: "2. 权限管理"
+        output: "权限记录"
+        time: "2h"
+      - skill: /execute
+        step: "3. 销毁管理"
+        output: "销毁记录"
+        time: "1h"
+      - skill: /review
+        step: "4. 安全审计"
+        output: "审计报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /process
+  - /analyze
+  - /create
+  - /review
+  - /policy
+  - /mark
+
+output:
+  - "分类标准"
+  - "归档记录"
+  - "审核记录"
+  - "需求分析"
+  - "索引方案"
+  - "检索记录"
+  - "版本流程"
+  - "版本记录"
+  - "安全政策"
+  - "权限记录"
+  - "销毁记录"
+  - "审计报告"

@@ -1,0 +1,78 @@
+---
+name: reverse-logistics-manager
+description: "逆向物流经理工作流：退货→分拣→翻新→再售→报废→循环"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪退货量/周转时间/翻新率/回收价值"
+    output: "逆向物流看板"
+    time: "15min"
+  - skill: /execute
+    trigger: "处理退货分拣、翻新调度、报废审批"
+    output: "逆向执行"
+    time: "持续"
+  - skill: /mark
+    trigger: "标记高退货SKU、翻新机会、报废异常"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "逆向物流优化"
+    flow:
+      - skill: /analyze
+        step: "1. 退货数据与成本分析"
+        output: "退货分析"
+        time: "2h"
+      - skill: /process
+        step: "2. 逆向物流流程标准化"
+        output: "逆向SOP"
+        time: "2h"
+      - skill: /modeling
+        step: "3. 翻新vs报废经济模型"
+        output: "翻新模型"
+        time: "2h"
+      - skill: /sourcing
+        step: "4. 二手渠道/回收商开发"
+        output: "渠道开发"
+        time: "2h"
+    total: "1-2天"
+  - name: "循环经济"
+    flow:
+      - skill: /analyze
+        step: "1. 产品生命周期分析"
+        output: "LCA分析"
+        time: "3h"
+      - skill: /create
+        step: "2. 循环经济方案（回收/翻新/再制造）"
+        output: "循环方案"
+        time: "3h"
+      - skill: /pricing
+        step: "3. 翻新产品定价"
+        output: "定价方案"
+        time: "1h"
+      - skill: /pitch
+        step: "4. 循环经济ROI汇报"
+        output: "ROI汇报"
+        time: "2h"
+    total: "2-3天"
+
+skills:
+  - /monitor
+  - /execute
+  - /mark
+  - /analyze
+  - /process
+  - /modeling
+  - /sourcing
+  - /create
+  - /pricing
+  - /pitch
+
+output:
+  - "退货分析"
+  - "逆向SOP"
+  - "翻新经济模型"
+  - "渠道开发方案"
+  - "LCA分析"
+  - "循环经济方案"
+  - "ROI汇报"

@@ -1,0 +1,108 @@
+---
+name: vp-strategy
+description: "VP战略工作流：行业研究→竞争分析→商业模式→战略项目→汇报"
+
+daily:
+  - skill: /new-info
+    trigger: "行业动态、政策变化、竞品战略"
+    output: "情报摘要"
+    time: "15min"
+  - skill: /monitor
+    trigger: "战略项目进度、关键指标"
+    output: "项目摘要"
+    time: "10min"
+  - skill: /mark
+    trigger: "战略洞察、决策、风险"
+    output: "标签"
+    time: "5min"
+
+projects:
+  - name: "行业研究"
+    flow:
+      - skill: /learn
+        step: "1. 快速建立行业认知"
+        output: "认知地图"
+        time: "2h"
+      - skill: /market-search
+        step: "2. 市场规模与结构"
+        output: "市场分析"
+        time: "3h"
+      - skill: /graph-builder
+        step: "3. 产业链图谱"
+        output: "产业图谱"
+        time: "2h"
+      - skill: /professional
+        step: "4. 竞争分析（五力/价值链）"
+        output: "竞争分析"
+        time: "3h"
+      - skill: /analyze
+        step: "5. 数据验证"
+        output: "数据报告"
+        time: "2h"
+      - skill: /pitch
+        step: "6. 研究汇报"
+        output: "汇报材料"
+        time: "2h"
+    total: "1-2天"
+  - name: "战略规划"
+    flow:
+      - skill: /professional
+        step: "1. 战略框架分析（SWOT/蓝海/时钟）"
+        output: "战略分析"
+        time: "4h"
+      - skill: /decide
+        step: "2. 战略方向决策"
+        output: "决策矩阵"
+        time: "2h"
+      - skill: /modeling
+        step: "3. 战略财务模型"
+        output: "财务模型"
+        time: "2h"
+      - skill: /workshop
+        step: "4. 高管战略工作坊"
+        output: "工作坊方案"
+        time: "3h"
+      - skill: /pitch
+        step: "5. 战略汇报"
+        output: "汇报材料"
+        time: "3h"
+    total: "2-3天"
+  - name: "战略项目"
+    flow:
+      - skill: /plan
+        step: "1. 项目计划与里程碑"
+        output: "项目计划"
+        time: "2h"
+      - skill: /execute
+        step: "2. 项目执行与跟踪"
+        output: "执行计划"
+        time: "持续"
+      - skill: /review
+        step: "3. 项目复盘"
+        output: "复盘报告"
+        time: "2h"
+    total: "持续"
+
+skills:
+  - /learn
+  - /market-search
+  - /graph-builder
+  - /professional
+  - /analyze
+  - /decide
+  - /modeling
+  - /workshop
+  - /pitch
+  - /plan
+  - /execute
+  - /review
+  - /new-info
+  - /monitor
+  - /mark
+
+output:
+  - "行业研究报告"
+  - "战略分析"
+  - "决策矩阵"
+  - "战略汇报"
+  - "项目复盘"

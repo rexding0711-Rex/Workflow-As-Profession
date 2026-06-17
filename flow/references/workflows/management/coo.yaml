@@ -1,0 +1,102 @@
+---
+name: coo
+description: "COO工作流：运营管理→流程优化→供应链→质量→效率提升"
+
+daily:
+  - skill: /execute
+    trigger: "运营指标、项目进度、异常"
+    output: "运营仪表盘"
+    time: "15min"
+  - skill: /monitor
+    trigger: "供应链、库存、质量"
+    output: "监控摘要"
+    time: "10min"
+  - skill: /mark
+    trigger: "运营决策、风险、改进点"
+    output: "标签"
+    time: "5min"
+
+projects:
+  - name: "流程优化"
+    flow:
+      - skill: /process
+        step: "1. 现有流程梳理"
+        output: "流程图"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 瓶颈与浪费分析"
+        output: "分析报告"
+        time: "2h"
+      - skill: /process
+        step: "3. 新流程设计"
+        output: "优化方案"
+        time: "3h"
+      - skill: /experiment
+        step: "4. 试点与A/B测试"
+        output: "实验结果"
+        time: "2周"
+      - skill: /execute
+        step: "5. 全面推广"
+        output: "推广计划"
+        time: "持续"
+    total: "1-2周"
+  - name: "供应链优化"
+    flow:
+      - skill: /sourcing
+        step: "1. 供应商寻源与评估"
+        output: "供应商评估"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 供应链成本模型"
+        output: "成本模型"
+        time: "2h"
+      - skill: /analyze
+        step: "3. 库存与需求分析"
+        output: "分析报告"
+        time: "2h"
+      - skill: /process
+        step: "4. 供应链流程优化"
+        output: "优化方案"
+        time: "2h"
+      - skill: /execute
+        step: "5. 执行与监控"
+        output: "执行计划"
+        time: "持续"
+    total: "1-2周"
+  - name: "质量提升"
+    flow:
+      - skill: /analyze
+        step: "1. 质量数据分析"
+        output: "质量报告"
+        time: "2h"
+      - skill: /process
+        step: "2. 质量体系设计"
+        output: "质量体系"
+        time: "3h"
+      - skill: /experiment
+        step: "3. 改进实验"
+        output: "实验结果"
+        time: "2周"
+      - skill: /review
+        step: "4. 复盘与标准化"
+        output: "复盘报告"
+        time: "2h"
+    total: "持续"
+
+skills:
+  - /process
+  - /analyze
+  - /execute
+  - /sourcing
+  - /modeling
+  - /experiment
+  - /review
+  - /monitor
+  - /mark
+
+output:
+  - "流程优化方案"
+  - "供应链优化报告"
+  - "质量体系"
+  - "运营仪表盘"
+  - "复盘报告"

@@ -1,0 +1,125 @@
+---
+name: operations-director
+description: "运营总监工作流：战略→效率→成本→质量→团队"
+
+daily:
+  - skill: /execute
+    trigger: "管理运营、审批决策、协调资源"
+    output: "运营总监日志"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪运营效率、成本、质量"
+    output: "运营总监监控"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记运营问题、机会、风险"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "运营战略"
+    flow:
+      - skill: /analyze
+        step: "1. 战略分析"
+        output: "战略分析"
+        time: "3h"
+      - skill: /create
+        step: "2. 战略规划"
+        output: "战略规划"
+        time: "3h"
+      - skill: /pitch
+        step: "3. 战略汇报"
+        output: "汇报材料"
+        time: "2h"
+      - skill: /review
+        step: "4. 战略评估"
+        output: "评估报告"
+        time: "1h"
+    total: "2-3天"
+
+  - name: "效率提升"
+    flow:
+      - skill: /analyze
+        step: "1. 效率分析"
+        output: "效率分析"
+        time: "2h"
+      - skill: /process
+        step: "2. 流程优化"
+        output: "流程优化"
+        time: "2h"
+      - skill: /create
+        step: "3. 改进方案"
+        output: "改进方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 方案实施"
+        output: "实施记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "成本控制"
+    flow:
+      - skill: /analyze
+        step: "1. 成本分析"
+        output: "成本分析"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 成本模型"
+        output: "成本模型"
+        time: "2h"
+      - skill: /create
+        step: "3. 降本方案"
+        output: "降本方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 方案执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "质量建设"
+    flow:
+      - skill: /analyze
+        step: "1. 质量分析"
+        output: "质量分析"
+        time: "2h"
+      - skill: /policy
+        step: "2. 质量标准"
+        output: "质量标准"
+        time: "2h"
+      - skill: /execute
+        step: "3. 体系建设"
+        output: "建设记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 质量评估"
+        output: "评估报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /analyze
+  - /create
+  - /pitch
+  - /review
+  - /process
+  - /modeling
+  - /policy
+  - /mark
+
+output:
+  - "战略分析"
+  - "战略规划"
+  - "汇报材料"
+  - "效率分析"
+  - "流程优化"
+  - "改进方案"
+  - "成本分析"
+  - "成本模型"
+  - "降本方案"
+  - "质量分析"
+  - "质量标准"
+  - "建设记录"
+  - "评估报告"

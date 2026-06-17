@@ -1,0 +1,108 @@
+---
+name: cto
+description: "CTO工作流：技术战略→架构设计→团队建设→技术治理→创新管理"
+
+daily:
+  - skill: /monitor
+    trigger: "技术动态、竞品专利、学术进展"
+    output: "技术情报"
+    time: "15min"
+  - skill: /execute
+    trigger: "项目进度、风险、资源"
+    output: "技术仪表盘"
+    time: "10min"
+  - skill: /mark
+    trigger: "技术决策、风险、关键数据"
+    output: "标签"
+    time: "5min"
+
+projects:
+  - name: "技术战略规划"
+    flow:
+      - skill: /learn
+        step: "1. 前沿技术趋势"
+        output: "技术趋势报告"
+        time: "4h"
+      - skill: /tech-compare
+        step: "2. 技术路线选型"
+        output: "对比矩阵"
+        time: "4h"
+      - skill: /patent
+        step: "3. 专利布局与FTO"
+        output: "专利策略"
+        time: "3h"
+      - skill: /modeling
+        step: "4. 技术投资回报"
+        output: "ROI模型"
+        time: "2h"
+      - skill: /pitch
+        step: "5. 技术战略汇报"
+        output: "汇报材料"
+        time: "4h"
+    total: "2-3天"
+  - name: "架构设计"
+    flow:
+      - skill: /tech-compare
+        step: "1. 技术方案对比"
+        output: "方案对比"
+        time: "3h"
+      - skill: /analyze
+        step: "2. 技术可行性分析"
+        output: "可行性报告"
+        time: "2h"
+      - skill: /design
+        step: "3. 架构设计可视化"
+        output: "架构图"
+        time: "2h"
+      - skill: /process
+        step: "4. 技术规范与SOP"
+        output: "技术规范"
+        time: "2h"
+    total: "1-2天"
+  - name: "技术团队管理"
+    flow:
+      - skill: /market-search
+        step: "1. 技术人才市场分析"
+        output: "人才报告"
+        time: "2h"
+      - skill: /interview
+        step: "2. 技术面试与评估"
+        output: "评估标准"
+        time: "2h"
+      - skill: /process
+        step: "3. 研发流程标准化"
+        output: "研发SOP"
+        time: "3h"
+      - skill: /workshop
+        step: "4. 技术分享与培训"
+        output: "培训方案"
+        time: "2h"
+      - skill: /review
+        step: "5. 团队绩效复盘"
+        output: "复盘报告"
+        time: "2h"
+    total: "持续"
+
+skills:
+  - /tech-compare
+  - /patent
+  - /learn
+  - /modeling
+  - /pitch
+  - /design
+  - /analyze
+  - /process
+  - /workshop
+  - /review
+  - /market-search
+  - /interview
+  - /monitor
+  - /mark
+  - /execute
+
+output:
+  - "技术路线图"
+  - "架构设计方案"
+  - "专利策略"
+  - "技术规范"
+  - "团队绩效报告"

@@ -1,0 +1,128 @@
+---
+name: crm-consultant
+description: "CRM顾问工作流：诊断→设计→实施→培训→优化"
+
+daily:
+  - skill: /execute
+    trigger: "配置CRM、分析数据、支持用户"
+    output: "CRM日志"
+    time: "持续"
+  - skill: /new-info
+    trigger: "跟踪CRM更新、最佳实践、行业趋势"
+    output: "CRM情报"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记配置问题、机会、流程改进"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "需求诊断"
+    flow:
+      - skill: /interview
+        step: "1. 客户访谈"
+        output: "访谈记录"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 需求诊断"
+        output: "诊断报告"
+        time: "2h"
+      - skill: /create
+        step: "3. 方案建议"
+        output: "方案建议"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 建议汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "CRM设计"
+    flow:
+      - skill: /design
+        step: "1. 系统架构"
+        output: "系统架构"
+        time: "2h"
+      - skill: /process
+        step: "2. 流程设计"
+        output: "流程设计"
+        time: "2h"
+      - skill: /execute
+        step: "3. 字段配置"
+        output: "配置记录"
+        time: "2h"
+      - skill: /review
+        step: "4. 设计评审"
+        output: "评审意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "CRM实施"
+    flow:
+      - skill: /execute
+        step: "1. 系统搭建"
+        output: "搭建记录"
+        time: "3h"
+      - skill: /execute
+        step: "2. 数据迁移"
+        output: "迁移记录"
+        time: "2h"
+      - skill: /experiment
+        step: "3. 集成测试"
+        output: "测试报告"
+        time: "2h"
+      - skill: /execute
+        step: "4. 上线部署"
+        output: "部署记录"
+        time: "1h"
+    total: "2-3天"
+
+  - name: "用户培训"
+    flow:
+      - skill: /user-research
+        step: "1. 培训需求"
+        output: "培训需求"
+        time: "1h"
+      - skill: /create
+        step: "2. 培训材料"
+        output: "培训材料"
+        time: "2h"
+      - skill: /workshop
+        step: "3. 培训实施"
+        output: "培训记录"
+        time: "3h"
+      - skill: /review
+        step: "4. 培训评估"
+        output: "评估报告"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /execute
+  - /new-info
+  - /interview
+  - /analyze
+  - /create
+  - /pitch
+  - /design
+  - /process
+  - /review
+  - /experiment
+  - /user-research
+  - /workshop
+  - /mark
+
+output:
+  - "访谈记录"
+  - "诊断报告"
+  - "方案建议"
+  - "系统架构"
+  - "流程设计"
+  - "配置记录"
+  - "搭建记录"
+  - "迁移记录"
+  - "测试报告"
+  - "培训需求"
+  - "培训材料"
+  - "培训记录"
+  - "评估报告"

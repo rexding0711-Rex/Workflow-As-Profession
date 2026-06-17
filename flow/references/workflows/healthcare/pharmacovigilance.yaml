@@ -1,0 +1,122 @@
+---
+name: pharmacovigilance
+description: "药物警戒工作流：监测→评估→报告→调查→预防"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪不良反应、信号、风险"
+    output: "警戒监控"
+    time: "15min"
+  - skill: /execute
+    trigger: "处理个例报告、信号、调查"
+    output: "警戒日志"
+    time: "持续"
+  - skill: /mark
+    trigger: "标记安全信号、风险、措施"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "不良反应监测"
+    flow:
+      - skill: /execute
+        step: "1. 报告收集"
+        output: "收集记录"
+        time: "持续"
+      - skill: /analyze
+        step: "2. 报告处理"
+        output: "处理记录"
+        time: "2h"
+      - skill: /execute
+        step: "3. 数据录入"
+        output: "录入记录"
+        time: "持续"
+      - skill: /monitor
+        step: "4. 质量监控"
+        output: "监控记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "信号检测"
+    flow:
+      - skill: /analyze
+        step: "1. 数据分析"
+        output: "数据分析"
+        time: "3h"
+      - skill: /modeling
+        step: "2. 信号模型"
+        output: "信号模型"
+        time: "2h"
+      - skill: /analyze
+        step: "3. 信号评估"
+        output: "信号评估"
+        time: "2h"
+      - skill: /create
+        step: "4. 信号报告"
+        output: "信号报告"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "风险评估"
+    flow:
+      - skill: /analyze
+        step: "1. 风险评估"
+        output: "风险评估"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 风险模型"
+        output: "风险模型"
+        time: "2h"
+      - skill: /create
+        step: "3. 风险报告"
+        output: "风险报告"
+        time: "2h"
+      - skill: /review
+        step: "4. 报告审核"
+        output: "审核意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "预防措施"
+    flow:
+      - skill: /create
+        step: "1. 预防方案"
+        output: "预防方案"
+        time: "2h"
+      - skill: /execute
+        step: "2. 措施实施"
+        output: "实施记录"
+        time: "持续"
+      - skill: /review
+        step: "3. 效果评估"
+        output: "评估报告"
+        time: "1h"
+      - skill: /create
+        step: "4. 标签更新"
+        output: "更新记录"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /monitor
+  - /execute
+  - /analyze
+  - /modeling
+  - /create
+  - /review
+  - /mark
+
+output:
+  - "收集记录"
+  - "处理记录"
+  - "录入记录"
+  - "数据分析"
+  - "信号模型"
+  - "信号评估"
+  - "风险评估"
+  - "风险模型"
+  - "风险报告"
+  - "预防方案"
+  - "实施记录"
+  - "评估报告"
+  - "更新记录"

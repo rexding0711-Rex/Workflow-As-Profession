@@ -1,0 +1,177 @@
+---
+name: rd-director
+description: "研发总监工作流：技术规划→项目管理→研发执行→技术评审→知识产权→团队管理"
+
+daily:
+  - skill: /monitor
+    trigger: "技术动态、竞品专利、学术进展"
+    output: "技术情报"
+    time: "10min"
+  - skill: /execute
+    trigger: "项目进度、风险、资源"
+    output: "项目仪表盘"
+    time: "10min"
+  - skill: /mark
+    trigger: "技术决策、风险、关键数据"
+    output: "标签"
+    time: "5min"
+
+projects:
+  - name: "技术战略规划"
+    flow:
+      - skill: /learn
+        step: "1. 跟踪前沿技术（L3-L4）"
+        output: "技术趋势报告"
+        time: "4h"
+      - skill: /tech-compare
+        step: "2. 技术路线对比与选型"
+        output: "对比矩阵 + 推荐"
+        time: "4h"
+      - skill: /patent
+        step: "3. 专利布局与FTO分析"
+        output: "专利策略"
+        time: "2h"
+      - skill: /modeling
+        step: "4. 技术投资回报测算"
+        output: "ROI模型"
+        time: "2h"
+      - skill: /pitch
+        step: "5. 技术战略汇报（CTO/CEO）"
+        output: "汇报材料"
+        time: "4h"
+    total: "2-3天"
+  - name: "研发项目管理"
+    flow:
+      - skill: /plan
+        step: "1. 项目计划与里程碑设定"
+        output: "项目计划"
+        time: "2h"
+      - skill: /execute
+        step: "2. 项目执行与进度跟踪"
+        output: "甘特图 + 仪表盘"
+        time: "持续"
+      - skill: /experiment
+        step: "3. 技术实验设计与验证"
+        output: "实验方案"
+        time: "1h"
+      - skill: /review
+        step: "4. 阶段评审与复盘"
+        output: "评审报告"
+        time: "2h"
+      - skill: /process
+        step: "5. 研发流程标准化"
+        output: "研发SOP"
+        time: "持续"
+    total: "持续"
+  - name: "技术评审"
+    flow:
+      - skill: /tech-compare
+        step: "1. 技术方案评审"
+        output: "评审意见"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 技术风险与可行性分析"
+        output: "风险报告"
+        time: "2h"
+      - skill: /modeling
+        step: "3. 资源与时间估算"
+        output: "估算模型"
+        time: "1h"
+      - skill: /decide
+        step: "4. 技术决策（Go/Kill/Redirect）"
+        output: "决策矩阵"
+        time: "1h"
+    total: "1天"
+  - name: "知识产权管理"
+    flow:
+      - skill: /patent
+        step: "1. 专利布局规划"
+        output: "专利地图"
+        time: "2h"
+      - skill: /patent
+        step: "2. FTO分析与侵权规避"
+        output: "FTO报告"
+        time: "4h"
+      - skill: /patent
+        step: "3. 专利申请与撰写"
+        output: "专利文件"
+        time: "持续"
+      - skill: /dd
+        step: "4. 技术尽调（TDD）"
+        output: "技术尽调报告"
+        time: "2-3天"
+    total: "持续"
+  - name: "技术团队管理"
+    flow:
+      - skill: /market-search
+        step: "1. 技术人才市场分析"
+        output: "人才画像"
+        time: "2h"
+      - skill: /interview
+        step: "2. 技术面试与评估"
+        output: "评估报告"
+        time: "1h/人"
+      - skill: /process
+        step: "3. 研发流程与规范设计"
+        output: "技术规范"
+        time: "持续"
+      - skill: /workshop
+        step: "4. 技术培训与知识分享"
+        output: "培训材料"
+        time: "4h/月"
+      - skill: /review
+        step: "5. 团队绩效与复盘"
+        output: "团队报告"
+        time: "2h/月"
+    total: "持续"
+  - name: "技术合作与外部对接"
+    flow:
+      - skill: /network
+        step: "1. 寻找技术合作伙伴/专家"
+        output: "合作方案"
+        time: "2h"
+      - skill: /deal
+        step: "2. 技术合作协议审查"
+        output: "条款审查"
+        time: "1h"
+      - skill: /tech-compare
+        step: "3. 外部技术评估"
+        output: "技术评估"
+        time: "2h"
+      - skill: /modeling
+        step: "4. 合作ROI测算"
+        output: "合作模型"
+        time: "1h"
+    total: "1天"
+
+skills:
+  - /tech-compare
+  - /patent
+  - /experiment
+  - /execute
+  - /plan
+  - /process
+  - /review
+  - /learn
+  - /modeling
+  - /pitch
+  - /analyze
+  - /decide
+  - /monitor
+  - /mark
+  - /dd
+  - /network
+
+  - /deal
+  - /interview
+  - /market-search
+  - /workshop
+output:
+  - "技术路线图"
+  - "技术评审报告"
+  - "专利地图"
+  - "FTO报告"
+  - "项目计划"
+  - "技术规范"
+  - "研发SOP"
+  - "技术尽调报告"

@@ -1,0 +1,125 @@
+---
+name: compensation-benefits-specialist
+description: "薪酬福利专员工作流：调研→设计→核算→发放→优化"
+
+daily:
+  - skill: /analyze
+    trigger: "跟踪薪酬数据、福利、成本"
+    output: "薪酬日报"
+    time: "15min"
+  - skill: /monitor
+    trigger: "监控薪酬合规、发放、异常"
+    output: "薪酬监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记薪酬问题、政策、机会"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "薪酬调研"
+    flow:
+      - skill: /market-search
+        step: "1. 市场薪酬调研"
+        output: "调研报告"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 薪酬竞争力分析"
+        output: "竞争力分析"
+        time: "2h"
+      - skill: /modeling
+        step: "3. 薪酬结构模型"
+        output: "薪酬模型"
+        time: "2h"
+      - skill: /create
+        step: "4. 薪酬报告"
+        output: "薪酬报告"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "薪酬设计"
+    flow:
+      - skill: /analyze
+        step: "1. 岗位评估"
+        output: "岗位评估"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 薪酬等级设计"
+        output: "等级设计"
+        time: "2h"
+      - skill: /create
+        step: "3. 薪酬方案"
+        output: "薪酬方案"
+        time: "2h"
+      - skill: /review
+        step: "4. 方案评审"
+        output: "评审意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "福利管理"
+    flow:
+      - skill: /user-research
+        step: "1. 员工福利需求"
+        output: "需求调研"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 福利成本分析"
+        output: "成本分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 福利方案"
+        output: "福利方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 福利执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "薪酬核算"
+    flow:
+      - skill: /analyze
+        step: "1. 考勤与绩效数据"
+        output: "数据汇总"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 薪酬计算"
+        output: "计算记录"
+        time: "2h"
+      - skill: /review
+        step: "3. 薪酬审核"
+        output: "审核记录"
+        time: "1h"
+      - skill: /execute
+        step: "4. 薪酬发放"
+        output: "发放记录"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /analyze
+  - /monitor
+  - /market-search
+  - /modeling
+  - /create
+  - /review
+  - /user-research
+  - /execute
+  - /mark
+
+output:
+  - "调研报告"
+  - "竞争力分析"
+  - "薪酬模型"
+  - "薪酬报告"
+  - "岗位评估"
+  - "等级设计"
+  - "薪酬方案"
+  - "需求调研"
+  - "成本分析"
+  - "福利方案"
+  - "数据汇总"
+  - "计算记录"
+  - "审核记录"
+  - "发放记录"

@@ -1,0 +1,124 @@
+---
+name: editor-chief
+description: "主编工作流：选题→编辑→审核→发布→品牌"
+
+daily:
+  - skill: /create
+    trigger: "审核内容、指导编辑、把控质量"
+    output: "主编日志"
+    time: "持续"
+  - skill: /new-info
+    trigger: "跟踪行业动态、竞品、热点"
+    output: "主编情报"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记内容问题、机会、方向"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "选题策划"
+    flow:
+      - skill: /market-search
+        step: "1. 市场热点"
+        output: "热点扫描"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 选题分析"
+        output: "选题分析"
+        time: "2h"
+      - skill: /decide
+        step: "3. 选题决策"
+        output: "选题决策"
+        time: "1h"
+      - skill: /create
+        step: "4. 选题方案"
+        output: "选题方案"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "内容审核"
+    flow:
+      - skill: /review
+        step: "1. 初审"
+        output: "初审意见"
+        time: "2h"
+      - skill: /review
+        step: "2. 终审"
+        output: "终审意见"
+        time: "2h"
+      - skill: /create
+        step: "3. 修改意见"
+        output: "修改意见"
+        time: "1h"
+      - skill: /execute
+        step: "4. 发布确认"
+        output: "确认记录"
+        time: "30min"
+    total: "1天"
+
+  - name: "团队管理"
+    flow:
+      - skill: /interview
+        step: "1. 团队沟通"
+        output: "沟通记录"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 绩效分析"
+        output: "绩效分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 改进方案"
+        output: "改进方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 执行跟进"
+        output: "跟进记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "品牌建设"
+    flow:
+      - skill: /analyze
+        step: "1. 品牌分析"
+        output: "品牌分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 品牌策略"
+        output: "品牌策略"
+        time: "3h"
+      - skill: /execute
+        step: "3. 品牌执行"
+        output: "执行记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 品牌评估"
+        output: "评估报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /create
+  - /new-info
+  - /market-search
+  - /analyze
+  - /decide
+  - /review
+  - /interview
+  - /execute
+  - /mark
+
+output:
+  - "热点扫描"
+  - "选题分析"
+  - "选题决策"
+  - "选题方案"
+  - "初审意见"
+  - "终审意见"
+  - "修改意见"
+  - "沟通记录"
+  - "绩效分析"
+  - "改进方案"
+  - "品牌分析"
+  - "品牌策略"
+  - "评估报告"

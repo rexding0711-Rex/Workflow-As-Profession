@@ -1,0 +1,116 @@
+---
+name: agile-coach
+description: "敏捷教练工作流：项目管理→工作坊→流程→会议→团队"
+
+daily:
+  - skill: /execute
+    trigger: "跟踪团队进度、阻塞、敏捷指标"
+    output: "敏捷仪表盘"
+    time: "15min"
+  - skill: /monitor
+    trigger: "监控团队健康度、速度、质量"
+    output: "团队监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记团队问题、改进点、成就"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "敏捷导入"
+    flow:
+      - skill: /professional
+        step: "1. 敏捷成熟度评估"
+        output: "成熟度评估"
+        time: "2h"
+      - skill: /workshop
+        step: "2. 敏捷培训与工作坊"
+        output: "培训方案"
+        time: "3h"
+      - skill: /process
+        step: "3. 敏捷流程设计"
+        output: "流程方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 敏捷导入执行"
+        output: "导入计划"
+        time: "持续"
+    total: "持续"
+
+  - name: "团队辅导"
+    flow:
+      - skill: /interview
+        step: "1. 团队访谈与诊断"
+        output: "团队诊断"
+        time: "2h"
+      - skill: /workshop
+        step: "2. 团队建设工作坊"
+        output: "工作坊方案"
+        time: "3h"
+      - skill: /review
+        step: "3. 团队复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "流程优化"
+    flow:
+      - skill: /process
+        step: "1. 现有流程梳理"
+        output: "流程梳理"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 流程瓶颈分析"
+        output: "瓶颈分析"
+        time: "2h"
+      - skill: /experiment
+        step: "3. 流程改进实验"
+        output: "实验结果"
+        time: "2周"
+      - skill: /execute
+        step: "4. 流程优化执行"
+        output: "优化计划"
+        time: "持续"
+    total: "持续"
+
+  - name: "敏捷汇报"
+    flow:
+      - skill: /analyze
+        step: "1. 敏捷数据汇总"
+        output: "数据汇总"
+        time: "2h"
+      - skill: /visual
+        step: "2. 数据可视化"
+        output: "可视化报告"
+        time: "2h"
+      - skill: /pitch
+        step: "3. 管理层汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1天"
+
+skills:
+  - /execute
+  - /monitor
+  - /professional
+  - /workshop
+  - /process
+  - /interview
+  - /review
+  - /analyze
+  - /experiment
+  - /visual
+  - /pitch
+  - /mark
+
+output:
+  - "成熟度评估"
+  - "培训方案"
+  - "流程方案"
+  - "团队诊断"
+  - "工作坊方案"
+  - "复盘报告"
+  - "流程梳理"
+  - "瓶颈分析"
+  - "数据汇总"
+  - "可视化报告"

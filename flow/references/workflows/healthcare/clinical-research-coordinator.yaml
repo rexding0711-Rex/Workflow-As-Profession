@@ -1,0 +1,122 @@
+---
+name: clinical-research-coordinator
+description: "临床协调员工作流：启动→执行→数据→关闭→报告"
+
+daily:
+  - skill: /execute
+    trigger: "协调试验、管理受试者、收集数据"
+    output: "协调日志"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪试验进度、合规、数据"
+    output: "协调监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记试验问题、偏差、风险"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "试验启动"
+    flow:
+      - skill: /plan
+        step: "1. 启动计划"
+        output: "启动计划"
+        time: "2h"
+      - skill: /execute
+        step: "2. 伦理审批"
+        output: "审批记录"
+        time: "2h"
+      - skill: /execute
+        step: "3. 中心启动"
+        output: "启动记录"
+        time: "2h"
+      - skill: /review
+        step: "4. 启动检查"
+        output: "检查报告"
+        time: "1h"
+    total: "2-3天"
+
+  - name: "受试者管理"
+    flow:
+      - skill: /execute
+        step: "1. 招募筛选"
+        output: "筛选记录"
+        time: "2h"
+      - skill: /execute
+        step: "2. 知情同意"
+        output: "同意记录"
+        time: "1h"
+      - skill: /execute
+        step: "3. 随访管理"
+        output: "随访记录"
+        time: "持续"
+      - skill: /execute
+        step: "4. 数据录入"
+        output: "录入记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "数据管理"
+    flow:
+      - skill: /execute
+        step: "1. CRF收集"
+        output: "收集记录"
+        time: "持续"
+      - skill: /review
+        step: "2. 数据核查"
+        output: "核查记录"
+        time: "2h"
+      - skill: /execute
+        step: "3. 数据清理"
+        output: "清理记录"
+        time: "2h"
+      - skill: /analyze
+        step: "4. 数据分析"
+        output: "数据分析"
+        time: "2h"
+    total: "持续"
+
+  - name: "试验关闭"
+    flow:
+      - skill: /execute
+        step: "1. 关闭准备"
+        output: "关闭准备"
+        time: "2h"
+      - skill: /execute
+        step: "2. 中心关闭"
+        output: "关闭记录"
+        time: "2h"
+      - skill: /create
+        step: "3. 总结报告"
+        output: "总结报告"
+        time: "2h"
+      - skill: /review
+        step: "4. 关闭审核"
+        output: "审核报告"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /execute
+  - /monitor
+  - /plan
+  - /review
+  - /analyze
+  - /create
+  - /mark
+
+output:
+  - "启动计划"
+  - "审批记录"
+  - "启动记录"
+  - "筛选记录"
+  - "同意记录"
+  - "随访记录"
+  - "录入记录"
+  - "核查记录"
+  - "清理记录"
+  - "数据分析"
+  - "关闭准备"
+  - "关闭记录"
+  - "总结报告"

@@ -1,0 +1,124 @@
+---
+name: performance-management-specialist
+description: "绩效管理专员工作流：指标→考核→面谈→改进→应用"
+
+daily:
+  - skill: /analyze
+    trigger: "跟踪绩效数据、考核进度、改进"
+    output: "绩效日报"
+    time: "15min"
+  - skill: /monitor
+    trigger: "监控绩效指标、异常、申诉"
+    output: "绩效监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记绩效问题、优秀案例、改进"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "指标设计"
+    flow:
+      - skill: /interview
+        step: "1. 部门访谈"
+        output: "访谈记录"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 岗位分析"
+        output: "岗位分析"
+        time: "2h"
+      - skill: /create
+        step: "3. KPI设计"
+        output: "KPI方案"
+        time: "2h"
+      - skill: /review
+        step: "4. KPI评审"
+        output: "评审意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "绩效考核"
+    flow:
+      - skill: /plan
+        step: "1. 考核计划"
+        output: "考核计划"
+        time: "1h"
+      - skill: /execute
+        step: "2. 考核执行"
+        output: "考核记录"
+        time: "持续"
+      - skill: /analyze
+        step: "3. 考核数据分析"
+        output: "考核分析"
+        time: "2h"
+      - skill: /review
+        step: "4. 考核审核"
+        output: "审核记录"
+        time: "1h"
+    total: "持续"
+
+  - name: "绩效面谈"
+    flow:
+      - skill: /interview
+        step: "1. 面谈准备"
+        output: "面谈准备"
+        time: "1h"
+      - skill: /interview
+        step: "2. 面谈执行"
+        output: "面谈记录"
+        time: "2h"
+      - skill: /create
+        step: "3. 改进计划"
+        output: "改进计划"
+        time: "1h"
+      - skill: /execute
+        step: "4. 改进跟踪"
+        output: "跟踪记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "结果应用"
+    flow:
+      - skill: /analyze
+        step: "1. 绩效结果分析"
+        output: "结果分析"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 激励模型"
+        output: "激励模型"
+        time: "2h"
+      - skill: /create
+        step: "3. 激励方案"
+        output: "激励方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 激励执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /analyze
+  - /monitor
+  - /interview
+  - /create
+  - /review
+  - /plan
+  - /execute
+  - /modeling
+  - /mark
+
+output:
+  - "访谈记录"
+  - "岗位分析"
+  - "KPI方案"
+  - "考核计划"
+  - "考核记录"
+  - "考核分析"
+  - "面谈准备"
+  - "面谈记录"
+  - "改进计划"
+  - "结果分析"
+  - "激励模型"
+  - "激励方案"
+  - "跟踪记录"

@@ -1,0 +1,126 @@
+---
+name: process-improvement
+description: "流程改进工作流：识别→分析→设计→实施→固化"
+
+daily:
+  - skill: /execute
+    trigger: "推进改进、协调实施、监控效果"
+    output: "改进日志"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪流程效率、改进进度"
+    output: "改进监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记瓶颈、改进机会、效果"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "流程识别"
+    flow:
+      - skill: /analyze
+        step: "1. 流程梳理"
+        output: "流程梳理"
+        time: "2h"
+      - skill: /interview
+        step: "2. 访谈调研"
+        output: "访谈记录"
+        time: "2h"
+      - skill: /visual
+        step: "3. 流程可视化"
+        output: "可视化报告"
+        time: "2h"
+      - skill: /create
+        step: "4. 问题清单"
+        output: "问题清单"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "流程分析"
+    flow:
+      - skill: /analyze
+        step: "1. 效率分析"
+        output: "效率分析"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 瓶颈分析"
+        output: "瓶颈分析"
+        time: "2h"
+      - skill: /analyze
+        step: "3. 根因分析"
+        output: "根因分析"
+        time: "2h"
+      - skill: /create
+        step: "4. 分析报告"
+        output: "分析报告"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "流程设计"
+    flow:
+      - skill: /design
+        step: "1. 流程设计"
+        output: "流程设计"
+        time: "3h"
+      - skill: /visual
+        step: "2. 流程建模"
+        output: "流程建模"
+        time: "2h"
+      - skill: /review
+        step: "3. 设计评审"
+        output: "评审意见"
+        time: "1h"
+      - skill: /create
+        step: "4. 设计文档"
+        output: "设计文档"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "流程实施"
+    flow:
+      - skill: /plan
+        step: "1. 实施计划"
+        output: "实施计划"
+        time: "2h"
+      - skill: /execute
+        step: "2. 试点实施"
+        output: "试点记录"
+        time: "2h"
+      - skill: /workshop
+        step: "3. 培训推广"
+        output: "培训记录"
+        time: "2h"
+      - skill: /review
+        step: "4. 效果评估"
+        output: "评估报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /analyze
+  - /interview
+  - /visual
+  - /create
+  - /design
+  - /review
+  - /plan
+  - /workshop
+  - /mark
+
+output:
+  - "流程梳理"
+  - "访谈记录"
+  - "可视化报告"
+  - "问题清单"
+  - "效率分析"
+  - "瓶颈分析"
+  - "根因分析"
+  - "分析报告"
+  - "流程设计"
+  - "流程建模"
+  - "评审意见"
+  - "实施计划"
+  - "试点记录"

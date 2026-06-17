@@ -1,0 +1,79 @@
+---
+name: 3pl-manager
+description: "第三方物流经理工作流：3PL选型→合同→KPI→成本→关系管理"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪3PL KPI（准时率/破损率/成本/响应速度）"
+    output: "3PL仪表盘"
+    time: "15min"
+  - skill: /execute
+    trigger: "协调3PL日常运营问题"
+    output: "运营协调"
+    time: "持续"
+  - skill: /mark
+    trigger: "标记服务异常、成本变化、合同节点"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "3PL选型与导入"
+    flow:
+      - skill: /analyze
+        step: "1. 物流需求分析"
+        output: "需求分析"
+        time: "2h"
+      - skill: /sourcing
+        step: "2. 3PL搜寻与RFQ"
+        output: "短名单"
+        time: "3h"
+      - skill: /deal
+        step: "3. 合同条款与SLA设计"
+        output: "合同草案"
+        time: "3h"
+      - skill: /process
+        step: "4. 导入与过渡方案"
+        output: "导入方案"
+        time: "2h"
+    total: "2-3天"
+  - name: "3PL绩效管理"
+    flow:
+      - skill: /review
+        step: "1. 月度QBR（季度业务回顾）"
+        output: "QBR报告"
+        time: "3h"
+      - skill: /benchmarking
+        step: "2. 行业物流成本对标"
+        output: "对标分析"
+        time: "2h"
+      - skill: /modeling
+        step: "3. 物流成本优化模型"
+        output: "成本模型"
+        time: "2h"
+      - skill: /negotiate
+        step: "4. 合同续约谈判"
+        output: "谈判方案"
+        time: "2h"
+    total: "每季度"
+
+skills:
+  - /monitor
+  - /execute
+  - /mark
+  - /analyze
+  - /sourcing
+  - /deal
+  - /process
+  - /review
+  - /benchmarking
+  - /modeling
+  - /negotiate
+
+output:
+  - "物流需求分析"
+  - "3PL短名单"
+  - "SLA方案"
+  - "QBR报告"
+  - "对标分析"
+  - "成本优化模型"
+  - "谈判方案"

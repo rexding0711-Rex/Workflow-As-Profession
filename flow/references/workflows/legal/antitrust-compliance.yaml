@@ -1,0 +1,125 @@
+---
+name: antitrust-compliance
+description: "反垄断合规工作流：评估→监控→申报→培训→调查"
+
+daily:
+  - skill: /execute
+    trigger: "审查交易、评估合规、跟踪法规"
+    output: "反垄断日志"
+    time: "持续"
+  - skill: /new-info
+    trigger: "跟踪反垄断法规、案例、执法"
+    output: "反垄断情报"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记合规风险、申报节点、调查"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "合规评估"
+    flow:
+      - skill: /analyze
+        step: "1. 市场分析"
+        output: "市场分析"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 竞争评估"
+        output: "竞争评估"
+        time: "2h"
+      - skill: /create
+        step: "3. 合规报告"
+        output: "合规报告"
+        time: "2h"
+      - skill: /review
+        step: "4. 报告审核"
+        output: "审核意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "经营者申报"
+    flow:
+      - skill: /plan
+        step: "1. 申报计划"
+        output: "申报计划"
+        time: "2h"
+      - skill: /create
+        step: "2. 申报文件"
+        output: "申报文件"
+        time: "3h"
+      - skill: /execute
+        step: "3. 申报提交"
+        output: "提交记录"
+        time: "1h"
+      - skill: /execute
+        step: "4. 审查跟进"
+        output: "跟进记录"
+        time: "持续"
+    total: "2-3天"
+
+  - name: "内部培训"
+    flow:
+      - skill: /user-research
+        step: "1. 培训需求"
+        output: "培训需求"
+        time: "1h"
+      - skill: /create
+        step: "2. 培训材料"
+        output: "培训材料"
+        time: "2h"
+      - skill: /workshop
+        step: "3. 培训实施"
+        output: "培训记录"
+        time: "2h"
+      - skill: /review
+        step: "4. 培训评估"
+        output: "评估报告"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "违规调查"
+    flow:
+      - skill: /interview
+        step: "1. 调查访谈"
+        output: "访谈记录"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 证据分析"
+        output: "证据分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 调查报告"
+        output: "调查报告"
+        time: "2h"
+      - skill: /review
+        step: "4. 处置建议"
+        output: "处置建议"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /execute
+  - /new-info
+  - /analyze
+  - /create
+  - /review
+  - /plan
+  - /user-research
+  - /workshop
+  - /interview
+  - /mark
+
+output:
+  - "市场分析"
+  - "竞争评估"
+  - "合规报告"
+  - "申报计划"
+  - "申报文件"
+  - "提交记录"
+  - "培训需求"
+  - "培训材料"
+  - "培训记录"
+  - "访谈记录"
+  - "证据分析"
+  - "调查报告"
+  - "处置建议"

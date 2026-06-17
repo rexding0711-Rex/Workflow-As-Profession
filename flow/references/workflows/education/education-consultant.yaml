@@ -1,0 +1,128 @@
+---
+name: education-consultant
+description: "教育顾问工作流：评估→规划→实施→培训→评估"
+
+daily:
+  - skill: /new-info
+    trigger: "跟踪教育政策、趋势、案例"
+    output: "教育情报"
+    time: "15min"
+  - skill: /analyze
+    trigger: "分析客户教育需求、效果、数据"
+    output: "顾问分析"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记教育洞察、问题、机会"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "教育评估"
+    flow:
+      - skill: /interview
+        step: "1. 客户访谈"
+        output: "访谈记录"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 现状评估"
+        output: "评估报告"
+        time: "3h"
+      - skill: /user-research
+        step: "3. 利益相关者调研"
+        output: "调研报告"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 评估汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "教育规划"
+    flow:
+      - skill: /analyze
+        step: "1. 需求分析"
+        output: "需求分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 教育方案"
+        output: "教育方案"
+        time: "3h"
+      - skill: /modeling
+        step: "3. 实施模型"
+        output: "实施模型"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 方案汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "实施支持"
+    flow:
+      - skill: /workshop
+        step: "1. 培训工作坊"
+        output: "工作坊方案"
+        time: "3h"
+      - skill: /execute
+        step: "2. 实施辅导"
+        output: "辅导记录"
+        time: "持续"
+      - skill: /monitor
+        step: "3. 实施监控"
+        output: "监控记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 实施复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "效果评估"
+    flow:
+      - skill: /user-research
+        step: "1. 效果调研"
+        output: "调研报告"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 效果分析"
+        output: "效果分析"
+        time: "2h"
+      - skill: /visual
+        step: "3. 效果可视化"
+        output: "可视化报告"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 效果汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /new-info
+  - /analyze
+  - /interview
+  - /user-research
+  - /pitch
+  - /create
+  - /modeling
+  - /workshop
+  - /execute
+  - /monitor
+  - /review
+  - /visual
+  - /mark
+
+output:
+  - "访谈记录"
+  - "评估报告"
+  - "调研报告"
+  - "需求分析"
+  - "教育方案"
+  - "实施模型"
+  - "工作坊方案"
+  - "辅导记录"
+  - "监控记录"
+  - "效果调研"
+  - "效果分析"
+  - "可视化报告"
+  - "汇报材料"

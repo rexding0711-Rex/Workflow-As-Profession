@@ -1,0 +1,77 @@
+---
+name: affiliate-marketing-manager
+description: "联盟营销经理工作流：联盟计划→渠道招募→佣金设计→防作弊→效果优化"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪各渠道佣金/订单/退货/作弊风险"
+    output: "联盟仪表盘"
+    time: "10min"
+  - skill: /new-info
+    trigger: "扫描联盟平台动态、竞品佣金策略"
+    output: "联盟情报"
+    time: "5min"
+  - skill: /mark
+    trigger: "标记高转化渠道、异常数据、作弊信号"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "联盟计划设计"
+    flow:
+      - skill: /analyze
+        step: "1. 行业佣金基准分析"
+        output: "佣金分析"
+        time: "2h"
+      - skill: /pricing
+        step: "2. 佣金结构设计（CPS/CPL/CPM）"
+        output: "佣金方案"
+        time: "2h"
+      - skill: /create
+        step: "3. 联盟招募物料"
+        output: "招募物料"
+        time: "2h"
+      - skill: /process
+        step: "4. 联盟运营SOP"
+        output: "运营SOP"
+        time: "1h"
+    total: "1天"
+  - name: "渠道管理与防作弊"
+    flow:
+      - skill: /analyze
+        step: "1. 渠道绩效分析"
+        output: "渠道分析"
+        time: "2h"
+      - skill: /dd
+        step: "2. 渠道审核与风险评估"
+        output: "渠道评估"
+        time: "2h"
+      - skill: /review
+        step: "3. 防作弊规则与扣量策略"
+        output: "防作弊策略"
+        time: "1h"
+      - skill: /execute
+        step: "4. 优质渠道维护"
+        output: "维护记录"
+        time: "持续"
+    total: "1天"
+
+skills:
+  - /monitor
+  - /new-info
+  - /mark
+  - /analyze
+  - /pricing
+  - /create
+  - /process
+  - /dd
+  - /review
+  - /execute
+
+output:
+  - "佣金分析报告"
+  - "佣金方案"
+  - "招募物料"
+  - "渠道绩效分析"
+  - "渠道评估报告"
+  - "防作弊策略"

@@ -1,0 +1,130 @@
+---
+name: business-analyst-it
+description: "IT业务分析师工作流：需求→分析→方案→设计→验收"
+
+daily:
+  - skill: /execute
+    trigger: "分析需求、沟通业务、设计方案"
+    output: "BA日志"
+    time: "持续"
+  - skill: /new-info
+    trigger: "跟踪业务变化、技术趋势、政策更新"
+    output: "BA情报"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记需求冲突、机会、风险"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "需求分析"
+    flow:
+      - skill: /interview
+        step: "1. 业务访谈"
+        output: "访谈记录"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 需求分析"
+        output: "需求分析"
+        time: "3h"
+      - skill: /create
+        step: "3. 需求文档"
+        output: "需求文档"
+        time: "2h"
+      - skill: /review
+        step: "4. 需求评审"
+        output: "评审意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "流程建模"
+    flow:
+      - skill: /process
+        step: "1. 流程梳理"
+        output: "流程梳理"
+        time: "3h"
+      - skill: /visual
+        step: "2. 流程建模"
+        output: "流程模型"
+        time: "2h"
+      - skill: /analyze
+        step: "3. 流程优化"
+        output: "流程优化"
+        time: "2h"
+      - skill: /review
+        step: "4. 流程评审"
+        output: "评审意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "方案设计"
+    flow:
+      - skill: /design
+        step: "1. 方案设计"
+        output: "方案设计"
+        time: "3h"
+      - skill: /tech-compare
+        step: "2. 技术选型"
+        output: "技术选型"
+        time: "2h"
+      - skill: /modeling
+        step: "3. 原型建模"
+        output: "原型方案"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 方案汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "验收支持"
+    flow:
+      - skill: /execute
+        step: "1. 验收准备"
+        output: "验收准备"
+        time: "2h"
+      - skill: /experiment
+        step: "2. UAT测试"
+        output: "UAT报告"
+        time: "2h"
+      - skill: /analyze
+        step: "3. 问题分析"
+        output: "问题分析"
+        time: "2h"
+      - skill: /review
+        step: "4. 验收报告"
+        output: "验收报告"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /execute
+  - /new-info
+  - /interview
+  - /analyze
+  - /create
+  - /review
+  - /process
+  - /visual
+  - /design
+  - /tech-compare
+  - /modeling
+  - /pitch
+  - /experiment
+  - /mark
+
+output:
+  - "访谈记录"
+  - "需求分析"
+  - "需求文档"
+  - "流程梳理"
+  - "流程模型"
+  - "流程优化"
+  - "方案设计"
+  - "技术选型"
+  - "原型方案"
+  - "汇报材料"
+  - "验收准备"
+  - "UAT报告"
+  - "问题分析"
+  - "验收报告"

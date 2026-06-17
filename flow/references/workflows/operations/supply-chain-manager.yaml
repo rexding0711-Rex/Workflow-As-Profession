@@ -1,0 +1,146 @@
+---
+name: supply-chain-manager
+description: "供应链经理工作流：计划→采购→库存→物流→供应商"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪库存、物流、供应商、订单状态"
+    output: "供应链监控"
+    time: "15min"
+  - skill: /execute
+    trigger: "处理供应异常、库存预警、物流延迟"
+    output: "运维记录"
+    time: "持续"
+  - skill: /mark
+    trigger: "标记供应链问题、风险、优化点"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "需求计划"
+    flow:
+      - skill: /analyze
+        step: "1. 需求预测分析"
+        output: "需求预测"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 计划模型"
+        output: "计划模型"
+        time: "2h"
+      - skill: /plan
+        step: "3. 供应计划"
+        output: "供应计划"
+        time: "2h"
+      - skill: /execute
+        step: "4. 计划执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "采购管理"
+    flow:
+      - skill: /analyze
+        step: "1. 采购需求分析"
+        output: "采购分析"
+        time: "2h"
+      - skill: /dd
+        step: "2. 供应商评估"
+        output: "供应商评估"
+        time: "2h"
+      - skill: /tech-compare
+        step: "3. 供应商比价"
+        output: "比价分析"
+        time: "1h"
+      - skill: /execute
+        step: "4. 采购执行"
+        output: "采购记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "库存优化"
+    flow:
+      - skill: /analyze
+        step: "1. 库存数据分析"
+        output: "库存分析"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 库存优化模型"
+        output: "库存模型"
+        time: "2h"
+      - skill: /create
+        step: "3. 库存策略"
+        output: "库存策略"
+        time: "2h"
+      - skill: /execute
+        step: "4. 策略执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "物流优化"
+    flow:
+      - skill: /analyze
+        step: "1. 物流数据分析"
+        output: "物流分析"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 物流网络优化"
+        output: "网络优化"
+        time: "2h"
+      - skill: /create
+        step: "3. 物流方案"
+        output: "物流方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 方案执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "供应商管理"
+    flow:
+      - skill: /dd
+        step: "1. 供应商尽调"
+        output: "尽调报告"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 供应商绩效分析"
+        output: "绩效分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 供应商管理方案"
+        output: "管理方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 管理执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /monitor
+  - /execute
+  - /analyze
+  - /modeling
+  - /plan
+  - /dd
+  - /tech-compare
+  - /create
+  - /mark
+
+output:
+  - "需求预测"
+  - "计划模型"
+  - "供应计划"
+  - "采购分析"
+  - "供应商评估"
+  - "比价分析"
+  - "库存分析"
+  - "库存模型"
+  - "库存策略"
+  - "物流分析"
+  - "网络优化"
+  - "物流方案"
+  - "尽调报告"
+  - "绩效分析"
+  - "管理方案"

@@ -1,0 +1,128 @@
+---
+name: erp-consultant
+description: "ERP顾问工作流：诊断→设计→实施→培训→运维"
+
+daily:
+  - skill: /execute
+    trigger: "配置系统、解决问题、支持用户"
+    output: "ERP日志"
+    time: "持续"
+  - skill: /new-info
+    trigger: "跟踪ERP更新、模块、行业方案"
+    output: "ERP情报"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记配置问题、需求、优化"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "需求诊断"
+    flow:
+      - skill: /interview
+        step: "1. 业务调研"
+        output: "调研记录"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 流程分析"
+        output: "流程分析"
+        time: "3h"
+      - skill: /create
+        step: "3. 方案建议"
+        output: "方案建议"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 方案汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "蓝图设计"
+    flow:
+      - skill: /design
+        step: "1. 蓝图设计"
+        output: "蓝图设计"
+        time: "3h"
+      - skill: /process
+        step: "2. 流程配置"
+        output: "流程配置"
+        time: "3h"
+      - skill: /execute
+        step: "3. 主数据配置"
+        output: "配置记录"
+        time: "2h"
+      - skill: /review
+        step: "4. 蓝图评审"
+        output: "评审意见"
+        time: "1h"
+    total: "2-3天"
+
+  - name: "系统实施"
+    flow:
+      - skill: /execute
+        step: "1. 系统配置"
+        output: "配置记录"
+        time: "3h"
+      - skill: /execute
+        step: "2. 数据迁移"
+        output: "迁移记录"
+        time: "2h"
+      - skill: /experiment
+        step: "3. 集成测试"
+        output: "测试报告"
+        time: "2h"
+      - skill: /execute
+        step: "4. 上线切换"
+        output: "切换记录"
+        time: "1h"
+    total: "2-3天"
+
+  - name: "运维支持"
+    flow:
+      - skill: /user-research
+        step: "1. 培训需求"
+        output: "培训需求"
+        time: "1h"
+      - skill: /workshop
+        step: "2. 用户培训"
+        output: "培训记录"
+        time: "3h"
+      - skill: /execute
+        step: "3. 问题支持"
+        output: "支持记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 运维评估"
+        output: "评估报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /new-info
+  - /interview
+  - /analyze
+  - /create
+  - /pitch
+  - /design
+  - /process
+  - /review
+  - /experiment
+  - /user-research
+  - /workshop
+  - /mark
+
+output:
+  - "调研记录"
+  - "流程分析"
+  - "方案建议"
+  - "蓝图设计"
+  - "流程配置"
+  - "配置记录"
+  - "迁移记录"
+  - "测试报告"
+  - "切换记录"
+  - "培训需求"
+  - "培训记录"
+  - "支持记录"
+  - "评估报告"

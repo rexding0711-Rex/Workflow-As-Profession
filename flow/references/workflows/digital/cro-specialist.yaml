@@ -1,0 +1,78 @@
+---
+name: cro-specialist
+description: "转化率优化专家工作流：漏斗分析→用户研究→实验设计→优化落地"
+
+daily:
+  - skill: /monitor
+    trigger: "监控漏斗各环节转化率、用户行为数据"
+    output: "转化仪表盘"
+    time: "10min"
+  - skill: /new-info
+    trigger: "扫描CRO工具更新、行业转化率基准"
+    output: "CRO情报"
+    time: "5min"
+  - skill: /mark
+    trigger: "标记转化瓶颈、异常数据、优化机会"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "转化漏斗诊断"
+    flow:
+      - skill: /analyze
+        step: "1. 全漏斗数据分析"
+        output: "漏斗分析"
+        time: "2h"
+      - skill: /user-research
+        step: "2. 用户行为定性研究（录屏/热力图/用户访谈）"
+        output: "用户洞察"
+        time: "3h"
+      - skill: /issue-tree
+        step: "3. 问题拆解与优先级"
+        output: "问题优先级"
+        time: "1h"
+      - skill: /create
+        step: "4. 优化机会清单"
+        output: "优化清单"
+        time: "1h"
+    total: "1天"
+  - name: "A/B实验"
+    flow:
+      - skill: /hypothesis-driven
+        step: "1. 实验假设设计"
+        output: "实验假设"
+        time: "1h"
+      - skill: /experiment
+        step: "2. 实验方案（样本量/时长/指标）"
+        output: "实验方案"
+        time: "2h"
+      - skill: /analyze
+        step: "3. 实验结果分析"
+        output: "实验报告"
+        time: "2h"
+      - skill: /decide
+        step: "4. 是否全量上线"
+        output: "上线决策"
+        time: "1h"
+    total: "1天"
+
+skills:
+  - /monitor
+  - /new-info
+  - /mark
+  - /analyze
+  - /user-research
+  - /issue-tree
+  - /create
+  - /hypothesis-driven
+  - /experiment
+  - /decide
+
+output:
+  - "漏斗分析报告"
+  - "用户行为洞察"
+  - "优化机会清单"
+  - "实验假设"
+  - "实验方案"
+  - "实验报告"
+  - "上线决策"

@@ -1,0 +1,112 @@
+---
+name: brand-manager
+description: "品牌经理工作流：品牌定位→内容→GEO→品牌审计→竞品"
+
+daily:
+  - skill: /monitor
+    trigger: "品牌声量、舆情、竞品品牌动态"
+    output: "品牌监控"
+    time: "10min"
+  - skill: /new-info
+    trigger: "扫描品牌新闻、行业趋势、消费者洞察"
+    output: "品牌情报"
+    time: "5min"
+  - skill: /mark
+    trigger: "标记品牌事件、创意洞察、风险"
+    output: "标签"
+    time: "5min"
+
+projects:
+  - name: "品牌定位"
+    flow:
+      - skill: /market-search
+        step: "1. 消费者洞察与品牌调研"
+        output: "调研报告"
+        time: "3h"
+      - skill: /professional
+        step: "2. 品牌定位与价值主张"
+        output: "定位方案"
+        time: "3h"
+      - skill: /analyze
+        step: "3. 品牌资产分析"
+        output: "资产分析"
+        time: "2h"
+      - skill: /decide
+        step: "4. 品牌定位决策"
+        output: "决策方案"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "品牌视觉"
+    flow:
+      - skill: /design
+        step: "1. 品牌视觉系统设计"
+        output: "视觉规范"
+        time: "3h"
+      - skill: /visual
+        step: "2. 品牌视觉应用"
+        output: "应用方案"
+        time: "2h"
+      - skill: /experiment
+        step: "3. 视觉测试"
+        output: "测试结果"
+        time: "2周"
+    total: "持续"
+
+  - name: "品牌审计"
+    flow:
+      - skill: /analyze
+        step: "1. 品牌健康度审计"
+        output: "审计报告"
+        time: "2h"
+      - skill: /tech-compare
+        step: "2. 竞品品牌对比"
+        output: "对比分析"
+        time: "2h"
+      - skill: /review
+        step: "3. 品牌复盘与优化"
+        output: "复盘报告"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "品牌传播"
+    flow:
+      - skill: /create
+        step: "1. 品牌内容与故事"
+        output: "内容方案"
+        time: "3h"
+      - skill: /geo
+        step: "2. 品牌SEO/GEO"
+        output: "优化方案"
+        time: "2h"
+      - skill: /network
+        step: "3. KOL/媒体关系"
+        output: "关系计划"
+        time: "2h"
+    total: "1-2天"
+
+skills:
+  - /monitor
+  - /new-info
+  - /market-search
+  - /professional
+  - /analyze
+  - /decide
+  - /design
+  - /visual
+  - /experiment
+  - /tech-compare
+  - /review
+  - /create
+  - /geo
+  - /network
+  - /mark
+
+output:
+  - "品牌调研报告"
+  - "定位方案"
+  - "视觉规范"
+  - "审计报告"
+  - "对比分析"
+  - "内容方案"
+  - "优化方案"

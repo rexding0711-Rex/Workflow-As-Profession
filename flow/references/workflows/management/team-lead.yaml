@@ -1,0 +1,126 @@
+---
+name: team-lead
+description: "团队负责人工作流：目标→分配→辅导→绩效→文化"
+
+daily:
+  - skill: /execute
+    trigger: "跟踪团队任务、进度、阻塞"
+    output: "团队日报"
+    time: "15min"
+  - skill: /monitor
+    trigger: "监控团队绩效、士气、质量"
+    output: "团队监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记团队问题、成就、改进点"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "目标管理"
+    flow:
+      - skill: /plan
+        step: "1. 团队目标拆解"
+        output: "目标拆解"
+        time: "2h"
+      - skill: /execute
+        step: "2. 任务分配"
+        output: "任务分配"
+        time: "1h"
+      - skill: /monitor
+        step: "3. 目标跟踪"
+        output: "跟踪记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 目标复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "团队辅导"
+    flow:
+      - skill: /interview
+        step: "1. 1对1沟通"
+        output: "沟通记录"
+        time: "2h"
+      - skill: /user-research
+        step: "2. 能力差距分析"
+        output: "差距分析"
+        time: "2h"
+      - skill: /workshop
+        step: "3. 技能培训"
+        output: "培训方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 辅导执行"
+        output: "辅导记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "绩效管理"
+    flow:
+      - skill: /analyze
+        step: "1. 绩效数据分析"
+        output: "绩效分析"
+        time: "2h"
+      - skill: /interview
+        step: "2. 绩效面谈"
+        output: "面谈记录"
+        time: "2h"
+      - skill: /create
+        step: "3. 绩效改进计划"
+        output: "改进计划"
+        time: "2h"
+      - skill: /execute
+        step: "4. 改进执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "团队建设"
+    flow:
+      - skill: /user-research
+        step: "1. 团队氛围调研"
+        output: "氛围调研"
+        time: "2h"
+      - skill: /create
+        step: "2. 团建方案"
+        output: "团建方案"
+        time: "2h"
+      - skill: /workshop
+        step: "3. 团队工作坊"
+        output: "工作坊方案"
+        time: "2h"
+      - skill: /review
+        step: "4. 效果评估"
+        output: "评估报告"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /execute
+  - /monitor
+  - /plan
+  - /interview
+  - /user-research
+  - /workshop
+  - /analyze
+  - /create
+  - /review
+  - /mark
+
+output:
+  - "目标拆解"
+  - "任务分配"
+  - "跟踪记录"
+  - "复盘报告"
+  - "沟通记录"
+  - "差距分析"
+  - "培训方案"
+  - "辅导记录"
+  - "绩效分析"
+  - "面谈记录"
+  - "改进计划"
+  - "氛围调研"
+  - "团建方案"
+  - "评估报告"

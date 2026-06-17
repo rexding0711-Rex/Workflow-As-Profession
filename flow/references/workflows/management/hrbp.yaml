@@ -1,0 +1,220 @@
+---
+name: hrbp
+description: "HRBP工作流：组织诊断→人才规划→招聘管理→员工发展→绩效激励→文化变革"
+
+daily:
+  - skill: /mark
+    trigger: "标记关键人事决策、员工风险、文化信号"
+    output: "结构化标签"
+    time: "5min"
+  - skill: /monitor
+    trigger: "监控员工动态、离职信号、团队氛围"
+    output: "异动提醒"
+    time: "10min"
+  - skill: /crm
+    trigger: "跟踪关键人才与候选人状态"
+    output: "人才Pipeline"
+    time: "10min"
+
+projects:
+  - name: "组织诊断"
+    flow:
+      - skill: /professional
+        step: "1. 组织诊断（六盒子/7S/麦肯锡7S）"
+        output: "诊断报告"
+        time: "4h"
+      - skill: /analyze
+        step: "2. 数据分析（人效/离职率/满意度）"
+        output: "数据洞察"
+        time: "2h"
+      - skill: /interview
+        step: "3. 高管与员工访谈"
+        output: "访谈纪要"
+        time: "3-5h"
+      - skill: /user-research
+        step: "4. 员工旅程与痛点分析"
+        output: "员工旅程地图"
+        time: "2h"
+      - skill: /decide
+        step: "5. 优先改进事项决策"
+        output: "优先级矩阵"
+        time: "1h"
+    total: "1-2天"
+  - name: "人才规划"
+    flow:
+      - skill: /market-search
+        step: "1. 人才市场分析（供需/薪酬/竞争）"
+        output: "人才市场报告"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 人力成本建模与预算"
+        output: "预算模型"
+        time: "2h"
+      - skill: /process
+        step: "3. 人才盘点与继任计划"
+        output: "人才地图"
+        time: "4h"
+      - skill: /plan
+        step: "4. 招聘计划与时间表"
+        output: "招聘计划"
+        time: "2h"
+      - skill: /decide
+        step: "5. 招聘渠道与优先级决策"
+        output: "渠道策略"
+        time: "1h"
+    total: "1-2天"
+  - name: "招聘管理"
+    flow:
+      - skill: /market-search
+        step: "1. 岗位分析与人才画像（ICP）"
+        output: "JD + 人才画像"
+        time: "1h"
+      - skill: /create
+        step: "2. 雇主品牌内容（GEO/社交媒体）"
+        output: "招聘内容"
+        time: "2h"
+      - skill: /interview
+        step: "3. 面试设计与评估标准"
+        output: "面试手册"
+        time: "2h"
+      - skill: /network
+        step: "4. 内推与人才网络激活"
+        output: "内推策略"
+        time: "1h"
+      - skill: /crm
+        step: "5. 候选人管理与Pipeline"
+        output: "招聘Pipeline"
+        time: "持续"
+      - skill: /deal
+        step: "6. Offer谈判与合同审查"
+        output: "Offer方案"
+        time: "1h"
+    total: "持续"
+  - name: "员工发展"
+    flow:
+      - skill: /user-research
+        step: "1. 培训需求调研"
+        output: "需求报告"
+        time: "2h"
+      - skill: /workshop
+        step: "2. 培训工作坊设计"
+        output: "工作坊方案"
+        time: "3h"
+      - skill: /process
+        step: "3. 职业发展路径设计"
+        output: "发展路径"
+        time: "2h"
+      - skill: /experiment
+        step: "4. 培训效果A/B测试"
+        output: "实验结果"
+        time: "2周"
+      - skill: /review
+        step: "5. 培训复盘与优化"
+        output: "复盘报告"
+        time: "2h"
+    total: "持续"
+  - name: "绩效与激励"
+    flow:
+      - skill: /analyze
+        step: "1. 绩效数据分析"
+        output: "绩效洞察"
+        time: "2h"
+      - skill: /pricing
+        step: "2. 薪酬竞争力分析"
+        output: "薪酬报告"
+        time: "2h"
+      - skill: /modeling
+        step: "3. 激励方案建模（长期/短期）"
+        output: "激励模型"
+        time: "2h"
+      - skill: /professional
+        step: "4. 组织激励理论应用"
+        output: "激励策略"
+        time: "2h"
+      - skill: /decide
+        step: "5. 调薪与晋升决策"
+        output: "决策矩阵"
+        time: "1h"
+    total: "1-2天"
+  - name: "文化变革"
+    flow:
+      - skill: /professional
+        step: "1. 文化诊断与愿景设计"
+        output: "文化诊断"
+        time: "3h"
+      - skill: /workshop
+        step: "2. 文化共创工作坊"
+        output: "工作坊方案"
+        time: "4h"
+      - skill: /create
+        step: "3. 文化内容与传播（GEO/内部媒体）"
+        output: "文化内容"
+        time: "2h"
+      - skill: /process
+        step: "4. 文化落地流程与制度"
+        output: "文化手册"
+        time: "持续"
+      - skill: /experiment
+        step: "5. 文化实验与效果追踪"
+        output: "实验结果"
+        time: "持续"
+    total: "持续"
+  - name: "HR数据分析"
+    flow:
+      - skill: /format
+        step: "1. HR数据清洗与标准化"
+        output: "清洗数据"
+        time: "1h"
+      - skill: /analyze
+        step: "2. 人效/离职/满意度分析"
+        output: "分析报告"
+        time: "2h"
+      - skill: /visual
+        step: "3. HR数据可视化"
+        output: "Dashboard"
+        time: "2h"
+      - skill: /modeling
+        step: "4. 人力预测模型"
+        output: "预测模型"
+        time: "2h"
+      - skill: /pitch
+        step: "5. HR数据汇报（管理层）"
+        output: "汇报材料"
+        time: "2h"
+    total: "1天"
+
+skills:
+  - /professional
+  - /analyze
+  - /interview
+  - /user-research
+  - /workshop
+  - /process
+  - /create
+  - /experiment
+  - /market-search
+  - /modeling
+  - /pricing
+  - /decide
+  - /visual
+  - /pitch
+  - /review
+  - /network
+  - /crm
+  - /mark
+  - /monitor
+  - /format
+
+  - /deal
+  - /plan
+output:
+  - "组织诊断报告"
+  - "人才地图"
+  - "招聘计划"
+  - "面试手册"
+  - "培训方案"
+  - "薪酬报告"
+  - "文化手册"
+  - "HR数据分析报告"
+  - "员工旅程地图"
+  - "继任计划"

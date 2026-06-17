@@ -1,0 +1,120 @@
+---
+name: medical-writer
+description: "医学写作工作流：文献→撰写→审核→提交→沟通"
+
+daily:
+  - skill: /create
+    trigger: "撰写医学文档、整理数据、编辑"
+    output: "写作稿"
+    time: "持续"
+  - skill: /new-info
+    trigger: "跟踪指南、法规、术语"
+    output: "写作情报"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记数据问题、格式、反馈"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "方案撰写"
+    flow:
+      - skill: /market-search
+        step: "1. 文献检索"
+        output: "文献综述"
+        time: "2h"
+      - skill: /create
+        step: "2. 方案起草"
+        output: "方案草稿"
+        time: "3h"
+      - skill: /review
+        step: "3. 医学审核"
+        output: "审核意见"
+        time: "2h"
+      - skill: /review
+        step: "4. 格式审核"
+        output: "格式审核"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "CSR撰写"
+    flow:
+      - skill: /analyze
+        step: "1. 数据汇总"
+        output: "数据汇总"
+        time: "2h"
+      - skill: /create
+        step: "2. CSR撰写"
+        output: "CSR草稿"
+        time: "3h"
+      - skill: /review
+        step: "3. QC审核"
+        output: "QC意见"
+        time: "2h"
+      - skill: /create
+        step: "4. 终稿"
+        output: "CSR终稿"
+        time: "1h"
+    total: "2-3天"
+
+  - name: "摘要海报"
+    flow:
+      - skill: /create
+        step: "1. 摘要撰写"
+        output: "摘要草稿"
+        time: "2h"
+      - skill: /visual
+        step: "2. 海报设计"
+        output: "海报方案"
+        time: "2h"
+      - skill: /review
+        step: "3. 内容审核"
+        output: "审核意见"
+        time: "1h"
+      - skill: /execute
+        step: "4. 提交"
+        output: "提交记录"
+        time: "30min"
+    total: "1-2天"
+
+  - name: "沟通支持"
+    flow:
+      - skill: /interview
+        step: "1. 研究者沟通"
+        output: "沟通记录"
+        time: "2h"
+      - skill: /execute
+        step: "2. 修订"
+        output: "修订记录"
+        time: "2h"
+      - skill: /execute
+        step: "3. 提交支持"
+        output: "支持记录"
+        time: "1h"
+    total: "半天"
+
+skills:
+  - /create
+  - /new-info
+  - /market-search
+  - /review
+  - /analyze
+  - /visual
+  - /interview
+  - /execute
+  - /mark
+
+output:
+  - "文献综述"
+  - "方案草稿"
+  - "审核意见"
+  - "格式审核"
+  - "数据汇总"
+  - "CSR草稿"
+  - "QC意见"
+  - "CSR终稿"
+  - "摘要草稿"
+  - "海报方案"
+  - "提交记录"
+  - "沟通记录"
+  - "修订记录"

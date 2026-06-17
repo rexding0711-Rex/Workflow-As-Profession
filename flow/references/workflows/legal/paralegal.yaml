@@ -1,0 +1,123 @@
+---
+name: paralegal
+description: "律师助理工作流：研究→文书→调查→证据→支持"
+
+daily:
+  - skill: /execute
+    trigger: "法律研究、文书整理、案件支持"
+    output: "助理日志"
+    time: "持续"
+  - skill: /new-info
+    trigger: "跟踪法律更新、案例、研究"
+    output: "助理情报"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记研究要点、证据、截止日期"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "法律研究"
+    flow:
+      - skill: /market-search
+        step: "1. 案例检索"
+        output: "案例检索"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 法律分析"
+        output: "法律分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 备忘录"
+        output: "备忘录"
+        time: "2h"
+      - skill: /review
+        step: "4. 研究审核"
+        output: "审核记录"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "文书起草"
+    flow:
+      - skill: /create
+        step: "1. 文书起草"
+        output: "文书起草"
+        time: "2h"
+      - skill: /execute
+        step: "2. 格式整理"
+        output: "整理记录"
+        time: "1h"
+      - skill: /review
+        step: "3. 文书审核"
+        output: "审核记录"
+        time: "1h"
+      - skill: /execute
+        step: "4. 文书归档"
+        output: "归档记录"
+        time: "1h"
+    total: "半天"
+
+  - name: "案件调查"
+    flow:
+      - skill: /analyze
+        step: "1. 背景调查"
+        output: "背景调查"
+        time: "2h"
+      - skill: /dd
+        step: "2. 证据收集"
+        output: "证据收集"
+        time: "2h"
+      - skill: /execute
+        step: "3. 证人联系"
+        output: "联系记录"
+        time: "1h"
+      - skill: /create
+        step: "4. 调查报告"
+        output: "调查报告"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "庭审支持"
+    flow:
+      - skill: /execute
+        step: "1. 证据整理"
+        output: "证据整理"
+        time: "2h"
+      - skill: /execute
+        step: "2. 庭审准备"
+        output: "准备记录"
+        time: "2h"
+      - skill: /execute
+        step: "3. 庭审协助"
+        output: "协助记录"
+        time: "持续"
+      - skill: /execute
+        step: "4. 庭审记录"
+        output: "庭审记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /execute
+  - /new-info
+  - /market-search
+  - /analyze
+  - /create
+  - /review
+  - /dd
+  - /mark
+
+output:
+  - "案例检索"
+  - "法律分析"
+  - "备忘录"
+  - "文书起草"
+  - "整理记录"
+  - "背景调查"
+  - "证据收集"
+  - "联系记录"
+  - "调查报告"
+  - "证据整理"
+  - "准备记录"
+  - "协助记录"
+  - "庭审记录"

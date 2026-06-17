@@ -1,0 +1,92 @@
+---
+name: accountant
+description: "会计工作流：财务→数据→合规→报告→政策"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪账务处理、凭证审核、报表编制"
+    output: "账务摘要"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记异常交易、政策变化、合规事项"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "月度结账"
+    flow:
+      - skill: /analyze
+        step: "1. 账务核对与调整"
+        output: "账务核对"
+        time: "2h"
+      - skill: /format
+        step: "2. 数据整理与标准化"
+        output: "标准化数据"
+        time: "1h"
+      - skill: /process
+        step: "3. 结账流程执行"
+        output: "结账记录"
+        time: "持续"
+      - skill: /visual
+        step: "4. 报表可视化"
+        output: "报表"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "年度审计"
+    flow:
+      - skill: /dd
+        step: "1. 审计资料准备"
+        output: "审计资料"
+        time: "2天"
+      - skill: /analyze
+        step: "2. 财务数据复核"
+        output: "复核报告"
+        time: "1天"
+      - skill: /policy
+        step: "3. 会计准则与合规审查"
+        output: "合规报告"
+        time: "1h"
+      - skill: /pitch
+        step: "4. 管理层汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "2-3天"
+
+  - name: "税务申报"
+    flow:
+      - skill: /modeling
+        step: "1. 税务计算与筹划"
+        output: "税务模型"
+        time: "2h"
+      - skill: /policy
+        step: "2. 税务政策跟踪"
+        output: "政策分析"
+        time: "1h"
+      - skill: /process
+        step: "3. 申报流程执行"
+        output: "申报记录"
+        time: "1h"
+    total: "1天"
+
+skills:
+  - /analyze
+  - /format
+  - /process
+  - /visual
+  - /dd
+  - /policy
+  - /modeling
+  - /pitch
+  - /monitor
+  - /mark
+
+output:
+  - "账务核对"
+  - "标准化数据"
+  - "报表"
+  - "审计资料"
+  - "复核报告"
+  - "合规报告"
+  - "税务模型"
+  - "申报记录"

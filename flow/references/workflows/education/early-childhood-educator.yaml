@@ -1,0 +1,114 @@
+---
+name: early-childhood-educator
+description: "幼教工作流：观察→活动→评估→家园→发展"
+
+daily:
+  - skill: /execute
+    trigger: "组织活动、照护、观察记录"
+    output: "幼教日志"
+    time: "持续"
+  - skill: /monitor
+    trigger: "跟踪儿童发展、安全、健康"
+    output: "幼教监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记发展里程碑、问题、调整"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "观察记录"
+    flow:
+      - skill: /execute
+        step: "1. 日常观察"
+        output: "观察记录"
+        time: "持续"
+      - skill: /analyze
+        step: "2. 发展分析"
+        output: "发展分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 观察档案"
+        output: "观察档案"
+        time: "2h"
+    total: "持续"
+
+  - name: "活动设计"
+    flow:
+      - skill: /create
+        step: "1. 活动方案"
+        output: "活动方案"
+        time: "2h"
+      - skill: /create
+        step: "2. 教具准备"
+        output: "教具清单"
+        time: "1h"
+      - skill: /execute
+        step: "3. 活动实施"
+        output: "活动记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 活动反思"
+        output: "反思记录"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "发展评估"
+    flow:
+      - skill: /analyze
+        step: "1. 发展评估"
+        output: "评估报告"
+        time: "2h"
+      - skill: /create
+        step: "2. 发展报告"
+        output: "发展报告"
+        time: "2h"
+      - skill: /interview
+        step: "3. 家长沟通"
+        output: "沟通记录"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "家园共育"
+    flow:
+      - skill: /interview
+        step: "1. 家长访谈"
+        output: "访谈记录"
+        time: "2h"
+      - skill: /create
+        step: "2. 家庭指导"
+        output: "指导方案"
+        time: "2h"
+      - skill: /execute
+        step: "3. 共育活动"
+        output: "活动记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 共育复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /analyze
+  - /create
+  - /review
+  - /interview
+  - /mark
+
+output:
+  - "观察记录"
+  - "发展分析"
+  - "观察档案"
+  - "活动方案"
+  - "教具清单"
+  - "活动记录"
+  - "反思记录"
+  - "评估报告"
+  - "发展报告"
+  - "沟通记录"
+  - "访谈记录"
+  - "指导方案"
+  - "复盘报告"

@@ -1,0 +1,122 @@
+---
+name: data-privacy-officer
+description: "隐私官工作流：评估→政策→合规→响应→培训"
+
+daily:
+  - skill: /execute
+    trigger: "管理隐私政策、处理请求、监督合规"
+    output: "隐私日志"
+    time: "持续"
+  - skill: /new-info
+    trigger: "跟踪隐私法规、执法、技术"
+    output: "隐私情报"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记隐私风险、事件、改进"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "隐私评估"
+    flow:
+      - skill: /analyze
+        step: "1. 数据盘点"
+        output: "数据盘点"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 影响评估"
+        output: "影响评估"
+        time: "3h"
+      - skill: /create
+        step: "3. 评估报告"
+        output: "评估报告"
+        time: "2h"
+      - skill: /review
+        step: "4. 报告审核"
+        output: "审核意见"
+        time: "1h"
+    total: "2-3天"
+
+  - name: "隐私政策"
+    flow:
+      - skill: /policy
+        step: "1. 政策研究"
+        output: "政策研究"
+        time: "2h"
+      - skill: /create
+        step: "2. 政策起草"
+        output: "政策起草"
+        time: "3h"
+      - skill: /review
+        step: "3. 政策审核"
+        output: "审核意见"
+        time: "1h"
+      - skill: /execute
+        step: "4. 政策发布"
+        output: "发布记录"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "事件响应"
+    flow:
+      - skill: /execute
+        step: "1. 事件发现"
+        output: "事件发现"
+        time: "持续"
+      - skill: /analyze
+        step: "2. 影响分析"
+        output: "影响分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 通知方案"
+        output: "通知方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 事件报告"
+        output: "事件报告"
+        time: "2h"
+    total: "持续"
+
+  - name: "用户请求"
+    flow:
+      - skill: /execute
+        step: "1. 请求受理"
+        output: "受理记录"
+        time: "持续"
+      - skill: /analyze
+        step: "2. 身份验证"
+        output: "验证记录"
+        time: "1h"
+      - skill: /execute
+        step: "3. 数据处理"
+        output: "处理记录"
+        time: "2h"
+      - skill: /review
+        step: "4. 请求关闭"
+        output: "关闭记录"
+        time: "30min"
+    total: "持续"
+
+skills:
+  - /execute
+  - /new-info
+  - /analyze
+  - /create
+  - /review
+  - /policy
+  - /mark
+
+output:
+  - "数据盘点"
+  - "影响评估"
+  - "评估报告"
+  - "政策研究"
+  - "政策起草"
+  - "发布记录"
+  - "事件发现"
+  - "通知方案"
+  - "事件报告"
+  - "受理记录"
+  - "验证记录"
+  - "处理记录"
+  - "关闭记录"

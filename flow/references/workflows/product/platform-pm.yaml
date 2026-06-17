@@ -1,0 +1,123 @@
+---
+name: platform-pm
+description: "平台产品经理工作流：架构→需求→生态→Roadmap→实验"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪平台数据、生态健康度、开发者反馈"
+    output: "平台仪表盘"
+    time: "10min"
+  - skill: /new-info
+    trigger: "扫描平台动态、技术趋势、竞品生态"
+    output: "平台情报"
+    time: "5min"
+  - skill: /mark
+    trigger: "标记生态洞察、合作伙伴需求、平台机会"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "平台需求分析"
+    flow:
+      - skill: /user-research
+        step: "1. 开发者/合作伙伴访谈"
+        output: "用户访谈"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 平台数据与生态分析"
+        output: "生态分析"
+        time: "2h"
+      - skill: /market-search
+        step: "3. 平台竞品分析"
+        output: "竞品分析"
+        time: "2h"
+      - skill: /decide
+        step: "4. 平台需求优先级"
+        output: "优先级"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "平台架构设计"
+    flow:
+      - skill: /design
+        step: "1. 平台架构设计"
+        output: "架构设计"
+        time: "3h"
+      - skill: /tech-compare
+        step: "2. 技术方案对比"
+        output: "技术对比"
+        time: "2h"
+      - skill: /create
+        step: "3. 平台PRD与API设计"
+        output: "PRD文档"
+        time: "3h"
+    total: "1-2天"
+
+  - name: "生态建设"
+    flow:
+      - skill: /network
+        step: "1. 合作伙伴关系建设"
+        output: "关系计划"
+        time: "2h"
+      - skill: /create
+        step: "2. 开发者内容与文档"
+        output: "内容方案"
+        time: "3h"
+      - skill: /workshop
+        step: "3. 开发者培训与工作坊"
+        output: "培训方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 生态运营执行"
+        output: "执行计划"
+        time: "持续"
+    total: "持续"
+
+  - name: "平台上线"
+    flow:
+      - skill: /experiment
+        step: "1. 平台测试与灰度"
+        output: "测试方案"
+        time: "2周"
+      - skill: /analyze
+        step: "2. 平台数据监控"
+        output: "数据监控"
+        time: "持续"
+      - skill: /user-research
+        step: "3. 开发者反馈"
+        output: "反馈报告"
+        time: "1h"
+      - skill: /review
+        step: "4. 平台复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "2-3周"
+
+skills:
+  - /monitor
+  - /new-info
+  - /user-research
+  - /analyze
+  - /market-search
+  - /decide
+  - /design
+  - /tech-compare
+  - /create
+  - /network
+  - /workshop
+  - /experiment
+  - /review
+  - /execute
+  - /mark
+
+output:
+  - "用户访谈"
+  - "生态分析"
+  - "竞品分析"
+  - "架构设计"
+  - "PRD文档"
+  - "关系计划"
+  - "内容方案"
+  - "培训方案"
+  - "测试方案"
+  - "复盘报告"

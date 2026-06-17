@@ -1,0 +1,126 @@
+---
+name: it-director
+description: "IT总监工作流：战略→架构→预算→团队→安全"
+
+daily:
+  - skill: /execute
+    trigger: "管理IT团队、审批项目、协调资源"
+    output: "IT总监日志"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪IT战略、预算、项目进展"
+    output: "IT总监监控"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记IT风险、机会、决策"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "IT战略"
+    flow:
+      - skill: /analyze
+        step: "1. 战略分析"
+        output: "战略分析"
+        time: "3h"
+      - skill: /create
+        step: "2. 战略规划"
+        output: "战略规划"
+        time: "3h"
+      - skill: /tech-compare
+        step: "3. 技术趋势"
+        output: "技术趋势"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 战略汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "2-3天"
+
+  - name: "架构治理"
+    flow:
+      - skill: /design
+        step: "1. 架构设计"
+        output: "架构设计"
+        time: "3h"
+      - skill: /review
+        step: "2. 架构评审"
+        output: "评审意见"
+        time: "1h"
+      - skill: /execute
+        step: "3. 标准制定"
+        output: "标准制定"
+        time: "2h"
+      - skill: /review
+        step: "4. 治理评估"
+        output: "评估报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "预算管理"
+    flow:
+      - skill: /analyze
+        step: "1. 预算分析"
+        output: "预算分析"
+        time: "2h"
+      - skill: /plan
+        step: "2. 预算编制"
+        output: "预算编制"
+        time: "2h"
+      - skill: /execute
+        step: "3. 预算执行"
+        output: "执行记录"
+        time: "持续"
+      - skill: /monitor
+        step: "4. 预算监控"
+        output: "监控记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "团队建设"
+    flow:
+      - skill: /analyze
+        step: "1. 团队分析"
+        output: "团队分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 招聘计划"
+        output: "招聘计划"
+        time: "2h"
+      - skill: /execute
+        step: "3. 绩效管理"
+        output: "绩效记录"
+        time: "持续"
+      - skill: /interview
+        step: "4. 人才培养"
+        output: "培养记录"
+        time: "2h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /analyze
+  - /create
+  - /tech-compare
+  - /pitch
+  - /design
+  - /review
+  - /plan
+  - /interview
+  - /mark
+
+output:
+  - "战略分析"
+  - "战略规划"
+  - "技术趋势"
+  - "汇报材料"
+  - "架构设计"
+  - "评审意见"
+  - "标准制定"
+  - "预算分析"
+  - "预算编制"
+  - "执行记录"
+  - "团队分析"
+  - "招聘计划"
+  - "绩效记录"

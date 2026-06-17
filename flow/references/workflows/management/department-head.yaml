@@ -1,0 +1,123 @@
+---
+name: department-head
+description: "部门总监工作流：战略→组织→绩效→预算→文化"
+
+daily:
+  - skill: /execute
+    trigger: "管理部门、审批决策、协调资源"
+    output: "部门日志"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪部门绩效、预算、团队状态"
+    output: "部门监控"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记部门问题、机会、风险"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "部门战略"
+    flow:
+      - skill: /analyze
+        step: "1. 战略分析"
+        output: "战略分析"
+        time: "3h"
+      - skill: /create
+        step: "2. 战略规划"
+        output: "战略规划"
+        time: "3h"
+      - skill: /pitch
+        step: "3. 战略汇报"
+        output: "汇报材料"
+        time: "2h"
+      - skill: /review
+        step: "4. 战略评估"
+        output: "评估报告"
+        time: "1h"
+    total: "2-3天"
+
+  - name: "组织建设"
+    flow:
+      - skill: /analyze
+        step: "1. 组织分析"
+        output: "组织分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 架构设计"
+        output: "架构设计"
+        time: "2h"
+      - skill: /execute
+        step: "3. 人才配置"
+        output: "配置记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 组织评估"
+        output: "评估报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "绩效管理"
+    flow:
+      - skill: /analyze
+        step: "1. 绩效分析"
+        output: "绩效分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 绩效目标"
+        output: "绩效目标"
+        time: "2h"
+      - skill: /execute
+        step: "3. 绩效辅导"
+        output: "辅导记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 绩效评估"
+        output: "评估报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "预算管理"
+    flow:
+      - skill: /analyze
+        step: "1. 预算分析"
+        output: "预算分析"
+        time: "2h"
+      - skill: /plan
+        step: "2. 预算编制"
+        output: "预算编制"
+        time: "2h"
+      - skill: /execute
+        step: "3. 预算执行"
+        output: "执行记录"
+        time: "持续"
+      - skill: /monitor
+        step: "4. 预算监控"
+        output: "监控记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /analyze
+  - /create
+  - /pitch
+  - /review
+  - /plan
+  - /mark
+
+output:
+  - "战略分析"
+  - "战略规划"
+  - "汇报材料"
+  - "组织分析"
+  - "架构设计"
+  - "配置记录"
+  - "绩效分析"
+  - "绩效目标"
+  - "辅导记录"
+  - "预算分析"
+  - "预算编制"
+  - "执行记录"
+  - "监控记录"

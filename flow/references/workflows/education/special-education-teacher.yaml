@@ -1,0 +1,124 @@
+---
+name: special-education-teacher
+description: "特教教师工作流：评估→IEP→教学→干预→家校"
+
+daily:
+  - skill: /execute
+    trigger: "实施个别化教学、行为干预、康复训练"
+    output: "特教日志"
+    time: "持续"
+  - skill: /monitor
+    trigger: "跟踪学生行为、进展、安全"
+    output: "特教监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记学生进步、问题、调整"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "学生评估"
+    flow:
+      - skill: /interview
+        step: "1. 家长访谈"
+        output: "访谈记录"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 能力评估"
+        output: "评估报告"
+        time: "3h"
+      - skill: /user-research
+        step: "3. 行为观察"
+        output: "观察记录"
+        time: "2h"
+      - skill: /create
+        step: "4. 评估总结"
+        output: "评估总结"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "IEP制定"
+    flow:
+      - skill: /analyze
+        step: "1. 目标分析"
+        output: "目标分析"
+        time: "2h"
+      - skill: /create
+        step: "2. IEP撰写"
+        output: "IEP文档"
+        time: "3h"
+      - skill: /interview
+        step: "3. 家长沟通"
+        output: "沟通记录"
+        time: "2h"
+      - skill: /review
+        step: "4. IEP评审"
+        output: "评审意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "个别化教学"
+    flow:
+      - skill: /create
+        step: "1. 教学计划"
+        output: "教学计划"
+        time: "2h"
+      - skill: /execute
+        step: "2. 教学实施"
+        output: "教学记录"
+        time: "持续"
+      - skill: /execute
+        step: "3. 行为干预"
+        output: "干预记录"
+        time: "持续"
+      - skill: /monitor
+        step: "4. 进展监控"
+        output: "监控记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "家校协作"
+    flow:
+      - skill: /interview
+        step: "1. 家长沟通"
+        output: "沟通记录"
+        time: "2h"
+      - skill: /create
+        step: "2. 家庭支持方案"
+        output: "支持方案"
+        time: "2h"
+      - skill: /execute
+        step: "3. 协作执行"
+        output: "协作记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 协作复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /interview
+  - /analyze
+  - /user-research
+  - /create
+  - /review
+  - /mark
+
+output:
+  - "访谈记录"
+  - "评估报告"
+  - "观察记录"
+  - "评估总结"
+  - "目标分析"
+  - "IEP文档"
+  - "沟通记录"
+  - "评审意见"
+  - "教学计划"
+  - "教学记录"
+  - "干预记录"
+  - "支持方案"
+  - "协作记录"
+  - "复盘报告"

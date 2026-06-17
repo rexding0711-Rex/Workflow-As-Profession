@@ -1,0 +1,78 @@
+---
+name: supply-chain-sustainability-manager
+description: "供应链可持续发展经理工作流：碳核算→ESG→绿色采购→循环→报告"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪供应链碳数据/ESG评分/合规要求"
+    output: "可持续发展仪表盘"
+    time: "10min"
+  - skill: /new-info
+    trigger: "扫描ESG法规/碳关税(CBAM)/行业标准"
+    output: "ESG情报"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记减排机会/合规风险/绿色供应商"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "碳核算与减排"
+    flow:
+      - skill: /analyze
+        step: "1. 范围1/2/3碳排放核算"
+        output: "碳核算报告"
+        time: "3h"
+      - skill: /benchmarking
+        step: "2. 行业碳强度对标"
+        output: "对标分析"
+        time: "2h"
+      - skill: /modeling
+        step: "3. 减排路径与成本模型"
+        output: "减排方案"
+        time: "3h"
+      - skill: /create
+        step: "4. 碳中和路线图"
+        output: "路线图"
+        time: "2h"
+    total: "2-3天"
+  - name: "绿色供应链"
+    flow:
+      - skill: /dd
+        step: "1. 供应商ESG评估"
+        output: "ESG评估"
+        time: "3h"
+      - skill: /sourcing
+        step: "2. 绿色供应商开发"
+        output: "绿色供应商"
+        time: "2h"
+      - skill: /process
+        step: "3. 绿色采购标准"
+        output: "采购标准"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 可持续发展报告"
+        output: "ESG报告"
+        time: "3h"
+    total: "2-3天"
+
+skills:
+  - /monitor
+  - /new-info
+  - /mark
+  - /analyze
+  - /benchmarking
+  - /modeling
+  - /create
+  - /dd
+  - /sourcing
+  - /process
+  - /pitch
+
+output:
+  - "碳核算报告"
+  - "对标分析"
+  - "减排路线图"
+  - "供应商ESG评估"
+  - "绿色采购标准"
+  - "可持续发展报告"

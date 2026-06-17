@@ -1,0 +1,75 @@
+---
+name: fulfillment-manager
+description: "履约经理工作流：订单→拣货→包装→发货→退货→体验"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪订单履约率/时效/差错率/成本"
+    output: "履约仪表盘"
+    time: "15min"
+  - skill: /execute
+    trigger: "处理异常订单、紧急发货、退货审批"
+    output: "履约执行"
+    time: "持续"
+  - skill: /mark
+    trigger: "标记履约瓶颈、差错趋势、体验问题"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "履约流程优化"
+    flow:
+      - skill: /analyze
+        step: "1. 履约全流程分析（接单→交付）"
+        output: "流程分析"
+        time: "2h"
+      - skill: /process
+        step: "2. 拣货/包装/发货SOP优化"
+        output: "SOP优化"
+        time: "2h"
+      - skill: /tech-compare
+        step: "3. 自动化方案评估（AGV/分拣/包装）"
+        output: "自动化方案"
+        time: "2h"
+      - skill: /modeling
+        step: "4. 履约成本模型"
+        output: "成本模型"
+        time: "2h"
+    total: "1-2天"
+  - name: "退换货管理"
+    flow:
+      - skill: /analyze
+        step: "1. 退货原因分析"
+        output: "退货分析"
+        time: "2h"
+      - skill: /process
+        step: "2. 逆向物流流程设计"
+        output: "逆向流程"
+        time: "2h"
+      - skill: /pricing
+        step: "3. 退货成本与政策优化"
+        output: "退货政策"
+        time: "1h"
+      - skill: /execute
+        step: "4. 退货处理SOP执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /monitor
+  - /execute
+  - /mark
+  - /analyze
+  - /process
+  - /tech-compare
+  - /modeling
+  - /pricing
+
+output:
+  - "履约流程分析"
+  - "SOP优化方案"
+  - "自动化评估"
+  - "成本模型"
+  - "退货原因分析"
+  - "逆向流程设计"

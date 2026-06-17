@@ -1,0 +1,125 @@
+---
+name: health-data-analyst
+description: "健康数据分析工作流：数据→清洗→分析→建模→应用"
+
+daily:
+  - skill: /analyze
+    trigger: "分析健康数据、趋势、异常"
+    output: "数据分析日志"
+    time: "15min"
+  - skill: /execute
+    trigger: "处理数据需求、ETL、报表"
+    output: "执行日志"
+    time: "持续"
+  - skill: /mark
+    trigger: "标记数据问题、洞察、机会"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "数据治理"
+    flow:
+      - skill: /analyze
+        step: "1. 数据收集"
+        output: "数据收集"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 数据清洗"
+        output: "数据清洗"
+        time: "2h"
+      - skill: /process
+        step: "3. 数据标准"
+        output: "数据标准"
+        time: "2h"
+      - skill: /execute
+        step: "4. 数据入库"
+        output: "入库记录"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "数据分析"
+    flow:
+      - skill: /analyze
+        step: "1. 探索分析"
+        output: "探索分析"
+        time: "3h"
+      - skill: /analyze
+        step: "2. 统计分析"
+        output: "统计分析"
+        time: "3h"
+      - skill: /modeling
+        step: "3. 预测模型"
+        output: "预测模型"
+        time: "3h"
+      - skill: /create
+        step: "4. 分析报告"
+        output: "分析报告"
+        time: "2h"
+    total: "2-3天"
+
+  - name: "临床洞察"
+    flow:
+      - skill: /analyze
+        step: "1. 临床数据分析"
+        output: "临床分析"
+        time: "3h"
+      - skill: /visual
+        step: "2. 可视化"
+        output: "可视化报告"
+        time: "2h"
+      - skill: /create
+        step: "3. 洞察报告"
+        output: "洞察报告"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 洞察汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "数据应用"
+    flow:
+      - skill: /user-research
+        step: "1. 需求调研"
+        output: "需求调研"
+        time: "2h"
+      - skill: /create
+        step: "2. 应用设计"
+        output: "应用设计"
+        time: "2h"
+      - skill: /execute
+        step: "3. 应用开发"
+        output: "开发记录"
+        time: "3h"
+      - skill: /experiment
+        step: "4. 应用测试"
+        output: "测试报告"
+        time: "2h"
+    total: "2-3天"
+
+skills:
+  - /analyze
+  - /execute
+  - /process
+  - /modeling
+  - /visual
+  - /create
+  - /pitch
+  - /user-research
+  - /experiment
+  - /mark
+
+output:
+  - "数据收集"
+  - "数据清洗"
+  - "数据标准"
+  - "探索分析"
+  - "统计分析"
+  - "预测模型"
+  - "临床分析"
+  - "可视化报告"
+  - "洞察报告"
+  - "需求调研"
+  - "应用设计"
+  - "开发记录"
+  - "测试报告"

@@ -1,0 +1,102 @@
+---
+name: actuary
+description: "精算师工作流：模型→数据→风险→预测→分析"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪模型输出、数据质量、假设变化"
+    output: "模型摘要"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记模型异常、政策变化、风险信号"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "精算模型"
+    flow:
+      - skill: /modeling
+        step: "1. 精算模型开发（准备金/定价/偿付能力）"
+        output: "精算模型"
+        time: "3天"
+      - skill: /analyze
+        step: "2. 数据验证与假设设定"
+        output: "数据验证"
+        time: "2天"
+      - skill: /experiment
+        step: "3. 模型测试与验证"
+        output: "测试结果"
+        time: "1周"
+      - skill: /review
+        step: "4. 模型上线与监控"
+        output: "上线报告"
+        time: "1天"
+    total: "1-2周"
+
+  - name: "准备金评估"
+    flow:
+      - skill: /modeling
+        step: "1. 准备金模型计算"
+        output: "准备金报告"
+        time: "2天"
+      - skill: /analyze
+        step: "2. 准备金充足性分析"
+        output: "充足性分析"
+        time: "1天"
+      - skill: /pitch
+        step: "3. 管理层/监管汇报"
+        output: "汇报材料"
+        time: "2h"
+    total: "2-3天"
+
+  - name: "产品定价"
+    flow:
+      - skill: /modeling
+        step: "1. 定价模型开发"
+        output: "定价模型"
+        time: "2天"
+      - skill: /analyze
+        step: "2. 利润测试与敏感性分析"
+        output: "利润测试"
+        time: "1天"
+      - skill: /decide
+        step: "3. 定价决策"
+        output: "定价建议"
+        time: "1h"
+    total: "2-3天"
+
+  - name: "偿付能力"
+    flow:
+      - skill: /modeling
+        step: "1. 偿付能力模型（Solvency II/偿二代）"
+        output: "偿付能力报告"
+        time: "2天"
+      - skill: /policy
+        step: "2. 监管政策跟踪"
+        output: "政策分析"
+        time: "1h"
+      - skill: /pitch
+        step: "3. 监管汇报"
+        output: "汇报材料"
+        time: "2h"
+    total: "2-3天"
+
+skills:
+  - /modeling
+  - /analyze
+  - /experiment
+  - /review
+  - /pitch
+  - /policy
+  - /decide
+  - /monitor
+  - /mark
+
+output:
+  - "精算模型"
+  - "准备金报告"
+  - "充足性分析"
+  - "定价模型"
+  - "利润测试"
+  - "偿付能力报告"
+  - "监管汇报"

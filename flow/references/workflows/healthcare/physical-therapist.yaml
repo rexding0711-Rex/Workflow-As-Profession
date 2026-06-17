@@ -1,0 +1,118 @@
+---
+name: physical-therapist
+description: "物理治疗师工作流：评估→计划→治疗→记录→出院"
+
+daily:
+  - skill: /execute
+    trigger: "实施治疗、指导训练、记录"
+    output: "治疗日志"
+    time: "持续"
+  - skill: /monitor
+    trigger: "跟踪患者功能、疼痛、进展"
+    output: "治疗监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记功能改善、问题、调整"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "功能评估"
+    flow:
+      - skill: /interview
+        step: "1. 病史采集"
+        output: "病史记录"
+        time: "30min"
+      - skill: /analyze
+        step: "2. 功能评估"
+        output: "评估报告"
+        time: "1h"
+      - skill: /create
+        step: "3. 治疗目标"
+        output: "目标方案"
+        time: "30min"
+    total: "半天"
+
+  - name: "治疗计划"
+    flow:
+      - skill: /plan
+        step: "1. 治疗计划"
+        output: "治疗计划"
+        time: "1h"
+      - skill: /create
+        step: "2. 训练方案"
+        output: "训练方案"
+        time: "1h"
+      - skill: /execute
+        step: "3. 治疗实施"
+        output: "治疗记录"
+        time: "持续"
+      - skill: /monitor
+        step: "4. 治疗监控"
+        output: "监控记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "康复训练"
+    flow:
+      - skill: /execute
+        step: "1. 手法治疗"
+        output: "手法记录"
+        time: "持续"
+      - skill: /execute
+        step: "2. 运动训练"
+        output: "训练记录"
+        time: "持续"
+      - skill: /execute
+        step: "3. 物理因子"
+        output: "因子记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 效果评估"
+        output: "评估报告"
+        time: "30min"
+    total: "持续"
+
+  - name: "出院管理"
+    flow:
+      - skill: /analyze
+        step: "1. 功能评估"
+        output: "出院评估"
+        time: "1h"
+      - skill: /create
+        step: "2. 家庭方案"
+        output: "家庭方案"
+        time: "1h"
+      - skill: /interview
+        step: "3. 患者教育"
+        output: "教育记录"
+        time: "30min"
+      - skill: /execute
+        step: "4. 随访安排"
+        output: "随访记录"
+        time: "30min"
+    total: "半天"
+
+skills:
+  - /execute
+  - /monitor
+  - /interview
+  - /analyze
+  - /create
+  - /plan
+  - /review
+  - /mark
+
+output:
+  - "病史记录"
+  - "评估报告"
+  - "目标方案"
+  - "治疗计划"
+  - "训练方案"
+  - "治疗记录"
+  - "手法记录"
+  - "训练记录"
+  - "出院评估"
+  - "家庭方案"
+  - "教育记录"
+  - "随访记录"

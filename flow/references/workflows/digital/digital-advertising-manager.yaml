@@ -1,0 +1,76 @@
+---
+name: digital-advertising-manager
+description: "数字广告经理工作流：SEM→信息流→DSP→程序化→效果优化"
+
+daily:
+  - skill: /monitor
+    trigger: "监控搜索/信息流/展示广告投放数据"
+    output: "广告仪表盘"
+    time: "15min"
+  - skill: /new-info
+    trigger: "扫描竞价环境、关键词热度、竞品创意"
+    output: "广告情报"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记高转化关键词、优质受众包、创意亮点"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "SEM/搜索广告"
+    flow:
+      - skill: /analyze
+        step: "1. 关键词分析（搜索量/竞争度/意图）"
+        output: "关键词策略"
+        time: "2h"
+      - skill: /create
+        step: "2. 广告文案与落地页优化"
+        output: "广告文案"
+        time: "2h"
+      - skill: /experiment
+        step: "3. 关键词出价实验"
+        output: "实验报告"
+        time: "2h"
+      - skill: /review
+        step: "4. 搜索广告效果复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "1天"
+  - name: "信息流广告"
+    flow:
+      - skill: /user-research
+        step: "1. 受众画像与兴趣定向"
+        output: "受众策略"
+        time: "2h"
+      - skill: /create
+        step: "2. 素材创意矩阵"
+        output: "素材矩阵"
+        time: "3h"
+      - skill: /experiment
+        step: "3. 素材与定向组合测试"
+        output: "测试报告"
+        time: "2h"
+      - skill: /execute
+        step: "4. 放量优化"
+        output: "执行记录"
+        time: "持续"
+    total: "1-2天"
+
+skills:
+  - /monitor
+  - /new-info
+  - /mark
+  - /analyze
+  - /create
+  - /experiment
+  - /review
+  - /user-research
+  - /execute
+
+output:
+  - "关键词策略"
+  - "广告文案与落地页"
+  - "出价实验报告"
+  - "受众策略"
+  - "素材创意矩阵"
+  - "投放效果复盘"

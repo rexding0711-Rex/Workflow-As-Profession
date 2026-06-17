@@ -1,0 +1,124 @@
+---
+name: labor-law-advisor
+description: "劳动法顾问工作流：制度→用工→争议→福利→合规"
+
+daily:
+  - skill: /execute
+    trigger: "审核制度、处理用工、提供咨询"
+    output: "劳动法日志"
+    time: "持续"
+  - skill: /new-info
+    trigger: "跟踪劳动法、司法解释、政策"
+    output: "劳动法情报"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记用工风险、争议、合规"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "制度建设"
+    flow:
+      - skill: /analyze
+        step: "1. 制度审查"
+        output: "制度审查"
+        time: "2h"
+      - skill: /create
+        step: "2. 制度修订"
+        output: "制度修订"
+        time: "3h"
+      - skill: /review
+        step: "3. 合规审核"
+        output: "合规审核"
+        time: "1h"
+      - skill: /execute
+        step: "4. 制度发布"
+        output: "发布记录"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "用工管理"
+    flow:
+      - skill: /interview
+        step: "1. 用工咨询"
+        output: "咨询记录"
+        time: "1h"
+      - skill: /analyze
+        step: "2. 合同审核"
+        output: "合同审核"
+        time: "2h"
+      - skill: /create
+        step: "3. 用工方案"
+        output: "用工方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 方案实施"
+        output: "实施记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "劳动争议"
+    flow:
+      - skill: /interview
+        step: "1. 争议沟通"
+        output: "沟通记录"
+        time: "1h"
+      - skill: /analyze
+        step: "2. 争议分析"
+        output: "争议分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 解决方案"
+        output: "解决方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 仲裁诉讼"
+        output: "仲裁记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "合规培训"
+    flow:
+      - skill: /user-research
+        step: "1. 培训需求"
+        output: "培训需求"
+        time: "1h"
+      - skill: /create
+        step: "2. 培训材料"
+        output: "培训材料"
+        time: "2h"
+      - skill: /workshop
+        step: "3. 培训实施"
+        output: "培训记录"
+        time: "2h"
+      - skill: /review
+        step: "4. 培训评估"
+        output: "评估报告"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /execute
+  - /new-info
+  - /analyze
+  - /create
+  - /review
+  - /interview
+  - /user-research
+  - /workshop
+  - /mark
+
+output:
+  - "制度审查"
+  - "制度修订"
+  - "合规审核"
+  - "咨询记录"
+  - "合同审核"
+  - "用工方案"
+  - "沟通记录"
+  - "争议分析"
+  - "解决方案"
+  - "仲裁记录"
+  - "培训需求"
+  - "培训材料"
+  - "培训记录"

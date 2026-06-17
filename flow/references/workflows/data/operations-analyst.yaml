@@ -1,0 +1,119 @@
+---
+name: operations-analyst
+description: "运营分析工作流：数据→流程→效率→成本→优化"
+
+daily:
+  - skill: /analyze
+    trigger: "分析运营数据、效率、成本"
+    output: "运营分析"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪运营指标、异常、瓶颈"
+    output: "运营监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记运营问题、改进、机会"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "运营数据"
+    flow:
+      - skill: /analyze
+        step: "1. 数据收集"
+        output: "数据收集"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 数据处理"
+        output: "数据处理"
+        time: "2h"
+      - skill: /analyze
+        step: "3. 数据分析"
+        output: "数据分析"
+        time: "3h"
+    total: "1-2天"
+
+  - name: "流程分析"
+    flow:
+      - skill: /process
+        step: "1. 流程梳理"
+        output: "流程梳理"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 流程分析"
+        output: "流程分析"
+        time: "2h"
+      - skill: /visual
+        step: "3. 流程可视化"
+        output: "可视化报告"
+        time: "2h"
+      - skill: /create
+        step: "4. 流程报告"
+        output: "流程报告"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "效率分析"
+    flow:
+      - skill: /analyze
+        step: "1. 效率分析"
+        output: "效率分析"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 效率模型"
+        output: "效率模型"
+        time: "2h"
+      - skill: /create
+        step: "3. 效率报告"
+        output: "效率报告"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 效率汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "成本优化"
+    flow:
+      - skill: /analyze
+        step: "1. 成本分析"
+        output: "成本分析"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 成本模型"
+        output: "成本模型"
+        time: "2h"
+      - skill: /create
+        step: "3. 优化方案"
+        output: "优化方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 优化执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /analyze
+  - /monitor
+  - /process
+  - /visual
+  - /modeling
+  - /create
+  - /pitch
+  - /execute
+  - /mark
+
+output:
+  - "数据收集"
+  - "数据分析"
+  - "流程梳理"
+  - "流程分析"
+  - "可视化报告"
+  - "效率分析"
+  - "效率模型"
+  - "效率报告"
+  - "成本分析"
+  - "成本模型"
+  - "优化方案"
+  - "执行记录"

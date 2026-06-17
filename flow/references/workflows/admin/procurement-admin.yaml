@@ -1,0 +1,103 @@
+---
+name: procurement-admin
+description: "采购行政工作流：采购→比价→订单→跟踪→报销"
+
+daily:
+  - skill: /execute
+    trigger: "处理采购申请、比价、下单"
+    output: "采购日志"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪订单、到货、库存"
+    output: "采购监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记采购问题、成本、供应商"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "采购申请"
+    flow:
+      - skill: /analyze
+        step: "1. 需求收集"
+        output: "需求记录"
+        time: "1h"
+      - skill: /execute
+        step: "2. 申请处理"
+        output: "申请记录"
+        time: "1h"
+      - skill: /review
+        step: "3. 申请审核"
+        output: "审核记录"
+        time: "1h"
+    total: "半天"
+
+  - name: "比价采购"
+    flow:
+      - skill: /tech-compare
+        step: "1. 供应商比价"
+        output: "比价记录"
+        time: "2h"
+      - skill: /execute
+        step: "2. 采购下单"
+        output: "下单记录"
+        time: "1h"
+      - skill: /execute
+        step: "3. 订单跟踪"
+        output: "跟踪记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "到货管理"
+    flow:
+      - skill: /execute
+        step: "1. 到货验收"
+        output: "验收记录"
+        time: "1h"
+      - skill: /execute
+        step: "2. 入库管理"
+        output: "入库记录"
+        time: "1h"
+      - skill: /monitor
+        step: "3. 库存监控"
+        output: "监控记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "报销结算"
+    flow:
+      - skill: /analyze
+        step: "1. 费用核对"
+        output: "核对记录"
+        time: "1h"
+      - skill: /execute
+        step: "2. 报销处理"
+        output: "报销记录"
+        time: "1h"
+      - skill: /execute
+        step: "3. 结算跟进"
+        output: "结算记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /analyze
+  - /tech-compare
+  - /review
+  - /mark
+
+output:
+  - "需求记录"
+  - "申请记录"
+  - "审核记录"
+  - "比价记录"
+  - "下单记录"
+  - "跟踪记录"
+  - "验收记录"
+  - "入库记录"
+  - "核对记录"
+  - "报销记录"
+  - "结算记录"

@@ -1,0 +1,126 @@
+---
+name: channel-manager
+description: "渠道经理工作流：渠道策略→合作伙伴→谈判→合同→市场"
+
+daily:
+  - skill: /crm
+    trigger: "查看渠道伙伴状态、业绩、问题"
+    output: "渠道状态"
+    time: "10min"
+  - skill: /new-info
+    trigger: "扫描渠道动态、竞品渠道策略"
+    output: "渠道情报"
+    time: "5min"
+  - skill: /mark
+    trigger: "标记渠道风险、机会、合作伙伴反馈"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "渠道策略"
+    flow:
+      - skill: /market-search
+        step: "1. 渠道市场分析（覆盖/密度/效率）"
+        output: "市场分析"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 渠道绩效与问题分析"
+        output: "绩效分析"
+        time: "2h"
+      - skill: /professional
+        step: "3. 渠道模式设计（直销/分销/代理）"
+        output: "渠道模式"
+        time: "2h"
+      - skill: /decide
+        step: "4. 渠道优先级决策"
+        output: "决策矩阵"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "合作伙伴招募"
+    flow:
+      - skill: /market-search
+        step: "1. 潜在合作伙伴画像"
+        output: "伙伴画像"
+        time: "1h"
+      - skill: /network
+        step: "2. 合作伙伴接触与评估"
+        output: "评估报告"
+        time: "2h"
+      - skill: /sales
+        step: "3. 合作伙伴招募方案"
+        output: "招募方案"
+        time: "2h"
+      - skill: /deal
+        step: "4. 合作协议谈判"
+        output: "谈判策略"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "渠道赋能"
+    flow:
+      - skill: /workshop
+        step: "1. 合作伙伴培训"
+        output: "培训方案"
+        time: "3h"
+      - skill: /create
+        step: "2. 渠道营销物料"
+        output: "营销物料"
+        time: "2h"
+      - skill: /process
+        step: "3. 渠道流程与SOP"
+        output: "渠道SOP"
+        time: "2h"
+      - skill: /execute
+        step: "4. 渠道执行跟踪"
+        output: "执行计划"
+        time: "持续"
+    total: "持续"
+
+  - name: "渠道冲突管理"
+    flow:
+      - skill: /analyze
+        step: "1. 渠道冲突分析（串货/价格/区域）"
+        output: "冲突分析"
+        time: "1h"
+      - skill: /policy
+        step: "2. 渠道政策与合规审查"
+        output: "政策审查"
+        time: "1h"
+      - skill: /sales
+        step: "3. 冲突解决方案"
+        output: "解决方案"
+        time: "1h"
+      - skill: /execute
+        step: "4. 方案执行"
+        output: "执行记录"
+        time: "持续"
+    total: "1-2天"
+
+skills:
+  - /crm
+  - /market-search
+  - /analyze
+  - /professional
+  - /decide
+  - /network
+  - /sales
+  - /deal
+  - /workshop
+  - /create
+  - /process
+  - /execute
+  - /policy
+  - /new-info
+  - /mark
+
+output:
+  - "市场分析"
+  - "绩效分析"
+  - "渠道模式"
+  - "伙伴画像"
+  - "招募方案"
+  - "培训方案"
+  - "渠道SOP"
+  - "冲突分析"
+  - "解决方案"

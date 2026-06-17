@@ -1,0 +1,126 @@
+---
+name: social-media
+description: "社交媒体工作流：内容→社区→数据分析→GEO→活动"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪社媒数据、互动、舆情、竞品动态"
+    output: "社媒仪表盘"
+    time: "15min"
+  - skill: /new-info
+    trigger: "扫描热点、话题、行业动态"
+    output: "社媒情报"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记热点机会、用户反馈、危机信号"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "社媒策略"
+    flow:
+      - skill: /market-search
+        step: "1. 受众与平台分析"
+        output: "受众分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 内容策略与选题"
+        output: "内容策略"
+        time: "2h"
+      - skill: /geo
+        step: "3. 社媒SEO策略"
+        output: "GEO方案"
+        time: "1h"
+      - skill: /decide
+        step: "4. 平台优先级决策"
+        output: "决策方案"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "内容运营"
+    flow:
+      - skill: /create
+        step: "1. 社媒内容创作"
+        output: "内容素材"
+        time: "3h"
+      - skill: /visual
+        step: "2. 视觉设计"
+        output: "视觉素材"
+        time: "2h"
+      - skill: /experiment
+        step: "3. 内容A/B测试"
+        output: "测试结果"
+        time: "2周"
+      - skill: /execute
+        step: "4. 发布执行"
+        output: "发布计划"
+        time: "持续"
+    total: "持续"
+
+  - name: "社区管理"
+    flow:
+      - skill: /user-research
+        step: "1. 用户画像与需求分析"
+        output: "用户画像"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 社区数据分析"
+        output: "社区分析"
+        time: "2h"
+      - skill: /network
+        step: "3. KOL/核心用户运营"
+        output: "运营计划"
+        time: "2h"
+      - skill: /execute
+        step: "4. 社区活动执行"
+        output: "活动计划"
+        time: "持续"
+    total: "持续"
+
+  - name: "社媒活动"
+    flow:
+      - skill: /event-manager
+        step: "1. 线上活动策划"
+        output: "活动方案"
+        time: "2h"
+      - skill: /create
+        step: "2. 活动物料制作"
+        output: "活动物料"
+        time: "3h"
+      - skill: /execute
+        step: "3. 活动执行"
+        output: "执行计划"
+        time: "持续"
+      - skill: /review
+        step: "4. 活动复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "1-2周"
+
+skills:
+  - /monitor
+  - /new-info
+  - /market-search
+  - /create
+  - /geo
+  - /decide
+  - /visual
+  - /experiment
+  - /execute
+  - /user-research
+  - /analyze
+  - /network
+  - /event-manager
+  - /review
+  - /mark
+
+output:
+  - "受众分析"
+  - "内容策略"
+  - "GEO方案"
+  - "内容素材"
+  - "视觉素材"
+  - "用户画像"
+  - "社区分析"
+  - "活动方案"
+  - "复盘报告"

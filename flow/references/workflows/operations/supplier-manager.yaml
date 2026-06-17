@@ -1,0 +1,125 @@
+---
+name: supplier-manager
+description: "供应商经理工作流：寻源→评估→合作→绩效→优化"
+
+daily:
+  - skill: /execute
+    trigger: "管理供应商、处理采购、协调交付"
+    output: "供应商日志"
+    time: "持续"
+  - skill: /monitor
+    trigger: "跟踪供应商绩效、质量、交付"
+    output: "供应商监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记供应商风险、问题、机会"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "供应商寻源"
+    flow:
+      - skill: /market-search
+        step: "1. 市场调研"
+        output: "市场调研"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 供应商筛选"
+        output: "筛选报告"
+        time: "2h"
+      - skill: /dd
+        step: "3. 资质尽调"
+        output: "尽调报告"
+        time: "2h"
+      - skill: /create
+        step: "4. 寻源报告"
+        output: "寻源报告"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "供应商评估"
+    flow:
+      - skill: /analyze
+        step: "1. 质量评估"
+        output: "质量评估"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 成本评估"
+        output: "成本评估"
+        time: "2h"
+      - skill: /analyze
+        step: "3. 交付评估"
+        output: "交付评估"
+        time: "2h"
+      - skill: /create
+        step: "4. 综合评估"
+        output: "综合评估"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "合作管理"
+    flow:
+      - skill: /negotiate
+        step: "1. 合同谈判"
+        output: "谈判记录"
+        time: "2h"
+      - skill: /execute
+        step: "2. 合同签订"
+        output: "签订记录"
+        time: "1h"
+      - skill: /execute
+        step: "3. 订单管理"
+        output: "订单记录"
+        time: "持续"
+      - skill: /execute
+        step: "4. 交付跟踪"
+        output: "跟踪记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "供应商优化"
+    flow:
+      - skill: /analyze
+        step: "1. 绩效分析"
+        output: "绩效分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 优化方案"
+        output: "优化方案"
+        time: "2h"
+      - skill: /execute
+        step: "3. 关系优化"
+        output: "优化记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 优化评估"
+        output: "评估报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /market-search
+  - /analyze
+  - /dd
+  - /create
+  - /negotiate
+  - /review
+  - /mark
+
+output:
+  - "市场调研"
+  - "筛选报告"
+  - "尽调报告"
+  - "寻源报告"
+  - "质量评估"
+  - "成本评估"
+  - "交付评估"
+  - "综合评估"
+  - "谈判记录"
+  - "签订记录"
+  - "订单记录"
+  - "跟踪记录"
+  - "绩效分析"
+  - "优化方案"

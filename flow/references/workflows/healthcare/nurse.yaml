@@ -1,0 +1,121 @@
+---
+name: nurse
+description: "护士工作流：护理→监测→执行→宣教→交接"
+
+daily:
+  - skill: /execute
+    trigger: "执行医嘱、护理操作、观察病情"
+    output: "护理日志"
+    time: "持续"
+  - skill: /monitor
+    trigger: "监测生命体征、输液、引流"
+    output: "护理监控"
+    time: "持续"
+  - skill: /mark
+    trigger: "标记病情变化、异常、风险"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "患者护理"
+    flow:
+      - skill: /execute
+        step: "1. 基础护理"
+        output: "护理记录"
+        time: "持续"
+      - skill: /execute
+        step: "2. 用药执行"
+        output: "用药记录"
+        time: "持续"
+      - skill: /execute
+        step: "3. 专科护理"
+        output: "专科记录"
+        time: "持续"
+      - skill: /monitor
+        step: "4. 护理监控"
+        output: "监控记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "健康宣教"
+    flow:
+      - skill: /interview
+        step: "1. 患者评估"
+        output: "评估记录"
+        time: "1h"
+      - skill: /create
+        step: "2. 宣教方案"
+        output: "宣教方案"
+        time: "1h"
+      - skill: /execute
+        step: "3. 宣教执行"
+        output: "宣教记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 效果评估"
+        output: "评估报告"
+        time: "30min"
+    total: "持续"
+
+  - name: "急救处理"
+    flow:
+      - skill: /analyze
+        step: "1. 病情评估"
+        output: "评估记录"
+        time: "10min"
+      - skill: /execute
+        step: "2. 急救执行"
+        output: "急救记录"
+        time: "持续"
+      - skill: /execute
+        step: "3. 配合抢救"
+        output: "抢救记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 急救复盘"
+        output: "复盘报告"
+        time: "30min"
+    total: "持续"
+
+  - name: "护理质控"
+    flow:
+      - skill: /analyze
+        step: "1. 质量检查"
+        output: "检查记录"
+        time: "2h"
+      - skill: /review
+        step: "2. 问题分析"
+        output: "问题分析"
+        time: "1h"
+      - skill: /create
+        step: "3. 改进方案"
+        output: "改进方案"
+        time: "1h"
+      - skill: /execute
+        step: "4. 改进执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /interview
+  - /create
+  - /analyze
+  - /review
+  - /mark
+
+output:
+  - "护理记录"
+  - "用药记录"
+  - "专科记录"
+  - "监控记录"
+  - "评估记录"
+  - "宣教方案"
+  - "宣教记录"
+  - "急救记录"
+  - "抢救记录"
+  - "检查记录"
+  - "问题分析"
+  - "改进方案"

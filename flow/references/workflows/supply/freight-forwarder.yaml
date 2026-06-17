@@ -1,0 +1,78 @@
+---
+name: freight-forwarder
+description: "货运代理工作流：询价→订舱→单证→跟踪→交付"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪所有在途货物状态、船期/航班变化"
+    output: "货运监控"
+    time: "20min"
+  - skill: /execute
+    trigger: "处理订舱、单证、报关、异常协调"
+    output: "操作执行"
+    time: "持续"
+  - skill: /mark
+    trigger: "标记延误预警、单证问题、费率变化"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "运输方案设计"
+    flow:
+      - skill: /analyze
+        step: "1. 货物特性与时效要求分析"
+        output: "需求分析"
+        time: "1h"
+      - skill: /tech-compare
+        step: "2. 运输方式对比（海运/空运/铁运/多式联运）"
+        output: "方式对比"
+        time: "1h"
+      - skill: /pricing
+        step: "3. 运价询比与成本优化"
+        output: "运价分析"
+        time: "2h"
+      - skill: /create
+        step: "4. 运输方案建议书"
+        output: "运输方案"
+        time: "1h"
+    total: "1天"
+  - name: "大客户管理"
+    flow:
+      - skill: /crm
+        step: "1. 客户档案与服务记录"
+        output: "客户档案"
+        time: "1h"
+      - skill: /process
+        step: "2. 客户SOP定制"
+        output: "客户SOP"
+        time: "2h"
+      - skill: /review
+        step: "3. 月度服务报告"
+        output: "服务报告"
+        time: "2h"
+      - skill: /network
+        step: "4. 海外代理网络维护"
+        output: "代理网络"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /monitor
+  - /execute
+  - /mark
+  - /analyze
+  - /tech-compare
+  - /pricing
+  - /create
+  - /crm
+  - /process
+  - /review
+  - /network
+
+output:
+  - "需求分析"
+  - "运输方式对比"
+  - "运价分析"
+  - "运输方案"
+  - "客户SOP"
+  - "月度服务报告"

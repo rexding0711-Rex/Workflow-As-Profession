@@ -1,0 +1,75 @@
+---
+name: demand-planner
+description: "需求计划员工作流：需求预测→S&OP→库存策略→协同→偏差分析"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪实际需求 vs 预测偏差、库存水位、缺货率"
+    output: "需求监控"
+    time: "15min"
+  - skill: /analyze
+    trigger: "更新短期需求预测"
+    output: "预测更新"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记预测偏差、需求异常、补货信号"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "需求预测"
+    flow:
+      - skill: /analyze
+        step: "1. 历史需求数据分析"
+        output: "历史分析"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 统计预测模型（时间序列/回归/ML）"
+        output: "预测模型"
+        time: "3h"
+      - skill: /professional
+        step: "3. 市场与促销因素叠加"
+        output: "综合预测"
+        time: "2h"
+      - skill: /visual
+        step: "4. 预测可视化与汇报"
+        output: "预测看板"
+        time: "1h"
+    total: "1-2天"
+  - name: "S&OP流程"
+    flow:
+      - skill: /analyze
+        step: "1. 需求供应缺口分析"
+        output: "缺口分析"
+        time: "2h"
+      - skill: /workshop
+        step: "2. S&OP会议准备"
+        output: "会议材料"
+        time: "2h"
+      - skill: /decide
+        step: "3. 产供销平衡决策"
+        output: "决策建议"
+        time: "1h"
+      - skill: /execute
+        step: "4. 行动项跟踪"
+        output: "执行记录"
+        time: "持续"
+    total: "每月"
+
+skills:
+  - /monitor
+  - /analyze
+  - /mark
+  - /modeling
+  - /professional
+  - /visual
+  - /workshop
+  - /decide
+  - /execute
+
+output:
+  - "需求预测模型"
+  - "预测看板"
+  - "缺口分析"
+  - "S&OP会议材料"
+  - "产供销决策建议"

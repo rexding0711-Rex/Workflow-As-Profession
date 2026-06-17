@@ -1,0 +1,125 @@
+---
+name: corporate-governance
+description: "公司治理工作流：架构→制度→合规→披露→评估"
+
+daily:
+  - skill: /execute
+    trigger: "管理治理结构、审核制度、监督合规"
+    output: "治理日志"
+    time: "持续"
+  - skill: /new-info
+    trigger: "跟踪公司法、证券法、治理准则"
+    output: "治理情报"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记治理风险、合规、改进"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "治理架构"
+    flow:
+      - skill: /analyze
+        step: "1. 架构分析"
+        output: "架构分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 章程修订"
+        output: "章程修订"
+        time: "3h"
+      - skill: /create
+        step: "3. 议事规则"
+        output: "议事规则"
+        time: "2h"
+      - skill: /review
+        step: "4. 架构评审"
+        output: "评审意见"
+        time: "1h"
+    total: "2-3天"
+
+  - name: "制度建设"
+    flow:
+      - skill: /policy
+        step: "1. 制度框架"
+        output: "制度框架"
+        time: "2h"
+      - skill: /create
+        step: "2. 制度编写"
+        output: "制度编写"
+        time: "3h"
+      - skill: /execute
+        step: "3. 制度发布"
+        output: "发布记录"
+        time: "1h"
+      - skill: /workshop
+        step: "4. 制度培训"
+        output: "培训记录"
+        time: "2h"
+    total: "2-3天"
+
+  - name: "信息披露"
+    flow:
+      - skill: /analyze
+        step: "1. 披露分析"
+        output: "披露分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 披露文件"
+        output: "披露文件"
+        time: "3h"
+      - skill: /review
+        step: "3. 披露审核"
+        output: "审核记录"
+        time: "1h"
+      - skill: /execute
+        step: "4. 披露发布"
+        output: "发布记录"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "治理评估"
+    flow:
+      - skill: /analyze
+        step: "1. 治理评估"
+        output: "治理评估"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 评估模型"
+        output: "评估模型"
+        time: "2h"
+      - skill: /create
+        step: "3. 改进方案"
+        output: "改进方案"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 评估汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /execute
+  - /new-info
+  - /analyze
+  - /create
+  - /review
+  - /policy
+  - /workshop
+  - /modeling
+  - /pitch
+  - /mark
+
+output:
+  - "架构分析"
+  - "章程修订"
+  - "议事规则"
+  - "制度框架"
+  - "制度编写"
+  - "发布记录"
+  - "披露分析"
+  - "披露文件"
+  - "披露审核"
+  - "治理评估"
+  - "评估模型"
+  - "改进方案"
+  - "汇报材料"

@@ -1,0 +1,113 @@
+---
+name: data-entry-clerk
+description: "数据录入工作流：接收→核对→录入→校验→归档"
+
+daily:
+  - skill: /execute
+    trigger: "处理数据录入、核对、校验"
+    output: "录入日报"
+    time: "10min"
+  - skill: /monitor
+    trigger: "监控数据质量、进度、异常"
+    output: "录入监控"
+    time: "5min"
+  - skill: /mark
+    trigger: "标记数据问题、错误、改进"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "数据录入"
+    flow:
+      - skill: /execute
+        step: "1. 数据接收"
+        output: "接收记录"
+        time: "1h"
+      - skill: /execute
+        step: "2. 数据录入"
+        output: "录入记录"
+        time: "3h"
+      - skill: /review
+        step: "3. 数据校验"
+        output: "校验记录"
+        time: "2h"
+      - skill: /execute
+        step: "4. 数据归档"
+        output: "归档记录"
+        time: "1h"
+    total: "持续"
+
+  - name: "数据核对"
+    flow:
+      - skill: /analyze
+        step: "1. 数据比对"
+        output: "比对记录"
+        time: "2h"
+      - skill: /review
+        step: "2. 差异分析"
+        output: "差异分析"
+        time: "2h"
+      - skill: /execute
+        step: "3. 差异修正"
+        output: "修正记录"
+        time: "2h"
+      - skill: /review
+        step: "4. 复核"
+        output: "复核记录"
+        time: "1h"
+    total: "持续"
+
+  - name: "报表制作"
+    flow:
+      - skill: /analyze
+        step: "1. 数据提取"
+        output: "提取记录"
+        time: "2h"
+      - skill: /visual
+        step: "2. 报表制作"
+        output: "报表"
+        time: "2h"
+      - skill: /review
+        step: "3. 报表审核"
+        output: "审核记录"
+        time: "1h"
+    total: "半天"
+
+  - name: "系统维护"
+    flow:
+      - skill: /execute
+        step: "1. 系统操作"
+        output: "操作记录"
+        time: "持续"
+      - skill: /monitor
+        step: "2. 系统监控"
+        output: "监控记录"
+        time: "持续"
+      - skill: /execute
+        step: "3. 系统优化"
+        output: "优化记录"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /analyze
+  - /review
+  - /visual
+  - /mark
+
+output:
+  - "接收记录"
+  - "录入记录"
+  - "校验记录"
+  - "归档记录"
+  - "比对记录"
+  - "差异分析"
+  - "修正记录"
+  - "复核记录"
+  - "提取记录"
+  - "报表"
+  - "审核记录"
+  - "操作记录"
+  - "优化记录"

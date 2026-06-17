@@ -1,0 +1,125 @@
+---
+name: employee-relations-specialist
+description: "员工关系专员工作流：沟通→冲突→合规→活动→离职"
+
+daily:
+  - skill: /execute
+    trigger: "处理员工咨询、投诉、纠纷"
+    output: "关系日报"
+    time: "15min"
+  - skill: /monitor
+    trigger: "监控员工满意度、流失率、合规"
+    output: "关系监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记员工问题、风险、改进"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "员工沟通"
+    flow:
+      - skill: /interview
+        step: "1. 员工访谈"
+        output: "访谈记录"
+        time: "2h"
+      - skill: /user-research
+        step: "2. 满意度调研"
+        output: "满意度报告"
+        time: "2h"
+      - skill: /create
+        step: "3. 沟通方案"
+        output: "沟通方案"
+        time: "1h"
+      - skill: /execute
+        step: "4. 沟通执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "冲突处理"
+    flow:
+      - skill: /interview
+        step: "1. 冲突调查"
+        output: "调查报告"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 冲突分析"
+        output: "冲突分析"
+        time: "1h"
+      - skill: /create
+        step: "3. 调解方案"
+        output: "调解方案"
+        time: "1h"
+      - skill: /execute
+        step: "4. 调解执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "合规管理"
+    flow:
+      - skill: /policy
+        step: "1. 劳动法规研究"
+        output: "法规研究"
+        time: "2h"
+      - skill: /process
+        step: "2. 合规流程"
+        output: "合规流程"
+        time: "2h"
+      - skill: /execute
+        step: "3. 合规执行"
+        output: "执行记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 合规审计"
+        output: "审计报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "离职管理"
+    flow:
+      - skill: /interview
+        step: "1. 离职面谈"
+        output: "面谈记录"
+        time: "1h"
+      - skill: /analyze
+        step: "2. 离职分析"
+        output: "离职分析"
+        time: "1h"
+      - skill: /execute
+        step: "3. 离职手续"
+        output: "手续记录"
+        time: "1h"
+      - skill: /review
+        step: "4. 离职复盘"
+        output: "复盘报告"
+        time: "30min"
+    total: "半天"
+
+skills:
+  - /execute
+  - /monitor
+  - /interview
+  - /user-research
+  - /create
+  - /analyze
+  - /policy
+  - /process
+  - /review
+  - /mark
+
+output:
+  - "访谈记录"
+  - "满意度报告"
+  - "沟通方案"
+  - "调查报告"
+  - "冲突分析"
+  - "调解方案"
+  - "法规研究"
+  - "合规流程"
+  - "审计报告"
+  - "面谈记录"
+  - "离职分析"
+  - "手续记录"
+  - "复盘报告"

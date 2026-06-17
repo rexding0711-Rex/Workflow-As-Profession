@@ -1,0 +1,124 @@
+---
+name: mobile-developer
+description: "移动开发者工作流：需求→设计→开发→测试→发布"
+
+daily:
+  - skill: /execute
+    trigger: "编码开发、调试测试、修复Bug"
+    output: "开发日志"
+    time: "持续"
+  - skill: /new-info
+    trigger: "跟踪技术更新、平台政策、竞品"
+    output: "技术情报"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记技术问题、优化、方案"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "需求开发"
+    flow:
+      - skill: /analyze
+        step: "1. 需求分析"
+        output: "需求分析"
+        time: "2h"
+      - skill: /design
+        step: "2. 技术设计"
+        output: "技术设计"
+        time: "2h"
+      - skill: /execute
+        step: "3. 代码开发"
+        output: "开发记录"
+        time: "持续"
+      - skill: /execute
+        step: "4. 代码审查"
+        output: "审查记录"
+        time: "1h"
+    total: "持续"
+
+  - name: "UI实现"
+    flow:
+      - skill: /visual
+        step: "1. UI设计稿"
+        output: "UI设计稿"
+        time: "2h"
+      - skill: /execute
+        step: "2. UI开发"
+        output: "UI开发"
+        time: "3h"
+      - skill: /experiment
+        step: "3. UI测试"
+        output: "UI测试"
+        time: "2h"
+      - skill: /review
+        step: "4. UI验收"
+        output: "验收记录"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "性能优化"
+    flow:
+      - skill: /analyze
+        step: "1. 性能分析"
+        output: "性能分析"
+        time: "2h"
+      - skill: /execute
+        step: "2. 优化开发"
+        output: "优化记录"
+        time: "3h"
+      - skill: /experiment
+        step: "3. 性能测试"
+        output: "测试报告"
+        time: "2h"
+      - skill: /review
+        step: "4. 优化验证"
+        output: "验证记录"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "发布运维"
+    flow:
+      - skill: /execute
+        step: "1. 打包签名"
+        output: "打包记录"
+        time: "1h"
+      - skill: /execute
+        step: "2. 商店发布"
+        output: "发布记录"
+        time: "1h"
+      - skill: /monitor
+        step: "3. 上线监控"
+        output: "监控记录"
+        time: "持续"
+      - skill: /execute
+        step: "4. 热修复"
+        output: "修复记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /execute
+  - /new-info
+  - /analyze
+  - /design
+  - /visual
+  - /experiment
+  - /review
+  - /monitor
+  - /mark
+
+output:
+  - "需求分析"
+  - "技术设计"
+  - "开发记录"
+  - "审查记录"
+  - "UI设计稿"
+  - "UI开发"
+  - "UI测试"
+  - "性能分析"
+  - "优化记录"
+  - "测试报告"
+  - "打包记录"
+  - "发布记录"
+  - "监控记录"

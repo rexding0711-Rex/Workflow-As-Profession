@@ -1,0 +1,105 @@
+---
+name: tutor
+description: "家教工作流：诊断→计划→授课→反馈→调整"
+
+daily:
+  - skill: /execute
+    trigger: "授课、答疑、批改"
+    output: "辅导日志"
+    time: "持续"
+  - skill: /monitor
+    trigger: "跟踪学生进度、问题、效果"
+    output: "辅导监控"
+    time: "5min"
+  - skill: /mark
+    trigger: "标记学生问题、进步、调整"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "学情诊断"
+    flow:
+      - skill: /interview
+        step: "1. 学生沟通"
+        output: "沟通记录"
+        time: "1h"
+      - skill: /analyze
+        step: "2. 学情测试"
+        output: "测试分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 诊断报告"
+        output: "诊断报告"
+        time: "1h"
+    total: "半天"
+
+  - name: "辅导计划"
+    flow:
+      - skill: /plan
+        step: "1. 目标设定"
+        output: "目标方案"
+        time: "1h"
+      - skill: /create
+        step: "2. 辅导方案"
+        output: "辅导方案"
+        time: "2h"
+      - skill: /plan
+        step: "3. 时间安排"
+        output: "时间安排"
+        time: "1h"
+    total: "半天"
+
+  - name: "辅导实施"
+    flow:
+      - skill: /execute
+        step: "1. 知识讲解"
+        output: "讲解记录"
+        time: "持续"
+      - skill: /execute
+        step: "2. 练习辅导"
+        output: "练习记录"
+        time: "持续"
+      - skill: /execute
+        step: "3. 作业检查"
+        output: "检查记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "效果反馈"
+    flow:
+      - skill: /analyze
+        step: "1. 进步分析"
+        output: "进步分析"
+        time: "1h"
+      - skill: /interview
+        step: "2. 家长沟通"
+        output: "沟通记录"
+        time: "1h"
+      - skill: /review
+        step: "3. 辅导复盘"
+        output: "复盘报告"
+        time: "30min"
+    total: "半天"
+
+skills:
+  - /execute
+  - /monitor
+  - /interview
+  - /analyze
+  - /create
+  - /plan
+  - /review
+  - /mark
+
+output:
+  - "沟通记录"
+  - "测试分析"
+  - "诊断报告"
+  - "目标方案"
+  - "辅导方案"
+  - "时间安排"
+  - "讲解记录"
+  - "练习记录"
+  - "检查记录"
+  - "进步分析"
+  - "复盘报告"

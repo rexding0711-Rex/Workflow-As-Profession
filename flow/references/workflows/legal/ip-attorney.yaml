@@ -1,0 +1,122 @@
+---
+name: ip-attorney
+description: "知识产权律师工作流：申请→保护→维权→许可→策略"
+
+daily:
+  - skill: /execute
+    trigger: "管理知识产权、处理侵权、许可谈判"
+    output: "IP日志"
+    time: "持续"
+  - skill: /new-info
+    trigger: "跟踪IP法规、技术、案例"
+    output: "IP情报"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记IP风险、机会、策略"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "IP申请"
+    flow:
+      - skill: /analyze
+        step: "1. 可专利性分析"
+        output: "可专利性分析"
+        time: "2h"
+      - skill: /execute
+        step: "2. 申请文件"
+        output: "申请文件"
+        time: "3h"
+      - skill: /execute
+        step: "3. 申请提交"
+        output: "提交记录"
+        time: "1h"
+      - skill: /execute
+        step: "4. 审查跟进"
+        output: "跟进记录"
+        time: "持续"
+    total: "2-3天"
+
+  - name: "IP保护"
+    flow:
+      - skill: /monitor
+        step: "1. 侵权监测"
+        output: "监测记录"
+        time: "持续"
+      - skill: /analyze
+        step: "2. 侵权分析"
+        output: "侵权分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 保护方案"
+        output: "保护方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 保护实施"
+        output: "实施记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "IP维权"
+    flow:
+      - skill: /analyze
+        step: "1. 侵权取证"
+        output: "取证记录"
+        time: "2h"
+      - skill: /create
+        step: "2. 维权方案"
+        output: "维权方案"
+        time: "2h"
+      - skill: /execute
+        step: "3. 行政投诉"
+        output: "投诉记录"
+        time: "2h"
+      - skill: /execute
+        step: "4. 诉讼维权"
+        output: "诉讼记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "IP许可"
+    flow:
+      - skill: /analyze
+        step: "1. 许可分析"
+        output: "许可分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 许可协议"
+        output: "许可协议"
+        time: "3h"
+      - skill: /negotiate
+        step: "3. 许可谈判"
+        output: "谈判记录"
+        time: "2h"
+      - skill: /execute
+        step: "4. 许可管理"
+        output: "管理记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /execute
+  - /new-info
+  - /analyze
+  - /monitor
+  - /create
+  - /negotiate
+  - /mark
+
+output:
+  - "可专利性分析"
+  - "申请文件"
+  - "提交记录"
+  - "监测记录"
+  - "侵权分析"
+  - "保护方案"
+  - "取证记录"
+  - "维权方案"
+  - "投诉记录"
+  - "许可分析"
+  - "许可协议"
+  - "谈判记录"
+  - "管理记录"

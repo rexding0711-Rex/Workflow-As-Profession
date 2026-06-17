@@ -1,0 +1,112 @@
+---
+name: data-scientist
+description: "数据科学家工作流：数据→建模→实验→可视化→分析"
+
+daily:
+  - skill: /analyze
+    trigger: "跟踪数据质量、模型性能、实验结果"
+    output: "数据仪表盘"
+    time: "15min"
+  - skill: /monitor
+    trigger: "监控模型指标、异常、数据漂移"
+    output: "模型监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记数据洞察、模型改进、假设"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "数据探索"
+    flow:
+      - skill: /analyze
+        step: "1. 数据清洗与探索"
+        output: "EDA报告"
+        time: "3h"
+      - skill: /visual
+        step: "2. 数据可视化"
+        output: "可视化报告"
+        time: "2h"
+      - skill: /analyze
+        step: "3. 特征工程"
+        output: "特征报告"
+        time: "3h"
+    total: "1-2天"
+
+  - name: "模型开发"
+    flow:
+      - skill: /modeling
+        step: "1. 模型选择与训练"
+        output: "模型方案"
+        time: "3h"
+      - skill: /experiment
+        step: "2. 模型验证与调参"
+        output: "验证报告"
+        time: "3h"
+      - skill: /analyze
+        step: "3. 模型性能评估"
+        output: "性能评估"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "模型上线"
+    flow:
+      - skill: /tech-compare
+        step: "1. 部署方案对比"
+        output: "部署对比"
+        time: "2h"
+      - skill: /execute
+        step: "2. 模型部署"
+        output: "部署记录"
+        time: "2h"
+      - skill: /monitor
+        step: "3. 模型性能监控"
+        output: "性能监控"
+        time: "持续"
+      - skill: /review
+        step: "4. 模型复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "2-3天"
+
+  - name: "数据产品"
+    flow:
+      - skill: /user-research
+        step: "1. 数据需求分析"
+        output: "需求分析"
+        time: "2h"
+      - skill: /design
+        step: "2. 数据产品设计"
+        output: "产品设计"
+        time: "2h"
+      - skill: /create
+        step: "3. 数据PRD"
+        output: "PRD文档"
+        time: "2h"
+    total: "1-2天"
+
+skills:
+  - /analyze
+  - /visual
+  - /modeling
+  - /experiment
+  - /monitor
+  - /tech-compare
+  - /execute
+  - /review
+  - /user-research
+  - /design
+  - /create
+  - /mark
+
+output:
+  - "EDA报告"
+  - "可视化报告"
+  - "特征报告"
+  - "模型方案"
+  - "验证报告"
+  - "性能评估"
+  - "部署对比"
+  - "性能监控"
+  - "复盘报告"
+  - "需求分析"

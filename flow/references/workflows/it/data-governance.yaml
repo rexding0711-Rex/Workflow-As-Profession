@@ -1,0 +1,122 @@
+---
+name: data-governance
+description: "数据治理工作流：标准→质量→安全→合规→运营"
+
+daily:
+  - skill: /execute
+    trigger: "制定标准、审核数据、监控质量"
+    output: "治理日志"
+    time: "持续"
+  - skill: /monitor
+    trigger: "跟踪数据质量、合规、异常"
+    output: "治理监控"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记数据问题、风险、改进"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "标准制定"
+    flow:
+      - skill: /analyze
+        step: "1. 现状分析"
+        output: "现状分析"
+        time: "2h"
+      - skill: /policy
+        step: "2. 标准定义"
+        output: "标准定义"
+        time: "3h"
+      - skill: /create
+        step: "3. 标准文档"
+        output: "标准文档"
+        time: "2h"
+      - skill: /review
+        step: "4. 标准发布"
+        output: "发布记录"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "质量管控"
+    flow:
+      - skill: /analyze
+        step: "1. 质量分析"
+        output: "质量分析"
+        time: "2h"
+      - skill: /execute
+        step: "2. 质量校验"
+        output: "校验记录"
+        time: "2h"
+      - skill: /execute
+        step: "3. 数据清洗"
+        output: "清洗记录"
+        time: "2h"
+      - skill: /review
+        step: "4. 质量报告"
+        output: "质量报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "安全管理"
+    flow:
+      - skill: /policy
+        step: "1. 安全策略"
+        output: "安全策略"
+        time: "2h"
+      - skill: /execute
+        step: "2. 权限控制"
+        output: "控制记录"
+        time: "2h"
+      - skill: /execute
+        step: "3. 脱敏加密"
+        output: "加密记录"
+        time: "2h"
+      - skill: /review
+        step: "4. 安全审计"
+        output: "审计报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "合规运营"
+    flow:
+      - skill: /analyze
+        step: "1. 合规分析"
+        output: "合规分析"
+        time: "2h"
+      - skill: /execute
+        step: "2. 合规检查"
+        output: "检查记录"
+        time: "2h"
+      - skill: /create
+        step: "3. 改进方案"
+        output: "改进方案"
+        time: "2h"
+      - skill: /review
+        step: "4. 合规评估"
+        output: "评估报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /analyze
+  - /policy
+  - /create
+  - /review
+  - /mark
+
+output:
+  - "现状分析"
+  - "标准定义"
+  - "标准文档"
+  - "质量分析"
+  - "校验记录"
+  - "清洗记录"
+  - "质量报告"
+  - "安全策略"
+  - "控制记录"
+  - "加密记录"
+  - "合规分析"
+  - "检查记录"
+  - "改进方案"

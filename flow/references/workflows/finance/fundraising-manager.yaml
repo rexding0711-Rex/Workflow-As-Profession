@@ -1,0 +1,115 @@
+---
+name: fundraising-manager
+description: "募资经理工作流：汇报→融资→市场→客户关系→pitch"
+
+daily:
+  - skill: /new-info
+    trigger: "扫描LP动态、市场募资环境、竞品基金"
+    output: "募资情报"
+    time: "10min"
+  - skill: /network
+    trigger: "维护LP关系、跟进潜在投资人"
+    output: "关系提醒"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记LP反馈、市场信号、募资进展"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "募资材料准备"
+    flow:
+      - skill: /pitch
+        step: "1. PPM/Teaser/路演材料"
+        output: "募资材料"
+        time: "3天"
+      - skill: /modeling
+        step: "2. 基金财务模型（IRR/J曲线）"
+        output: "财务模型"
+        time: "2天"
+      - skill: /visual
+        step: "3. 数据可视化（业绩/团队/策略）"
+        output: "图表"
+        time: "2h"
+      - skill: /create
+        step: "4. DDQ/FAQ准备"
+        output: "Q&A材料"
+        time: "2h"
+    total: "3-4天"
+
+  - name: "LP路演"
+    flow:
+      - skill: /pitch
+        step: "1. 定制化路演材料"
+        output: "定制路演"
+        time: "2h"
+      - skill: /network
+        step: "2. LP关系维护与引荐"
+        output: "关系计划"
+        time: "2h"
+      - skill: /meeting
+        step: "3. 路演会议与跟进"
+        output: "会议纪要"
+        time: "持续"
+      - skill: /deal
+        step: "4. LPA条款谈判"
+        output: "条款谈判"
+        time: "1天"
+    total: "持续"
+
+  - name: "LP尽职调查"
+    flow:
+      - skill: /dd
+        step: "1. LP反向尽调准备"
+        output: "尽调材料"
+        time: "2天"
+      - skill: /process
+        step: "2. 尽调流程协调"
+        output: "流程方案"
+        time: "1h"
+      - skill: /pitch
+        step: "3. 管理层/投资人Q&A"
+        output: "Q&A材料"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "募资复盘"
+    flow:
+      - skill: /analyze
+        step: "1. 募资数据分析（转化率/周期）"
+        output: "数据分析"
+        time: "2h"
+      - skill: /review
+        step: "2. 募资复盘与优化"
+        output: "复盘报告"
+        time: "1h"
+      - skill: /network
+        step: "3. LP关系归档与维护"
+        output: "关系档案"
+        time: "1h"
+    total: "1天"
+
+skills:
+  - /pitch
+  - /modeling
+  - /visual
+  - /create
+  - /network
+  - /meeting
+  - /deal
+  - /dd
+  - /process
+  - /analyze
+  - /review
+  - /new-info
+  - /mark
+
+output:
+  - "PPM/Teaser"
+  - "财务模型"
+  - "路演材料"
+  - "Q&A材料"
+  - "会议纪要"
+  - "LPA条款"
+  - "尽调材料"
+  - "募资复盘报告"

@@ -1,0 +1,78 @@
+---
+name: supplier-development-manager
+description: "供应商发展经理工作流：评估→诊断→改善→培训→绩效"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪供应商质量/交期/成本绩效"
+    output: "供应商看板"
+    time: "10min"
+  - skill: /execute
+    trigger: "跟进供应商改善计划执行"
+    output: "改善跟踪"
+    time: "持续"
+  - skill: /mark
+    trigger: "标记供应商风险、改善机会、优秀实践"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "供应商诊断"
+    flow:
+      - skill: /dd
+        step: "1. 供应商能力评估（质量/产能/管理/财务）"
+        output: "能力评估"
+        time: "3h"
+      - skill: /benchmarking
+        step: "2. 与行业最佳对标"
+        output: "对标分析"
+        time: "2h"
+      - skill: /issue-tree
+        step: "3. 问题根因分析"
+        output: "根因分析"
+        time: "2h"
+      - skill: /create
+        step: "4. 改善计划"
+        output: "改善计划"
+        time: "2h"
+    total: "1-2天"
+  - name: "供应商能力提升"
+    flow:
+      - skill: /workshop
+        step: "1. 供应商培训（精益/质量/管理）"
+        output: "培训方案"
+        time: "3h"
+      - skill: /process
+        step: "2. 工艺/流程优化"
+        output: "流程优化"
+        time: "2h"
+      - skill: /review
+        step: "3. 月度绩效评估"
+        output: "绩效评估"
+        time: "1h"
+      - skill: /decide
+        step: "4. 供应商等级调整"
+        output: "等级调整"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /monitor
+  - /execute
+  - /mark
+  - /dd
+  - /benchmarking
+  - /issue-tree
+  - /create
+  - /workshop
+  - /process
+  - /review
+  - /decide
+
+output:
+  - "供应商能力评估"
+  - "对标分析"
+  - "根因分析"
+  - "改善计划"
+  - "培训方案"
+  - "绩效评估"

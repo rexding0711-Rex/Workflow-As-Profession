@@ -1,0 +1,126 @@
+---
+name: litigation-attorney
+description: "诉讼律师工作流：案件→策略→证据→庭审→执行"
+
+daily:
+  - skill: /execute
+    trigger: "处理案件、准备材料、出庭应诉"
+    output: "诉讼日志"
+    time: "持续"
+  - skill: /new-info
+    trigger: "跟踪法律、案例、对手"
+    output: "诉讼情报"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记证据、策略、风险"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "案件分析"
+    flow:
+      - skill: /analyze
+        step: "1. 案情分析"
+        output: "案情分析"
+        time: "3h"
+      - skill: /dd
+        step: "2. 证据收集"
+        output: "证据收集"
+        time: "3h"
+      - skill: /analyze
+        step: "3. 法律研究"
+        output: "法律研究"
+        time: "2h"
+      - skill: /create
+        step: "4. 案件评估"
+        output: "案件评估"
+        time: "2h"
+    total: "2-3天"
+
+  - name: "诉讼策略"
+    flow:
+      - skill: /analyze
+        step: "1. 策略分析"
+        output: "策略分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 策略方案"
+        output: "策略方案"
+        time: "2h"
+      - skill: /modeling
+        step: "3. 胜诉模型"
+        output: "胜诉模型"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 策略汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "庭审准备"
+    flow:
+      - skill: /create
+        step: "1. 起诉/答辩"
+        output: "起诉状/答辩状"
+        time: "3h"
+      - skill: /execute
+        step: "2. 证据整理"
+        output: "证据整理"
+        time: "2h"
+      - skill: /interview
+        step: "3. 证人准备"
+        output: "证人准备"
+        time: "2h"
+      - skill: /experiment
+        step: "4. 模拟庭审"
+        output: "模拟记录"
+        time: "2h"
+    total: "2-3天"
+
+  - name: "庭审执行"
+    flow:
+      - skill: /execute
+        step: "1. 出庭庭审"
+        output: "庭审记录"
+        time: "持续"
+      - skill: /create
+        step: "2. 代理词"
+        output: "代理词"
+        time: "2h"
+      - skill: /execute
+        step: "3. 判决执行"
+        output: "执行记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 结案复盘"
+        output: "结案报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /new-info
+  - /analyze
+  - /dd
+  - /create
+  - /modeling
+  - /pitch
+  - /interview
+  - /experiment
+  - /review
+  - /mark
+
+output:
+  - "案情分析"
+  - "证据收集"
+  - "法律研究"
+  - "案件评估"
+  - "策略方案"
+  - "胜诉模型"
+  - "起诉状/答辩状"
+  - "证据整理"
+  - "证人准备"
+  - "模拟记录"
+  - "庭审记录"
+  - "代理词"
+  - "结案报告"

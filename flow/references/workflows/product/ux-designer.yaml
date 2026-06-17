@@ -1,0 +1,115 @@
+---
+name: ux-designer
+description: "UX设计师工作流：用户研究→设计→原型→测试→用户旅程"
+
+daily:
+  - skill: /user-research
+    trigger: "跟踪用户反馈、可用性问题、设计趋势"
+    output: "用户洞察"
+    time: "10min"
+  - skill: /monitor
+    trigger: "监控设计系统、组件库、设计规范"
+    output: "设计监控"
+    time: "5min"
+  - skill: /mark
+    trigger: "标记设计洞察、用户痛点、灵感"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "用户研究"
+    flow:
+      - skill: /user-research
+        step: "1. 用户访谈与调研"
+        output: "调研报告"
+        time: "3h"
+      - skill: /analyze
+        step: "2. 用户行为数据分析"
+        output: "行为分析"
+        time: "2h"
+      - skill: /user-research
+        step: "3. 用户旅程地图"
+        output: "旅程地图"
+        time: "2h"
+      - skill: /decide
+        step: "4. 设计优先级决策"
+        output: "优先级"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "交互设计"
+    flow:
+      - skill: /design
+        step: "1. 信息架构与导航设计"
+        output: "信息架构"
+        time: "3h"
+      - skill: /design
+        step: "2. 交互流程设计"
+        output: "交互流程"
+        time: "3h"
+      - skill: /user-research
+        step: "3. 可用性测试"
+        output: "测试报告"
+        time: "2h"
+      - skill: /review
+        step: "4. 设计评审"
+        output: "评审意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "视觉设计"
+    flow:
+      - skill: /design
+        step: "1. 视觉风格设计"
+        output: "视觉方案"
+        time: "3h"
+      - skill: /visual
+        step: "2. 视觉系统与规范"
+        output: "视觉规范"
+        time: "2h"
+      - skill: /experiment
+        step: "3. 视觉A/B测试"
+        output: "测试结果"
+        time: "2周"
+    total: "持续"
+
+  - name: "设计系统"
+    flow:
+      - skill: /design
+        step: "1. 设计系统架构"
+        output: "系统架构"
+        time: "3h"
+      - skill: /process
+        step: "2. 组件库与规范"
+        output: "设计规范"
+        time: "3h"
+      - skill: /execute
+        step: "3. 设计系统推广"
+        output: "推广计划"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /user-research
+  - /analyze
+  - /design
+  - /visual
+  - /experiment
+  - /review
+  - /process
+  - /execute
+  - /decide
+  - /monitor
+  - /mark
+
+output:
+  - "调研报告"
+  - "行为分析"
+  - "旅程地图"
+  - "信息架构"
+  - "交互流程"
+  - "测试报告"
+  - "视觉方案"
+  - "视觉规范"
+  - "系统架构"
+  - "设计规范"

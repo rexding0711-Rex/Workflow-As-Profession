@@ -1,0 +1,121 @@
+---
+name: curriculum-designer
+description: "课程设计师工作流：分析→设计→开发→评估→迭代"
+
+daily:
+  - skill: /create
+    trigger: "设计课程、编写内容、制作素材"
+    output: "设计稿"
+    time: "持续"
+  - skill: /new-info
+    trigger: "跟踪教育趋势、教学法、技术"
+    output: "教育情报"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记设计问题、创新点、反馈"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "需求分析"
+    flow:
+      - skill: /interview
+        step: "1. 利益相关者访谈"
+        output: "访谈记录"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 学习目标分析"
+        output: "目标分析"
+        time: "2h"
+      - skill: /user-research
+        step: "3. 学习者分析"
+        output: "学习者分析"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "课程设计"
+    flow:
+      - skill: /design
+        step: "1. 课程架构"
+        output: "课程架构"
+        time: "2h"
+      - skill: /create
+        step: "2. 单元设计"
+        output: "单元设计"
+        time: "3h"
+      - skill: /create
+        step: "3. 评估设计"
+        output: "评估方案"
+        time: "2h"
+      - skill: /review
+        step: "4. 设计评审"
+        output: "评审意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "内容开发"
+    flow:
+      - skill: /create
+        step: "1. 内容编写"
+        output: "内容草稿"
+        time: "3h"
+      - skill: /visual
+        step: "2. 多媒体素材"
+        output: "素材方案"
+        time: "2h"
+      - skill: /experiment
+        step: "3. 内容测试"
+        output: "测试报告"
+        time: "2h"
+      - skill: /review
+        step: "4. 内容审核"
+        output: "审核意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "课程评估"
+    flow:
+      - skill: /user-research
+        step: "1. 学习者反馈"
+        output: "反馈报告"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 学习效果分析"
+        output: "效果分析"
+        time: "2h"
+      - skill: /review
+        step: "3. 课程复盘"
+        output: "复盘报告"
+        time: "1h"
+      - skill: /create
+        step: "4. 迭代方案"
+        output: "迭代方案"
+        time: "2h"
+    total: "1-2天"
+
+skills:
+  - /create
+  - /new-info
+  - /interview
+  - /analyze
+  - /user-research
+  - /design
+  - /visual
+  - /experiment
+  - /review
+  - /mark
+
+output:
+  - "访谈记录"
+  - "目标分析"
+  - "学习者分析"
+  - "课程架构"
+  - "单元设计"
+  - "评估方案"
+  - "内容草稿"
+  - "素材方案"
+  - "测试报告"
+  - "反馈报告"
+  - "效果分析"
+  - "复盘报告"
+  - "迭代方案"

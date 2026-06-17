@@ -1,0 +1,117 @@
+---
+name: customer-success-manager
+description: "客户成功经理工作流：客户管理→续约→增购→数据分析→会议"
+
+daily:
+  - skill: /crm
+    trigger: "查看客户健康度、使用数据、支持工单"
+    output: "健康度仪表盘"
+    time: "10min"
+  - skill: /analyze
+    trigger: "监控客户使用数据、流失信号"
+    output: "数据摘要"
+    time: "5min"
+  - skill: /mark
+    trigger: "标记客户风险、增购机会、关键反馈"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "客户健康度管理"
+    flow:
+      - skill: /analyze
+        step: "1. 客户数据与使用行为分析"
+        output: "行为分析"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 健康度评分模型"
+        output: "健康度模型"
+        time: "2h"
+      - skill: /experiment
+        step: "3. 干预策略A/B测试"
+        output: "测试结果"
+        time: "2周"
+      - skill: /execute
+        step: "4. 客户干预执行"
+        output: "干预计划"
+        time: "持续"
+    total: "持续"
+
+  - name: "续约管理"
+    flow:
+      - skill: /crm
+        step: "1. 续约客户清单与优先级"
+        output: "续约清单"
+        time: "1h"
+      - skill: /sales
+        step: "2. 续约方案与价值证明"
+        output: "续约方案"
+        time: "2h"
+      - skill: /user-research
+        step: "3. 客户满意度调研"
+        output: "满意度报告"
+        time: "2h"
+      - skill: /network
+        step: "4. 客户高层关系维护"
+        output: "关系计划"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "增购与扩展"
+    flow:
+      - skill: /analyze
+        step: "1. 客户增购潜力分析"
+        output: "潜力分析"
+        time: "2h"
+      - skill: /sales
+        step: "2. 增购方案设计"
+        output: "增购方案"
+        time: "2h"
+      - skill: /user-research
+        step: "3. 新需求挖掘"
+        output: "需求报告"
+        time: "1h"
+      - skill: /pitch
+        step: "4. 增购汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "客户转介绍"
+    flow:
+      - skill: /network
+        step: "1. 转介绍机会识别"
+        output: "机会清单"
+        time: "1h"
+      - skill: /sales
+        step: "2. 转介绍话术与方案"
+        output: "话术方案"
+        time: "1h"
+      - skill: /experiment
+        step: "3. 转介绍激励A/B测试"
+        output: "测试结果"
+        time: "2周"
+    total: "持续"
+
+skills:
+  - /crm
+  - /analyze
+  - /modeling
+  - /experiment
+  - /execute
+  - /sales
+  - /user-research
+  - /network
+  - /pitch
+  - /mark
+
+output:
+  - "健康度模型"
+  - "行为分析"
+  - "干预计划"
+  - "续约清单"
+  - "续约方案"
+  - "满意度报告"
+  - "增购方案"
+  - "潜力分析"
+  - "转介绍方案"

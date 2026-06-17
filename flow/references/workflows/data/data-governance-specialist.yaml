@@ -1,0 +1,117 @@
+---
+name: data-governance-specialist
+description: "数据治理工作流：数据→标准→流程→合规→质量"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪数据质量、合规状态、标准执行"
+    output: "治理监控"
+    time: "15min"
+  - skill: /execute
+    trigger: "处理数据异常、合规问题、质量问题"
+    output: "治理记录"
+    time: "持续"
+  - skill: /mark
+    trigger: "标记治理问题、标准、决策"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "数据标准"
+    flow:
+      - skill: /process
+        step: "1. 数据标准梳理"
+        output: "标准梳理"
+        time: "3h"
+      - skill: /create
+        step: "2. 数据标准制定"
+        output: "标准文档"
+        time: "3h"
+      - skill: /execute
+        step: "3. 标准推广执行"
+        output: "执行计划"
+        time: "持续"
+      - skill: /review
+        step: "4. 标准执行复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "数据质量"
+    flow:
+      - skill: /analyze
+        step: "1. 数据质量评估"
+        output: "质量评估"
+        time: "2h"
+      - skill: /process
+        step: "2. 质量规则设计"
+        output: "规则设计"
+        time: "2h"
+      - skill: /execute
+        step: "3. 质量监控执行"
+        output: "监控记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 质量复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "数据合规"
+    flow:
+      - skill: /policy
+        step: "1. 数据合规政策分析"
+        output: "政策分析"
+        time: "2h"
+      - skill: /process
+        step: "2. 合规流程设计"
+        output: "流程设计"
+        time: "2h"
+      - skill: /execute
+        step: "3. 合规执行"
+        output: "执行记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 合规审计"
+        output: "审计报告"
+        time: "2h"
+    total: "持续"
+
+  - name: "元数据管理"
+    flow:
+      - skill: /process
+        step: "1. 元数据梳理"
+        output: "元数据梳理"
+        time: "2h"
+      - skill: /design
+        step: "2. 元数据架构设计"
+        output: "架构设计"
+        time: "2h"
+      - skill: /execute
+        step: "3. 元数据管理执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /monitor
+  - /execute
+  - /process
+  - /create
+  - /review
+  - /analyze
+  - /policy
+  - /design
+  - /mark
+
+output:
+  - "标准梳理"
+  - "标准文档"
+  - "执行计划"
+  - "质量评估"
+  - "规则设计"
+  - "监控记录"
+  - "政策分析"
+  - "流程设计"
+  - "审计报告"
+  - "元数据梳理"

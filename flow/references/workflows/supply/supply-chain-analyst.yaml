@@ -1,0 +1,78 @@
+---
+name: supply-chain-analyst
+description: "供应链分析师工作流：数据分析→可视化→优化→预测→决策支持"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪供应链KPI（OTIF/库存周转/现金转换周期）"
+    output: "SC看板"
+    time: "15min"
+  - skill: /new-info
+    trigger: "扫描供应链技术趋势（AI/数字孪生/区块链）"
+    output: "技术情报"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记数据异常、优化机会、最佳实践"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "供应链诊断"
+    flow:
+      - skill: /analyze
+        step: "1. 端到端供应链数据分析"
+        output: "数据分析"
+        time: "3h"
+      - skill: /visual
+        step: "2. 供应链可视化（地图/网络/漏斗）"
+        output: "可视化报告"
+        time: "2h"
+      - skill: /modeling
+        step: "3. 网络优化模型"
+        output: "优化模型"
+        time: "3h"
+      - skill: /create
+        step: "4. 诊断报告与建议"
+        output: "诊断报告"
+        time: "2h"
+    total: "1-2天"
+  - name: "决策支持"
+    flow:
+      - skill: /modeling
+        step: "1. What-if情景分析"
+        output: "情景分析"
+        time: "2h"
+      - skill: /decide
+        step: "2. 决策选项评估"
+        output: "决策矩阵"
+        time: "2h"
+      - skill: /pitch
+        step: "3. 管理层汇报"
+        output: "汇报材料"
+        time: "2h"
+      - skill: /execute
+        step: "4. 决策落地跟踪"
+        output: "落地跟踪"
+        time: "持续"
+    total: "1天"
+
+skills:
+  - /monitor
+  - /new-info
+  - /mark
+  - /analyze
+  - /visual
+  - /modeling
+  - /create
+  - /decide
+  - /pitch
+  - /execute
+
+output:
+  - "供应链数据分析"
+  - "可视化报告"
+  - "网络优化模型"
+  - "诊断报告"
+  - "情景分析"
+  - "决策矩阵"
+  - "管理层汇报"

@@ -1,0 +1,121 @@
+---
+name: instructional-designer
+description: "教学设计工作流：分析→设计→开发→实施→评估"
+
+daily:
+  - skill: /create
+    trigger: "设计课程、编写脚本、制作素材"
+    output: "设计日志"
+    time: "持续"
+  - skill: /new-info
+    trigger: "跟踪教学法、技术、工具"
+    output: "设计情报"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记设计问题、创新、效果"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "学习分析"
+    flow:
+      - skill: /user-research
+        step: "1. 学习者分析"
+        output: "学习者分析"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 需求分析"
+        output: "需求分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 学习目标"
+        output: "学习目标"
+        time: "1h"
+    total: "半天"
+
+  - name: "教学设计"
+    flow:
+      - skill: /design
+        step: "1. 教学策略"
+        output: "教学策略"
+        time: "2h"
+      - skill: /create
+        step: "2. 内容设计"
+        output: "内容设计"
+        time: "3h"
+      - skill: /create
+        step: "3. 活动设计"
+        output: "活动设计"
+        time: "2h"
+      - skill: /review
+        step: "4. 设计评审"
+        output: "评审意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "资源开发"
+    flow:
+      - skill: /create
+        step: "1. 脚本开发"
+        output: "脚本开发"
+        time: "3h"
+      - skill: /visual
+        step: "2. 视觉开发"
+        output: "视觉开发"
+        time: "3h"
+      - skill: /experiment
+        step: "3. 资源测试"
+        output: "测试报告"
+        time: "2h"
+      - skill: /review
+        step: "4. 资源审核"
+        output: "审核意见"
+        time: "1h"
+    total: "2-3天"
+
+  - name: "实施评估"
+    flow:
+      - skill: /workshop
+        step: "1. 培训实施"
+        output: "培训记录"
+        time: "3h"
+      - skill: /user-research
+        step: "2. 学员反馈"
+        output: "反馈报告"
+        time: "2h"
+      - skill: /analyze
+        step: "3. 效果分析"
+        output: "效果分析"
+        time: "2h"
+      - skill: /create
+        step: "4. 改进方案"
+        output: "改进方案"
+        time: "2h"
+    total: "1-2天"
+
+skills:
+  - /create
+  - /new-info
+  - /user-research
+  - /analyze
+  - /design
+  - /visual
+  - /experiment
+  - /review
+  - /workshop
+  - /mark
+
+output:
+  - "学习者分析"
+  - "需求分析"
+  - "学习目标"
+  - "教学策略"
+  - "内容设计"
+  - "活动设计"
+  - "脚本开发"
+  - "视觉开发"
+  - "测试报告"
+  - "培训记录"
+  - "反馈报告"
+  - "效果分析"
+  - "改进方案"

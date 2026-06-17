@@ -1,0 +1,122 @@
+---
+name: quality-manager
+description: "质量经理工作流：标准→检测→分析→改进→合规"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪质量数据、检测、异常、投诉"
+    output: "质量监控"
+    time: "15min"
+  - skill: /execute
+    trigger: "处理质量问题、投诉、返工"
+    output: "质量记录"
+    time: "持续"
+  - skill: /mark
+    trigger: "标记质量问题、改进点、风险"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "质量检测"
+    flow:
+      - skill: /process
+        step: "1. 检测标准与流程"
+        output: "检测标准"
+        time: "2h"
+      - skill: /execute
+        step: "2. 检测执行"
+        output: "检测记录"
+        time: "持续"
+      - skill: /analyze
+        step: "3. 检测数据分析"
+        output: "检测分析"
+        time: "2h"
+      - skill: /review
+        step: "4. 检测复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "质量改进"
+    flow:
+      - skill: /analyze
+        step: "1. 质量数据分析"
+        output: "质量分析"
+        time: "2h"
+      - skill: /process
+        step: "2. 根因分析"
+        output: "根因分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 改进方案"
+        output: "改进方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 改进执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "质量体系"
+    flow:
+      - skill: /policy
+        step: "1. 质量标准政策"
+        output: "质量政策"
+        time: "2h"
+      - skill: /process
+        step: "2. 质量体系设计"
+        output: "质量体系"
+        time: "3h"
+      - skill: /execute
+        step: "3. 体系实施"
+        output: "实施记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 体系审核"
+        output: "审核报告"
+        time: "2h"
+    total: "持续"
+
+  - name: "供应商质量"
+    flow:
+      - skill: /dd
+        step: "1. 供应商质量评估"
+        output: "质量评估"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 供应商质量分析"
+        output: "质量分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 供应商管理方案"
+        output: "管理方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 管理执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /monitor
+  - /execute
+  - /process
+  - /analyze
+  - /review
+  - /policy
+  - /create
+  - /dd
+  - /mark
+
+output:
+  - "检测标准"
+  - "检测记录"
+  - "检测分析"
+  - "质量分析"
+  - "根因分析"
+  - "改进方案"
+  - "质量政策"
+  - "质量体系"
+  - "审核报告"
+  - "质量评估"
+  - "管理方案"

@@ -1,0 +1,116 @@
+---
+name: knowledge-management
+description: "知识管理工作流：采集→整理→存储→共享→应用"
+
+daily:
+  - skill: /execute
+    trigger: "收集知识、更新知识库、回答问题"
+    output: "知识日志"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪知识库使用、质量、反馈"
+    output: "知识监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记知识缺口、更新、改进"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "知识采集"
+    flow:
+      - skill: /new-info
+        step: "1. 知识扫描"
+        output: "知识扫描"
+        time: "2h"
+      - skill: /execute
+        step: "2. 知识采集"
+        output: "采集记录"
+        time: "2h"
+      - skill: /analyze
+        step: "3. 知识筛选"
+        output: "筛选记录"
+        time: "1h"
+    total: "半天"
+
+  - name: "知识整理"
+    flow:
+      - skill: /process
+        step: "1. 知识分类"
+        output: "分类体系"
+        time: "2h"
+      - skill: /create
+        step: "2. 知识标签"
+        output: "标签体系"
+        time: "2h"
+      - skill: /execute
+        step: "3. 知识入库"
+        output: "入库记录"
+        time: "2h"
+    total: "1天"
+
+  - name: "知识共享"
+    flow:
+      - skill: /user-research
+        step: "1. 需求分析"
+        output: "需求分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 共享方案"
+        output: "共享方案"
+        time: "2h"
+      - skill: /workshop
+        step: "3. 培训推广"
+        output: "培训方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 共享执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "知识应用"
+    flow:
+      - skill: /analyze
+        step: "1. 应用分析"
+        output: "应用分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 应用指南"
+        output: "应用指南"
+        time: "2h"
+      - skill: /execute
+        step: "3. 应用支持"
+        output: "支持记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 效果评估"
+        output: "评估报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /new-info
+  - /analyze
+  - /process
+  - /create
+  - /user-research
+  - /workshop
+  - /review
+  - /mark
+
+output:
+  - "知识扫描"
+  - "采集记录"
+  - "筛选记录"
+  - "分类体系"
+  - "标签体系"
+  - "入库记录"
+  - "需求分析"
+  - "共享方案"
+  - "培训方案"
+  - "应用分析"
+  - "应用指南"
+  - "评估报告"

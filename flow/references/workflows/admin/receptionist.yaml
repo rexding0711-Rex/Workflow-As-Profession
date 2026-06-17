@@ -1,0 +1,100 @@
+---
+name: receptionist
+description: "前台工作流：接待→电话→邮件→快递→访客"
+
+daily:
+  - skill: /execute
+    trigger: "处理访客、电话、快递、邮件"
+    output: "前台日报"
+    time: "10min"
+  - skill: /monitor
+    trigger: "监控访客安全、环境、物资"
+    output: "前台监控"
+    time: "5min"
+  - skill: /mark
+    trigger: "标记访客信息、问题、反馈"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "访客接待"
+    flow:
+      - skill: /execute
+        step: "1. 访客登记"
+        output: "登记记录"
+        time: "持续"
+      - skill: /execute
+        step: "2. 访客引导"
+        output: "引导记录"
+        time: "持续"
+      - skill: /execute
+        step: "3. 访客通知"
+        output: "通知记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "电话邮件"
+    flow:
+      - skill: /execute
+        step: "1. 电话接听"
+        output: "电话记录"
+        time: "持续"
+      - skill: /execute
+        step: "2. 邮件处理"
+        output: "邮件记录"
+        time: "持续"
+      - skill: /summary
+        step: "3. 信息汇总"
+        output: "信息汇总"
+        time: "1h"
+    total: "持续"
+
+  - name: "快递管理"
+    flow:
+      - skill: /execute
+        step: "1. 快递收发"
+        output: "收发记录"
+        time: "持续"
+      - skill: /execute
+        step: "2. 快递登记"
+        output: "登记记录"
+        time: "持续"
+      - skill: /execute
+        step: "3. 快递通知"
+        output: "通知记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "环境维护"
+    flow:
+      - skill: /execute
+        step: "1. 前台环境"
+        output: "环境记录"
+        time: "持续"
+      - skill: /monitor
+        step: "2. 环境监控"
+        output: "监控记录"
+        time: "持续"
+      - skill: /execute
+        step: "3. 环境改善"
+        output: "改善记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /summary
+  - /mark
+
+output:
+  - "登记记录"
+  - "引导记录"
+  - "通知记录"
+  - "电话记录"
+  - "邮件记录"
+  - "信息汇总"
+  - "收发记录"
+  - "环境记录"
+  - "监控记录"
+  - "改善记录"

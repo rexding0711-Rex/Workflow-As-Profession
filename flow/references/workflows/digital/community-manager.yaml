@@ -1,0 +1,75 @@
+---
+name: community-manager
+description: "社群运营经理工作流：社群搭建→内容运营→活跃→转化→KOC培育"
+
+daily:
+  - skill: /monitor
+    trigger: "监控社群活跃度、发言质量、退群率"
+    output: "社群仪表盘"
+    time: "10min"
+  - skill: /social-media
+    trigger: "发布日常话题、互动内容"
+    output: "社群内容"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记活跃成员、KOC潜力、话题趋势"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "社群搭建"
+    flow:
+      - skill: /analyze
+        step: "1. 目标用户社群需求分析"
+        output: "需求分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 社群定位与规则设计"
+        output: "社群方案"
+        time: "2h"
+      - skill: /process
+        step: "3. 社群SOP（入群/日常/活动/转化）"
+        output: "社群SOP"
+        time: "2h"
+      - skill: /execute
+        step: "4. 冷启动执行"
+        output: "启动记录"
+        time: "持续"
+    total: "1天"
+  - name: "社群活跃与转化"
+    flow:
+      - skill: /create
+        step: "1. 内容日历"
+        output: "内容日历"
+        time: "2h"
+      - skill: /event-manager
+        step: "2. 社群活动策划"
+        output: "活动方案"
+        time: "2h"
+      - skill: /social-media
+        step: "3. UGC激励与KOC培育"
+        output: "KOC计划"
+        time: "2h"
+      - skill: /analyze
+        step: "4. 社群转化数据分析"
+        output: "转化分析"
+        time: "1h"
+    total: "1天"
+
+skills:
+  - /monitor
+  - /social-media
+  - /mark
+  - /analyze
+  - /create
+  - /process
+  - /execute
+  - /event-manager
+
+output:
+  - "社群方案"
+  - "社群SOP"
+  - "内容日历"
+  - "社群活动方案"
+  - "KOC培育计划"
+  - "社群转化分析"

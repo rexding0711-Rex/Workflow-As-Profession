@@ -1,0 +1,114 @@
+---
+name: reception-manager
+description: "接待经理工作流：接待→服务→环境→投诉→活动"
+
+daily:
+  - skill: /execute
+    trigger: "管理前台、接待访客、处理投诉"
+    output: "接待日志"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪服务质量、环境、安全"
+    output: "接待监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记服务问题、改进、亮点"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "接待服务"
+    flow:
+      - skill: /process
+        step: "1. 服务流程"
+        output: "服务流程"
+        time: "2h"
+      - skill: /execute
+        step: "2. 服务执行"
+        output: "服务记录"
+        time: "持续"
+      - skill: /monitor
+        step: "3. 服务监控"
+        output: "监控记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 服务复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "环境管理"
+    flow:
+      - skill: /plan
+        step: "1. 环境标准"
+        output: "环境标准"
+        time: "1h"
+      - skill: /execute
+        step: "2. 环境维护"
+        output: "维护记录"
+        time: "持续"
+      - skill: /monitor
+        step: "3. 环境检查"
+        output: "检查记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "投诉处理"
+    flow:
+      - skill: /interview
+        step: "1. 投诉接待"
+        output: "投诉记录"
+        time: "1h"
+      - skill: /analyze
+        step: "2. 投诉分析"
+        output: "投诉分析"
+        time: "1h"
+      - skill: /create
+        step: "3. 处理方案"
+        output: "处理方案"
+        time: "1h"
+      - skill: /execute
+        step: "4. 处理执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "接待活动"
+    flow:
+      - skill: /plan
+        step: "1. 活动计划"
+        output: "活动计划"
+        time: "2h"
+      - skill: /execute
+        step: "2. 活动执行"
+        output: "活动记录"
+        time: "持续"
+      - skill: /review
+        step: "3. 活动复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /execute
+  - /monitor
+  - /process
+  - /plan
+  - /interview
+  - /analyze
+  - /create
+  - /review
+  - /mark
+
+output:
+  - "服务流程"
+  - "服务记录"
+  - "监控记录"
+  - "复盘报告"
+  - "环境标准"
+  - "维护记录"
+  - "投诉记录"
+  - "投诉分析"
+  - "处理方案"
+  - "活动计划"
+  - "活动记录"

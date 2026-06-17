@@ -1,0 +1,101 @@
+---
+name: ecommerce-manager
+description: "电商经理工作流：店铺运营→选品→活动→流量→数据"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪GMV、转化率、流量、库存、竞品价格"
+    output: "电商仪表盘"
+    time: "15min"
+  - skill: /new-info
+    trigger: "扫描平台规则变化、行业活动、爆品趋势"
+    output: "电商情报"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记爆品机会、流量异常、活动效果"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "店铺运营优化"
+    flow:
+      - skill: /analyze
+        step: "1. 店铺数据分析（流量/转化/客单/复购）"
+        output: "店铺诊断"
+        time: "2h"
+      - skill: /user-research
+        step: "2. 用户购物路径分析"
+        output: "用户洞察"
+        time: "2h"
+      - skill: /create
+        step: "3. 运营优化方案"
+        output: "优化方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 方案执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+  - name: "大促活动策划"
+    flow:
+      - skill: /analyze
+        step: "1. 历史活动数据复盘"
+        output: "活动分析"
+        time: "1h"
+      - skill: /plan
+        step: "2. 大促活动方案（选品/折扣/节奏/预热）"
+        output: "活动方案"
+        time: "3h"
+      - skill: /event-manager
+        step: "3. 活动执行清单"
+        output: "执行清单"
+        time: "1h"
+      - skill: /review
+        step: "4. 活动复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "1-2天"
+  - name: "选品与供应链"
+    flow:
+      - skill: /market-search
+        step: "1. 品类趋势分析"
+        output: "品类报告"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 爆品特征分析"
+        output: "选品策略"
+        time: "2h"
+      - skill: /sourcing
+        step: "3. 供应商寻源"
+        output: "供应商清单"
+        time: "2h"
+      - skill: /pricing
+        step: "4. 定价策略"
+        output: "定价方案"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /monitor
+  - /new-info
+  - /mark
+  - /analyze
+  - /user-research
+  - /create
+  - /execute
+  - /plan
+  - /event-manager
+  - /review
+  - /market-search
+  - /sourcing
+  - /pricing
+
+output:
+  - "店铺诊断报告"
+  - "用户洞察"
+  - "运营优化方案"
+  - "大促活动方案"
+  - "活动复盘"
+  - "选品策略"
+  - "供应商清单"
+  - "定价方案"

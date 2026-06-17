@@ -1,0 +1,126 @@
+---
+name: academic-advisor
+description: "学术顾问工作流：规划→选课→跟踪→支持→毕业"
+
+daily:
+  - skill: /execute
+    trigger: "咨询学生、处理申请、协调资源"
+    output: "顾问日志"
+    time: "持续"
+  - skill: /monitor
+    trigger: "跟踪学生进度、GPA、问题"
+    output: "顾问监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记学生风险、机会、决策"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "学业规划"
+    flow:
+      - skill: /interview
+        step: "1. 学生访谈"
+        output: "访谈记录"
+        time: "1h"
+      - skill: /analyze
+        step: "2. 学业分析"
+        output: "学业分析"
+        time: "2h"
+      - skill: /plan
+        step: "3. 课程规划"
+        output: "课程规划"
+        time: "2h"
+      - skill: /create
+        step: "4. 学业计划"
+        output: "学业计划"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "选课指导"
+    flow:
+      - skill: /analyze
+        step: "1. 课程分析"
+        output: "课程分析"
+        time: "1h"
+      - skill: /tech-compare
+        step: "2. 课程对比"
+        output: "课程对比"
+        time: "1h"
+      - skill: /interview
+        step: "3. 学生咨询"
+        output: "咨询记录"
+        time: "2h"
+      - skill: /execute
+        step: "4. 选课执行"
+        output: "选课记录"
+        time: "1h"
+    total: "半天"
+
+  - name: "学业支持"
+    flow:
+      - skill: /user-research
+        step: "1. 学生需求"
+        output: "需求报告"
+        time: "1h"
+      - skill: /create
+        step: "2. 支持方案"
+        output: "支持方案"
+        time: "1h"
+      - skill: /execute
+        step: "3. 资源对接"
+        output: "对接记录"
+        time: "持续"
+      - skill: /monitor
+        step: "4. 支持监控"
+        output: "监控记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "毕业审核"
+    flow:
+      - skill: /analyze
+        step: "1. 学分审核"
+        output: "学分审核"
+        time: "2h"
+      - skill: /review
+        step: "2. 毕业要求"
+        output: "毕业审核"
+        time: "1h"
+      - skill: /execute
+        step: "3. 毕业流程"
+        output: "流程记录"
+        time: "1h"
+      - skill: /pitch
+        step: "4. 毕业汇报"
+        output: "汇报材料"
+        time: "30min"
+    total: "半天"
+
+skills:
+  - /execute
+  - /monitor
+  - /interview
+  - /analyze
+  - /plan
+  - /create
+  - /tech-compare
+  - /user-research
+  - /review
+  - /pitch
+  - /mark
+
+output:
+  - "访谈记录"
+  - "学业分析"
+  - "课程规划"
+  - "学业计划"
+  - "课程分析"
+  - "课程对比"
+  - "咨询记录"
+  - "需求报告"
+  - "支持方案"
+  - "学分审核"
+  - "毕业审核"
+  - "流程记录"
+  - "汇报材料"

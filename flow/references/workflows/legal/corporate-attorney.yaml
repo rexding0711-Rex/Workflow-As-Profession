@@ -1,0 +1,124 @@
+---
+name: corporate-attorney
+description: "企业律师工作流：合同→交易→合规→治理→纠纷"
+
+daily:
+  - skill: /execute
+    trigger: "审阅合同、提供咨询、处理法律事务"
+    output: "律师日志"
+    time: "持续"
+  - skill: /new-info
+    trigger: "跟踪法律变化、行业法规、案例"
+    output: "法律情报"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记法律风险、合规、机会"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "合同管理"
+    flow:
+      - skill: /analyze
+        step: "1. 合同审查"
+        output: "审查意见"
+        time: "2h"
+      - skill: /create
+        step: "2. 合同修订"
+        output: "修订记录"
+        time: "2h"
+      - skill: /negotiate
+        step: "3. 合同谈判"
+        output: "谈判记录"
+        time: "2h"
+      - skill: /execute
+        step: "4. 合同归档"
+        output: "归档记录"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "交易支持"
+    flow:
+      - skill: /dd
+        step: "1. 法律尽调"
+        output: "尽调报告"
+        time: "3h"
+      - skill: /create
+        step: "2. 交易文件"
+        output: "交易文件"
+        time: "3h"
+      - skill: /negotiate
+        step: "3. 交易谈判"
+        output: "谈判记录"
+        time: "2h"
+      - skill: /execute
+        step: "4. 交易交割"
+        output: "交割记录"
+        time: "1h"
+    total: "2-3天"
+
+  - name: "公司治理"
+    flow:
+      - skill: /policy
+        step: "1. 治理政策"
+        output: "治理政策"
+        time: "2h"
+      - skill: /create
+        step: "2. 章程修订"
+        output: "章程修订"
+        time: "2h"
+      - skill: /execute
+        step: "3. 股东会议"
+        output: "会议记录"
+        time: "2h"
+      - skill: /review
+        step: "4. 合规审计"
+        output: "审计报告"
+        time: "2h"
+    total: "持续"
+
+  - name: "纠纷处理"
+    flow:
+      - skill: /analyze
+        step: "1. 纠纷分析"
+        output: "纠纷分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 解决方案"
+        output: "解决方案"
+        time: "2h"
+      - skill: /negotiate
+        step: "3. 协商调解"
+        output: "调解记录"
+        time: "2h"
+      - skill: /execute
+        step: "4. 诉讼仲裁"
+        output: "诉讼记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /execute
+  - /new-info
+  - /analyze
+  - /create
+  - /negotiate
+  - /dd
+  - /policy
+  - /review
+  - /mark
+
+output:
+  - "审查意见"
+  - "修订记录"
+  - "谈判记录"
+  - "归档记录"
+  - "尽调报告"
+  - "交易文件"
+  - "交割记录"
+  - "治理政策"
+  - "章程修订"
+  - "会议记录"
+  - "纠纷分析"
+  - "解决方案"
+  - "诉讼记录"

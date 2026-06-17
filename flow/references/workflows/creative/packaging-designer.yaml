@@ -1,0 +1,113 @@
+---
+name: packaging-designer
+description: "包装设计师工作流：调研→概念→设计→打样→上市"
+
+daily:
+  - skill: /create
+    trigger: "设计包装、调整细节、跟进打样"
+    output: "设计日志"
+    time: "持续"
+  - skill: /new-info
+    trigger: "跟踪包装趋势、材料、工艺"
+    output: "设计情报"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记设计问题、工艺、成本"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "包装调研"
+    flow:
+      - skill: /market-search
+        step: "1. 市场调研"
+        output: "市场调研"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 竞品分析"
+        output: "竞品分析"
+        time: "2h"
+      - skill: /user-research
+        step: "3. 用户研究"
+        output: "用户研究"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "包装设计"
+    flow:
+      - skill: /create
+        step: "1. 概念设计"
+        output: "概念方案"
+        time: "3h"
+      - skill: /create
+        step: "2. 结构设计"
+        output: "结构方案"
+        time: "3h"
+      - skill: /visual
+        step: "3. 视觉设计"
+        output: "视觉方案"
+        time: "3h"
+      - skill: /review
+        step: "4. 设计评审"
+        output: "评审意见"
+        time: "1h"
+    total: "2-3天"
+
+  - name: "包装打样"
+    flow:
+      - skill: /execute
+        step: "1. 打样跟进"
+        output: "打样记录"
+        time: "2h"
+      - skill: /experiment
+        step: "2. 样品测试"
+        output: "测试报告"
+        time: "2h"
+      - skill: /review
+        step: "3. 样品评审"
+        output: "评审意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "包装上市"
+    flow:
+      - skill: /execute
+        step: "1. 生产跟进"
+        output: "生产记录"
+        time: "持续"
+      - skill: /monitor
+        step: "2. 上市监控"
+        output: "监控记录"
+        time: "持续"
+      - skill: /review
+        step: "3. 上市复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /create
+  - /new-info
+  - /market-search
+  - /analyze
+  - /user-research
+  - /visual
+  - /review
+  - /execute
+  - /experiment
+  - /monitor
+  - /mark
+
+output:
+  - "市场调研"
+  - "竞品分析"
+  - "用户研究"
+  - "概念方案"
+  - "结构方案"
+  - "视觉方案"
+  - "评审意见"
+  - "打样记录"
+  - "测试报告"
+  - "生产记录"
+  - "监控记录"
+  - "复盘报告"

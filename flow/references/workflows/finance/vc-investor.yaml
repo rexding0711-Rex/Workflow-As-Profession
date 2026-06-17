@@ -1,0 +1,181 @@
+---
+name: vc-investor
+description: "VC投资人工作流：项目源→尽调→估值→投后→行业趋势"
+
+daily:
+  - skill: /new-info
+    trigger: "扫描早期项目融资、行业动态、技术突破"
+    output: "项目情报摘要"
+    time: "10min"
+  - skill: /network
+    trigger: "维护创业者/FA/同行关系，发现项目源"
+    output: "关系提醒"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记潜在项目、行业洞察、投资观点"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "项目源管理"
+    flow:
+      - skill: /network
+        step: "1. 创业者/FA/孵化器网络激活"
+        output: "项目推荐清单"
+        time: "2h"
+      - skill: /new-info
+        step: "2. 扫描早期融资动态"
+        output: "融资情报"
+        time: "1h"
+      - skill: /graph-builder
+        step: "3. 更新创业生态图谱"
+        output: "生态图谱"
+        time: "1h"
+      - skill: /decide
+        step: "4. 项目优先级筛选"
+        output: "项目优先级"
+        time: "1h"
+    total: "1天"
+
+  - name: "早期项目筛选"
+    flow:
+      - skill: /quick
+        step: "1. 5分钟快速筛选（团队/市场/产品）"
+        output: "Pass/继续/深度"
+        time: "5min"
+      - skill: /learn
+        step: "2. 快速学习赛道认知"
+        output: "赛道认知"
+        time: "1h"
+      - skill: /professional
+        step: "3. 商业模式分析（画布/PMF）"
+        output: "商业分析"
+        time: "1h"
+      - skill: /market-search
+        step: "4. 市场规模与竞争格局"
+        output: "市场分析"
+        time: "1h"
+      - skill: /decide
+        step: "5. 立项决策"
+        output: "Go/No-Go"
+        time: "30min"
+    total: "2-3h"
+
+  - name: "深度尽调"
+    flow:
+      - skill: /dd
+        step: "1. 轻量级尽调（FDD+LDD+TDD）"
+        output: "尽调报告"
+        time: "1-2周"
+      - skill: /interview
+        step: "2. 创始人访谈与背景调查"
+        output: "访谈纪要"
+        time: "2天"
+      - skill: /tech-compare
+        step: "3. 技术验证（如有）"
+        output: "技术对比"
+        time: "1天"
+      - skill: /user-research
+        step: "4. 用户/客户验证"
+        output: "用户验证"
+        time: "1天"
+      - skill: /modeling
+        step: "5. 早期估值（博克斯/可比/风险调整）"
+        output: "估值模型"
+        time: "1天"
+      - skill: /deal
+        step: "6. TS条款审查"
+        output: "红旗清单"
+        time: "1天"
+    total: "2-3周"
+
+  - name: "投资决策"
+    flow:
+      - skill: /decide
+        step: "1. 评分决策矩阵"
+        output: "评分表"
+        time: "1h"
+      - skill: /modeling
+        step: "2. 回报测算与敏感性"
+        output: "回报模型"
+        time: "2h"
+      - skill: /pitch
+        step: "3. 投委会汇报"
+        output: "汇报材料"
+        time: "3h"
+      - skill: /visual
+        step: "4. 数据可视化"
+        output: "图表"
+        time: "1h"
+    total: "1天"
+
+  - name: "投后管理"
+    flow:
+      - skill: /monitor
+        step: "1. 被投企业月度跟踪"
+        output: "跟踪报告"
+        time: "持续"
+      - skill: /network
+        step: "2. 资源对接（客户/人才/下一轮融资）"
+        output: "资源对接"
+        time: "按需"
+      - skill: /review
+        step: "3. 季度复盘与估值更新"
+        output: "复盘报告"
+        time: "1天/季"
+      - skill: /mark
+        step: "4. 标记关键事件与风险"
+        output: "风险标签"
+        time: "持续"
+    total: "持续"
+
+  - name: "退出策略"
+    flow:
+      - skill: /market-search
+        step: "1. 退出市场分析（并购/IPO/股权转让）"
+        output: "退出路径"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 退出估值与回报"
+        output: "退出回报"
+        time: "2h"
+      - skill: /network
+        step: "3. 寻找潜在买家/收购方"
+        output: "买家清单"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 退出方案汇报"
+        output: "汇报材料"
+        time: "2h"
+    total: "1-2天"
+
+skills:
+  - /new-info
+  - /network
+  - /quick
+  - /learn
+  - /professional
+  - /market-search
+  - /decide
+  - /dd
+  - /interview
+  - /tech-compare
+  - /user-research
+  - /modeling
+  - /deal
+  - /pitch
+  - /visual
+  - /monitor
+  - /review
+  - /mark
+
+  - /graph-builder
+output:
+  - "项目源清单"
+  - "赛道认知报告"
+  - "尽调报告"
+  - "估值模型"
+  - "投委会汇报"
+  - "投后跟踪报告"
+  - "退出策略"
+  - "复盘报告"

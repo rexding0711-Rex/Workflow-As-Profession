@@ -1,0 +1,124 @@
+---
+name: arbitrator
+description: "仲裁员工作流：受理→审理→裁决→执行→监督"
+
+daily:
+  - skill: /execute
+    trigger: "审查案件材料、安排庭审、撰写裁决"
+    output: "仲裁日志"
+    time: "持续"
+  - skill: /new-info
+    trigger: "跟踪法律法规、仲裁规则、判例"
+    output: "仲裁情报"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记争议焦点、证据、程序"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "案件受理"
+    flow:
+      - skill: /analyze
+        step: "1. 管辖审查"
+        output: "管辖审查"
+        time: "2h"
+      - skill: /execute
+        step: "2. 材料审核"
+        output: "审核记录"
+        time: "2h"
+      - skill: /plan
+        step: "3. 组庭程序"
+        output: "组庭程序"
+        time: "1h"
+      - skill: /execute
+        step: "4. 受理通知"
+        output: "受理记录"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "案件审理"
+    flow:
+      - skill: /interview
+        step: "1. 庭审安排"
+        output: "庭审安排"
+        time: "2h"
+      - skill: /execute
+        step: "2. 证据交换"
+        output: "证据交换"
+        time: "2h"
+      - skill: /interview
+        step: "3. 庭审审理"
+        output: "审理记录"
+        time: "3h"
+      - skill: /analyze
+        step: "4. 争议焦点"
+        output: "焦点分析"
+        time: "2h"
+    total: "2-3天"
+
+  - name: "裁决撰写"
+    flow:
+      - skill: /analyze
+        step: "1. 事实认定"
+        output: "事实认定"
+        time: "3h"
+      - skill: /policy
+        step: "2. 法律适用"
+        output: "法律适用"
+        time: "2h"
+      - skill: /create
+        step: "3. 裁决撰写"
+        output: "裁决书"
+        time: "3h"
+      - skill: /review
+        step: "4. 裁决审核"
+        output: "审核意见"
+        time: "1h"
+    total: "2-3天"
+
+  - name: "裁决执行"
+    flow:
+      - skill: /execute
+        step: "1. 裁决送达"
+        output: "送达记录"
+        time: "1h"
+      - skill: /execute
+        step: "2. 执行跟进"
+        output: "执行记录"
+        time: "持续"
+      - skill: /review
+        step: "3. 执行监督"
+        output: "监督记录"
+        time: "持续"
+      - skill: /create
+        step: "4. 结案报告"
+        output: "结案报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /new-info
+  - /analyze
+  - /plan
+  - /interview
+  - /policy
+  - /create
+  - /review
+  - /mark
+
+output:
+  - "管辖审查"
+  - "审核记录"
+  - "组庭程序"
+  - "庭审安排"
+  - "证据交换"
+  - "审理记录"
+  - "焦点分析"
+  - "事实认定"
+  - "法律适用"
+  - "裁决书"
+  - "送达记录"
+  - "执行记录"
+  - "结案报告"

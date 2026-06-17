@@ -1,0 +1,78 @@
+---
+name: digital-analytics-manager
+description: "数字分析经理工作流：埋点→数据治理→分析→看板→数据驱动决策"
+
+daily:
+  - skill: /monitor
+    trigger: "监控核心数字指标（UV/PV/留存/转化/收入）"
+    output: "数字看板"
+    time: "15min"
+  - skill: /new-info
+    trigger: "扫描分析工具更新、隐私政策变化"
+    output: "分析情报"
+    time: "5min"
+  - skill: /mark
+    trigger: "标记数据异常、洞察发现、归因变化"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "数据分析框架搭建"
+    flow:
+      - skill: /analyze
+        step: "1. 业务需求分析（What/Why/How）"
+        output: "需求分析"
+        time: "2h"
+      - skill: /process
+        step: "2. 埋点方案与数据字典"
+        output: "埋点方案"
+        time: "2h"
+      - skill: /format
+        step: "3. 数据治理规范"
+        output: "数据规范"
+        time: "1h"
+      - skill: /visual
+        step: "4. 核心看板搭建"
+        output: "数字看板"
+        time: "3h"
+    total: "1-2天"
+  - name: "深度分析"
+    flow:
+      - skill: /analyze
+        step: "1. 用户行为/渠道/收入分析"
+        output: "分析报告"
+        time: "3h"
+      - skill: /modeling
+        step: "2. 预测模型（LTV/流失/转化）"
+        output: "预测模型"
+        time: "3h"
+      - skill: /pitch
+        step: "3. 数据洞察汇报"
+        output: "洞察汇报"
+        time: "2h"
+      - skill: /decide
+        step: "4. 数据驱动建议"
+        output: "决策建议"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /monitor
+  - /new-info
+  - /mark
+  - /analyze
+  - /process
+  - /format
+  - /visual
+  - /modeling
+  - /pitch
+  - /decide
+
+output:
+  - "埋点方案"
+  - "数据字典"
+  - "数据治理规范"
+  - "数字看板"
+  - "分析报告"
+  - "预测模型"
+  - "洞察汇报"

@@ -1,0 +1,116 @@
+---
+name: graphic-designer
+description: "平面设计师工作流：需求→创意→设计→修改→交付"
+
+daily:
+  - skill: /create
+    trigger: "设计视觉、排版、素材"
+    output: "设计稿"
+    time: "持续"
+  - skill: /new-info
+    trigger: "扫描设计趋势、灵感、竞品"
+    output: "设计灵感"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记设计问题、亮点、反馈"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "品牌设计"
+    flow:
+      - skill: /analyze
+        step: "1. 品牌分析"
+        output: "品牌分析"
+        time: "1h"
+      - skill: /create
+        step: "2. 品牌视觉概念"
+        output: "视觉概念"
+        time: "2h"
+      - skill: /create
+        step: "3. Logo与VI设计"
+        output: "VI设计"
+        time: "3h"
+      - skill: /review
+        step: "4. 设计评审"
+        output: "评审意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "营销设计"
+    flow:
+      - skill: /create
+        step: "1. 营销物料设计"
+        output: "营销物料"
+        time: "3h"
+      - skill: /create
+        step: "2. 广告素材"
+        output: "广告素材"
+        time: "2h"
+      - skill: /review
+        step: "3. 设计审核"
+        output: "审核意见"
+        time: "1h"
+    total: "1天"
+
+  - name: "UI设计"
+    flow:
+      - skill: /user-research
+        step: "1. 用户需求分析"
+        output: "需求分析"
+        time: "1h"
+      - skill: /design
+        step: "2. UI界面设计"
+        output: "UI设计"
+        time: "3h"
+      - skill: /visual
+        step: "3. 视觉规范"
+        output: "视觉规范"
+        time: "2h"
+      - skill: /review
+        step: "4. UI评审"
+        output: "评审意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "包装设计"
+    flow:
+      - skill: /analyze
+        step: "1. 产品与市场分析"
+        output: "市场分析"
+        time: "1h"
+      - skill: /create
+        step: "2. 包装概念"
+        output: "包装概念"
+        time: "2h"
+      - skill: /create
+        step: "3. 包装设计"
+        output: "包装设计"
+        time: "3h"
+      - skill: /review
+        step: "4. 设计评审"
+        output: "评审意见"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /create
+  - /new-info
+  - /analyze
+  - /review
+  - /user-research
+  - /design
+  - /visual
+  - /mark
+
+output:
+  - "品牌分析"
+  - "视觉概念"
+  - "VI设计"
+  - "营销物料"
+  - "广告素材"
+  - "需求分析"
+  - "UI设计"
+  - "视觉规范"
+  - "市场分析"
+  - "包装设计"

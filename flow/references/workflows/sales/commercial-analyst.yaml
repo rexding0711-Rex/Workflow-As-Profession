@@ -1,0 +1,119 @@
+---
+name: commercial-analyst
+description: "商务分析师工作流：市场→定价→竞争→数据→策略"
+
+daily:
+  - skill: /analyze
+    trigger: "跟踪市场数据、竞争动态、价格变化"
+    output: "数据摘要"
+    time: "10min"
+  - skill: /new-info
+    trigger: "扫描行业动态、竞品动作"
+    output: "市场情报"
+    time: "5min"
+  - skill: /mark
+    trigger: "标记关键数据、洞察、风险"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "市场分析"
+    flow:
+      - skill: /market-search
+        step: "1. 市场规模与结构分析"
+        output: "市场分析"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 市场数据深度分析"
+        output: "数据报告"
+        time: "2h"
+      - skill: /visual
+        step: "3. 市场可视化"
+        output: "可视化报告"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 管理层汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "竞争分析"
+    flow:
+      - skill: /analyze
+        step: "1. 竞品数据收集与分析"
+        output: "竞品分析"
+        time: "2h"
+      - skill: /tech-compare
+        step: "2. 产品/技术对比"
+        output: "对比报告"
+        time: "2h"
+      - skill: /pricing
+        step: "3. 竞品定价分析"
+        output: "定价分析"
+        time: "2h"
+      - skill: /decide
+        step: "4. 竞争策略建议"
+        output: "策略建议"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "定价策略"
+    flow:
+      - skill: /analyze
+        step: "1. 价格敏感度与弹性分析"
+        output: "弹性分析"
+        time: "2h"
+      - skill: /pricing
+        step: "2. 定价策略设计"
+        output: "定价策略"
+        time: "2h"
+      - skill: /modeling
+        step: "3. 定价财务模型"
+        output: "财务模型"
+        time: "2h"
+      - skill: /experiment
+        step: "4. 定价A/B测试"
+        output: "测试结果"
+        time: "2周"
+    total: "1-2天"
+
+  - name: "商务策略"
+    flow:
+      - skill: /professional
+        step: "1. 商务策略框架分析"
+        output: "策略分析"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 数据驱动的策略建议"
+        output: "策略建议"
+        time: "2h"
+      - skill: /pitch
+        step: "3. 策略汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1天"
+
+skills:
+  - /analyze
+  - /market-search
+  - /visual
+  - /pitch
+  - /tech-compare
+  - /pricing
+  - /modeling
+  - /experiment
+  - /professional
+  - /decide
+  - /new-info
+  - /mark
+
+output:
+  - "市场分析"
+  - "数据报告"
+  - "可视化报告"
+  - "竞品分析"
+  - "定价分析"
+  - "策略建议"
+  - "弹性分析"
+  - "定价策略"
+  - "财务模型"

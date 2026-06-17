@@ -1,0 +1,113 @@
+---
+name: learning-development
+description: "学习发展工作流：诊断→规划→实施→评估→晋升"
+
+daily:
+  - skill: /execute
+    trigger: "推进学习项目、协调资源、跟踪进度"
+    output: "发展日志"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪学习效果、参与度、满意度"
+    output: "发展监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记学习问题、机会、改进"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "发展诊断"
+    flow:
+      - skill: /interview
+        step: "1. 员工访谈"
+        output: "访谈记录"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 能力诊断"
+        output: "诊断报告"
+        time: "2h"
+      - skill: /create
+        step: "3. 发展档案"
+        output: "发展档案"
+        time: "1h"
+    total: "半天"
+
+  - name: "发展规划"
+    flow:
+      - skill: /plan
+        step: "1. 发展计划"
+        output: "发展计划"
+        time: "2h"
+      - skill: /create
+        step: "2. 学习路径"
+        output: "学习路径"
+        time: "2h"
+      - skill: /create
+        step: "3. 发展方案"
+        output: "发展方案"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "学习实施"
+    flow:
+      - skill: /workshop
+        step: "1. 培训实施"
+        output: "培训记录"
+        time: "3h"
+      - skill: /execute
+        step: "2. 项目实践"
+        output: "实践记录"
+        time: "持续"
+      - skill: /execute
+        step: "3. 导师辅导"
+        output: "辅导记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "效果评估"
+    flow:
+      - skill: /user-research
+        step: "1. 满意度调研"
+        output: "满意度报告"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 效果分析"
+        output: "效果分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 晋升建议"
+        output: "晋升建议"
+        time: "1h"
+      - skill: /review
+        step: "4. 发展复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /interview
+  - /analyze
+  - /create
+  - /plan
+  - /workshop
+  - /user-research
+  - /review
+  - /mark
+
+output:
+  - "访谈记录"
+  - "诊断报告"
+  - "发展档案"
+  - "发展计划"
+  - "学习路径"
+  - "发展方案"
+  - "培训记录"
+  - "实践记录"
+  - "辅导记录"
+  - "满意度报告"
+  - "效果分析"
+  - "晋升建议"
+  - "复盘报告"

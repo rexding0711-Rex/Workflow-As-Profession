@@ -1,0 +1,94 @@
+---
+name: real-estate-analyst
+description: "房地产分析师工作流：市场→估值→模型→政策→数据"
+
+daily:
+  - skill: /new-info
+    trigger: "扫描房地产政策、土地拍卖、市场数据"
+    output: "市场情报"
+    time: "10min"
+  - skill: /monitor
+    trigger: "跟踪房价指数、成交量、库存"
+    output: "市场摘要"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记政策变化、市场信号、投资机会"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "市场分析"
+    flow:
+      - skill: /learn
+        step: "1. 区域市场快速认知"
+        output: "认知地图"
+        time: "2h"
+      - skill: /market-search
+        step: "2. 供需分析（土地/新房/二手房）"
+        output: "供需分析"
+        time: "2h"
+      - skill: /analyze
+        step: "3. 价格趋势与成交数据分析"
+        output: "数据报告"
+        time: "2h"
+      - skill: /policy
+        step: "4. 政策影响评估"
+        output: "政策分析"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "项目估值"
+    flow:
+      - skill: /modeling
+        step: "1. DCF/可比/成本法估值"
+        output: "估值模型"
+        time: "2天"
+      - skill: /analyze
+        step: "2. 投资回报与敏感性分析"
+        output: "回报分析"
+        time: "1天"
+      - skill: /decide
+        step: "3. 投资决策"
+        output: "投资建议"
+        time: "1h"
+    total: "2-3天"
+
+  - name: "投资报告"
+    flow:
+      - skill: /pitch
+        step: "1. 投资分析报告"
+        output: "分析报告"
+        time: "3h"
+      - skill: /visual
+        step: "2. 数据可视化"
+        output: "图表"
+        time: "2h"
+      - skill: /network
+        step: "3. 客户沟通与推介"
+        output: "沟通计划"
+        time: "1h"
+    total: "1天"
+
+skills:
+  - /new-info
+  - /monitor
+  - /learn
+  - /market-search
+  - /analyze
+  - /policy
+  - /modeling
+  - /decide
+  - /pitch
+  - /visual
+  - /network
+  - /mark
+
+output:
+  - "市场情报"
+  - "供需分析"
+  - "数据报告"
+  - "政策分析"
+  - "估值模型"
+  - "投资建议"
+  - "分析报告"
+  - "图表"

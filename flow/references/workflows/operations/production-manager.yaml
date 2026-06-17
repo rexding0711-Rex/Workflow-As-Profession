@@ -1,0 +1,121 @@
+---
+name: production-manager
+description: "生产经理工作流：计划→排产→质量→成本→安全"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪生产进度、设备、质量、安全"
+    output: "生产监控"
+    time: "15min"
+  - skill: /execute
+    trigger: "处理生产异常、设备故障、质量问题"
+    output: "生产记录"
+    time: "持续"
+  - skill: /mark
+    trigger: "标记生产问题、效率、改进点"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "生产计划"
+    flow:
+      - skill: /analyze
+        step: "1. 需求与产能分析"
+        output: "产能分析"
+        time: "2h"
+      - skill: /plan
+        step: "2. 排产计划"
+        output: "排产计划"
+        time: "2h"
+      - skill: /execute
+        step: "3. 计划执行"
+        output: "执行记录"
+        time: "持续"
+      - skill: /monitor
+        step: "4. 计划监控"
+        output: "监控记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "效率提升"
+    flow:
+      - skill: /analyze
+        step: "1. 生产数据分析"
+        output: "生产分析"
+        time: "2h"
+      - skill: /process
+        step: "2. 瓶颈分析"
+        output: "瓶颈分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 效率提升方案"
+        output: "提升方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 方案执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "质量管理"
+    flow:
+      - skill: /analyze
+        step: "1. 质量数据分析"
+        output: "质量分析"
+        time: "2h"
+      - skill: /process
+        step: "2. 质量控制流程"
+        output: "控制流程"
+        time: "2h"
+      - skill: /execute
+        step: "3. 质量执行"
+        output: "执行记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 质量复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "安全管理"
+    flow:
+      - skill: /policy
+        step: "1. 安全政策"
+        output: "安全政策"
+        time: "2h"
+      - skill: /process
+        step: "2. 安全流程"
+        output: "安全流程"
+        time: "2h"
+      - skill: /execute
+        step: "3. 安全执行"
+        output: "执行记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 安全复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /monitor
+  - /execute
+  - /analyze
+  - /plan
+  - /process
+  - /create
+  - /review
+  - /policy
+  - /mark
+
+output:
+  - "产能分析"
+  - "排产计划"
+  - "生产分析"
+  - "瓶颈分析"
+  - "提升方案"
+  - "质量分析"
+  - "控制流程"
+  - "安全政策"
+  - "安全流程"
+  - "复盘报告"

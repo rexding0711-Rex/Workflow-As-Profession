@@ -1,0 +1,110 @@
+---
+name: cfo
+description: "CFO工作流：财务规划→资金管理→投融资→并购→风控合规"
+
+daily:
+  - skill: /monitor
+    trigger: "财务指标、现金流、预算执行"
+    output: "财务仪表盘"
+    time: "15min"
+  - skill: /new-info
+    trigger: "资本市场动态、利率、汇率"
+    output: "市场情报"
+    time: "10min"
+  - skill: /mark
+    trigger: "财务决策、风险、合规事项"
+    output: "标签"
+    time: "5min"
+
+projects:
+  - name: "年度预算"
+    flow:
+      - skill: /modeling
+        step: "1. 财务预测模型"
+        output: "预测模型"
+        time: "2天"
+      - skill: /analyze
+        step: "2. 历史数据与趋势分析"
+        output: "分析报告"
+        time: "1天"
+      - skill: /process
+        step: "3. 预算编制流程"
+        output: "预算方案"
+        time: "1天"
+      - skill: /pitch
+        step: "4. 预算汇报（董事会）"
+        output: "汇报材料"
+        time: "2h"
+      - skill: /execute
+        step: "5. 预算执行与监控"
+        output: "监控计划"
+        time: "持续"
+    total: "1周"
+  - name: "融资/并购"
+    flow:
+      - skill: /modeling
+        step: "1. 估值与财务模型"
+        output: "估值模型"
+        time: "2天"
+      - skill: /dd
+        step: "2. 财务尽调（FDD）"
+        output: "尽调报告"
+        time: "1周"
+      - skill: /deal
+        step: "3. 交易条款谈判"
+        output: "条款审查"
+        time: "1天"
+      - skill: /policy
+        step: "4. 税务与监管合规"
+        output: "合规分析"
+        time: "1天"
+      - skill: /pitch
+        step: "5. 投资人/董事会汇报"
+        output: "汇报材料"
+        time: "2h"
+    total: "2-3周"
+  - name: "风险管理"
+    flow:
+      - skill: /analyze
+        step: "1. 财务风险识别"
+        output: "风险清单"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 风险量化模型"
+        output: "风险模型"
+        time: "2h"
+      - skill: /policy
+        step: "3. 合规与内控"
+        output: "合规报告"
+        time: "1天"
+      - skill: /decide
+        step: "4. 风险应对决策"
+        output: "决策矩阵"
+        time: "1h"
+      - skill: /execute
+        step: "5. 风险监控执行"
+        output: "监控计划"
+        time: "持续"
+    total: "2-3天"
+
+skills:
+  - /modeling
+  - /analyze
+  - /dd
+  - /deal
+  - /policy
+  - /pitch
+  - /process
+  - /execute
+  - /monitor
+  - /mark
+  - /new-info
+  - /decide
+
+output:
+  - "财务预测模型"
+  - "预算方案"
+  - "估值报告"
+  - "风险矩阵"
+  - "合规报告"
+  - "董事会汇报"

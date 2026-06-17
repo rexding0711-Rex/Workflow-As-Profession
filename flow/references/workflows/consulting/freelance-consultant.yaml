@@ -1,0 +1,125 @@
+---
+name: freelance-consultant
+description: "自由顾问工作流：获客→签约→交付→收款→品牌"
+
+daily:
+  - skill: /new-info
+    trigger: "扫描项目机会、行业动态、人脉"
+    output: "机会情报"
+    time: "15min"
+  - skill: /execute
+    trigger: "推进项目、沟通客户、交付"
+    output: "顾问日志"
+    time: "持续"
+  - skill: /mark
+    trigger: "标记商机、风险、口碑"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "客户获客"
+    flow:
+      - skill: /network
+        step: "1. 人脉拓展"
+        output: "人脉计划"
+        time: "2h"
+      - skill: /market-search
+        step: "2. 市场扫描"
+        output: "市场扫描"
+        time: "2h"
+      - skill: /pitch
+        step: "3. 提案展示"
+        output: "提案材料"
+        time: "3h"
+      - skill: /negotiate
+        step: "4. 商务谈判"
+        output: "谈判记录"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "项目签约"
+    flow:
+      - skill: /create
+        step: "1. 合同起草"
+        output: "合同草稿"
+        time: "2h"
+      - skill: /review
+        step: "2. 合同审核"
+        output: "审核意见"
+        time: "1h"
+      - skill: /negotiate
+        step: "3. 合同谈判"
+        output: "谈判记录"
+        time: "2h"
+      - skill: /execute
+        step: "4. 合同签署"
+        output: "签署记录"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "项目交付"
+    flow:
+      - skill: /analyze
+        step: "1. 需求分析"
+        output: "需求分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 方案设计"
+        output: "方案设计"
+        time: "3h"
+      - skill: /execute
+        step: "3. 方案交付"
+        output: "交付记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 客户验收"
+        output: "验收记录"
+        time: "1h"
+    total: "持续"
+
+  - name: "品牌管理"
+    flow:
+      - skill: /create
+        step: "1. 个人品牌"
+        output: "品牌方案"
+        time: "2h"
+      - skill: /create
+        step: "2. 内容营销"
+        output: "内容方案"
+        time: "2h"
+      - skill: /execute
+        step: "3. 口碑运营"
+        output: "运营记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 效果评估"
+        output: "评估报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /new-info
+  - /execute
+  - /network
+  - /market-search
+  - /pitch
+  - /negotiate
+  - /create
+  - /review
+  - /analyze
+  - /mark
+
+output:
+  - "人脉计划"
+  - "市场扫描"
+  - "提案材料"
+  - "合同草稿"
+  - "审核意见"
+  - "谈判记录"
+  - "需求分析"
+  - "方案设计"
+  - "交付记录"
+  - "验收记录"
+  - "品牌方案"
+  - "内容方案"
+  - "评估报告"

@@ -1,0 +1,124 @@
+---
+name: security-engineer
+description: "安全工程师工作流：评估→防御→检测→响应→合规"
+
+daily:
+  - skill: /execute
+    trigger: "监控安全、处理告警、修复漏洞"
+    output: "安全日志"
+    time: "持续"
+  - skill: /monitor
+    trigger: "跟踪威胁、攻击、异常"
+    output: "安全监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记威胁、漏洞、风险"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "安全评估"
+    flow:
+      - skill: /analyze
+        step: "1. 风险评估"
+        output: "风险评估"
+        time: "2h"
+      - skill: /dd
+        step: "2. 渗透测试"
+        output: "测试报告"
+        time: "3h"
+      - skill: /analyze
+        step: "3. 漏洞分析"
+        output: "漏洞分析"
+        time: "2h"
+      - skill: /create
+        step: "4. 评估报告"
+        output: "评估报告"
+        time: "2h"
+    total: "2-3天"
+
+  - name: "防御建设"
+    flow:
+      - skill: /design
+        step: "1. 防御架构"
+        output: "防御架构"
+        time: "3h"
+      - skill: /execute
+        step: "2. 安全部署"
+        output: "部署记录"
+        time: "3h"
+      - skill: /experiment
+        step: "3. 防御测试"
+        output: "测试报告"
+        time: "2h"
+      - skill: /review
+        step: "4. 防御评审"
+        output: "评审意见"
+        time: "1h"
+    total: "2-3天"
+
+  - name: "威胁检测"
+    flow:
+      - skill: /monitor
+        step: "1. SIEM监控"
+        output: "监控记录"
+        time: "持续"
+      - skill: /analyze
+        step: "2. 威胁分析"
+        output: "威胁分析"
+        time: "2h"
+      - skill: /modeling
+        step: "3. 威胁模型"
+        output: "威胁模型"
+        time: "2h"
+      - skill: /create
+        step: "4. 检测规则"
+        output: "检测规则"
+        time: "2h"
+    total: "持续"
+
+  - name: "应急响应"
+    flow:
+      - skill: /execute
+        step: "1. 事件响应"
+        output: "响应记录"
+        time: "持续"
+      - skill: /analyze
+        step: "2. 事件调查"
+        output: "调查报告"
+        time: "2h"
+      - skill: /create
+        step: "3. 修复方案"
+        output: "修复方案"
+        time: "2h"
+      - skill: /review
+        step: "4. 事后复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /analyze
+  - /dd
+  - /create
+  - /design
+  - /experiment
+  - /review
+  - /modeling
+  - /mark
+
+output:
+  - "风险评估"
+  - "漏洞分析"
+  - "评估报告"
+  - "防御架构"
+  - "部署记录"
+  - "威胁分析"
+  - "威胁模型"
+  - "检测规则"
+  - "响应记录"
+  - "调查报告"
+  - "修复方案"
+  - "复盘报告"

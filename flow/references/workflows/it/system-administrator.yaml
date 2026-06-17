@@ -1,0 +1,123 @@
+---
+name: system-administrator
+description: "系统管理员工作流：维护→监控→备份→安全→优化"
+
+daily:
+  - skill: /execute
+    trigger: "维护系统、处理故障、用户支持"
+    output: "管理日志"
+    time: "持续"
+  - skill: /monitor
+    trigger: "监控系统状态、性能、安全"
+    output: "管理监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记系统问题、异常、优化"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "系统维护"
+    flow:
+      - skill: /execute
+        step: "1. 日常巡检"
+        output: "巡检记录"
+        time: "2h"
+      - skill: /execute
+        step: "2. 补丁管理"
+        output: "补丁记录"
+        time: "2h"
+      - skill: /execute
+        step: "3. 性能调优"
+        output: "调优记录"
+        time: "2h"
+      - skill: /review
+        step: "4. 维护评估"
+        output: "评估报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "监控告警"
+    flow:
+      - skill: /monitor
+        step: "1. 监控配置"
+        output: "监控配置"
+        time: "2h"
+      - skill: /execute
+        step: "2. 告警规则"
+        output: "告警规则"
+        time: "2h"
+      - skill: /execute
+        step: "3. 事件响应"
+        output: "响应记录"
+        time: "持续"
+      - skill: /analyze
+        step: "4. 事件分析"
+        output: "事件分析"
+        time: "2h"
+    total: "持续"
+
+  - name: "备份恢复"
+    flow:
+      - skill: /plan
+        step: "1. 备份策略"
+        output: "备份策略"
+        time: "2h"
+      - skill: /execute
+        step: "2. 备份执行"
+        output: "备份记录"
+        time: "持续"
+      - skill: /experiment
+        step: "3. 恢复测试"
+        output: "测试报告"
+        time: "2h"
+      - skill: /review
+        step: "4. 恢复评估"
+        output: "评估报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "安全管理"
+    flow:
+      - skill: /policy
+        step: "1. 安全策略"
+        output: "安全策略"
+        time: "2h"
+      - skill: /execute
+        step: "2. 访问控制"
+        output: "控制记录"
+        time: "2h"
+      - skill: /execute
+        step: "3. 安全审计"
+        output: "审计记录"
+        time: "2h"
+      - skill: /review
+        step: "4. 安全评估"
+        output: "评估报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /review
+  - /analyze
+  - /plan
+  - /experiment
+  - /policy
+  - /mark
+
+output:
+  - "巡检记录"
+  - "补丁记录"
+  - "调优记录"
+  - "监控配置"
+  - "告警规则"
+  - "响应记录"
+  - "事件分析"
+  - "备份策略"
+  - "备份记录"
+  - "测试报告"
+  - "安全策略"
+  - "控制记录"
+  - "审计记录"

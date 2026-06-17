@@ -1,0 +1,121 @@
+---
+name: art-director
+description: "美术指导工作流：概念→风格→视觉→审核→交付"
+
+daily:
+  - skill: /create
+    trigger: "创意概念、视觉方向、风格指导"
+    output: "创意方向"
+    time: "持续"
+  - skill: /new-info
+    trigger: "扫描艺术趋势、设计灵感、竞品"
+    output: "艺术灵感"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记视觉问题、亮点、反馈"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "视觉概念"
+    flow:
+      - skill: /analyze
+        step: "1. 品牌与需求分析"
+        output: "需求分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 视觉概念"
+        output: "视觉概念"
+        time: "3h"
+      - skill: /visual
+        step: "3. 风格板"
+        output: "风格板"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 概念汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "视觉审核"
+    flow:
+      - skill: /review
+        step: "1. 设计审核"
+        output: "审核意见"
+        time: "2h"
+      - skill: /create
+        step: "2. 修改意见"
+        output: "修改意见"
+        time: "1h"
+      - skill: /review
+        step: "3. 终稿确认"
+        output: "确认意见"
+        time: "1h"
+    total: "半天"
+
+  - name: "视觉规范"
+    flow:
+      - skill: /design
+        step: "1. 视觉系统"
+        output: "视觉系统"
+        time: "3h"
+      - skill: /visual
+        step: "2. 视觉规范"
+        output: "视觉规范"
+        time: "2h"
+      - skill: /create
+        step: "3. 规范文档"
+        output: "规范文档"
+        time: "2h"
+      - skill: /execute
+        step: "4. 规范推广"
+        output: "推广记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "跨部门协作"
+    flow:
+      - skill: /interview
+        step: "1. 需求沟通"
+        output: "沟通记录"
+        time: "2h"
+      - skill: /create
+        step: "2. 创意方案"
+        output: "创意方案"
+        time: "2h"
+      - skill: /workshop
+        step: "3. 创意工作坊"
+        output: "工作坊方案"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 方案汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /create
+  - /new-info
+  - /analyze
+  - /visual
+  - /pitch
+  - /review
+  - /design
+  - /execute
+  - /interview
+  - /workshop
+  - /mark
+
+output:
+  - "需求分析"
+  - "视觉概念"
+  - "风格板"
+  - "审核意见"
+  - "修改意见"
+  - "视觉系统"
+  - "视觉规范"
+  - "规范文档"
+  - "沟通记录"
+  - "创意方案"
+  - "工作坊方案"
+  - "汇报材料"

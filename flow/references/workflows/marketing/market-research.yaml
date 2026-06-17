@@ -1,0 +1,115 @@
+---
+name: market-research
+description: "市场研究工作流：市场分析→用户研究→调研→数据→报告"
+
+daily:
+  - skill: /new-info
+    trigger: "扫描行业数据、调研报告、消费者趋势"
+    output: "研究情报"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪调研项目进度、数据质量"
+    output: "项目摘要"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记关键数据、洞察、假设"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "市场分析"
+    flow:
+      - skill: /learn
+        step: "1. 行业快速认知"
+        output: "认知地图"
+        time: "2h"
+      - skill: /market-search
+        step: "2. 市场规模与结构分析"
+        output: "市场分析"
+        time: "3h"
+      - skill: /graph-builder
+        step: "3. 产业链与竞争图谱"
+        output: "产业图谱"
+        time: "2h"
+      - skill: /analyze
+        step: "4. 数据验证与趋势分析"
+        output: "数据报告"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "消费者研究"
+    flow:
+      - skill: /user-research
+        step: "1. 消费者访谈与调研"
+        output: "调研报告"
+        time: "3h"
+      - skill: /analyze
+        step: "2. 消费者数据分析"
+        output: "消费者分析"
+        time: "2h"
+      - skill: /experiment
+        step: "3. 消费者测试"
+        output: "测试结果"
+        time: "2周"
+      - skill: /visual
+        step: "4. 消费者可视化"
+        output: "可视化报告"
+        time: "2h"
+    total: "1-2周"
+
+  - name: "竞品分析"
+    flow:
+      - skill: /tech-compare
+        step: "1. 产品/技术对比"
+        output: "对比分析"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 竞品数据与策略分析"
+        output: "竞品分析"
+        time: "2h"
+      - skill: /market-search
+        step: "3. 竞品市场分析"
+        output: "市场分析"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "研究报告"
+    flow:
+      - skill: /analyze
+        step: "1. 研究数据汇总"
+        output: "数据汇总"
+        time: "2h"
+      - skill: /visual
+        step: "2. 报告可视化"
+        output: "可视化报告"
+        time: "2h"
+      - skill: /pitch
+        step: "3. 管理层汇报"
+        output: "汇报材料"
+        time: "2h"
+    total: "1-2天"
+
+skills:
+  - /new-info
+  - /monitor
+  - /learn
+  - /market-search
+  - /graph-builder
+  - /analyze
+  - /user-research
+  - /experiment
+  - /visual
+  - /tech-compare
+  - /pitch
+  - /mark
+
+output:
+  - "认知地图"
+  - "市场分析"
+  - "产业图谱"
+  - "调研报告"
+  - "消费者分析"
+  - "对比分析"
+  - "竞品分析"
+  - "可视化报告"
+  - "汇报材料"

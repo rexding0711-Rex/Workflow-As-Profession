@@ -1,0 +1,123 @@
+---
+name: data-engineer
+description: "数据工程师工作流：采集→存储→处理→管道→监控"
+
+daily:
+  - skill: /execute
+    trigger: "维护管道、处理数据、修复故障"
+    output: "工程日志"
+    time: "持续"
+  - skill: /monitor
+    trigger: "跟踪数据流、质量、延迟"
+    output: "工程监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记工程问题、优化、风险"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "数据采集"
+    flow:
+      - skill: /analyze
+        step: "1. 源分析"
+        output: "源分析"
+        time: "2h"
+      - skill: /tech-compare
+        step: "2. 采集方案"
+        output: "采集方案"
+        time: "2h"
+      - skill: /execute
+        step: "3. 采集开发"
+        output: "开发记录"
+        time: "3h"
+      - skill: /experiment
+        step: "4. 采集测试"
+        output: "测试报告"
+        time: "2h"
+    total: "2-3天"
+
+  - name: "数据存储"
+    flow:
+      - skill: /design
+        step: "1. 存储架构"
+        output: "存储架构"
+        time: "2h"
+      - skill: /tech-compare
+        step: "2. 技术选型"
+        output: "技术选型"
+        time: "2h"
+      - skill: /execute
+        step: "3. 存储搭建"
+        output: "搭建记录"
+        time: "3h"
+      - skill: /experiment
+        step: "4. 存储测试"
+        output: "测试报告"
+        time: "2h"
+    total: "2-3天"
+
+  - name: "数据处理"
+    flow:
+      - skill: /analyze
+        step: "1. 处理分析"
+        output: "处理分析"
+        time: "2h"
+      - skill: /execute
+        step: "2. ETL开发"
+        output: "ETL开发"
+        time: "3h"
+      - skill: /execute
+        step: "3. 数据清洗"
+        output: "清洗记录"
+        time: "2h"
+      - skill: /review
+        step: "4. 质量验证"
+        output: "验证报告"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "管道监控"
+    flow:
+      - skill: /execute
+        step: "1. 管道部署"
+        output: "部署记录"
+        time: "2h"
+      - skill: /monitor
+        step: "2. 管道监控"
+        output: "监控记录"
+        time: "持续"
+      - skill: /analyze
+        step: "3. 性能优化"
+        output: "优化报告"
+        time: "2h"
+      - skill: /execute
+        step: "4. 故障处理"
+        output: "处理记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /analyze
+  - /tech-compare
+  - /design
+  - /experiment
+  - /review
+  - /mark
+
+output:
+  - "源分析"
+  - "采集方案"
+  - "开发记录"
+  - "测试报告"
+  - "存储架构"
+  - "技术选型"
+  - "搭建记录"
+  - "处理分析"
+  - "ETL开发"
+  - "清洗记录"
+  - "验证报告"
+  - "部署记录"
+  - "优化报告"

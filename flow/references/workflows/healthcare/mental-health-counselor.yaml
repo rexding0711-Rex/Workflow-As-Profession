@@ -1,0 +1,121 @@
+---
+name: mental-health-counselor
+description: "心理咨询师工作流：评估→咨询→干预→记录→督导"
+
+daily:
+  - skill: /execute
+    trigger: "个体咨询、团体辅导、危机干预"
+    output: "咨询日志"
+    time: "持续"
+  - skill: /monitor
+    trigger: "跟踪来访者状态、风险、进展"
+    output: "咨询监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记危机信号、突破、转介"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "初始评估"
+    flow:
+      - skill: /interview
+        step: "1. intake访谈"
+        output: "访谈记录"
+        time: "1h"
+      - skill: /analyze
+        step: "2. 心理评估"
+        output: "评估报告"
+        time: "2h"
+      - skill: /create
+        step: "3. 咨询方案"
+        output: "咨询方案"
+        time: "1h"
+      - skill: /interview
+        step: "4. 知情同意"
+        output: "同意记录"
+        time: "30min"
+    total: "半天"
+
+  - name: "个体咨询"
+    flow:
+      - skill: /interview
+        step: "1. 咨询会谈"
+        output: "会谈记录"
+        time: "持续"
+      - skill: /execute
+        step: "2. 干预技术"
+        output: "干预记录"
+        time: "持续"
+      - skill: /analyze
+        step: "3. 进展评估"
+        output: "进展评估"
+        time: "30min"
+      - skill: /create
+        step: "4. 家庭作业"
+        output: "作业方案"
+        time: "30min"
+    total: "持续"
+
+  - name: "危机干预"
+    flow:
+      - skill: /analyze
+        step: "1. 风险评估"
+        output: "风险评估"
+        time: "30min"
+      - skill: /execute
+        step: "2. 危机干预"
+        output: "干预记录"
+        time: "持续"
+      - skill: /interview
+        step: "3. 安全计划"
+        output: "安全计划"
+        time: "1h"
+      - skill: /execute
+        step: "4. 随访跟踪"
+        output: "随访记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "专业督导"
+    flow:
+      - skill: /interview
+        step: "1. 个案呈报"
+        output: "呈报记录"
+        time: "1h"
+      - skill: /interview
+        step: "2. 督导讨论"
+        output: "督导记录"
+        time: "1h"
+      - skill: /analyze
+        step: "3. 反思分析"
+        output: "反思报告"
+        time: "30min"
+      - skill: /create
+        step: "4. 改进计划"
+        output: "改进计划"
+        time: "30min"
+    total: "半天"
+
+skills:
+  - /execute
+  - /monitor
+  - /interview
+  - /analyze
+  - /create
+  - /mark
+
+output:
+  - "访谈记录"
+  - "评估报告"
+  - "咨询方案"
+  - "会谈记录"
+  - "干预记录"
+  - "进展评估"
+  - "风险评估"
+  - "安全计划"
+  - "随访记录"
+  - "呈报记录"
+  - "督导记录"
+  - "反思报告"
+  - "改进计划"

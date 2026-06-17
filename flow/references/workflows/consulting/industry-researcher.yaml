@@ -1,0 +1,122 @@
+---
+name: industry-researcher
+description: "行业研究工作流：选题→调研→分析→报告→传播"
+
+daily:
+  - skill: /new-info
+    trigger: "跟踪行业动态、数据、政策"
+    output: "行业情报"
+    time: "15min"
+  - skill: /analyze
+    trigger: "分析行业数据、趋势、竞争"
+    output: "研究分析"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记关键洞察、机会、风险"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "研究选题"
+    flow:
+      - skill: /market-search
+        step: "1. 热点扫描"
+        output: "热点扫描"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 选题分析"
+        output: "选题分析"
+        time: "2h"
+      - skill: /decide
+        step: "3. 选题决策"
+        output: "选题决策"
+        time: "1h"
+    total: "半天"
+
+  - name: "行业调研"
+    flow:
+      - skill: /market-search
+        step: "1. 数据收集"
+        output: "数据收集"
+        time: "3h"
+      - skill: /interview
+        step: "2. 专家访谈"
+        output: "访谈记录"
+        time: "2h"
+      - skill: /execute
+        step: "3. 实地调研"
+        output: "调研记录"
+        time: "3h"
+      - skill: /analyze
+        step: "4. 数据整理"
+        output: "整理报告"
+        time: "2h"
+    total: "2-3天"
+
+  - name: "研究报告"
+    flow:
+      - skill: /analyze
+        step: "1. 深度分析"
+        output: "深度分析"
+        time: "3h"
+      - skill: /visual
+        step: "2. 可视化"
+        output: "可视化报告"
+        time: "2h"
+      - skill: /create
+        step: "3. 报告撰写"
+        output: "研究报告"
+        time: "3h"
+      - skill: /review
+        step: "4. 报告审核"
+        output: "审核意见"
+        time: "1h"
+    total: "2-3天"
+
+  - name: "成果传播"
+    flow:
+      - skill: /create
+        step: "1. 传播策略"
+        output: "传播策略"
+        time: "2h"
+      - skill: /create
+        step: "2. 内容制作"
+        output: "内容制作"
+        time: "2h"
+      - skill: /execute
+        step: "3. 渠道发布"
+        output: "发布记录"
+        time: "1h"
+      - skill: /monitor
+        step: "4. 效果监控"
+        output: "监控记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /new-info
+  - /analyze
+  - /market-search
+  - /interview
+  - /execute
+  - /visual
+  - /create
+  - /review
+  - /decide
+  - /monitor
+  - /mark
+
+output:
+  - "热点扫描"
+  - "选题分析"
+  - "数据收集"
+  - "访谈记录"
+  - "调研记录"
+  - "整理报告"
+  - "深度分析"
+  - "可视化报告"
+  - "研究报告"
+  - "审核意见"
+  - "传播策略"
+  - "内容制作"
+  - "发布记录"

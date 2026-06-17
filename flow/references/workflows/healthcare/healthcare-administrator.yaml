@@ -1,0 +1,121 @@
+---
+name: healthcare-administrator
+description: "医院管理工作流：运营→质控→人力→财务→合规"
+
+daily:
+  - skill: /execute
+    trigger: "处理行政事务、协调部门、审批"
+    output: "管理日志"
+    time: "持续"
+  - skill: /monitor
+    trigger: "跟踪运营指标、投诉、安全"
+    output: "运营监控"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记运营问题、风险、改进"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "运营管理"
+    flow:
+      - skill: /analyze
+        step: "1. 运营数据分析"
+        output: "运营分析"
+        time: "2h"
+      - skill: /plan
+        step: "2. 运营计划"
+        output: "运营计划"
+        time: "2h"
+      - skill: /execute
+        step: "3. 运营执行"
+        output: "执行记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 运营复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "质量控制"
+    flow:
+      - skill: /analyze
+        step: "1. 质量指标"
+        output: "质量分析"
+        time: "2h"
+      - skill: /process
+        step: "2. 质控流程"
+        output: "质控流程"
+        time: "2h"
+      - skill: /execute
+        step: "3. 质控执行"
+        output: "执行记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 质控复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "人力管理"
+    flow:
+      - skill: /analyze
+        step: "1. 人力分析"
+        output: "人力分析"
+        time: "2h"
+      - skill: /plan
+        step: "2. 排班计划"
+        output: "排班计划"
+        time: "2h"
+      - skill: /execute
+        step: "3. 人力执行"
+        output: "执行记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 人力复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "合规管理"
+    flow:
+      - skill: /policy
+        step: "1. 法规研究"
+        output: "法规研究"
+        time: "2h"
+      - skill: /process
+        step: "2. 合规流程"
+        output: "合规流程"
+        time: "2h"
+      - skill: /execute
+        step: "3. 合规执行"
+        output: "执行记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 合规审计"
+        output: "审计报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /analyze
+  - /plan
+  - /process
+  - /policy
+  - /review
+  - /mark
+
+output:
+  - "运营分析"
+  - "运营计划"
+  - "质量分析"
+  - "质控流程"
+  - "人力分析"
+  - "排班计划"
+  - "法规研究"
+  - "合规流程"
+  - "执行记录"
+  - "复盘报告"
+  - "审计报告"

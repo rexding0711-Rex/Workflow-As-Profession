@@ -1,0 +1,104 @@
+---
+name: animator
+description: "动画师工作流：脚本→分镜→动画→后期→交付"
+
+daily:
+  - skill: /execute
+    trigger: "跟踪动画进度、镜头、渲染"
+    output: "动画日报"
+    time: "10min"
+  - skill: /new-info
+    trigger: "扫描动画技术、趋势、灵感"
+    output: "动画灵感"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记动画问题、亮点、反馈"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "动画策划"
+    flow:
+      - skill: /create
+        step: "1. 动画概念"
+        output: "动画概念"
+        time: "2h"
+      - skill: /create
+        step: "2. 分镜脚本"
+        output: "分镜脚本"
+        time: "3h"
+      - skill: /plan
+        step: "3. 制作计划"
+        output: "制作计划"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "动画制作"
+    flow:
+      - skill: /execute
+        step: "1. 原画"
+        output: "原画记录"
+        time: "3h"
+      - skill: /execute
+        step: "2. 动画"
+        output: "动画记录"
+        time: "3h"
+      - skill: /execute
+        step: "3. 渲染"
+        output: "渲染记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "后期合成"
+    flow:
+      - skill: /visual
+        step: "1. 合成与特效"
+        output: "合成记录"
+        time: "3h"
+      - skill: /visual
+        step: "2. 调色"
+        output: "调色方案"
+        time: "2h"
+      - skill: /review
+        step: "3. 成片审核"
+        output: "审核意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "交付"
+    flow:
+      - skill: /execute
+        step: "1. 输出与压缩"
+        output: "输出记录"
+        time: "1h"
+      - skill: /execute
+        step: "2. 交付"
+        output: "交付记录"
+        time: "1h"
+      - skill: /review
+        step: "3. 反馈修改"
+        output: "修改记录"
+        time: "2h"
+    total: "1天"
+
+skills:
+  - /execute
+  - /new-info
+  - /create
+  - /plan
+  - /visual
+  - /review
+  - /mark
+
+output:
+  - "动画概念"
+  - "分镜脚本"
+  - "制作计划"
+  - "原画记录"
+  - "动画记录"
+  - "渲染记录"
+  - "合成记录"
+  - "调色方案"
+  - "审核意见"
+  - "输出记录"
+  - "交付记录"

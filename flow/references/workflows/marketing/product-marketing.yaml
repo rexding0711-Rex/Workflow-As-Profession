@@ -1,0 +1,124 @@
+---
+name: product-marketing
+description: "产品营销工作流：产品定位→内容→GEO→定价→上市"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪产品数据、用户反馈、竞品动态"
+    output: "产品仪表盘"
+    time: "10min"
+  - skill: /new-info
+    trigger: "扫描产品新闻、行业动态、用户讨论"
+    output: "产品情报"
+    time: "5min"
+  - skill: /mark
+    trigger: "标记产品洞察、用户反馈、营销机会"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "产品定位"
+    flow:
+      - skill: /market-search
+        step: "1. 目标市场与受众分析"
+        output: "受众分析"
+        time: "2h"
+      - skill: /tech-compare
+        step: "2. 竞品产品对比"
+        output: "竞品对比"
+        time: "2h"
+      - skill: /professional
+        step: "3. 产品定位与价值主张"
+        output: "定位方案"
+        time: "2h"
+      - skill: /user-research
+        step: "4. 用户验证"
+        output: "用户验证"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "上市策略"
+    flow:
+      - skill: /create
+        step: "1. 上市内容与物料"
+        output: "上市物料"
+        time: "3h"
+      - skill: /geo
+        step: "2. 上市SEO/GEO策略"
+        output: "GEO方案"
+        time: "2h"
+      - skill: /pricing
+        step: "3. 产品定价策略"
+        output: "定价策略"
+        time: "2h"
+      - skill: /execute
+        step: "4. 上市执行计划"
+        output: "执行计划"
+        time: "持续"
+    total: "1-2天"
+
+  - name: "产品内容"
+    flow:
+      - skill: /create
+        step: "1. 产品内容与文案"
+        output: "内容素材"
+        time: "3h"
+      - skill: /tech-article
+        step: "2. 技术/产品内容"
+        output: "技术内容"
+        time: "3h"
+      - skill: /visual
+        step: "3. 产品可视化"
+        output: "视觉素材"
+        time: "2h"
+      - skill: /experiment
+        step: "4. 内容A/B测试"
+        output: "测试结果"
+        time: "2周"
+    total: "持续"
+
+  - name: "产品上市复盘"
+    flow:
+      - skill: /analyze
+        step: "1. 上市数据与效果分析"
+        output: "效果分析"
+        time: "2h"
+      - skill: /review
+        step: "2. 上市复盘"
+        output: "复盘报告"
+        time: "1h"
+      - skill: /user-research
+        step: "3. 用户反馈收集"
+        output: "反馈报告"
+        time: "2h"
+    total: "1-2天"
+
+skills:
+  - /monitor
+  - /new-info
+  - /market-search
+  - /tech-compare
+  - /professional
+  - /user-research
+  - /create
+  - /geo
+  - /pricing
+  - /execute
+  - /tech-article
+  - /visual
+  - /experiment
+  - /analyze
+  - /review
+  - /mark
+
+output:
+  - "受众分析"
+  - "竞品对比"
+  - "定位方案"
+  - "上市物料"
+  - "GEO方案"
+  - "定价策略"
+  - "内容素材"
+  - "技术内容"
+  - "效果分析"
+  - "复盘报告"

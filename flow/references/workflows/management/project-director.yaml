@@ -1,0 +1,125 @@
+---
+name: project-director
+description: "项目总监工作流：战略→项目组合→资源→风险→汇报"
+
+daily:
+  - skill: /execute
+    trigger: "跟踪项目组合进度、资源、风险"
+    output: "项目组合日报"
+    time: "15min"
+  - skill: /monitor
+    trigger: "监控项目健康度、预算、里程碑"
+    output: "组合监控"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记项目风险、资源冲突、战略偏差"
+    output: "结构化标签"
+    time: "10min"
+
+projects:
+  - name: "项目组合管理"
+    flow:
+      - skill: /analyze
+        step: "1. 项目组合分析"
+        output: "组合分析"
+        time: "3h"
+      - skill: /modeling
+        step: "2. 资源分配模型"
+        output: "资源模型"
+        time: "2h"
+      - skill: /decide
+        step: "3. 项目优先级决策"
+        output: "优先级决策"
+        time: "2h"
+      - skill: /execute
+        step: "4. 组合执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "风险管理"
+    flow:
+      - skill: /analyze
+        step: "1. 组合风险识别"
+        output: "风险清单"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 风险评估模型"
+        output: "评估模型"
+        time: "2h"
+      - skill: /create
+        step: "3. 风险应对计划"
+        output: "应对计划"
+        time: "2h"
+      - skill: /monitor
+        step: "4. 风险监控"
+        output: "监控记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "资源规划"
+    flow:
+      - skill: /analyze
+        step: "1. 资源需求分析"
+        output: "需求分析"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 资源规划模型"
+        output: "规划模型"
+        time: "2h"
+      - skill: /plan
+        step: "3. 资源调配计划"
+        output: "调配计划"
+        time: "2h"
+      - skill: /execute
+        step: "4. 资源执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "战略汇报"
+    flow:
+      - skill: /analyze
+        step: "1. 项目数据汇总"
+        output: "数据汇总"
+        time: "2h"
+      - skill: /visual
+        step: "2. 可视化报告"
+        output: "可视化报告"
+        time: "2h"
+      - skill: /pitch
+        step: "3. 高管汇报"
+        output: "汇报材料"
+        time: "2h"
+      - skill: /review
+        step: "4. 战略复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /execute
+  - /monitor
+  - /analyze
+  - /modeling
+  - /decide
+  - /create
+  - /plan
+  - /visual
+  - /pitch
+  - /review
+  - /mark
+
+output:
+  - "组合分析"
+  - "资源模型"
+  - "优先级决策"
+  - "风险清单"
+  - "评估模型"
+  - "应对计划"
+  - "需求分析"
+  - "规划模型"
+  - "调配计划"
+  - "数据汇总"
+  - "可视化报告"
+  - "汇报材料"

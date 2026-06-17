@@ -1,0 +1,122 @@
+---
+name: financial-advisor
+description: "财务顾问工作流：财务分析→估值→规划→建议→监控"
+
+daily:
+  - skill: /analyze
+    trigger: "跟踪客户财务数据、市场动态、投资组合"
+    output: "财务仪表盘"
+    time: "15min"
+  - skill: /new-info
+    trigger: "扫描市场机会、政策变化、产品动态"
+    output: "市场情报"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记财务洞察、风险、机会"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "财务规划"
+    flow:
+      - skill: /interview
+        step: "1. 客户财务状况访谈"
+        output: "访谈记录"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 财务数据分析"
+        output: "财务分析"
+        time: "3h"
+      - skill: /modeling
+        step: "3. 财务规划模型"
+        output: "规划模型"
+        time: "2h"
+      - skill: /create
+        step: "4. 财务规划方案"
+        output: "规划方案"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "投资建议"
+    flow:
+      - skill: /analyze
+        step: "1. 投资需求分析"
+        output: "需求分析"
+        time: "2h"
+      - skill: /market-search
+        step: "2. 市场与产品研究"
+        output: "市场研究"
+        time: "2h"
+      - skill: /modeling
+        step: "3. 投资组合建模"
+        output: "组合模型"
+        time: "2h"
+      - skill: /create
+        step: "4. 投资建议书"
+        output: "投资建议"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "税务规划"
+    flow:
+      - skill: /analyze
+        step: "1. 税务状况分析"
+        output: "税务分析"
+        time: "2h"
+      - skill: /policy
+        step: "2. 税务政策研究"
+        output: "政策研究"
+        time: "2h"
+      - skill: /create
+        step: "3. 税务规划方案"
+        output: "税务方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 税务执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "财富传承"
+    flow:
+      - skill: /analyze
+        step: "1. 家庭资产分析"
+        output: "资产分析"
+        time: "2h"
+      - skill: /policy
+        step: "2. 法律与政策研究"
+        output: "法律研究"
+        time: "2h"
+      - skill: /create
+        step: "3. 传承方案设计"
+        output: "传承方案"
+        time: "3h"
+      - skill: /execute
+        step: "4. 方案执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /analyze
+  - /new-info
+  - /interview
+  - /modeling
+  - /create
+  - /market-search
+  - /policy
+  - /execute
+  - /mark
+
+output:
+  - "访谈记录"
+  - "财务分析"
+  - "规划模型"
+  - "规划方案"
+  - "需求分析"
+  - "市场研究"
+  - "组合模型"
+  - "投资建议"
+  - "税务分析"
+  - "税务方案"
+  - "传承方案"

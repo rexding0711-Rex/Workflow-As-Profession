@@ -1,0 +1,67 @@
+---
+name: email-marketing-manager
+description: "邮件营销经理工作流：列表管理→自动化→个性化→A/B测试→可送达率"
+
+daily:
+  - skill: /monitor
+    trigger: "监控打开率/点击率/退订率/可送达率"
+    output: "邮件仪表盘"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记高价值分群、优质邮件模板、异常指标"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "邮件策略与自动化"
+    flow:
+      - skill: /analyze
+        step: "1. 用户分群与生命周期分析"
+        output: "用户分群"
+        time: "2h"
+      - skill: /process
+        step: "2. 自动化旅程设计（欢迎/培育/挽回）"
+        output: "旅程设计"
+        time: "2h"
+      - skill: /create
+        step: "3. 邮件模板与内容"
+        output: "邮件模板"
+        time: "2h"
+      - skill: /experiment
+        step: "4. 标题/内容/发送时间A/B测试"
+        output: "测试报告"
+        time: "2h"
+    total: "1天"
+  - name: "可送达率优化"
+    flow:
+      - skill: /analyze
+        step: "1. 可送达率诊断"
+        output: "诊断报告"
+        time: "1h"
+      - skill: /review
+        step: "2. 列表清洗与分群优化"
+        output: "列表优化"
+        time: "2h"
+      - skill: /execute
+        step: "3. 发送信誉恢复"
+        output: "执行记录"
+        time: "持续"
+    total: "1天"
+
+skills:
+  - /monitor
+  - /mark
+  - /analyze
+  - /process
+  - /create
+  - /experiment
+  - /review
+  - /execute
+
+output:
+  - "用户分群方案"
+  - "自动化旅程设计"
+  - "邮件模板"
+  - "A/B测试报告"
+  - "可送达率诊断"
+  - "列表优化方案"

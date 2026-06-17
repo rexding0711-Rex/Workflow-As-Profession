@@ -1,0 +1,125 @@
+---
+name: program-manager
+description: "项目集经理工作流：规划→协调→治理→收益→整合"
+
+daily:
+  - skill: /execute
+    trigger: "协调项目集、管理依赖、跟踪收益"
+    output: "项目集日志"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪项目集状态、风险、资源"
+    output: "项目集监控"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记项目集问题、依赖、进展"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "项目集规划"
+    flow:
+      - skill: /analyze
+        step: "1. 战略分析"
+        output: "战略分析"
+        time: "2h"
+      - skill: /plan
+        step: "2. 项目集规划"
+        output: "项目集规划"
+        time: "3h"
+      - skill: /modeling
+        step: "3. 依赖模型"
+        output: "依赖模型"
+        time: "2h"
+      - skill: /create
+        step: "4. 路线图"
+        output: "路线图"
+        time: "2h"
+    total: "2-3天"
+
+  - name: "项目集协调"
+    flow:
+      - skill: /execute
+        step: "1. 资源协调"
+        output: "协调记录"
+        time: "持续"
+      - skill: /interview
+        step: "2. 干系人沟通"
+        output: "沟通记录"
+        time: "2h"
+      - skill: /monitor
+        step: "3. 进度监控"
+        output: "监控记录"
+        time: "持续"
+      - skill: /analyze
+        step: "4. 冲突分析"
+        output: "冲突分析"
+        time: "2h"
+    total: "持续"
+
+  - name: "项目集治理"
+    flow:
+      - skill: /policy
+        step: "1. 治理框架"
+        output: "治理框架"
+        time: "2h"
+      - skill: /execute
+        step: "2. 治理实施"
+        output: "实施记录"
+        time: "持续"
+      - skill: /review
+        step: "3. 治理评审"
+        output: "评审记录"
+        time: "1h"
+      - skill: /create
+        step: "4. 治理报告"
+        output: "治理报告"
+        time: "2h"
+    total: "持续"
+
+  - name: "收益管理"
+    flow:
+      - skill: /analyze
+        step: "1. 收益分析"
+        output: "收益分析"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 收益模型"
+        output: "收益模型"
+        time: "2h"
+      - skill: /monitor
+        step: "3. 收益跟踪"
+        output: "跟踪记录"
+        time: "持续"
+      - skill: /create
+        step: "4. 收益报告"
+        output: "收益报告"
+        time: "2h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /analyze
+  - /plan
+  - /modeling
+  - /create
+  - /interview
+  - /policy
+  - /review
+  - /mark
+
+output:
+  - "战略分析"
+  - "项目集规划"
+  - "依赖模型"
+  - "路线图"
+  - "协调记录"
+  - "沟通记录"
+  - "监控记录"
+  - "冲突分析"
+  - "治理框架"
+  - "实施记录"
+  - "收益分析"
+  - "收益模型"
+  - "收益报告"

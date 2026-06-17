@@ -1,0 +1,105 @@
+---
+name: coach
+description: "教练工作流：建立关系→评估→目标→辅导→评估"
+
+daily:
+  - skill: /execute
+    trigger: "进行辅导、反馈、支持"
+    output: "教练日志"
+    time: "持续"
+  - skill: /monitor
+    trigger: "跟踪客户进展、目标、状态"
+    output: "教练监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记突破、障碍、成长"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "建立关系"
+    flow:
+      - skill: /interview
+        step: "1. 初始会谈"
+        output: "会谈记录"
+        time: "1h"
+      - skill: /analyze
+        step: "2. 需求评估"
+        output: "需求评估"
+        time: "1h"
+      - skill: /create
+        step: "3. 建立契约"
+        output: "契约文档"
+        time: "30min"
+    total: "半天"
+
+  - name: "评估诊断"
+    flow:
+      - skill: /analyze
+        step: "1. 能力评估"
+        output: "能力评估"
+        time: "2h"
+      - skill: /interview
+        step: "2. 深度访谈"
+        output: "访谈记录"
+        time: "2h"
+      - skill: /create
+        step: "3. 诊断报告"
+        output: "诊断报告"
+        time: "1h"
+    total: "半天"
+
+  - name: "目标辅导"
+    flow:
+      - skill: /plan
+        step: "1. 目标设定"
+        output: "目标设定"
+        time: "1h"
+      - skill: /execute
+        step: "2. 辅导会谈"
+        output: "辅导记录"
+        time: "持续"
+      - skill: /execute
+        step: "3. 行动计划"
+        output: "行动计划"
+        time: "1h"
+    total: "持续"
+
+  - name: "成果评估"
+    flow:
+      - skill: /analyze
+        step: "1. 成果评估"
+        output: "成果评估"
+        time: "1h"
+      - skill: /interview
+        step: "2. 反馈会谈"
+        output: "反馈记录"
+        time: "1h"
+      - skill: /review
+        step: "3. 结案评估"
+        output: "结案报告"
+        time: "30min"
+    total: "半天"
+
+skills:
+  - /execute
+  - /monitor
+  - /interview
+  - /analyze
+  - /create
+  - /plan
+  - /review
+  - /mark
+
+output:
+  - "会谈记录"
+  - "需求评估"
+  - "契约文档"
+  - "能力评估"
+  - "诊断报告"
+  - "目标设定"
+  - "辅导记录"
+  - "行动计划"
+  - "成果评估"
+  - "反馈记录"
+  - "结案报告"

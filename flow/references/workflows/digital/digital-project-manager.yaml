@@ -1,0 +1,75 @@
+---
+name: digital-project-manager
+description: "数字项目经理工作流：需求→范围→迭代→交付→复盘（敏捷+瀑布混合）"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪项目进度、阻塞项、团队负载"
+    output: "项目仪表盘"
+    time: "10min"
+  - skill: /execute
+    trigger: "处理阻塞项、协调资源"
+    output: "项目推动"
+    time: "持续"
+  - skill: /mark
+    trigger: "标记关键决策、风险变化、里程碑"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "项目启动"
+    flow:
+      - skill: /analyze
+        step: "1. 需求分析与范围定义"
+        output: "需求文档"
+        time: "2h"
+      - skill: /plan
+        step: "2. 项目计划与里程碑"
+        output: "项目计划"
+        time: "2h"
+      - skill: /process
+        step: "3. 协作流程与工具配置"
+        output: "协作流程"
+        time: "1h"
+      - skill: /workshop
+        step: "4. 项目启动会"
+        output: "启动记录"
+        time: "1h"
+    total: "1天"
+  - name: "迭代交付"
+    flow:
+      - skill: /execute
+        step: "1. 每日站会与进度跟踪"
+        output: "进度记录"
+        time: "持续"
+      - skill: /review
+        step: "2. Sprint Review"
+        output: "迭代回顾"
+        time: "1h"
+      - skill: /review
+        step: "3. Sprint Retrospective"
+        output: "改进措施"
+        time: "1h"
+      - skill: /plan
+        step: "4. 下迭代计划"
+        output: "迭代计划"
+        time: "1h"
+    total: "每迭代"
+
+skills:
+  - /monitor
+  - /execute
+  - /mark
+  - /analyze
+  - /plan
+  - /process
+  - /workshop
+  - /review
+
+output:
+  - "需求文档"
+  - "项目计划"
+  - "协作流程"
+  - "迭代回顾"
+  - "改进措施"
+  - "项目交付报告"

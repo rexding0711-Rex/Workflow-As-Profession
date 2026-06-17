@@ -1,0 +1,122 @@
+---
+name: frontend-developer
+description: "前端开发者工作流：需求→UI→交互→性能→兼容"
+
+daily:
+  - skill: /execute
+    trigger: "开发前端页面、调试交互、修复兼容"
+    output: "前端日志"
+    time: "持续"
+  - skill: /new-info
+    trigger: "跟踪前端技术、框架、浏览器"
+    output: "技术情报"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记UI问题、性能、兼容性"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "需求开发"
+    flow:
+      - skill: /analyze
+        step: "1. 需求分析"
+        output: "需求分析"
+        time: "2h"
+      - skill: /visual
+        step: "2. UI还原"
+        output: "UI还原"
+        time: "3h"
+      - skill: /execute
+        step: "3. 页面开发"
+        output: "页面开发"
+        time: "3h"
+      - skill: /experiment
+        step: "4. 交互测试"
+        output: "测试记录"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "组件开发"
+    flow:
+      - skill: /design
+        step: "1. 组件设计"
+        output: "组件设计"
+        time: "2h"
+      - skill: /execute
+        step: "2. 组件开发"
+        output: "组件开发"
+        time: "3h"
+      - skill: /experiment
+        step: "3. 组件测试"
+        output: "测试记录"
+        time: "2h"
+      - skill: /review
+        step: "4. 组件评审"
+        output: "评审意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "性能优化"
+    flow:
+      - skill: /analyze
+        step: "1. 性能分析"
+        output: "性能分析"
+        time: "2h"
+      - skill: /execute
+        step: "2. 加载优化"
+        output: "加载优化"
+        time: "2h"
+      - skill: /execute
+        step: "3. 渲染优化"
+        output: "渲染优化"
+        time: "2h"
+      - skill: /experiment
+        step: "4. 性能测试"
+        output: "测试报告"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "兼容性管理"
+    flow:
+      - skill: /analyze
+        step: "1. 兼容分析"
+        output: "兼容分析"
+        time: "2h"
+      - skill: /execute
+        step: "2. 兼容修复"
+        output: "修复记录"
+        time: "持续"
+      - skill: /experiment
+        step: "3. 多设备测试"
+        output: "测试报告"
+        time: "2h"
+      - skill: /review
+        step: "4. 兼容验收"
+        output: "验收记录"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /new-info
+  - /analyze
+  - /visual
+  - /design
+  - /experiment
+  - /review
+  - /mark
+
+output:
+  - "需求分析"
+  - "UI还原"
+  - "页面开发"
+  - "组件设计"
+  - "组件开发"
+  - "性能分析"
+  - "加载优化"
+  - "渲染优化"
+  - "兼容分析"
+  - "修复记录"
+  - "测试记录"
+  - "测试报告"

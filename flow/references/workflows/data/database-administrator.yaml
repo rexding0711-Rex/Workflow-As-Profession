@@ -1,0 +1,119 @@
+---
+name: database-administrator
+description: "DBA工作流：数据库→性能→安全→备份→优化"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪数据库性能、连接、资源使用"
+    output: "DBA监控"
+    time: "15min"
+  - skill: /execute
+    trigger: "处理数据库故障、异常、备份"
+    output: "运维记录"
+    time: "持续"
+  - skill: /mark
+    trigger: "标记性能问题、优化点、风险"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "数据库架构"
+    flow:
+      - skill: /design
+        step: "1. 数据库架构设计"
+        output: "架构设计"
+        time: "3h"
+      - skill: /tech-compare
+        step: "2. 数据库选型对比"
+        output: "选型对比"
+        time: "2h"
+      - skill: /create
+        step: "3. 架构文档"
+        output: "架构文档"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "性能优化"
+    flow:
+      - skill: /analyze
+        step: "1. 性能瓶颈分析"
+        output: "瓶颈分析"
+        time: "2h"
+      - skill: /tech-compare
+        step: "2. 优化方案对比"
+        output: "优化对比"
+        time: "2h"
+      - skill: /execute
+        step: "3. 优化执行"
+        output: "执行记录"
+        time: "3h"
+      - skill: /monitor
+        step: "4. 效果监控"
+        output: "监控记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "安全管理"
+    flow:
+      - skill: /policy
+        step: "1. 数据库安全策略"
+        output: "安全策略"
+        time: "2h"
+      - skill: /execute
+        step: "2. 权限管理与审计"
+        output: "审计记录"
+        time: "2h"
+      - skill: /monitor
+        step: "3. 安全监控"
+        output: "安全监控"
+        time: "持续"
+      - skill: /review
+        step: "4. 安全复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "灾备管理"
+    flow:
+      - skill: /plan
+        step: "1. 灾备方案设计"
+        output: "灾备方案"
+        time: "2h"
+      - skill: /execute
+        step: "2. 备份执行"
+        output: "备份记录"
+        time: "持续"
+      - skill: /experiment
+        step: "3. 灾备演练"
+        output: "演练报告"
+        time: "2h"
+      - skill: /review
+        step: "4. 灾备复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /monitor
+  - /execute
+  - /design
+  - /tech-compare
+  - /analyze
+  - /policy
+  - /plan
+  - /experiment
+  - /review
+  - /create
+  - /mark
+
+output:
+  - "架构设计"
+  - "选型对比"
+  - "架构文档"
+  - "瓶颈分析"
+  - "优化对比"
+  - "执行记录"
+  - "安全策略"
+  - "审计记录"
+  - "灾备方案"
+  - "备份记录"

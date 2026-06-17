@@ -1,0 +1,124 @@
+---
+name: hr-consultant
+description: "HR顾问工作流：诊断→体系→薪酬→绩效→组织"
+
+daily:
+  - skill: /new-info
+    trigger: "扫描HR趋势、政策、最佳实践"
+    output: "HR情报"
+    time: "10min"
+  - skill: /analyze
+    trigger: "分析客户HR数据、员工满意度、流失率"
+    output: "HR仪表盘"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记HR洞察、组织问题、改进点"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "组织诊断"
+    flow:
+      - skill: /interview
+        step: "1. 管理层与员工访谈"
+        output: "访谈记录"
+        time: "3h"
+      - skill: /analyze
+        step: "2. 组织效能分析"
+        output: "效能分析"
+        time: "3h"
+      - skill: /user-research
+        step: "3. 员工满意度调研"
+        output: "满意度报告"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 诊断汇报"
+        output: "诊断汇报"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "薪酬体系"
+    flow:
+      - skill: /analyze
+        step: "1. 薪酬现状分析"
+        output: "薪酬分析"
+        time: "2h"
+      - skill: /market-search
+        step: "2. 市场薪酬调研"
+        output: "市场调研"
+        time: "2h"
+      - skill: /modeling
+        step: "3. 薪酬结构设计"
+        output: "薪酬模型"
+        time: "3h"
+      - skill: /create
+        step: "4. 薪酬方案"
+        output: "薪酬方案"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "绩效体系"
+    flow:
+      - skill: /analyze
+        step: "1. 绩效现状分析"
+        output: "绩效分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 绩效体系设计"
+        output: "绩效方案"
+        time: "3h"
+      - skill: /workshop
+        step: "3. 绩效培训"
+        output: "培训方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 绩效实施"
+        output: "实施记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "人才发展"
+    flow:
+      - skill: /analyze
+        step: "1. 人才盘点与分析"
+        output: "人才盘点"
+        time: "2h"
+      - skill: /create
+        step: "2. 发展路径设计"
+        output: "发展方案"
+        time: "2h"
+      - skill: /workshop
+        step: "3. 培训与发展工作坊"
+        output: "工作坊方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 发展执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /new-info
+  - /analyze
+  - /interview
+  - /user-research
+  - /pitch
+  - /market-search
+  - /modeling
+  - /create
+  - /workshop
+  - /execute
+  - /mark
+
+output:
+  - "访谈记录"
+  - "效能分析"
+  - "满意度报告"
+  - "薪酬分析"
+  - "市场调研"
+  - "薪酬模型"
+  - "绩效分析"
+  - "绩效方案"
+  - "人才盘点"
+  - "发展方案"
+  - "培训方案"

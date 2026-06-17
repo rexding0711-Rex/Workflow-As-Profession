@@ -1,0 +1,125 @@
+---
+name: training-director
+description: "培训总监工作流：战略→体系→资源→效果→变革"
+
+daily:
+  - skill: /execute
+    trigger: "管理培训团队、审批项目、协调资源"
+    output: "培训总监日志"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪培训战略、预算、效果"
+    output: "培训总监监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记战略问题、机会、风险"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "培训战略"
+    flow:
+      - skill: /analyze
+        step: "1. 战略分析"
+        output: "战略分析"
+        time: "3h"
+      - skill: /create
+        step: "2. 战略规划"
+        output: "战略规划"
+        time: "3h"
+      - skill: /pitch
+        step: "3. 战略汇报"
+        output: "汇报材料"
+        time: "2h"
+      - skill: /review
+        step: "4. 战略评估"
+        output: "评估报告"
+        time: "1h"
+    total: "2-3天"
+
+  - name: "体系建设"
+    flow:
+      - skill: /process
+        step: "1. 体系设计"
+        output: "体系设计"
+        time: "3h"
+      - skill: /create
+        step: "2. 课程体系建设"
+        output: "课程体系建设"
+        time: "3h"
+      - skill: /execute
+        step: "3. 体系实施"
+        output: "实施记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 体系评估"
+        output: "评估报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "资源管理"
+    flow:
+      - skill: /analyze
+        step: "1. 资源分析"
+        output: "资源分析"
+        time: "2h"
+      - skill: /plan
+        step: "2. 资源规划"
+        output: "资源规划"
+        time: "2h"
+      - skill: /execute
+        step: "3. 资源配置"
+        output: "配置记录"
+        time: "持续"
+      - skill: /monitor
+        step: "4. 资源监控"
+        output: "监控记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "效果管理"
+    flow:
+      - skill: /analyze
+        step: "1. 效果分析"
+        output: "效果分析"
+        time: "2h"
+      - skill: /modeling
+        step: "2. ROI模型"
+        output: "ROI模型"
+        time: "2h"
+      - skill: /create
+        step: "3. 改进方案"
+        output: "改进方案"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 效果汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /analyze
+  - /create
+  - /pitch
+  - /review
+  - /process
+  - /plan
+  - /modeling
+  - /mark
+
+output:
+  - "战略分析"
+  - "战略规划"
+  - "汇报材料"
+  - "体系设计"
+  - "课程体系建设"
+  - "实施记录"
+  - "资源分析"
+  - "资源规划"
+  - "配置记录"
+  - "效果分析"
+  - "ROI模型"
+  - "改进方案"
+  - "评估报告"

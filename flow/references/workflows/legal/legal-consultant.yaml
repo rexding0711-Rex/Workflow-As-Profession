@@ -1,0 +1,124 @@
+---
+name: legal-consultant
+description: "法律顾问工作流：咨询→分析→方案→实施→评估"
+
+daily:
+  - skill: /execute
+    trigger: "提供法律咨询、审阅文件、风险评估"
+    output: "顾问日志"
+    time: "持续"
+  - skill: /new-info
+    trigger: "跟踪法律变化、行业法规、案例"
+    output: "顾问情报"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记法律风险、机会、建议"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "法律咨询"
+    flow:
+      - skill: /interview
+        step: "1. 客户咨询"
+        output: "咨询记录"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 法律分析"
+        output: "法律分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 法律意见"
+        output: "法律意见"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 意见汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "方案设计"
+    flow:
+      - skill: /analyze
+        step: "1. 方案分析"
+        output: "方案分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 方案设计"
+        output: "方案设计"
+        time: "3h"
+      - skill: /modeling
+        step: "3. 风险评估"
+        output: "风险评估"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 方案汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "实施支持"
+    flow:
+      - skill: /execute
+        step: "1. 合同起草"
+        output: "合同起草"
+        time: "2h"
+      - skill: /negotiate
+        step: "2. 谈判支持"
+        output: "谈判记录"
+        time: "2h"
+      - skill: /execute
+        step: "3. 文件审核"
+        output: "审核记录"
+        time: "2h"
+      - skill: /execute
+        step: "4. 执行跟进"
+        output: "跟进记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "效果评估"
+    flow:
+      - skill: /analyze
+        step: "1. 效果分析"
+        output: "效果分析"
+        time: "2h"
+      - skill: /modeling
+        step: "2. ROI评估"
+        output: "ROI评估"
+        time: "2h"
+      - skill: /create
+        step: "3. 改进建议"
+        output: "改进建议"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 评估汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /new-info
+  - /interview
+  - /analyze
+  - /create
+  - /pitch
+  - /modeling
+  - /negotiate
+  - /mark
+
+output:
+  - "咨询记录"
+  - "法律分析"
+  - "法律意见"
+  - "方案分析"
+  - "方案设计"
+  - "风险评估"
+  - "合同起草"
+  - "谈判记录"
+  - "审核记录"
+  - "效果分析"
+  - "ROI评估"
+  - "改进建议"
+  - "汇报材料"

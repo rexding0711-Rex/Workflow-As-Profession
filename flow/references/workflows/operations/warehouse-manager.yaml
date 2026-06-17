@@ -1,0 +1,124 @@
+---
+name: warehouse-manager
+description: "仓库经理工作流：库存→布局→操作→安全→优化"
+
+daily:
+  - skill: /execute
+    trigger: "管理仓库、调度作业、处理异常"
+    output: "仓库日志"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪库存、作业、安全"
+    output: "仓库监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记库存异常、效率、安全"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "库存管理"
+    flow:
+      - skill: /analyze
+        step: "1. 库存分析"
+        output: "库存分析"
+        time: "2h"
+      - skill: /execute
+        step: "2. 盘点管理"
+        output: "盘点记录"
+        time: "持续"
+      - skill: /monitor
+        step: "3. 库存监控"
+        output: "监控记录"
+        time: "持续"
+      - skill: /create
+        step: "4. 库存优化"
+        output: "优化方案"
+        time: "2h"
+    total: "持续"
+
+  - name: "仓库布局"
+    flow:
+      - skill: /analyze
+        step: "1. 布局分析"
+        output: "布局分析"
+        time: "2h"
+      - skill: /design
+        step: "2. 布局设计"
+        output: "布局设计"
+        time: "2h"
+      - skill: /execute
+        step: "3. 布局实施"
+        output: "实施记录"
+        time: "2h"
+      - skill: /experiment
+        step: "4. 布局验证"
+        output: "验证报告"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "作业管理"
+    flow:
+      - skill: /process
+        step: "1. 作业流程"
+        output: "作业流程"
+        time: "2h"
+      - skill: /execute
+        step: "2. 作业调度"
+        output: "调度记录"
+        time: "持续"
+      - skill: /execute
+        step: "3. 入库管理"
+        output: "入库记录"
+        time: "持续"
+      - skill: /execute
+        step: "4. 出库管理"
+        output: "出库记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "安全管理"
+    flow:
+      - skill: /policy
+        step: "1. 安全政策"
+        output: "安全政策"
+        time: "2h"
+      - skill: /execute
+        step: "2. 安全检查"
+        output: "检查记录"
+        time: "持续"
+      - skill: /execute
+        step: "3. 消防管理"
+        output: "消防记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 安全评估"
+        output: "评估报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /analyze
+  - /design
+  - /process
+  - /policy
+  - /experiment
+  - /review
+  - /mark
+
+  - /create
+output:
+  - "库存分析"
+  - "盘点记录"
+  - "布局分析"
+  - "布局设计"
+  - "作业流程"
+  - "调度记录"
+  - "入库记录"
+  - "出库记录"
+  - "安全政策"
+  - "检查记录"
+  - "消防记录"
+  - "评估报告"

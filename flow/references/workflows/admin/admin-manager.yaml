@@ -1,0 +1,123 @@
+---
+name: admin-manager
+description: "行政经理工作流：制度→资源→设施→安全→文化"
+
+daily:
+  - skill: /execute
+    trigger: "管理行政团队、审批、协调"
+    output: "行政日志"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪行政预算、满意度、效率"
+    output: "行政监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记行政问题、成本、改进"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "制度建设"
+    flow:
+      - skill: /policy
+        step: "1. 制度梳理"
+        output: "制度梳理"
+        time: "2h"
+      - skill: /create
+        step: "2. 制度修订"
+        output: "制度修订"
+        time: "2h"
+      - skill: /execute
+        step: "3. 制度发布"
+        output: "发布记录"
+        time: "1h"
+      - skill: /review
+        step: "4. 制度评估"
+        output: "评估报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "资源管理"
+    flow:
+      - skill: /analyze
+        step: "1. 资源盘点"
+        output: "盘点记录"
+        time: "2h"
+      - skill: /plan
+        step: "2. 资源分配"
+        output: "分配计划"
+        time: "2h"
+      - skill: /execute
+        step: "3. 资源调配"
+        output: "调配记录"
+        time: "持续"
+      - skill: /monitor
+        step: "4. 资源监控"
+        output: "监控记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "设施管理"
+    flow:
+      - skill: /plan
+        step: "1. 维护计划"
+        output: "维护计划"
+        time: "2h"
+      - skill: /execute
+        step: "2. 设施维护"
+        output: "维护记录"
+        time: "持续"
+      - skill: /monitor
+        step: "3. 设施监控"
+        output: "监控记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 设施评估"
+        output: "评估报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "安全管理"
+    flow:
+      - skill: /policy
+        step: "1. 安全政策"
+        output: "安全政策"
+        time: "2h"
+      - skill: /execute
+        step: "2. 安全检查"
+        output: "检查记录"
+        time: "2h"
+      - skill: /execute
+        step: "3. 应急演练"
+        output: "演练记录"
+        time: "2h"
+      - skill: /review
+        step: "4. 安全复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /policy
+  - /create
+  - /analyze
+  - /plan
+  - /review
+  - /mark
+
+output:
+  - "制度梳理"
+  - "制度修订"
+  - "发布记录"
+  - "评估报告"
+  - "盘点记录"
+  - "分配计划"
+  - "调配记录"
+  - "维护计划"
+  - "维护记录"
+  - "安全政策"
+  - "检查记录"
+  - "演练记录"
+  - "复盘报告"

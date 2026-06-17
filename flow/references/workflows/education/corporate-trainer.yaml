@@ -1,0 +1,120 @@
+---
+name: corporate-trainer
+description: "企业培训师工作流：需求→设计→授课→评估→改进"
+
+daily:
+  - skill: /execute
+    trigger: "授课、辅导、答疑"
+    output: "培训日志"
+    time: "持续"
+  - skill: /monitor
+    trigger: "跟踪学员进度、反馈、效果"
+    output: "培训监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记培训问题、亮点、改进"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "需求分析"
+    flow:
+      - skill: /interview
+        step: "1. 业务访谈"
+        output: "访谈记录"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 能力差距分析"
+        output: "差距分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 培训需求报告"
+        output: "需求报告"
+        time: "1h"
+    total: "半天"
+
+  - name: "课程开发"
+    flow:
+      - skill: /create
+        step: "1. 课程大纲"
+        output: "课程大纲"
+        time: "2h"
+      - skill: /create
+        step: "2. 课件开发"
+        output: "课件素材"
+        time: "3h"
+      - skill: /workshop
+        step: "3. 教学方法设计"
+        output: "教学方案"
+        time: "2h"
+      - skill: /review
+        step: "4. 课程评审"
+        output: "评审意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "培训实施"
+    flow:
+      - skill: /plan
+        step: "1. 培训计划"
+        output: "培训计划"
+        time: "1h"
+      - skill: /workshop
+        step: "2. 培训授课"
+        output: "授课记录"
+        time: "3h"
+      - skill: /execute
+        step: "3. 学员管理"
+        output: "管理记录"
+        time: "持续"
+      - skill: /monitor
+        step: "4. 培训监控"
+        output: "监控记录"
+        time: "持续"
+    total: "1-2天"
+
+  - name: "效果评估"
+    flow:
+      - skill: /user-research
+        step: "1. 学员反馈"
+        output: "反馈报告"
+        time: "1h"
+      - skill: /analyze
+        step: "2. 学习效果分析"
+        output: "效果分析"
+        time: "2h"
+      - skill: /review
+        step: "3. 培训复盘"
+        output: "复盘报告"
+        time: "1h"
+      - skill: /create
+        step: "4. 改进方案"
+        output: "改进方案"
+        time: "1h"
+    total: "半天"
+
+skills:
+  - /execute
+  - /monitor
+  - /interview
+  - /analyze
+  - /create
+  - /workshop
+  - /review
+  - /plan
+  - /user-research
+  - /mark
+
+output:
+  - "访谈记录"
+  - "差距分析"
+  - "需求报告"
+  - "课程大纲"
+  - "课件素材"
+  - "教学方案"
+  - "培训计划"
+  - "授课记录"
+  - "反馈报告"
+  - "效果分析"
+  - "复盘报告"
+  - "改进方案"

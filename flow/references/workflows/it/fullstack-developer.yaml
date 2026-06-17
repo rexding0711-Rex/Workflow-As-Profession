@@ -1,0 +1,124 @@
+---
+name: fullstack-developer
+description: "全栈开发者工作流：需求→架构→前后端→集成→部署"
+
+daily:
+  - skill: /execute
+    trigger: "全栈开发、调试测试、代码审查"
+    output: "全栈日志"
+    time: "持续"
+  - skill: /new-info
+    trigger: "跟踪全栈技术、框架、最佳实践"
+    output: "技术情报"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记技术问题、架构、方案"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "需求架构"
+    flow:
+      - skill: /analyze
+        step: "1. 需求分析"
+        output: "需求分析"
+        time: "2h"
+      - skill: /design
+        step: "2. 系统架构"
+        output: "系统架构"
+        time: "3h"
+      - skill: /tech-compare
+        step: "3. 技术选型"
+        output: "技术选型"
+        time: "2h"
+      - skill: /review
+        step: "4. 架构评审"
+        output: "评审意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "后端开发"
+    flow:
+      - skill: /design
+        step: "1. 数据库设计"
+        output: "数据库设计"
+        time: "2h"
+      - skill: /execute
+        step: "2. API开发"
+        output: "API开发"
+        time: "3h"
+      - skill: /execute
+        step: "3. 业务逻辑"
+        output: "逻辑开发"
+        time: "3h"
+      - skill: /execute
+        step: "4. 后端测试"
+        output: "测试记录"
+        time: "2h"
+    total: "2-3天"
+
+  - name: "前端开发"
+    flow:
+      - skill: /visual
+        step: "1. UI设计稿"
+        output: "UI设计稿"
+        time: "2h"
+      - skill: /execute
+        step: "2. 前端开发"
+        output: "前端开发"
+        time: "3h"
+      - skill: /execute
+        step: "3. 交互实现"
+        output: "交互实现"
+        time: "2h"
+      - skill: /experiment
+        step: "4. 前端测试"
+        output: "测试记录"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "集成部署"
+    flow:
+      - skill: /execute
+        step: "1. 前后端联调"
+        output: "联调记录"
+        time: "2h"
+      - skill: /execute
+        step: "2. 部署配置"
+        output: "部署配置"
+        time: "2h"
+      - skill: /monitor
+        step: "3. 上线监控"
+        output: "监控记录"
+        time: "持续"
+      - skill: /execute
+        step: "4. 持续集成"
+        output: "CI记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /execute
+  - /new-info
+  - /analyze
+  - /design
+  - /tech-compare
+  - /visual
+  - /experiment
+  - /review
+  - /monitor
+  - /mark
+
+output:
+  - "需求分析"
+  - "系统架构"
+  - "技术选型"
+  - "数据库设计"
+  - "API开发"
+  - "逻辑开发"
+  - "前端开发"
+  - "交互实现"
+  - "联调记录"
+  - "部署配置"
+  - "监控记录"
+  - "CI记录"

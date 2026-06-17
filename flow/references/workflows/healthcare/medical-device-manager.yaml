@@ -1,0 +1,123 @@
+---
+name: medical-device-manager
+description: "医疗器械管理工作流：注册→质控→供应链→售后→培训"
+
+daily:
+  - skill: /execute
+    trigger: "管理器械、协调供应商、处理售后"
+    output: "器械日志"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪器械质量、库存、合规"
+    output: "器械监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记器械问题、召回、风险"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "器械注册"
+    flow:
+      - skill: /plan
+        step: "1. 注册计划"
+        output: "注册计划"
+        time: "2h"
+      - skill: /create
+        step: "2. 注册资料"
+        output: "注册资料"
+        time: "3h"
+      - skill: /execute
+        step: "3. 注册提交"
+        output: "提交记录"
+        time: "1h"
+      - skill: /execute
+        step: "4. 审评跟进"
+        output: "跟进记录"
+        time: "持续"
+    total: "2-3天"
+
+  - name: "质量控制"
+    flow:
+      - skill: /process
+        step: "1. 质量标准"
+        output: "质量标准"
+        time: "2h"
+      - skill: /execute
+        step: "2. 质量检验"
+        output: "检验记录"
+        time: "持续"
+      - skill: /analyze
+        step: "3. 质量分析"
+        output: "质量分析"
+        time: "2h"
+      - skill: /review
+        step: "4. 质量复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "供应链管理"
+    flow:
+      - skill: /analyze
+        step: "1. 供应商评估"
+        output: "供应商评估"
+        time: "2h"
+      - skill: /execute
+        step: "2. 采购管理"
+        output: "采购记录"
+        time: "持续"
+      - skill: /monitor
+        step: "3. 库存监控"
+        output: "监控记录"
+        time: "持续"
+      - skill: /execute
+        step: "4. 物流管理"
+        output: "物流记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "售后管理"
+    flow:
+      - skill: /execute
+        step: "1. 售后响应"
+        output: "响应记录"
+        time: "持续"
+      - skill: /execute
+        step: "2. 维修管理"
+        output: "维修记录"
+        time: "持续"
+      - skill: /analyze
+        step: "3. 故障分析"
+        output: "故障分析"
+        time: "2h"
+      - skill: /create
+        step: "4. 改进方案"
+        output: "改进方案"
+        time: "2h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /plan
+  - /create
+  - /process
+  - /analyze
+  - /review
+  - /mark
+
+output:
+  - "注册计划"
+  - "注册资料"
+  - "提交记录"
+  - "质量标准"
+  - "检验记录"
+  - "质量分析"
+  - "供应商评估"
+  - "采购记录"
+  - "监控记录"
+  - "响应记录"
+  - "维修记录"
+  - "故障分析"
+  - "改进方案"

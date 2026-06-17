@@ -1,0 +1,105 @@
+---
+name: music-producer
+description: "音乐制作人工作流：创作→编曲→录音→混音→母带"
+
+daily:
+  - skill: /execute
+    trigger: "跟踪制作进度、音轨、效果"
+    output: "制作日报"
+    time: "10min"
+  - skill: /new-info
+    trigger: "扫描音乐趋势、技术、灵感"
+    output: "音乐灵感"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记音乐问题、亮点、反馈"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "音乐创作"
+    flow:
+      - skill: /create
+        step: "1. 概念与风格"
+        output: "音乐概念"
+        time: "2h"
+      - skill: /create
+        step: "2. 作曲与编曲"
+        output: "编曲方案"
+        time: "3h"
+      - skill: /create
+        step: "3. 歌词创作"
+        output: "歌词方案"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "录音制作"
+    flow:
+      - skill: /execute
+        step: "1. 录音"
+        output: "录音记录"
+        time: "3h"
+      - skill: /visual
+        step: "2. 编辑与修音"
+        output: "编辑记录"
+        time: "2h"
+      - skill: /execute
+        step: "3. 混音"
+        output: "混音记录"
+        time: "3h"
+    total: "1-2天"
+
+  - name: "母带处理"
+    flow:
+      - skill: /visual
+        step: "1. 母带处理"
+        output: "母带记录"
+        time: "3h"
+      - skill: /review
+        step: "2. 音质审核"
+        output: "审核意见"
+        time: "1h"
+      - skill: /execute
+        step: "3. 输出与交付"
+        output: "交付记录"
+        time: "1h"
+    total: "1天"
+
+  - name: "版权管理"
+    flow:
+      - skill: /policy
+        step: "1. 版权政策"
+        output: "版权政策"
+        time: "1h"
+      - skill: /execute
+        step: "2. 版权登记"
+        output: "登记记录"
+        time: "1h"
+      - skill: /monitor
+        step: "3. 版权监控"
+        output: "监控记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /execute
+  - /new-info
+  - /create
+  - /visual
+  - /review
+  - /policy
+  - /monitor
+  - /mark
+
+output:
+  - "音乐概念"
+  - "编曲方案"
+  - "歌词方案"
+  - "录音记录"
+  - "编辑记录"
+  - "混音记录"
+  - "母带记录"
+  - "审核意见"
+  - "交付记录"
+  - "版权政策"
+  - "登记记录"

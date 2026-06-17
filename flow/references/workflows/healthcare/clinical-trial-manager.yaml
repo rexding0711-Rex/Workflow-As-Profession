@@ -1,0 +1,124 @@
+---
+name: clinical-trial-manager
+description: "临床试验经理工作流：方案→伦理→招募→监查→报告"
+
+daily:
+  - skill: /execute
+    trigger: "管理试验进度、文档、沟通"
+    output: "试验日志"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪受试者、数据、安全性"
+    output: "试验监控"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记偏差、不良事件、风险"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "试验启动"
+    flow:
+      - skill: /plan
+        step: "1. 试验计划"
+        output: "试验计划"
+        time: "3h"
+      - skill: /policy
+        step: "2. 伦理审批"
+        output: "伦理文件"
+        time: "2h"
+      - skill: /execute
+        step: "3. 中心启动"
+        output: "启动记录"
+        time: "2h"
+      - skill: /review
+        step: "4. 启动检查"
+        output: "检查报告"
+        time: "1h"
+    total: "2-3天"
+
+  - name: "受试者管理"
+    flow:
+      - skill: /execute
+        step: "1. 招募筛选"
+        output: "筛选记录"
+        time: "2h"
+      - skill: /execute
+        step: "2. 知情同意"
+        output: "同意记录"
+        time: "1h"
+      - skill: /monitor
+        step: "3. 随访管理"
+        output: "随访记录"
+        time: "持续"
+      - skill: /execute
+        step: "4. 数据录入"
+        output: "数据记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "监查稽查"
+    flow:
+      - skill: /analyze
+        step: "1. 数据监查"
+        output: "监查报告"
+        time: "2h"
+      - skill: /review
+        step: "2. 源数据核查"
+        output: "核查报告"
+        time: "2h"
+      - skill: /execute
+        step: "3. 问题纠正"
+        output: "纠正记录"
+        time: "1h"
+      - skill: /review
+        step: "4. 稽查应对"
+        output: "应对记录"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "结题报告"
+    flow:
+      - skill: /analyze
+        step: "1. 数据清理"
+        output: "清理报告"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 统计分析"
+        output: "统计分析"
+        time: "3h"
+      - skill: /create
+        step: "3. 总结报告"
+        output: "CSR报告"
+        time: "3h"
+      - skill: /review
+        step: "4. 报告审核"
+        output: "审核意见"
+        time: "1h"
+    total: "2-3天"
+
+skills:
+  - /execute
+  - /monitor
+  - /plan
+  - /policy
+  - /review
+  - /analyze
+  - /create
+  - /mark
+
+output:
+  - "试验计划"
+  - "伦理文件"
+  - "启动记录"
+  - "检查报告"
+  - "筛选记录"
+  - "同意记录"
+  - "随访记录"
+  - "监查报告"
+  - "核查报告"
+  - "纠正记录"
+  - "清理报告"
+  - "统计分析"
+  - "CSR报告"
+  - "审核意见"

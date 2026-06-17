@@ -1,0 +1,120 @@
+---
+name: growth-hacker
+description: "增长黑客工作流：实验→A/B测试→数据分析→获客→漏斗"
+
+daily:
+  - skill: /analyze
+    trigger: "跟踪增长指标、漏斗数据、实验结果"
+    output: "增长仪表盘"
+    time: "15min"
+  - skill: /experiment
+    trigger: "监控实验进度、显著性、样本量"
+    output: "实验摘要"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记增长洞察、假设、学习"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "增长实验"
+    flow:
+      - skill: /experiment
+        step: "1. 实验假设与设计"
+        output: "实验方案"
+        time: "2h"
+      - skill: /experiment
+        step: "2. 样本量计算与分组"
+        output: "实验设计"
+        time: "1h"
+      - skill: /execute
+        step: "3. 实验执行"
+        output: "执行记录"
+        time: "1-4周"
+      - skill: /analyze
+        step: "4. 实验结果分析"
+        output: "结果分析"
+        time: "2h"
+      - skill: /review
+        step: "5. 实验复盘与沉淀"
+        output: "复盘报告"
+        time: "1h"
+    total: "2-6周"
+
+  - name: "漏斗优化"
+    flow:
+      - skill: /analyze
+        step: "1. 漏斗数据分析"
+        output: "漏斗分析"
+        time: "2h"
+      - skill: /user-research
+        step: "2. 用户流失原因分析"
+        output: "流失分析"
+        time: "2h"
+      - skill: /experiment
+        step: "3. 漏斗优化A/B测试"
+        output: "测试结果"
+        time: "2周"
+      - skill: /execute
+        step: "4. 优化执行"
+        output: "执行计划"
+        time: "持续"
+    total: "持续"
+
+  - name: "获客策略"
+    flow:
+      - skill: /market-search
+        step: "1. 获客渠道分析"
+        output: "渠道分析"
+        time: "2h"
+      - skill: /modeling
+        step: "2. CAC/LTV模型"
+        output: "获客模型"
+        time: "2h"
+      - skill: /experiment
+        step: "3. 渠道A/B测试"
+        output: "测试结果"
+        time: "2周"
+      - skill: /execute
+        step: "4. 获客执行"
+        output: "执行计划"
+        time: "持续"
+    total: "持续"
+
+  - name: "病毒传播"
+    flow:
+      - skill: /analyze
+        step: "1. 病毒系数与分享分析"
+        output: "病毒分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 分享机制与内容设计"
+        output: "机制设计"
+        time: "2h"
+      - skill: /experiment
+        step: "3. 病毒机制A/B测试"
+        output: "测试结果"
+        time: "2周"
+    total: "持续"
+
+skills:
+  - /analyze
+  - /experiment
+  - /execute
+  - /review
+  - /user-research
+  - /market-search
+  - /modeling
+  - /create
+  - /mark
+
+output:
+  - "实验方案"
+  - "结果分析"
+  - "复盘报告"
+  - "漏斗分析"
+  - "流失分析"
+  - "渠道分析"
+  - "获客模型"
+  - "病毒分析"
+  - "机制设计"

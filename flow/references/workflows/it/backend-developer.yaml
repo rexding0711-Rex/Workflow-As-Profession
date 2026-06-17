@@ -1,0 +1,122 @@
+---
+name: backend-developer
+description: "后端开发者工作流：需求→设计→API→数据库→性能"
+
+daily:
+  - skill: /execute
+    trigger: "开发后端服务、编写API、优化性能"
+    output: "后端日志"
+    time: "持续"
+  - skill: /new-info
+    trigger: "跟踪后端技术、数据库、架构"
+    output: "技术情报"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记技术问题、架构、优化"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "需求设计"
+    flow:
+      - skill: /analyze
+        step: "1. 需求分析"
+        output: "需求分析"
+        time: "2h"
+      - skill: /design
+        step: "2. 服务架构"
+        output: "服务架构"
+        time: "3h"
+      - skill: /tech-compare
+        step: "3. 技术选型"
+        output: "技术选型"
+        time: "2h"
+      - skill: /review
+        step: "4. 设计评审"
+        output: "评审意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "API开发"
+    flow:
+      - skill: /design
+        step: "1. API设计"
+        output: "API设计"
+        time: "2h"
+      - skill: /execute
+        step: "2. API开发"
+        output: "API开发"
+        time: "3h"
+      - skill: /execute
+        step: "3. 接口测试"
+        output: "测试记录"
+        time: "2h"
+      - skill: /review
+        step: "4. API文档"
+        output: "API文档"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "数据库开发"
+    flow:
+      - skill: /design
+        step: "1. 数据库设计"
+        output: "数据库设计"
+        time: "2h"
+      - skill: /execute
+        step: "2. 表结构开发"
+        output: "表结构开发"
+        time: "2h"
+      - skill: /execute
+        step: "3. 查询优化"
+        output: "优化记录"
+        time: "2h"
+      - skill: /experiment
+        step: "4. 性能测试"
+        output: "测试报告"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "性能优化"
+    flow:
+      - skill: /analyze
+        step: "1. 性能分析"
+        output: "性能分析"
+        time: "2h"
+      - skill: /execute
+        step: "2. 缓存优化"
+        output: "缓存优化"
+        time: "2h"
+      - skill: /execute
+        step: "3. 并发优化"
+        output: "并发优化"
+        time: "2h"
+      - skill: /experiment
+        step: "4. 压力测试"
+        output: "测试报告"
+        time: "2h"
+    total: "1-2天"
+
+skills:
+  - /execute
+  - /new-info
+  - /analyze
+  - /design
+  - /tech-compare
+  - /experiment
+  - /review
+  - /mark
+
+output:
+  - "需求分析"
+  - "服务架构"
+  - "技术选型"
+  - "API设计"
+  - "API开发"
+  - "API文档"
+  - "数据库设计"
+  - "表结构开发"
+  - "缓存优化"
+  - "并发优化"
+  - "性能分析"
+  - "测试报告"

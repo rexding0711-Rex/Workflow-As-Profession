@@ -1,0 +1,96 @@
+---
+name: trader
+description: "交易员工作流：市场→风险→数据→政策→宏观"
+
+daily:
+  - skill: /new-info
+    trigger: "扫描市场动态、政策消息、宏观数据"
+    output: "市场情报"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪持仓、风险指标、止损线"
+    output: "风险仪表盘"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记交易信号、异常波动、政策变化"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "交易信号分析"
+    flow:
+      - skill: /analyze
+        step: "1. 技术分析与量化信号"
+        output: "信号报告"
+        time: "1h"
+      - skill: /modeling
+        step: "2. 量化模型与策略回测"
+        output: "策略模型"
+        time: "2h"
+      - skill: /learn
+        step: "3. 市场微观结构研究"
+        output: "市场分析"
+        time: "1h"
+      - skill: /decide
+        step: "4. 交易决策（方向/仓位/时机）"
+        output: "交易决策"
+        time: "30min"
+    total: "1天"
+
+  - name: "风险管理"
+    flow:
+      - skill: /modeling
+        step: "1. 风险模型（VaR/回撤/压力测试）"
+        output: "风险模型"
+        time: "1h"
+      - skill: /analyze
+        step: "2. 组合风险分析"
+        output: "风险报告"
+        time: "1h"
+      - skill: /policy
+        step: "3. 合规与限额监控"
+        output: "合规监控"
+        time: "1h"
+      - skill: /execute
+        step: "4. 对冲与风险调整执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "交易复盘"
+    flow:
+      - skill: /analyze
+        step: "1. 交易绩效分析（胜率/盈亏比）"
+        output: "绩效分析"
+        time: "1h"
+      - skill: /review
+        step: "2. 交易复盘与改进"
+        output: "复盘报告"
+        time: "1h"
+      - skill: /visual
+        step: "3. 交易可视化"
+        output: "交易图表"
+        time: "1h"
+    total: "1天"
+
+skills:
+  - /analyze
+  - /modeling
+  - /learn
+  - /decide
+  - /policy
+  - /execute
+  - /review
+  - /visual
+  - /new-info
+  - /monitor
+  - /mark
+
+output:
+  - "交易信号报告"
+  - "策略模型"
+  - "风险模型"
+  - "交易执行记录"
+  - "绩效分析"
+  - "复盘报告"
+  - "交易图表"

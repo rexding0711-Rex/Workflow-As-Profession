@@ -1,0 +1,123 @@
+---
+name: production-planning
+description: "生产计划工作流：需求→产能→排程→执行→调整"
+
+daily:
+  - skill: /execute
+    trigger: "制定计划、排程生产、协调资源"
+    output: "计划日志"
+    time: "持续"
+  - skill: /monitor
+    trigger: "跟踪进度、产能、物料"
+    output: "计划监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记瓶颈、延误、调整"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "需求计划"
+    flow:
+      - skill: /analyze
+        step: "1. 需求预测"
+        output: "需求预测"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 预测模型"
+        output: "预测模型"
+        time: "2h"
+      - skill: /plan
+        step: "3. 主计划"
+        output: "主计划"
+        time: "2h"
+      - skill: /create
+        step: "4. 计划评审"
+        output: "评审意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "产能规划"
+    flow:
+      - skill: /analyze
+        step: "1. 产能分析"
+        output: "产能分析"
+        time: "2h"
+      - skill: /plan
+        step: "2. 产能规划"
+        output: "产能规划"
+        time: "2h"
+      - skill: /execute
+        step: "3. 资源调配"
+        output: "调配记录"
+        time: "2h"
+      - skill: /review
+        step: "4. 规划评估"
+        output: "评估报告"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "生产排程"
+    flow:
+      - skill: /plan
+        step: "1. 排程计划"
+        output: "排程计划"
+        time: "2h"
+      - skill: /execute
+        step: "2. 工单下达"
+        output: "工单记录"
+        time: "持续"
+      - skill: /monitor
+        step: "3. 进度跟踪"
+        output: "跟踪记录"
+        time: "持续"
+      - skill: /execute
+        step: "4. 异常处理"
+        output: "处理记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "计划调整"
+    flow:
+      - skill: /analyze
+        step: "1. 偏差分析"
+        output: "偏差分析"
+        time: "2h"
+      - skill: /plan
+        step: "2. 调整方案"
+        output: "调整方案"
+        time: "2h"
+      - skill: /execute
+        step: "3. 计划调整"
+        output: "调整记录"
+        time: "2h"
+      - skill: /review
+        step: "4. 调整评估"
+        output: "评估报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /analyze
+  - /modeling
+  - /plan
+  - /create
+  - /review
+  - /mark
+
+output:
+  - "需求预测"
+  - "预测模型"
+  - "主计划"
+  - "产能分析"
+  - "产能规划"
+  - "调配记录"
+  - "排程计划"
+  - "工单记录"
+  - "跟踪记录"
+  - "偏差分析"
+  - "调整方案"
+  - "调整记录"
+  - "评估报告"

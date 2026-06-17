@@ -1,0 +1,76 @@
+---
+name: fleet-manager
+description: "车队经理工作流：车辆管理→调度→维护→安全→成本"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪车辆GPS/油耗/里程/维修状态"
+    output: "车队监控"
+    time: "15min"
+  - skill: /execute
+    trigger: "调度派车、处理紧急维修、司机管理"
+    output: "运营执行"
+    time: "持续"
+  - skill: /mark
+    trigger: "标记车辆异常、维保到期、事故记录"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "车队优化"
+    flow:
+      - skill: /analyze
+        step: "1. 车辆利用率与路由分析"
+        output: "利用率分析"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 车队TCO模型（购置/油耗/维护/折旧）"
+        output: "TCO模型"
+        time: "2h"
+      - skill: /plan
+        step: "3. 车辆更新与配置优化"
+        output: "更新计划"
+        time: "2h"
+      - skill: /execute
+        step: "4. 优化执行"
+        output: "执行记录"
+        time: "持续"
+    total: "1-2天"
+  - name: "安全管理"
+    flow:
+      - skill: /process
+        step: "1. 安全管理制度"
+        output: "安全制度"
+        time: "2h"
+      - skill: /workshop
+        step: "2. 司机安全培训"
+        output: "培训方案"
+        time: "2h"
+      - skill: /review
+        step: "3. 事故分析与防范"
+        output: "事故分析"
+        time: "2h"
+      - skill: /execute
+        step: "4. 整改措施"
+        output: "整改记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /monitor
+  - /execute
+  - /mark
+  - /analyze
+  - /modeling
+  - /plan
+  - /process
+  - /workshop
+  - /review
+
+output:
+  - "利用率分析"
+  - "TCO模型"
+  - "车辆更新计划"
+  - "安全管理制度"
+  - "培训方案"
+  - "事故分析报告"

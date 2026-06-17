@@ -1,0 +1,122 @@
+---
+name: devops-engineer
+description: "DevOps工程师工作流：CI/CD→自动化→监控→安全→文化"
+
+daily:
+  - skill: /execute
+    trigger: "维护管道、处理故障、优化流程"
+    output: "DevOps日志"
+    time: "持续"
+  - skill: /monitor
+    trigger: "跟踪系统状态、性能、安全"
+    output: "DevOps监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记流程问题、优化、风险"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "CI/CD建设"
+    flow:
+      - skill: /design
+        step: "1. 管道设计"
+        output: "管道设计"
+        time: "2h"
+      - skill: /execute
+        step: "2. 管道搭建"
+        output: "搭建记录"
+        time: "3h"
+      - skill: /experiment
+        step: "3. 管道测试"
+        output: "测试报告"
+        time: "2h"
+      - skill: /execute
+        step: "4. 持续优化"
+        output: "优化记录"
+        time: "持续"
+    total: "2-3天"
+
+  - name: "自动化建设"
+    flow:
+      - skill: /analyze
+        step: "1. 自动化分析"
+        output: "自动化分析"
+        time: "2h"
+      - skill: /execute
+        step: "2. 脚本开发"
+        output: "脚本开发"
+        time: "3h"
+      - skill: /execute
+        step: "3. 自动化部署"
+        output: "部署记录"
+        time: "2h"
+      - skill: /experiment
+        step: "4. 自动化测试"
+        output: "测试报告"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "监控告警"
+    flow:
+      - skill: /monitor
+        step: "1. 监控体系"
+        output: "监控体系"
+        time: "2h"
+      - skill: /execute
+        step: "2. 告警配置"
+        output: "告警配置"
+        time: "2h"
+      - skill: /execute
+        step: "3. 事件响应"
+        output: "响应记录"
+        time: "持续"
+      - skill: /analyze
+        step: "4. 事件分析"
+        output: "事件分析"
+        time: "2h"
+    total: "持续"
+
+  - name: "安全运维"
+    flow:
+      - skill: /policy
+        step: "1. 安全策略"
+        output: "安全策略"
+        time: "2h"
+      - skill: /execute
+        step: "2. 访问控制"
+        output: "控制记录"
+        time: "2h"
+      - skill: /execute
+        step: "3. 安全扫描"
+        output: "扫描记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 安全审计"
+        output: "审计报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /design
+  - /experiment
+  - /analyze
+  - /policy
+  - /review
+  - /mark
+
+output:
+  - "管道设计"
+  - "搭建记录"
+  - "自动化分析"
+  - "脚本开发"
+  - "监控体系"
+  - "告警配置"
+  - "响应记录"
+  - "事件分析"
+  - "安全策略"
+  - "控制记录"
+  - "扫描记录"
+  - "审计报告"

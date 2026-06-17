@@ -1,0 +1,149 @@
+---
+name: operations-manager
+description: "运营经理工作流：计划→执行→监控→优化→复盘"
+
+daily:
+  - skill: /execute
+    trigger: "跟踪运营进度、任务执行、团队产出"
+    output: "运营日报"
+    time: "15min"
+  - skill: /monitor
+    trigger: "监控运营指标、异常、用户反馈"
+    output: "运营监控"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记运营问题、机会、改进点"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "日常运营"
+    flow:
+      - skill: /plan
+        step: "1. 运营计划制定"
+        output: "运营计划"
+        time: "2h"
+      - skill: /execute
+        step: "2. 运营执行"
+        output: "执行记录"
+        time: "持续"
+      - skill: /monitor
+        step: "3. 运营监控"
+        output: "监控报告"
+        time: "持续"
+      - skill: /review
+        step: "4. 日复盘"
+        output: "复盘报告"
+        time: "30min"
+    total: "持续"
+
+  - name: "活动运营"
+    flow:
+      - skill: /create
+        step: "1. 活动策划"
+        output: "活动方案"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 预算与ROI模型"
+        output: "预算模型"
+        time: "1h"
+      - skill: /execute
+        step: "3. 活动执行"
+        output: "执行记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 活动复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "1-2周"
+
+  - name: "用户运营"
+    flow:
+      - skill: /analyze
+        step: "1. 用户分层分析"
+        output: "用户分层"
+        time: "2h"
+      - skill: /user-research
+        step: "2. 用户访谈"
+        output: "用户访谈"
+        time: "2h"
+      - skill: /create
+        step: "3. 用户运营内容"
+        output: "运营内容"
+        time: "2h"
+      - skill: /execute
+        step: "4. 用户运营执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "流程优化"
+    flow:
+      - skill: /process
+        step: "1. 流程梳理"
+        output: "流程梳理"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 瓶颈分析"
+        output: "瓶颈分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 优化方案"
+        output: "优化方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 优化执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "数据分析"
+    flow:
+      - skill: /analyze
+        step: "1. 运营数据收集"
+        output: "数据收集"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 数据分析"
+        output: "数据分析"
+        time: "3h"
+      - skill: /visual
+        step: "3. 数据可视化"
+        output: "可视化报告"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /execute
+  - /monitor
+  - /plan
+  - /create
+  - /modeling
+  - /review
+  - /analyze
+  - /user-research
+  - /process
+  - /visual
+  - /pitch
+  - /mark
+
+output:
+  - "运营计划"
+  - "执行记录"
+  - "监控报告"
+  - "复盘报告"
+  - "活动方案"
+  - "预算模型"
+  - "用户分层"
+  - "用户访谈"
+  - "运营内容"
+  - "流程梳理"
+  - "瓶颈分析"
+  - "优化方案"
+  - "数据分析"
+  - "可视化报告"
+  - "汇报材料"

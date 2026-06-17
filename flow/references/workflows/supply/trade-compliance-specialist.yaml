@@ -1,0 +1,78 @@
+---
+name: trade-compliance-specialist
+description: "贸易合规专员工作流：法规跟踪→分类→许可证→审计→培训"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪贸易法规变化、制裁名单更新、关税调整"
+    output: "合规监控"
+    time: "15min"
+  - skill: /new-info
+    trigger: "扫描出口管制政策、海关公告、贸易协定"
+    output: "合规情报"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记合规风险、许可证到期日、审计发现"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "合规审查"
+    flow:
+      - skill: /policy
+        step: "1. 贸易法规影响分析"
+        output: "法规分析"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 产品/技术出口分类（ECCN/HS）"
+        output: "分类报告"
+        time: "2h"
+      - skill: /dd
+        step: "3. 交易方筛查（制裁名单/最终用途）"
+        output: "筛查报告"
+        time: "1h"
+      - skill: /create
+        step: "4. 合规审查报告"
+        output: "审查报告"
+        time: "1h"
+    total: "1天"
+  - name: "合规体系建设"
+    flow:
+      - skill: /process
+        step: "1. 贸易合规SOP设计"
+        output: "合规SOP"
+        time: "3h"
+      - skill: /workshop
+        step: "2. 合规培训"
+        output: "培训方案"
+        time: "2h"
+      - skill: /review
+        step: "3. 内部审计"
+        output: "审计报告"
+        time: "3h"
+      - skill: /execute
+        step: "4. 整改措施跟踪"
+        output: "整改记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /monitor
+  - /new-info
+  - /mark
+  - /policy
+  - /analyze
+  - /dd
+  - /create
+  - /process
+  - /workshop
+  - /review
+  - /execute
+
+output:
+  - "法规影响分析"
+  - "产品分类报告"
+  - "筛查报告"
+  - "合规SOP"
+  - "培训方案"
+  - "审计报告"

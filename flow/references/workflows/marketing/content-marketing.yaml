@@ -1,0 +1,117 @@
+---
+name: content-marketing
+description: "内容营销工作流：内容→GEO→文章→SEO→社交媒体"
+
+daily:
+  - skill: /new-info
+    trigger: "扫描热点、行业话题、竞品内容"
+    output: "内容情报"
+    time: "10min"
+  - skill: /monitor
+    trigger: "跟踪内容表现、流量、互动"
+    output: "内容仪表盘"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记内容灵感、用户反馈、数据洞察"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "内容策略"
+    flow:
+      - skill: /market-search
+        step: "1. 受众与话题研究"
+        output: "话题研究"
+        time: "2h"
+      - skill: /create
+        step: "2. 内容日历与选题规划"
+        output: "内容日历"
+        time: "2h"
+      - skill: /geo
+        step: "3. 关键词与GEO策略"
+        output: "GEO方案"
+        time: "2h"
+      - skill: /decide
+        step: "4. 内容优先级决策"
+        output: "优先级"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "内容创作"
+    flow:
+      - skill: /create
+        step: "1. 文章/视频/图文创作"
+        output: "内容素材"
+        time: "4h"
+      - skill: /tech-article
+        step: "2. 技术/专业内容"
+        output: "技术文章"
+        time: "3h"
+      - skill: /visual
+        step: "3. 内容视觉设计"
+        output: "视觉素材"
+        time: "2h"
+      - skill: /review
+        step: "4. 内容审核与优化"
+        output: "审核意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "内容分发"
+    flow:
+      - skill: /geo
+        step: "1. SEO/GEO优化发布"
+        output: "发布方案"
+        time: "1h"
+      - skill: /social-media
+        step: "2. 社交媒体分发"
+        output: "分发计划"
+        time: "1h"
+      - skill: /network
+        step: "3. KOL/媒体合作"
+        output: "合作计划"
+        time: "1h"
+    total: "1天"
+
+  - name: "内容效果"
+    flow:
+      - skill: /analyze
+        step: "1. 内容数据与效果分析"
+        output: "效果分析"
+        time: "2h"
+      - skill: /experiment
+        step: "2. 内容A/B测试"
+        output: "测试结果"
+        time: "2周"
+      - skill: /review
+        step: "3. 内容复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /new-info
+  - /monitor
+  - /market-search
+  - /create
+  - /geo
+  - /decide
+  - /tech-article
+  - /visual
+  - /review
+  - /social-media
+  - /network
+  - /analyze
+  - /experiment
+  - /mark
+
+output:
+  - "内容情报"
+  - "话题研究"
+  - "内容日历"
+  - "GEO方案"
+  - "内容素材"
+  - "技术文章"
+  - "视觉素材"
+  - "效果分析"
+  - "复盘报告"

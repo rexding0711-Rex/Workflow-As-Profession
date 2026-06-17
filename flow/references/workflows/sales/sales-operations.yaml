@@ -1,0 +1,122 @@
+---
+name: sales-operations
+description: "销售运营工作流：数据分析→CRM→流程→预测→工具"
+
+daily:
+  - skill: /analyze
+    trigger: "跟踪销售数据、Pipeline、转化率"
+    output: "数据仪表盘"
+    time: "15min"
+  - skill: /crm
+    trigger: "检查CRM数据质量、流程执行"
+    output: "CRM状态"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记数据异常、流程问题、改进点"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "销售数据分析"
+    flow:
+      - skill: /format
+        step: "1. 销售数据清洗与标准化"
+        output: "清洗数据"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 销售漏斗与转化率分析"
+        output: "漏斗分析"
+        time: "2h"
+      - skill: /modeling
+        step: "3. 销售预测模型"
+        output: "预测模型"
+        time: "2h"
+      - skill: /visual
+        step: "4. 销售可视化报告"
+        output: "可视化报告"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "CRM管理"
+    flow:
+      - skill: /process
+        step: "1. CRM流程设计与优化"
+        output: "CRM流程"
+        time: "2h"
+      - skill: /format
+        step: "2. 数据质量检查与清洗"
+        output: "质量报告"
+        time: "2h"
+      - skill: /experiment
+        step: "3. CRM使用A/B测试"
+        output: "测试结果"
+        time: "2周"
+      - skill: /execute
+        step: "4. CRM推广执行"
+        output: "推广计划"
+        time: "持续"
+    total: "持续"
+
+  - name: "销售流程优化"
+    flow:
+      - skill: /process
+        step: "1. 现有销售流程梳理"
+        output: "流程图"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 流程瓶颈分析"
+        output: "瓶颈分析"
+        time: "2h"
+      - skill: /experiment
+        step: "3. 新流程A/B测试"
+        output: "测试结果"
+        time: "2周"
+      - skill: /execute
+        step: "4. 流程推广与培训"
+        output: "培训计划"
+        time: "持续"
+    total: "持续"
+
+  - name: "销售工具建设"
+    flow:
+      - skill: /analyze
+        step: "1. 销售工具需求分析"
+        output: "需求分析"
+        time: "2h"
+      - skill: /design
+        step: "2. 工具设计（报价/提案/计算器）"
+        output: "工具设计"
+        time: "3h"
+      - skill: /experiment
+        step: "3. 工具效果测试"
+        output: "测试结果"
+        time: "2周"
+      - skill: /execute
+        step: "4. 工具推广"
+        output: "推广计划"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /analyze
+  - /format
+  - /modeling
+  - /visual
+  - /process
+  - /experiment
+  - /execute
+  - /crm
+  - /design
+  - /mark
+
+output:
+  - "数据仪表盘"
+  - "漏斗分析"
+  - "预测模型"
+  - "可视化报告"
+  - "CRM流程"
+  - "质量报告"
+  - "流程图"
+  - "瓶颈分析"
+  - "工具设计"
+  - "培训计划"

@@ -1,0 +1,96 @@
+---
+name: pre-sales-engineer
+description: "售前工程师工作流：技术方案→提案→客户沟通→技术对比→汇报"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪技术动态、产品更新、竞品技术"
+    output: "技术摘要"
+    time: "10min"
+  - skill: /crm
+    trigger: "查看客户技术需求、方案进度"
+    output: "客户状态"
+    time: "5min"
+  - skill: /mark
+    trigger: "标记技术方案要点、客户反馈、风险"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "技术方案设计"
+    flow:
+      - skill: /user-research
+        step: "1. 客户需求与技术场景分析"
+        output: "需求分析"
+        time: "2h"
+      - skill: /tech-compare
+        step: "2. 技术方案对比与选型"
+        output: "方案对比"
+        time: "2h"
+      - skill: /design
+        step: "3. 技术架构设计"
+        output: "架构设计"
+        time: "2h"
+      - skill: /sales
+        step: "4. 技术方案书撰写"
+        output: "技术方案书"
+        time: "3h"
+    total: "1-2天"
+
+  - name: "客户技术交流"
+    flow:
+      - skill: /pitch
+        step: "1. 技术汇报PPT与Demo"
+        output: "汇报材料"
+        time: "2h"
+      - skill: /sales
+        step: "2. 技术问题解答与异议处理"
+        output: "FAQ"
+        time: "1h"
+      - skill: /user-research
+        step: "3. POC/Pilot设计"
+        output: "POC方案"
+        time: "2h"
+    total: "1天"
+
+  - name: "投标技术标"
+    flow:
+      - skill: /sales
+        step: "1. 技术标书撰写"
+        output: "技术标书"
+        time: "4h"
+      - skill: /tech-compare
+        step: "2. 技术偏离表与优势分析"
+        output: "优势分析"
+        time: "2h"
+      - skill: /visual
+        step: "3. 技术可视化"
+        output: "可视化方案"
+        time: "2h"
+      - skill: /review
+        step: "4. 技术标评审"
+        output: "评审意见"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /user-research
+  - /tech-compare
+  - /design
+  - /sales
+  - /pitch
+  - /visual
+  - /review
+  - /crm
+  - /monitor
+  - /mark
+
+output:
+  - "需求分析"
+  - "方案对比"
+  - "架构设计"
+  - "技术方案书"
+  - "汇报材料"
+  - "FAQ"
+  - "POC方案"
+  - "技术标书"

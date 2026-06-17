@@ -1,0 +1,125 @@
+---
+name: medical-rep
+description: "医药代表工作流：客户→产品→学术→合规→业绩"
+
+daily:
+  - skill: /execute
+    trigger: "拜访客户、传递信息、处理反馈"
+    output: "代表日志"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪销售数据、客户、竞品"
+    output: "代表监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记客户机会、问题、策略"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "客户管理"
+    flow:
+      - skill: /analyze
+        step: "1. 客户分析"
+        output: "客户分析"
+        time: "2h"
+      - skill: /interview
+        step: "2. 客户拜访"
+        output: "拜访记录"
+        time: "持续"
+      - skill: /execute
+        step: "3. 关系维护"
+        output: "维护记录"
+        time: "持续"
+      - skill: /monitor
+        step: "4. 客户监控"
+        output: "监控记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "产品推广"
+    flow:
+      - skill: /create
+        step: "1. 推广方案"
+        output: "推广方案"
+        time: "2h"
+      - skill: /execute
+        step: "2. 学术推广"
+        output: "推广记录"
+        time: "持续"
+      - skill: /user-research
+        step: "3. 客户反馈"
+        output: "反馈报告"
+        time: "2h"
+      - skill: /review
+        step: "4. 效果评估"
+        output: "评估报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "学术活动"
+    flow:
+      - skill: /plan
+        step: "1. 活动计划"
+        output: "活动计划"
+        time: "2h"
+      - skill: /execute
+        step: "2. 活动执行"
+        output: "活动记录"
+        time: "持续"
+      - skill: /user-research
+        step: "3. 参会反馈"
+        output: "反馈记录"
+        time: "1h"
+      - skill: /review
+        step: "4. 活动复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "合规管理"
+    flow:
+      - skill: /policy
+        step: "1. 合规学习"
+        output: "学习记录"
+        time: "1h"
+      - skill: /execute
+        step: "2. 合规执行"
+        output: "执行记录"
+        time: "持续"
+      - skill: /review
+        step: "3. 合规自查"
+        output: "自查报告"
+        time: "1h"
+      - skill: /review
+        step: "4. 合规审计"
+        output: "审计报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /analyze
+  - /interview
+  - /create
+  - /user-research
+  - /review
+  - /plan
+  - /policy
+  - /mark
+
+output:
+  - "客户分析"
+  - "拜访记录"
+  - "维护记录"
+  - "推广方案"
+  - "推广记录"
+  - "反馈报告"
+  - "活动计划"
+  - "活动记录"
+  - "复盘报告"
+  - "学习记录"
+  - "执行记录"
+  - "自查报告"
+  - "审计报告"

@@ -1,0 +1,101 @@
+---
+name: digital-transformation-lead
+description: "数字化转型负责人工作流：数字化评估→战略→技术选型→变革→落地"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪数字化转型KPI、项目进度、系统健康"
+    output: "转型仪表盘"
+    time: "15min"
+  - skill: /new-info
+    trigger: "扫描数字化趋势、新技术、行业案例"
+    output: "数字情报"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记转型障碍、快速win、关键决策点"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "数字化现状诊断"
+    flow:
+      - skill: /analyze
+        step: "1. 业务流程数字化水平评估"
+        output: "现状评估"
+        time: "3h"
+      - skill: /benchmarking
+        step: "2. 行业数字化标杆对比"
+        output: "对标分析"
+        time: "2h"
+      - skill: /issue-tree
+        step: "3. 问题与机会拆解"
+        output: "机会地图"
+        time: "2h"
+      - skill: /create
+        step: "4. 数字化成熟度报告"
+        output: "评估报告"
+        time: "2h"
+    total: "1-2天"
+  - name: "数字化转型路线图"
+    flow:
+      - skill: /professional
+        step: "1. 数字化战略制定"
+        output: "数字化战略"
+        time: "3h"
+      - skill: /tech-compare
+        step: "2. 技术平台选型"
+        output: "选型报告"
+        time: "3h"
+      - skill: /workshop
+        step: "3. 战略对齐工作坊"
+        output: "工作坊记录"
+        time: "3h"
+      - skill: /plan
+        step: "4. 分阶段实施路线图"
+        output: "实施路线图"
+        time: "2h"
+    total: "1-2天"
+  - name: "变革管理"
+    flow:
+      - skill: /change-management
+        step: "1. 变革影响评估"
+        output: "影响评估"
+        time: "2h"
+      - skill: /process
+        step: "2. 新流程设计"
+        output: "新流程"
+        time: "3h"
+      - skill: /workshop
+        step: "3. 数字化培训"
+        output: "培训方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 试点推进"
+        output: "试点记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /monitor
+  - /new-info
+  - /mark
+  - /analyze
+  - /benchmarking
+  - /issue-tree
+  - /create
+  - /professional
+  - /tech-compare
+  - /workshop
+  - /plan
+  - /change-management
+  - /process
+  - /execute
+
+output:
+  - "数字化成熟度评估"
+  - "数字化战略"
+  - "技术选型报告"
+  - "实施路线图"
+  - "变革影响评估"
+  - "新流程设计"
+  - "培训方案"

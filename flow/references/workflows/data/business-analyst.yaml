@@ -1,0 +1,122 @@
+---
+name: business-analyst
+description: "商业分析师工作流：数据→分析→报告→可视化→建议"
+
+daily:
+  - skill: /analyze
+    trigger: "跟踪业务数据、KPI、异常"
+    output: "业务仪表盘"
+    time: "15min"
+  - skill: /monitor
+    trigger: "监控业务指标、市场动态"
+    output: "业务监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记业务洞察、问题、建议"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "业务分析"
+    flow:
+      - skill: /analyze
+        step: "1. 业务数据收集与清洗"
+        output: "数据清洗"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 业务数据分析"
+        output: "业务分析"
+        time: "3h"
+      - skill: /visual
+        step: "3. 数据可视化"
+        output: "可视化报告"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 业务汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "需求分析"
+    flow:
+      - skill: /interview
+        step: "1. 业务访谈"
+        output: "访谈记录"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 需求分析"
+        output: "需求分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 需求文档"
+        output: "BRD文档"
+        time: "3h"
+      - skill: /review
+        step: "4. 需求评审"
+        output: "评审意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "流程分析"
+    flow:
+      - skill: /process
+        step: "1. 现有流程梳理"
+        output: "流程梳理"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 流程瓶颈分析"
+        output: "瓶颈分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 改进方案"
+        output: "改进方案"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 方案汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "竞品分析"
+    flow:
+      - skill: /market-search
+        step: "1. 竞品数据收集"
+        output: "竞品数据"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 竞品对比分析"
+        output: "竞品分析"
+        time: "2h"
+      - skill: /visual
+        step: "3. 分析可视化"
+        output: "可视化报告"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /analyze
+  - /visual
+  - /pitch
+  - /interview
+  - /create
+  - /review
+  - /process
+  - /market-search
+  - /monitor
+  - /mark
+
+output:
+  - "业务分析"
+  - "可视化报告"
+  - "汇报材料"
+  - "访谈记录"
+  - "BRD文档"
+  - "流程梳理"
+  - "瓶颈分析"
+  - "改进方案"
+  - "竞品数据"
+  - "竞品分析"

@@ -1,0 +1,125 @@
+---
+name: growth-pm
+description: "增长产品经理工作流：实验→A/B测试→漏斗→数据分析→用户研究"
+
+daily:
+  - skill: /analyze
+    trigger: "跟踪增长指标、漏斗数据、实验结果"
+    output: "增长仪表盘"
+    time: "15min"
+  - skill: /experiment
+    trigger: "监控实验进度、显著性、样本量"
+    output: "实验摘要"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记增长洞察、假设、学习"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "增长实验"
+    flow:
+      - skill: /experiment
+        step: "1. 实验假设与设计"
+        output: "实验方案"
+        time: "2h"
+      - skill: /user-research
+        step: "2. 用户需求验证"
+        output: "需求验证"
+        time: "2h"
+      - skill: /execute
+        step: "3. 实验执行"
+        output: "执行记录"
+        time: "1-4周"
+      - skill: /analyze
+        step: "4. 实验结果分析"
+        output: "结果分析"
+        time: "2h"
+      - skill: /review
+        step: "5. 实验复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "2-6周"
+
+  - name: "漏斗优化"
+    flow:
+      - skill: /analyze
+        step: "1. 漏斗数据分析"
+        output: "漏斗分析"
+        time: "2h"
+      - skill: /user-research
+        step: "2. 流失原因分析"
+        output: "流失分析"
+        time: "2h"
+      - skill: /experiment
+        step: "3. 优化A/B测试"
+        output: "测试结果"
+        time: "2周"
+      - skill: /execute
+        step: "4. 优化执行"
+        output: "执行计划"
+        time: "持续"
+    total: "持续"
+
+  - name: "新用户增长"
+    flow:
+      - skill: /market-search
+        step: "1. 获客渠道分析"
+        output: "渠道分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 增长机制设计"
+        output: "机制设计"
+        time: "2h"
+      - skill: /experiment
+        step: "3. 增长实验"
+        output: "测试结果"
+        time: "2周"
+      - skill: /modeling
+        step: "4. CAC/LTV模型"
+        output: "增长模型"
+        time: "2h"
+    total: "持续"
+
+  - name: "用户留存"
+    flow:
+      - skill: /analyze
+        step: "1. 留存数据分析"
+        output: "留存分析"
+        time: "2h"
+      - skill: /user-research
+        step: "2. 用户流失访谈"
+        output: "流失访谈"
+        time: "2h"
+      - skill: /experiment
+        step: "3. 留存策略A/B测试"
+        output: "测试结果"
+        time: "2周"
+      - skill: /execute
+        step: "4. 留存策略执行"
+        output: "执行计划"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /experiment
+  - /user-research
+  - /analyze
+  - /execute
+  - /review
+  - /market-search
+  - /create
+  - /modeling
+  - /mark
+
+output:
+  - "实验方案"
+  - "需求验证"
+  - "结果分析"
+  - "复盘报告"
+  - "漏斗分析"
+  - "流失分析"
+  - "渠道分析"
+  - "机制设计"
+  - "增长模型"
+  - "留存分析"

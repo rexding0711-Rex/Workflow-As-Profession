@@ -1,0 +1,125 @@
+---
+name: doctor
+description: "医生工作流：接诊→诊断→治疗→随访→科研"
+
+daily:
+  - skill: /execute
+    trigger: "接诊、查房、手术、写病历"
+    output: "医疗日志"
+    time: "持续"
+  - skill: /monitor
+    trigger: "跟踪患者病情、指标、用药"
+    output: "患者监控"
+    time: "持续"
+  - skill: /mark
+    trigger: "标记疑难病例、用药调整、风险"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "患者诊疗"
+    flow:
+      - skill: /interview
+        step: "1. 病史采集"
+        output: "病史记录"
+        time: "30min"
+      - skill: /analyze
+        step: "2. 诊断分析"
+        output: "诊断分析"
+        time: "1h"
+      - skill: /create
+        step: "3. 治疗方案"
+        output: "治疗方案"
+        time: "30min"
+      - skill: /execute
+        step: "4. 治疗执行"
+        output: "治疗记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "手术管理"
+    flow:
+      - skill: /plan
+        step: "1. 手术计划"
+        output: "手术计划"
+        time: "2h"
+      - skill: /execute
+        step: "2. 手术执行"
+        output: "手术记录"
+        time: "持续"
+      - skill: /monitor
+        step: "3. 术后监护"
+        output: "监护记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 术后复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "病例讨论"
+    flow:
+      - skill: /analyze
+        step: "1. 病例分析"
+        output: "病例分析"
+        time: "2h"
+      - skill: /interview
+        step: "2. 团队讨论"
+        output: "讨论记录"
+        time: "1h"
+      - skill: /create
+        step: "3. 诊疗方案"
+        output: "方案文档"
+        time: "1h"
+      - skill: /review
+        step: "4. 方案评审"
+        output: "评审意见"
+        time: "30min"
+    total: "半天"
+
+  - name: "医学科研"
+    flow:
+      - skill: /market-search
+        step: "1. 文献检索"
+        output: "文献综述"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 研究设计"
+        output: "研究方案"
+        time: "2h"
+      - skill: /experiment
+        step: "3. 临床研究"
+        output: "研究记录"
+        time: "持续"
+      - skill: /create
+        step: "4. 论文撰写"
+        output: "论文草稿"
+        time: "3h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /interview
+  - /analyze
+  - /create
+  - /plan
+  - /review
+  - /market-search
+  - /experiment
+  - /mark
+
+output:
+  - "病史记录"
+  - "诊断分析"
+  - "治疗方案"
+  - "治疗记录"
+  - "手术计划"
+  - "手术记录"
+  - "监护记录"
+  - "病例分析"
+  - "讨论记录"
+  - "方案文档"
+  - "文献综述"
+  - "研究方案"
+  - "论文草稿"

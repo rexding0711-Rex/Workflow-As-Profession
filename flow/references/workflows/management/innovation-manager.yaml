@@ -1,0 +1,128 @@
+---
+name: innovation-manager
+description: "创新经理工作流：发现→孵化→加速→转化→文化"
+
+daily:
+  - skill: /execute
+    trigger: "推进创新项目、协调资源、管理流程"
+    output: "创新日志"
+    time: "15min"
+  - skill: /new-info
+    trigger: "跟踪创新趋势、技术、市场"
+    output: "创新情报"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记创新机会、风险、进展"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "创新发现"
+    flow:
+      - skill: /market-search
+        step: "1. 趋势扫描"
+        output: "趋势扫描"
+        time: "2h"
+      - skill: /user-research
+        step: "2. 需求洞察"
+        output: "需求洞察"
+        time: "2h"
+      - skill: /analyze
+        step: "3. 机会分析"
+        output: "机会分析"
+        time: "2h"
+      - skill: /create
+        step: "4. 创新提案"
+        output: "创新提案"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "创新孵化"
+    flow:
+      - skill: /analyze
+        step: "1. 可行性分析"
+        output: "可行性分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 原型设计"
+        output: "原型设计"
+        time: "3h"
+      - skill: /experiment
+        step: "3. 原型验证"
+        output: "验证报告"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 内部路演"
+        output: "路演材料"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "创新加速"
+    flow:
+      - skill: /plan
+        step: "1. 加速计划"
+        output: "加速计划"
+        time: "2h"
+      - skill: /execute
+        step: "2. 资源协调"
+        output: "协调记录"
+        time: "持续"
+      - skill: /execute
+        step: "3. 试点推广"
+        output: "推广记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 加速评估"
+        output: "评估报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "转化落地"
+    flow:
+      - skill: /analyze
+        step: "1. 商业分析"
+        output: "商业分析"
+        time: "2h"
+      - skill: /modeling
+        step: "2. ROI模型"
+        output: "ROI模型"
+        time: "2h"
+      - skill: /create
+        step: "3. 转化方案"
+        output: "转化方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 商业落地"
+        output: "落地记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /execute
+  - /new-info
+  - /market-search
+  - /user-research
+  - /analyze
+  - /create
+  - /experiment
+  - /pitch
+  - /plan
+  - /review
+  - /modeling
+  - /mark
+
+output:
+  - "趋势扫描"
+  - "需求洞察"
+  - "机会分析"
+  - "创新提案"
+  - "可行性分析"
+  - "原型设计"
+  - "验证报告"
+  - "路演材料"
+  - "加速计划"
+  - "协调记录"
+  - "商业分析"
+  - "ROI模型"
+  - "转化方案"
+  - "落地记录"

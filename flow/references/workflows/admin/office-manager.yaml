@@ -1,0 +1,124 @@
+---
+name: office-manager
+description: "行政经理工作流：行政→采购→设施→安全→文化"
+
+daily:
+  - skill: /execute
+    trigger: "跟踪行政事务、设施、供应商"
+    output: "行政日报"
+    time: "15min"
+  - skill: /monitor
+    trigger: "监控办公环境、安全、预算"
+    output: "行政监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记行政问题、成本、改进"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "行政管理"
+    flow:
+      - skill: /process
+        step: "1. 行政流程设计"
+        output: "行政流程"
+        time: "2h"
+      - skill: /execute
+        step: "2. 行政执行"
+        output: "执行记录"
+        time: "持续"
+      - skill: /monitor
+        step: "3. 行政监控"
+        output: "监控记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 行政复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "采购管理"
+    flow:
+      - skill: /analyze
+        step: "1. 采购需求分析"
+        output: "需求分析"
+        time: "1h"
+      - skill: /tech-compare
+        step: "2. 供应商比价"
+        output: "比价记录"
+        time: "1h"
+      - skill: /execute
+        step: "3. 采购执行"
+        output: "采购记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 采购复盘"
+        output: "复盘报告"
+        time: "30min"
+    total: "持续"
+
+  - name: "设施管理"
+    flow:
+      - skill: /plan
+        step: "1. 设施维护计划"
+        output: "维护计划"
+        time: "1h"
+      - skill: /execute
+        step: "2. 设施维护"
+        output: "维护记录"
+        time: "持续"
+      - skill: /monitor
+        step: "3. 设施监控"
+        output: "监控记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 设施复盘"
+        output: "复盘报告"
+        time: "30min"
+    total: "持续"
+
+  - name: "企业文化"
+    flow:
+      - skill: /user-research
+        step: "1. 员工满意度调研"
+        output: "满意度调研"
+        time: "2h"
+      - skill: /create
+        step: "2. 文化活动策划"
+        output: "活动方案"
+        time: "2h"
+      - skill: /execute
+        step: "3. 活动执行"
+        output: "执行记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 活动复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /process
+  - /analyze
+  - /tech-compare
+  - /plan
+  - /review
+  - /user-research
+  - /create
+  - /mark
+
+output:
+  - "行政流程"
+  - "执行记录"
+  - "监控记录"
+  - "复盘报告"
+  - "需求分析"
+  - "比价记录"
+  - "采购记录"
+  - "维护计划"
+  - "维护记录"
+  - "满意度调研"
+  - "活动方案"
+  - "执行记录"

@@ -1,0 +1,98 @@
+---
+name: performance-marketing-manager
+description: "效果营销经理工作流：投放→优化→归因→预算→ROI"
+
+daily:
+  - skill: /monitor
+    trigger: "实时跟踪各渠道投放数据（CTR/CPC/CPA/ROAS）"
+    output: "投放仪表盘"
+    time: "20min"
+  - skill: /new-info
+    trigger: "扫描平台算法更新、新广告产品、竞品素材"
+    output: "投放情报"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记高转化素材、优质受众包、异常消耗"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "投放策略"
+    flow:
+      - skill: /analyze
+        step: "1. 历史投放数据分析"
+        output: "投放分析"
+        time: "2h"
+      - skill: /market-search
+        step: "2. 渠道与受众分析"
+        output: "受众画像"
+        time: "2h"
+      - skill: /create
+        step: "3. 投放策略与预算分配"
+        output: "投放策略"
+        time: "2h"
+      - skill: /plan
+        step: "4. 投放日历"
+        output: "投放日历"
+        time: "1h"
+    total: "1天"
+  - name: "素材与创意优化"
+    flow:
+      - skill: /analyze
+        step: "1. 素材效果分析"
+        output: "素材分析"
+        time: "1h"
+      - skill: /experiment
+        step: "2. 素材A/B测试"
+        output: "测试报告"
+        time: "2h"
+      - skill: /create
+        step: "3. 优质素材批量复制"
+        output: "素材扩展"
+        time: "2h"
+      - skill: /review
+        step: "4. 素材效果复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "1天"
+  - name: "ROI优化"
+    flow:
+      - skill: /analyze
+        step: "1. 全渠道归因分析"
+        output: "归因分析"
+        time: "2h"
+      - skill: /modeling
+        step: "2. LTV/CAC模型"
+        output: "LTV模型"
+        time: "2h"
+      - skill: /decide
+        step: "3. 预算再分配决策"
+        output: "预算决策"
+        time: "1h"
+      - skill: /execute
+        step: "4. 优化执行"
+        output: "执行记录"
+        time: "持续"
+    total: "1-2天"
+
+skills:
+  - /monitor
+  - /new-info
+  - /mark
+  - /analyze
+  - /market-search
+  - /create
+  - /plan
+  - /experiment
+  - /review
+  - /modeling
+  - /decide
+  - /execute
+
+output:
+  - "投放策略方案"
+  - "投放日历"
+  - "素材A/B测试报告"
+  - "归因分析"
+  - "LTV/CAC模型"
+  - "预算再分配方案"

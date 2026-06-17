@@ -1,0 +1,105 @@
+---
+name: meeting-management
+description: "会议管理工作流：策划→安排→执行→记录→跟踪"
+
+daily:
+  - skill: /execute
+    trigger: "安排会议、准备材料、发送通知"
+    output: "会议日志"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪会议室、设备、反馈"
+    output: "会议监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记会议问题、改进、决议"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "会议策划"
+    flow:
+      - skill: /plan
+        step: "1. 会议计划"
+        output: "会议计划"
+        time: "2h"
+      - skill: /create
+        step: "2. 议程设计"
+        output: "议程设计"
+        time: "1h"
+      - skill: /execute
+        step: "3. 通知发送"
+        output: "通知记录"
+        time: "1h"
+    total: "半天"
+
+  - name: "会议安排"
+    flow:
+      - skill: /plan
+        step: "1. 场地安排"
+        output: "场地安排"
+        time: "1h"
+      - skill: /execute
+        step: "2. 设备准备"
+        output: "准备记录"
+        time: "1h"
+      - skill: /execute
+        step: "3. 资料准备"
+        output: "资料准备"
+        time: "1h"
+    total: "半天"
+
+  - name: "会议执行"
+    flow:
+      - skill: /execute
+        step: "1. 签到管理"
+        output: "签到记录"
+        time: "1h"
+      - skill: /meeting
+        step: "2. 会议支持"
+        output: "支持记录"
+        time: "持续"
+      - skill: /summary
+        step: "3. 会议记录"
+        output: "会议记录"
+        time: "2h"
+    total: "1天"
+
+  - name: "会议跟踪"
+    flow:
+      - skill: /execute
+        step: "1. 决议分发"
+        output: "分发记录"
+        time: "1h"
+      - skill: /execute
+        step: "2. 任务跟踪"
+        output: "跟踪记录"
+        time: "持续"
+      - skill: /review
+        step: "3. 效果评估"
+        output: "评估报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /plan
+  - /create
+  - /meeting
+  - /summary
+  - /review
+  - /mark
+
+output:
+  - "会议计划"
+  - "议程设计"
+  - "通知记录"
+  - "场地安排"
+  - "准备记录"
+  - "签到记录"
+  - "支持记录"
+  - "会议记录"
+  - "分发记录"
+  - "跟踪记录"
+  - "评估报告"

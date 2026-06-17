@@ -1,0 +1,126 @@
+---
+name: ma-manager
+description: "并购经理工作流：并购→尽调→谈判→估值→整合"
+
+daily:
+  - skill: /new-info
+    trigger: "扫描并购动态、标的公司新闻、行业整合"
+    output: "并购情报"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪在途并购项目进度、审批状态"
+    output: "项目摘要"
+    time: "10min"
+  - skill: /mark
+    trigger: "标的关键数据、谈判要点、风险信号"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "标的筛选"
+    flow:
+      - skill: /market-search
+        step: "1. 行业并购机会扫描"
+        output: "机会清单"
+        time: "2h"
+      - skill: /quick
+        step: "2. 快速筛选（战略匹配/财务/风险）"
+        output: "筛选结果"
+        time: "1h"
+      - skill: /professional
+        step: "3. 战略匹配分析"
+        output: "战略分析"
+        time: "2h"
+      - skill: /decide
+        step: "4. 标的优先级决策"
+        output: "优先级"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "并购尽调"
+    flow:
+      - skill: /dd
+        step: "1. 全面尽调（FDD+LDD+TDD+CDD）"
+        output: "尽调报告"
+        time: "2-4周"
+      - skill: /modeling
+        step: "2. 估值与协同效应测算"
+        output: "估值模型"
+        time: "2-3天"
+      - skill: /deal
+        step: "3. 交易结构设计"
+        output: "交易方案"
+        time: "1天"
+      - skill: /policy
+        step: "4. 监管与反垄断审查"
+        output: "监管分析"
+        time: "1天"
+    total: "3-5周"
+
+  - name: "谈判与交割"
+    flow:
+      - skill: /deal
+        step: "1. SPA条款谈判"
+        output: "谈判策略"
+        time: "2天"
+      - skill: /network
+        step: "2. 关键利益相关者沟通"
+        output: "沟通计划"
+        time: "1h"
+      - skill: /pitch
+        step: "3. 董事会/股东汇报"
+        output: "汇报材料"
+        time: "2h"
+      - skill: /execute
+        step: "4. 交割执行"
+        output: "执行计划"
+        time: "持续"
+    total: "1-2周"
+
+  - name: "并购整合"
+    flow:
+      - skill: /professional
+        step: "1. 整合策略与文化评估"
+        output: "整合策略"
+        time: "2h"
+      - skill: /process
+        step: "2. 整合流程与组织架构"
+        output: "整合方案"
+        time: "2h"
+      - skill: /workshop
+        step: "3. 整合工作坊"
+        output: "工作坊方案"
+        time: "3h"
+      - skill: /execute
+        step: "4. 整合执行与跟踪"
+        output: "执行计划"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /market-search
+  - /quick
+  - /professional
+  - /decide
+  - /dd
+  - /modeling
+  - /deal
+  - /policy
+  - /network
+  - /pitch
+  - /execute
+  - /process
+  - /workshop
+  - /new-info
+  - /monitor
+  - /mark
+
+output:
+  - "并购机会清单"
+  - "尽调报告"
+  - "估值模型"
+  - "交易方案"
+  - "监管分析"
+  - "谈判策略"
+  - "整合方案"
+  - "汇报材料"

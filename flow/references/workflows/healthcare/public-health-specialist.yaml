@@ -1,0 +1,124 @@
+---
+name: public-health-specialist
+description: "公共卫生专员工作流：监测→调查→干预→政策→宣教"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪疫情、指标、健康数据"
+    output: "公卫监控"
+    time: "15min"
+  - skill: /analyze
+    trigger: "分析流行病学、趋势、风险"
+    output: "公卫分析"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记疫情、风险、干预点"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "疾病监测"
+    flow:
+      - skill: /monitor
+        step: "1. 数据收集"
+        output: "收集记录"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 疫情分析"
+        output: "疫情分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 监测报告"
+        output: "监测报告"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 疫情汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "现场调查"
+    flow:
+      - skill: /plan
+        step: "1. 调查方案"
+        output: "调查方案"
+        time: "2h"
+      - skill: /execute
+        step: "2. 现场调查"
+        output: "调查记录"
+        time: "3h"
+      - skill: /analyze
+        step: "3. 数据分析"
+        output: "数据分析"
+        time: "2h"
+      - skill: /create
+        step: "4. 调查报告"
+        output: "调查报告"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "健康干预"
+    flow:
+      - skill: /analyze
+        step: "1. 需求评估"
+        output: "需求评估"
+        time: "2h"
+      - skill: /create
+        step: "2. 干预方案"
+        output: "干预方案"
+        time: "2h"
+      - skill: /execute
+        step: "3. 干预实施"
+        output: "实施记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 效果评估"
+        output: "评估报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "政策建议"
+    flow:
+      - skill: /policy
+        step: "1. 政策研究"
+        output: "政策研究"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 效果分析"
+        output: "效果分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 政策建议"
+        output: "建议报告"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 政策汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /monitor
+  - /analyze
+  - /create
+  - /pitch
+  - /plan
+  - /execute
+  - /policy
+  - /review
+  - /mark
+
+output:
+  - "疫情分析"
+  - "监测报告"
+  - "调查方案"
+  - "调查记录"
+  - "数据分析"
+  - "调查报告"
+  - "需求评估"
+  - "干预方案"
+  - "实施记录"
+  - "政策研究"
+  - "效果分析"
+  - "建议报告"
+  - "汇报材料"

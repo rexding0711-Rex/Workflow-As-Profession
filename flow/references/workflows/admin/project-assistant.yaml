@@ -1,0 +1,110 @@
+---
+name: project-assistant
+description: "项目助理工作流：协调→文档→跟踪→会议→后勤"
+
+daily:
+  - skill: /execute
+    trigger: "协调进度、整理文档、安排会议"
+    output: "助理日志"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪任务、期限、资源"
+    output: "助理监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记问题、风险、提醒"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "项目协调"
+    flow:
+      - skill: /plan
+        step: "1. 协调计划"
+        output: "协调计划"
+        time: "1h"
+      - skill: /execute
+        step: "2. 进度协调"
+        output: "协调记录"
+        time: "持续"
+      - skill: /monitor
+        step: "3. 进度监控"
+        output: "监控记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "文档管理"
+    flow:
+      - skill: /create
+        step: "1. 文档起草"
+        output: "文档草稿"
+        time: "2h"
+      - skill: /format
+        step: "2. 文档排版"
+        output: "排版文档"
+        time: "1h"
+      - skill: /execute
+        step: "3. 文档归档"
+        output: "归档记录"
+        time: "1h"
+    total: "半天"
+
+  - name: "会议支持"
+    flow:
+      - skill: /plan
+        step: "1. 会议安排"
+        output: "会议安排"
+        time: "1h"
+      - skill: /meeting
+        step: "2. 会议准备"
+        output: "会议准备"
+        time: "1h"
+      - skill: /summary
+        step: "3. 会议纪要"
+        output: "会议纪要"
+        time: "1h"
+      - skill: /execute
+        step: "4. 会议跟进"
+        output: "跟进记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "后勤支持"
+    flow:
+      - skill: /plan
+        step: "1. 后勤计划"
+        output: "后勤计划"
+        time: "1h"
+      - skill: /execute
+        step: "2. 资源准备"
+        output: "准备记录"
+        time: "2h"
+      - skill: /execute
+        step: "3. 后勤执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /plan
+  - /create
+  - /format
+  - /meeting
+  - /summary
+  - /mark
+
+output:
+  - "协调计划"
+  - "协调记录"
+  - "监控记录"
+  - "文档草稿"
+  - "排版文档"
+  - "归档记录"
+  - "会议安排"
+  - "会议准备"
+  - "会议纪要"
+  - "后勤计划"
+  - "准备记录"
+  - "执行记录"

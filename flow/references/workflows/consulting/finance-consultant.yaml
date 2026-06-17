@@ -1,0 +1,128 @@
+---
+name: finance-consultant
+description: "财务咨询工作流：诊断→建模→优化→实施→培训"
+
+daily:
+  - skill: /analyze
+    trigger: "分析客户财务数据、指标、问题"
+    output: "咨询分析"
+    time: "15min"
+  - skill: /new-info
+    trigger: "跟踪财务政策、最佳实践、工具"
+    output: "咨询情报"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记财务风险、机会、建议"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "财务诊断"
+    flow:
+      - skill: /interview
+        step: "1. 客户访谈"
+        output: "访谈记录"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 财务分析"
+        output: "财务分析"
+        time: "3h"
+      - skill: /dd
+        step: "3. 数据尽调"
+        output: "尽调报告"
+        time: "2h"
+      - skill: /create
+        step: "4. 诊断报告"
+        output: "诊断报告"
+        time: "2h"
+    total: "2-3天"
+
+  - name: "财务建模"
+    flow:
+      - skill: /modeling
+        step: "1. 模型设计"
+        output: "模型设计"
+        time: "3h"
+      - skill: /analyze
+        step: "2. 数据输入"
+        output: "数据输入"
+        time: "2h"
+      - skill: /modeling
+        step: "3. 模型运算"
+        output: "模型运算"
+        time: "2h"
+      - skill: /review
+        step: "4. 模型验证"
+        output: "验证报告"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "优化方案"
+    flow:
+      - skill: /analyze
+        step: "1. 问题分析"
+        output: "问题分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 优化方案"
+        output: "优化方案"
+        time: "3h"
+      - skill: /modeling
+        step: "3. 效果预测"
+        output: "预测模型"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 方案汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "实施培训"
+    flow:
+      - skill: /plan
+        step: "1. 实施计划"
+        output: "实施计划"
+        time: "2h"
+      - skill: /execute
+        step: "2. 方案实施"
+        output: "实施记录"
+        time: "持续"
+      - skill: /workshop
+        step: "3. 客户培训"
+        output: "培训方案"
+        time: "3h"
+      - skill: /review
+        step: "4. 效果评估"
+        output: "评估报告"
+        time: "1h"
+    total: "持续"
+
+skills:
+  - /analyze
+  - /new-info
+  - /interview
+  - /dd
+  - /modeling
+  - /create
+  - /review
+  - /pitch
+  - /plan
+  - /execute
+  - /workshop
+  - /mark
+
+output:
+  - "访谈记录"
+  - "财务分析"
+  - "尽调报告"
+  - "诊断报告"
+  - "模型设计"
+  - "验证报告"
+  - "问题分析"
+  - "优化方案"
+  - "预测模型"
+  - "汇报材料"
+  - "实施计划"
+  - "实施记录"
+  - "培训方案"
+  - "评估报告"

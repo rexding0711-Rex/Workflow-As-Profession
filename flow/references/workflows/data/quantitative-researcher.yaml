@@ -1,0 +1,122 @@
+---
+name: quantitative-researcher
+description: "量化研究员工作流：数据→建模→回测→策略→执行"
+
+daily:
+  - skill: /analyze
+    trigger: "跟踪模型表现、市场数据、策略信号"
+    output: "量化仪表盘"
+    time: "15min"
+  - skill: /monitor
+    trigger: "监控模型风险、异常、回撤"
+    output: "风险监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记模型洞察、信号、风险"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "因子研究"
+    flow:
+      - skill: /analyze
+        step: "1. 因子挖掘与测试"
+        output: "因子测试"
+        time: "3h"
+      - skill: /modeling
+        step: "2. 因子模型构建"
+        output: "因子模型"
+        time: "3h"
+      - skill: /experiment
+        step: "3. 因子回测"
+        output: "回测报告"
+        time: "2h"
+      - skill: /visual
+        step: "4. 因子可视化"
+        output: "可视化报告"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "策略开发"
+    flow:
+      - skill: /modeling
+        step: "1. 策略模型设计"
+        output: "策略模型"
+        time: "3h"
+      - skill: /experiment
+        step: "2. 策略回测"
+        output: "回测报告"
+        time: "3h"
+      - skill: /analyze
+        step: "3. 策略性能分析"
+        output: "性能分析"
+        time: "2h"
+      - skill: /decide
+        step: "4. 策略评估决策"
+        output: "评估决策"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "风险管理"
+    flow:
+      - skill: /analyze
+        step: "1. 风险因子分析"
+        output: "风险分析"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 风险模型"
+        output: "风险模型"
+        time: "2h"
+      - skill: /monitor
+        step: "3. 风险监控"
+        output: "监控记录"
+        time: "持续"
+      - skill: /review
+        step: "4. 风险复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "策略上线"
+    flow:
+      - skill: /tech-compare
+        step: "1. 交易执行方案对比"
+        output: "执行对比"
+        time: "2h"
+      - skill: /execute
+        step: "2. 策略部署"
+        output: "部署记录"
+        time: "2h"
+      - skill: /monitor
+        step: "3. 实盘监控"
+        output: "实盘监控"
+        time: "持续"
+      - skill: /review
+        step: "4. 策略复盘"
+        output: "复盘报告"
+        time: "1h"
+    total: "2-3天"
+
+skills:
+  - /analyze
+  - /modeling
+  - /experiment
+  - /visual
+  - /monitor
+  - /decide
+  - /tech-compare
+  - /execute
+  - /review
+  - /mark
+
+output:
+  - "因子测试"
+  - "因子模型"
+  - "回测报告"
+  - "可视化报告"
+  - "策略模型"
+  - "性能分析"
+  - "风险分析"
+  - "风险模型"
+  - "实盘监控"
+  - "复盘报告"

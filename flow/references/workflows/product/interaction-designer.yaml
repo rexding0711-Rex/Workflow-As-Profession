@@ -1,0 +1,94 @@
+---
+name: interaction-designer
+description: "交互设计师工作流：原型→用户测试→流程→用户研究"
+
+daily:
+  - skill: /user-research
+    trigger: "跟踪用户反馈、交互问题、设计趋势"
+    output: "用户洞察"
+    time: "10min"
+  - skill: /monitor
+    trigger: "监控交互数据、点击率、转化率"
+    output: "交互监控"
+    time: "5min"
+  - skill: /mark
+    trigger: "标记交互洞察、问题、灵感"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "交互设计"
+    flow:
+      - skill: /user-research
+        step: "1. 用户需求分析"
+        output: "需求分析"
+        time: "2h"
+      - skill: /design
+        step: "2. 交互流程设计"
+        output: "交互流程"
+        time: "3h"
+      - skill: /design
+        step: "3. 原型设计"
+        output: "原型方案"
+        time: "3h"
+      - skill: /user-research
+        step: "4. 可用性测试"
+        output: "测试报告"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "交互优化"
+    flow:
+      - skill: /analyze
+        step: "1. 交互数据分析"
+        output: "数据分析"
+        time: "2h"
+      - skill: /user-research
+        step: "2. 用户痛点分析"
+        output: "痛点分析"
+        time: "2h"
+      - skill: /experiment
+        step: "3. 交互A/B测试"
+        output: "测试结果"
+        time: "2周"
+      - skill: /execute
+        step: "4. 优化执行"
+        output: "执行计划"
+        time: "持续"
+    total: "持续"
+
+  - name: "动效设计"
+    flow:
+      - skill: /design
+        step: "1. 动效概念设计"
+        output: "动效方案"
+        time: "3h"
+      - skill: /visual
+        step: "2. 动效可视化"
+        output: "动效素材"
+        time: "2h"
+      - skill: /user-research
+        step: "3. 动效可用性测试"
+        output: "测试报告"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /user-research
+  - /design
+  - /analyze
+  - /experiment
+  - /execute
+  - /visual
+  - /monitor
+  - /mark
+
+output:
+  - "需求分析"
+  - "交互流程"
+  - "原型方案"
+  - "测试报告"
+  - "数据分析"
+  - "痛点分析"
+  - "动效方案"
+  - "动效素材"

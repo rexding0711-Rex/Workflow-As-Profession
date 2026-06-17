@@ -1,0 +1,100 @@
+---
+name: global-trade-manager
+description: "全球贸易经理工作流：贸易合规→关税优化→FTA→供应链弹性→地缘风险"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪贸易政策变化/关税调整/地缘政治"
+    output: "贸易监控"
+    time: "15min"
+  - skill: /new-info
+    trigger: "扫描FTA谈判/制裁更新/贸易协定"
+    output: "贸易情报"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记政策风险/关税变化/合规问题"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "贸易合规体系"
+    flow:
+      - skill: /policy
+        step: "1. 贸易法规全景分析"
+        output: "法规地图"
+        time: "3h"
+      - skill: /dd
+        step: "2. 进出口合规审计"
+        output: "合规审计"
+        time: "3h"
+      - skill: /process
+        step: "3. 合规流程与内控"
+        output: "内控方案"
+        time: "2h"
+      - skill: /workshop
+        step: "4. 合规培训"
+        output: "培训方案"
+        time: "2h"
+    total: "2-3天"
+  - name: "关税与FTA优化"
+    flow:
+      - skill: /analyze
+        step: "1. 关税支出分析"
+        output: "关税分析"
+        time: "2h"
+      - skill: /modeling
+        step: "2. FTA利用率模型"
+        output: "FTA模型"
+        time: "2h"
+      - skill: /create
+        step: "3. 关税优化方案（首次销售/转移定价/加工贸易）"
+        output: "优化方案"
+        time: "3h"
+      - skill: /pitch
+        step: "4. 关税节约汇报"
+        output: "节约报告"
+        time: "1h"
+    total: "1-2天"
+  - name: "供应链弹性"
+    flow:
+      - skill: /analyze
+        step: "1. 地缘政治风险评估"
+        output: "风险评估"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 供应链中断情景模拟"
+        output: "情景模拟"
+        time: "3h"
+      - skill: /decide
+        step: "3. 多元化布局决策（China+1/Nearshoring）"
+        output: "布局建议"
+        time: "2h"
+      - skill: /plan
+        step: "4. 弹性路线图"
+        output: "弹性方案"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /monitor
+  - /new-info
+  - /mark
+  - /policy
+  - /dd
+  - /process
+  - /workshop
+  - /analyze
+  - /modeling
+  - /create
+  - /pitch
+  - /decide
+  - /plan
+
+output:
+  - "贸易法规地图"
+  - "合规审计报告"
+  - "内控方案"
+  - "关税分析"
+  - "FTA优化方案"
+  - "地缘风险评估"
+  - "供应链弹性方案"

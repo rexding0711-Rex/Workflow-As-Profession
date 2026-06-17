@@ -1,0 +1,117 @@
+---
+name: ui-designer
+description: "UI设计师工作流：需求→界面→交互→规范→走查"
+
+daily:
+  - skill: /create
+    trigger: "设计界面、调整细节、维护规范"
+    output: "UI日志"
+    time: "持续"
+  - skill: /new-info
+    trigger: "跟踪UI趋势、竞品、技术"
+    output: "UI情报"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记UI问题、体验、优化"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "需求理解"
+    flow:
+      - skill: /interview
+        step: "1. 需求沟通"
+        output: "沟通记录"
+        time: "1h"
+      - skill: /analyze
+        step: "2. 需求分析"
+        output: "需求分析"
+        time: "2h"
+      - skill: /user-research
+        step: "3. 用户研究"
+        output: "用户研究"
+        time: "2h"
+    total: "半天"
+
+  - name: "界面设计"
+    flow:
+      - skill: /design
+        step: "1. 信息架构"
+        output: "信息架构"
+        time: "2h"
+      - skill: /create
+        step: "2. 视觉设计"
+        output: "视觉方案"
+        time: "3h"
+      - skill: /visual
+        step: "3. 视觉规范"
+        output: "视觉规范"
+        time: "2h"
+      - skill: /review
+        step: "4. 设计评审"
+        output: "评审意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "交互设计"
+    flow:
+      - skill: /design
+        step: "1. 交互流程"
+        output: "交互流程"
+        time: "2h"
+      - skill: /create
+        step: "2. 原型设计"
+        output: "原型方案"
+        time: "3h"
+      - skill: /experiment
+        step: "3. 可用性测试"
+        output: "测试报告"
+        time: "2h"
+      - skill: /review
+        step: "4. 交互评审"
+        output: "评审意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "设计走查"
+    flow:
+      - skill: /execute
+        step: "1. 开发走查"
+        output: "走查记录"
+        time: "2h"
+      - skill: /review
+        step: "2. 验收审核"
+        output: "验收意见"
+        time: "1h"
+      - skill: /execute
+        step: "3. 问题修复"
+        output: "修复记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /create
+  - /new-info
+  - /interview
+  - /analyze
+  - /user-research
+  - /design
+  - /visual
+  - /review
+  - /experiment
+  - /execute
+  - /mark
+
+output:
+  - "沟通记录"
+  - "需求分析"
+  - "用户研究"
+  - "信息架构"
+  - "视觉方案"
+  - "视觉规范"
+  - "评审意见"
+  - "交互流程"
+  - "原型方案"
+  - "测试报告"
+  - "走查记录"
+  - "验收意见"

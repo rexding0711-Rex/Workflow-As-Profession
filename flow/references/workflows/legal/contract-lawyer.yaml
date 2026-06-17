@@ -1,0 +1,123 @@
+---
+name: contract-lawyer
+description: "合同律师工作流：起草→谈判→审核→履行→争议"
+
+daily:
+  - skill: /execute
+    trigger: "起草合同、审核条款、处理争议"
+    output: "合同律师日志"
+    time: "持续"
+  - skill: /new-info
+    trigger: "跟踪合同法、司法解释、行业模板"
+    output: "合同情报"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记风险条款、争议点、机会"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "合同起草"
+    flow:
+      - skill: /interview
+        step: "1. 需求沟通"
+        output: "沟通记录"
+        time: "1h"
+      - skill: /create
+        step: "2. 合同起草"
+        output: "合同起草"
+        time: "3h"
+      - skill: /review
+        step: "3. 内部审核"
+        output: "审核意见"
+        time: "1h"
+      - skill: /create
+        step: "4. 合同修订"
+        output: "修订记录"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "合同谈判"
+    flow:
+      - skill: /analyze
+        step: "1. 条款分析"
+        output: "条款分析"
+        time: "2h"
+      - skill: /negotiate
+        step: "2. 谈判策略"
+        output: "谈判策略"
+        time: "2h"
+      - skill: /negotiate
+        step: "3. 合同谈判"
+        output: "谈判记录"
+        time: "3h"
+      - skill: /create
+        step: "4. 谈判纪要"
+        output: "谈判纪要"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "合同审核"
+    flow:
+      - skill: /analyze
+        step: "1. 合同审查"
+        output: "审查意见"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 风险评估"
+        output: "风险评估"
+        time: "2h"
+      - skill: /create
+        step: "3. 修改建议"
+        output: "修改建议"
+        time: "2h"
+      - skill: /review
+        step: "4. 审核确认"
+        output: "确认记录"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "合同履行"
+    flow:
+      - skill: /execute
+        step: "1. 履行监控"
+        output: "监控记录"
+        time: "持续"
+      - skill: /analyze
+        step: "2. 违约分析"
+        output: "违约分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 争议方案"
+        output: "争议方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 争议解决"
+        output: "解决记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /execute
+  - /new-info
+  - /interview
+  - /create
+  - /review
+  - /analyze
+  - /negotiate
+  - /mark
+
+output:
+  - "沟通记录"
+  - "合同起草"
+  - "审核意见"
+  - "修订记录"
+  - "条款分析"
+  - "谈判策略"
+  - "谈判记录"
+  - "谈判纪要"
+  - "审查意见"
+  - "风险评估"
+  - "修改建议"
+  - "违约分析"
+  - "争议方案"

@@ -1,0 +1,127 @@
+---
+name: medical-affairs
+description: "医学事务工作流：KOL→证据→教育→合规→战略"
+
+daily:
+  - skill: /execute
+    trigger: "管理KOL、组织活动、审核材料"
+    output: "医学事务日志"
+    time: "15min"
+  - skill: /new-info
+    trigger: "跟踪医学进展、指南、研究"
+    output: "医学情报"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记医学机会、合规、风险"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "KOL管理"
+    flow:
+      - skill: /network
+        step: "1. KOL识别"
+        output: "KOL清单"
+        time: "2h"
+      - skill: /interview
+        step: "2. KOL沟通"
+        output: "沟通记录"
+        time: "2h"
+      - skill: /execute
+        step: "3. KOL合作"
+        output: "合作记录"
+        time: "持续"
+      - skill: /review
+        step: "4. KOL评估"
+        output: "评估报告"
+        time: "1h"
+    total: "持续"
+
+  - name: "医学证据"
+    flow:
+      - skill: /market-search
+        step: "1. 文献检索"
+        output: "文献检索"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 证据分析"
+        output: "证据分析"
+        time: "3h"
+      - skill: /create
+        step: "3. 证据生成"
+        output: "证据生成"
+        time: "3h"
+      - skill: /review
+        step: "4. 证据审核"
+        output: "审核意见"
+        time: "1h"
+    total: "2-3天"
+
+  - name: "医学教育"
+    flow:
+      - skill: /user-research
+        step: "1. 需求调研"
+        output: "需求调研"
+        time: "2h"
+      - skill: /create
+        step: "2. 教育内容"
+        output: "教育内容"
+        time: "3h"
+      - skill: /workshop
+        step: "3. 教育活动"
+        output: "活动记录"
+        time: "3h"
+      - skill: /review
+        step: "4. 效果评估"
+        output: "评估报告"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "医学战略"
+    flow:
+      - skill: /analyze
+        step: "1. 战略分析"
+        output: "战略分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 战略规划"
+        output: "战略规划"
+        time: "3h"
+      - skill: /pitch
+        step: "3. 战略汇报"
+        output: "汇报材料"
+        time: "1h"
+      - skill: /review
+        step: "4. 战略评估"
+        output: "评估报告"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /execute
+  - /new-info
+  - /network
+  - /interview
+  - /market-search
+  - /analyze
+  - /create
+  - /review
+  - /user-research
+  - /workshop
+  - /pitch
+  - /mark
+
+output:
+  - "KOL清单"
+  - "沟通记录"
+  - "合作记录"
+  - "文献检索"
+  - "证据分析"
+  - "证据生成"
+  - "需求调研"
+  - "教育内容"
+  - "活动记录"
+  - "战略分析"
+  - "战略规划"
+  - "汇报材料"
+  - "评估报告"

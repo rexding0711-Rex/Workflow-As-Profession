@@ -1,0 +1,122 @@
+---
+name: social-media-manager
+description: "社媒经理工作流：内容→互动→数据→增长→活动"
+
+daily:
+  - skill: /execute
+    trigger: "发布内容、互动回复、社群管理"
+    output: "社媒日报"
+    time: "15min"
+  - skill: /monitor
+    trigger: "监控社媒数据、舆情、竞品"
+    output: "社媒监控"
+    time: "15min"
+  - skill: /mark
+    trigger: "标记热点、危机、机会"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "内容策划"
+    flow:
+      - skill: /market-search
+        step: "1. 热点与趋势"
+        output: "热点报告"
+        time: "1h"
+      - skill: /create
+        step: "2. 内容日历"
+        output: "内容日历"
+        time: "2h"
+      - skill: /create
+        step: "3. 内容创作"
+        output: "内容素材"
+        time: "3h"
+      - skill: /review
+        step: "4. 内容审核"
+        output: "审核意见"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "社群运营"
+    flow:
+      - skill: /user-research
+        step: "1. 社群用户分析"
+        output: "用户分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 社群内容"
+        output: "社群内容"
+        time: "2h"
+      - skill: /execute
+        step: "3. 社群互动"
+        output: "互动记录"
+        time: "持续"
+      - skill: /monitor
+        step: "4. 社群监控"
+        output: "监控记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "社媒广告"
+    flow:
+      - skill: /analyze
+        step: "1. 广告需求分析"
+        output: "需求分析"
+        time: "1h"
+      - skill: /create
+        step: "2. 广告素材"
+        output: "广告素材"
+        time: "2h"
+      - skill: /experiment
+        step: "3. 广告A/B测试"
+        output: "测试结果"
+        time: "2周"
+      - skill: /analyze
+        step: "4. 广告数据分析"
+        output: "广告分析"
+        time: "2h"
+    total: "持续"
+
+  - name: "舆情管理"
+    flow:
+      - skill: /monitor
+        step: "1. 舆情监控"
+        output: "舆情报告"
+        time: "持续"
+      - skill: /analyze
+        step: "2. 舆情分析"
+        output: "舆情分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 应对策略"
+        output: "应对策略"
+        time: "2h"
+      - skill: /execute
+        step: "4. 危机处理"
+        output: "处理记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /market-search
+  - /create
+  - /review
+  - /user-research
+  - /analyze
+  - /experiment
+  - /mark
+
+output:
+  - "热点报告"
+  - "内容日历"
+  - "内容素材"
+  - "用户分析"
+  - "社群内容"
+  - "互动记录"
+  - "需求分析"
+  - "广告素材"
+  - "广告分析"
+  - "舆情报告"
+  - "应对策略"

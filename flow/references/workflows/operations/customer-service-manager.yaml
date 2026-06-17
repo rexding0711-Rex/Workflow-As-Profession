@@ -1,0 +1,123 @@
+---
+name: customer-service-manager
+description: "客服经理工作流：团队→质量→流程→系统→满意度"
+
+daily:
+  - skill: /execute
+    trigger: "管理团队、处理客诉、优化流程"
+    output: "客服经理日志"
+    time: "15min"
+  - skill: /monitor
+    trigger: "跟踪服务质量、效率、满意度"
+    output: "客服经理监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记服务问题、改进、机会"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "团队管理"
+    flow:
+      - skill: /analyze
+        step: "1. 团队分析"
+        output: "团队分析"
+        time: "2h"
+      - skill: /create
+        step: "2. 排班方案"
+        output: "排班方案"
+        time: "2h"
+      - skill: /execute
+        step: "3. 团队培训"
+        output: "培训记录"
+        time: "2h"
+      - skill: /review
+        step: "4. 绩效评估"
+        output: "绩效评估"
+        time: "1h"
+    total: "持续"
+
+  - name: "质量管理"
+    flow:
+      - skill: /process
+        step: "1. 质量标准"
+        output: "质量标准"
+        time: "2h"
+      - skill: /execute
+        step: "2. 质检执行"
+        output: "质检记录"
+        time: "持续"
+      - skill: /analyze
+        step: "3. 质量分析"
+        output: "质量分析"
+        time: "2h"
+      - skill: /create
+        step: "4. 改进方案"
+        output: "改进方案"
+        time: "2h"
+    total: "持续"
+
+  - name: "流程优化"
+    flow:
+      - skill: /process
+        step: "1. 流程梳理"
+        output: "流程梳理"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 流程分析"
+        output: "流程分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 流程优化"
+        output: "流程优化"
+        time: "2h"
+      - skill: /execute
+        step: "4. 流程实施"
+        output: "实施记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "系统管理"
+    flow:
+      - skill: /tech-compare
+        step: "1. 系统选型"
+        output: "系统选型"
+        time: "2h"
+      - skill: /execute
+        step: "2. 系统配置"
+        output: "配置记录"
+        time: "2h"
+      - skill: /experiment
+        step: "3. 系统测试"
+        output: "测试报告"
+        time: "2h"
+      - skill: /monitor
+        step: "4. 系统监控"
+        output: "监控记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /execute
+  - /monitor
+  - /analyze
+  - /create
+  - /process
+  - /tech-compare
+  - /experiment
+  - /review
+  - /mark
+
+output:
+  - "团队分析"
+  - "排班方案"
+  - "培训记录"
+  - "质量标准"
+  - "质检记录"
+  - "质量分析"
+  - "流程梳理"
+  - "流程优化"
+  - "系统选型"
+  - "配置记录"
+  - "测试报告"
+  - "监控记录"

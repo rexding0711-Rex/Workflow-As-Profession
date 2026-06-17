@@ -1,0 +1,118 @@
+---
+name: user-researcher
+description: "用户研究员工作流：用户研究→访谈→问卷→可用性测试→报告"
+
+daily:
+  - skill: /user-research
+    trigger: "跟踪用户反馈、研究计划、数据质量"
+    output: "研究摘要"
+    time: "10min"
+  - skill: /monitor
+    trigger: "监控用户行为数据、异常、趋势"
+    output: "用户监控"
+    time: "5min"
+  - skill: /mark
+    trigger: "标记研究洞察、用户痛点、问题"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "用户访谈"
+    flow:
+      - skill: /user-research
+        step: "1. 访谈脚本设计"
+        output: "访谈脚本"
+        time: "2h"
+      - skill: /user-research
+        step: "2. 用户访谈执行"
+        output: "访谈记录"
+        time: "3h"
+      - skill: /analyze
+        step: "3. 访谈数据分析"
+        output: "访谈分析"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 访谈汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "问卷调研"
+    flow:
+      - skill: /user-research
+        step: "1. 问卷设计"
+        output: "问卷方案"
+        time: "2h"
+      - skill: /user-research
+        step: "2. 问卷投放与回收"
+        output: "问卷数据"
+        time: "1-2周"
+      - skill: /analyze
+        step: "3. 问卷数据分析"
+        output: "问卷分析"
+        time: "2h"
+      - skill: /visual
+        step: "4. 数据可视化"
+        output: "可视化报告"
+        time: "2h"
+    total: "2-3周"
+
+  - name: "可用性测试"
+    flow:
+      - skill: /user-research
+        step: "1. 测试方案设计"
+        output: "测试方案"
+        time: "2h"
+      - skill: /user-research
+        step: "2. 测试执行"
+        output: "测试记录"
+        time: "3h"
+      - skill: /analyze
+        step: "3. 测试数据分析"
+        output: "测试分析"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 测试汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+  - name: "用户画像"
+    flow:
+      - skill: /user-research
+        step: "1. 用户数据收集"
+        output: "用户数据"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 用户数据分析"
+        output: "用户分析"
+        time: "2h"
+      - skill: /visual
+        step: "3. 用户画像可视化"
+        output: "画像可视化"
+        time: "2h"
+      - skill: /pitch
+        step: "4. 画像汇报"
+        output: "汇报材料"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /user-research
+  - /analyze
+  - /pitch
+  - /visual
+  - /monitor
+  - /mark
+
+output:
+  - "访谈脚本"
+  - "访谈记录"
+  - "访谈分析"
+  - "问卷方案"
+  - "问卷分析"
+  - "测试方案"
+  - "测试分析"
+  - "用户数据"
+  - "用户分析"
+  - "画像可视化"

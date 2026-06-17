@@ -1,0 +1,194 @@
+---
+name: pe-investor
+description: "PE/VC投资人工作流：项目筛选→尽调→估值→谈判→投后→退出"
+
+daily:
+  - skill: /new-info
+    trigger: "扫描赛道最新动态（融资、并购、政策）"
+    output: "1页情报摘要"
+    time: "5min"
+  - skill: /monitor
+    trigger: "监控持仓/关注项目的关键指标"
+    output: "异动提醒"
+    time: "3min"
+  - skill: /mark
+    trigger: "标记今日关键信息、决策、风险"
+    output: "结构化标签"
+    time: "2min"
+
+projects:
+  - name: "新赛道研究"
+    flow:
+      - skill: /learn
+        step: "1. 快速建立认知（L1-L3）"
+        output: "认知地图 + 产业链分析"
+        time: "2-3h"
+      - skill: /market-search
+        step: "2. 市场细分与客户画像"
+        output: "TAM/SAM/SOM + ICP"
+        time: "2h"
+      - skill: /new-info
+        step: "3. 扫描最新融资动态和竞争格局"
+        output: "情报摘要"
+        time: "1h"
+      - skill: /graph-builder
+        step: "4. 构建产业链图谱"
+        output: "实体关系图"
+        time: "1h"
+      - skill: /professional
+        step: "5. 行业分析（五力/价值链/趋势）"
+        output: "行业分析报告"
+        time: "2h"
+      - skill: /decide
+        step: "6. 是否进入赛道决策"
+        output: "决策矩阵 + 建议"
+        time: "30min"
+    total: "8-12h"
+  - name: "项目筛选（Deal Flow）"
+    flow:
+      - skill: /quick
+        step: "1. 5分钟快速筛选（BP扫读）"
+        output: "Pass/继续/深度"
+        time: "5min"
+      - skill: /summary
+        step: "2. 1页摘要（券商报告/行业数据）"
+        output: "核心要点"
+        time: "10min"
+      - skill: /professional
+        step: "3. 商业模式分析（画布/竞争）"
+        output: "商业分析"
+        time: "1h"
+      - skill: /modeling
+        step: "4. 快速估值（可比/DCF）"
+        output: "估值区间"
+        time: "1h"
+      - skill: /decide
+        step: "5. 立项决策"
+        output: "Go/No-Go"
+        time: "30min"
+    total: "2-3h"
+  - name: "深度尽调"
+    flow:
+      - skill: /dd
+        step: "1. 全面尽调（FDD+LDD+TDD+CDD）"
+        output: "尽调报告"
+        time: "2-4周"
+      - skill: /interview
+        step: "2. 管理层访谈（客户/供应商/员工）"
+        output: "访谈纪要"
+        time: "3-5天"
+      - skill: /tech-compare
+        step: "3. 技术路线验证（如有）"
+        output: "技术对比"
+        time: "1天"
+      - skill: /modeling
+        step: "4. 详细财务建模"
+        output: "DCF/LBO + 敏感性"
+        time: "2-3天"
+      - skill: /policy
+        step: "5. 政策与地缘政治风险评估"
+        output: "风险矩阵"
+        time: "1天"
+      - skill: /deal
+        step: "6. TS条款审查"
+        output: "红旗清单 + 谈判建议"
+        time: "1天"
+      - skill: /network
+        step: "7. 行业专家背调"
+        output: "专家反馈"
+        time: "2-3天"
+    total: "3-6周"
+  - name: "投资决策"
+    flow:
+      - skill: /decide
+        step: "1. 加权评分决策矩阵"
+        output: "评分表 + 推荐"
+        time: "1h"
+      - skill: /modeling
+        step: "2. 最终估值与回报测算"
+        output: "IRR/MOIC + 情景"
+        time: "2h"
+      - skill: /pitch
+        step: "3. 投委会汇报材料"
+        output: "PPT + 演讲稿 + Q&A"
+        time: "4-6h"
+      - skill: /visual
+        step: "4. 数据可视化优化"
+        output: "图表方案"
+        time: "2h"
+      - skill: /review
+        step: "5. 自检（4步检查）"
+        output: "自检报告"
+        time: "1h"
+    total: "8-12h"
+  - name: "投后管理"
+    flow:
+      - skill: /monitor
+        step: "1. 定期监控（财务/运营/市场）"
+        output: "监控报告"
+        time: "持续"
+      - skill: /execute
+        step: "2. 增值服务（战略/资源/人才）"
+        output: "行动计划"
+        time: "按需"
+      - skill: /modeling
+        step: "3. 季度估值更新"
+        output: "估值调整"
+        time: "1天/季"
+      - skill: /mark
+        step: "4. 标记关键事件与风险"
+        output: "风险标签"
+        time: "持续"
+    total: "持续"
+  - name: "退出策略"
+    flow:
+      - skill: /market-search
+        step: "1. 退出市场分析（IPO/并购/二次出售）"
+        output: "退出路径分析"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 退出估值与回报测算"
+        output: "退出回报"
+        time: "2h"
+      - skill: /pitch
+        step: "3. 退出方案汇报（董事会/LP）"
+        output: "汇报材料"
+        time: "4h"
+      - skill: /deal
+        step: "4. 退出条款审查"
+        output: "条款审查"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /new-info
+  - /dd
+  - /modeling
+  - /deal
+  - /decide
+  - /professional
+  - /network
+  - /learn
+  - /pitch
+  - /visual
+  - /mark
+  - /policy
+  - /monitor
+  - /quick
+  - /summary
+  - /review
+
+  - /execute
+  - /graph-builder
+  - /interview
+  - /market-search
+  - /tech-compare
+output:
+  - "投资备忘录（IM）"
+  - "尽调报告"
+  - "估值模型（Excel-ready）"
+  - "投委会PPT"
+  - "行业分析报告"
+  - "专家访谈纪要"
+  - "风险矩阵"
+  - "投资条款清单"

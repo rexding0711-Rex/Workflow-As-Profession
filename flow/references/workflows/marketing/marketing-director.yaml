@@ -1,0 +1,135 @@
+---
+name: marketing-director
+description: "市场总监工作流：市场战略→品牌建设→获客增长→内容营销→数据分析"
+
+daily:
+  - skill: /new-info
+    trigger: "扫描市场动态、竞品营销、行业趋势"
+    output: "情报摘要"
+    time: "15min"
+  - skill: /monitor
+    trigger: "营销指标、品牌声量、获客数据"
+    output: "营销仪表盘"
+    time: "10min"
+  - skill: /mark
+    trigger: "营销决策、创意洞察、风险"
+    output: "标签"
+    time: "5min"
+
+projects:
+  - name: "市场战略"
+    flow:
+      - skill: /market-search
+        step: "1. 市场细分与目标定位"
+        output: "STP分析"
+        time: "3h"
+      - skill: /professional
+        step: "2. 竞争分析与定位"
+        output: "竞争分析"
+        time: "3h"
+      - skill: /analyze
+        step: "3. 营销数据分析"
+        output: "数据洞察"
+        time: "2h"
+      - skill: /decide
+        step: "4. 营销策略决策"
+        output: "策略方案"
+        time: "2h"
+      - skill: /pitch
+        step: "5. 战略汇报"
+        output: "汇报材料"
+        time: "2h"
+    total: "1-2天"
+
+  - name: "品牌建设"
+    flow:
+      - skill: /design
+        step: "1. 品牌视觉设计"
+        output: "品牌规范"
+        time: "2h"
+      - skill: /create
+        step: "2. 品牌内容策略"
+        output: "内容方案"
+        time: "3h"
+      - skill: /geo
+        step: "3. 品牌SEO/GEO策略"
+        output: "GEO方案"
+        time: "2h"
+      - skill: /experiment
+        step: "4. 品牌测试"
+        output: "测试结果"
+        time: "2周"
+      - skill: /visual
+        step: "5. 品牌视觉优化"
+        output: "视觉方案"
+        time: "2h"
+    total: "持续"
+
+  - name: "获客增长"
+    flow:
+      - skill: /market-search
+        step: "1. 获客渠道分析"
+        output: "渠道分析"
+        time: "2h"
+      - skill: /experiment
+        step: "2. A/B测试增长策略"
+        output: "实验结果"
+        time: "2周"
+      - skill: /modeling
+        step: "3. CAC/LTV模型"
+        output: "获客模型"
+        time: "2h"
+      - skill: /execute
+        step: "4. 增长执行计划"
+        output: "执行计划"
+        time: "持续"
+    total: "持续"
+
+  - name: "内容营销"
+    flow:
+      - skill: /create
+        step: "1. 内容策略与日历"
+        output: "内容方案"
+        time: "2h"
+      - skill: /geo
+        step: "2. SEO/GEO优化"
+        output: "优化方案"
+        time: "2h"
+      - skill: /tech-article
+        step: "3. 技术/专业内容"
+        output: "技术文章"
+        time: "3h"
+      - skill: /visual
+        step: "4. 内容可视化"
+        output: "视觉方案"
+        time: "2h"
+      - skill: /experiment
+        step: "5. 内容效果测试"
+        output: "效果报告"
+        time: "2周"
+    total: "持续"
+
+skills:
+  - /market-search
+  - /professional
+  - /analyze
+  - /decide
+  - /pitch
+  - /design
+  - /create
+  - /geo
+  - /experiment
+  - /visual
+  - /modeling
+  - /execute
+  - /new-info
+  - /monitor
+  - /mark
+
+  - /tech-article
+output:
+  - "市场战略报告"
+  - "品牌规范"
+  - "获客增长方案"
+  - "内容营销日历"
+  - "营销仪表盘"

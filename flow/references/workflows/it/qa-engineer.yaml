@@ -1,0 +1,115 @@
+---
+name: qa-engineer
+description: "测试工程师工作流：需求→用例→执行→缺陷→报告"
+
+daily:
+  - skill: /execute
+    trigger: "执行测试、记录缺陷、验证修复"
+    output: "测试日志"
+    time: "持续"
+  - skill: /monitor
+    trigger: "跟踪测试进度、覆盖率、质量"
+    output: "测试监控"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记测试问题、风险、改进"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "测试分析"
+    flow:
+      - skill: /analyze
+        step: "1. 需求分析"
+        output: "需求分析"
+        time: "2h"
+      - skill: /tech-compare
+        step: "2. 测试策略"
+        output: "测试策略"
+        time: "2h"
+      - skill: /plan
+        step: "3. 测试计划"
+        output: "测试计划"
+        time: "2h"
+    total: "半天"
+
+  - name: "用例设计"
+    flow:
+      - skill: /create
+        step: "1. 用例设计"
+        output: "用例设计"
+        time: "3h"
+      - skill: /review
+        step: "2. 用例评审"
+        output: "评审意见"
+        time: "1h"
+      - skill: /execute
+        step: "3. 用例维护"
+        output: "维护记录"
+        time: "持续"
+    total: "1-2天"
+
+  - name: "测试执行"
+    flow:
+      - skill: /execute
+        step: "1. 测试执行"
+        output: "执行记录"
+        time: "持续"
+      - skill: /execute
+        step: "2. 缺陷管理"
+        output: "缺陷记录"
+        time: "持续"
+      - skill: /review
+        step: "3. 缺陷验证"
+        output: "验证记录"
+        time: "持续"
+      - skill: /execute
+        step: "4. 回归测试"
+        output: "回归记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "测试报告"
+    flow:
+      - skill: /analyze
+        step: "1. 数据分析"
+        output: "数据分析"
+        time: "2h"
+      - skill: /visual
+        step: "2. 可视化"
+        output: "可视化报告"
+        time: "2h"
+      - skill: /create
+        step: "3. 测试报告"
+        output: "测试报告"
+        time: "2h"
+      - skill: /review
+        step: "4. 报告审核"
+        output: "审核意见"
+        time: "1h"
+    total: "1-2天"
+
+skills:
+  - /execute
+  - /monitor
+  - /analyze
+  - /tech-compare
+  - /plan
+  - /create
+  - /review
+  - /visual
+  - /mark
+
+output:
+  - "需求分析"
+  - "测试策略"
+  - "测试计划"
+  - "用例设计"
+  - "执行记录"
+  - "缺陷记录"
+  - "验证记录"
+  - "回归记录"
+  - "数据分析"
+  - "可视化报告"
+  - "测试报告"
+  - "审核意见"

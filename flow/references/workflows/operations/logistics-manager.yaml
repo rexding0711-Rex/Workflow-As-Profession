@@ -1,0 +1,121 @@
+---
+name: logistics-manager
+description: "物流经理工作流：运输→仓储→配送→成本→优化"
+
+daily:
+  - skill: /monitor
+    trigger: "跟踪物流状态、运输、配送、异常"
+    output: "物流监控"
+    time: "15min"
+  - skill: /execute
+    trigger: "处理物流异常、延迟、破损"
+    output: "运维记录"
+    time: "持续"
+  - skill: /mark
+    trigger: "标记物流问题、成本、优化点"
+    output: "结构化标签"
+    time: "5min"
+
+projects:
+  - name: "运输管理"
+    flow:
+      - skill: /analyze
+        step: "1. 运输数据分析"
+        output: "运输分析"
+        time: "2h"
+      - skill: /tech-compare
+        step: "2. 承运商对比"
+        output: "承运商对比"
+        time: "1h"
+      - skill: /execute
+        step: "3. 运输执行"
+        output: "运输记录"
+        time: "持续"
+      - skill: /monitor
+        step: "4. 运输监控"
+        output: "监控记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "仓储管理"
+    flow:
+      - skill: /analyze
+        step: "1. 仓储数据分析"
+        output: "仓储分析"
+        time: "2h"
+      - skill: /process
+        step: "2. 仓储流程设计"
+        output: "流程设计"
+        time: "2h"
+      - skill: /execute
+        step: "3. 仓储执行"
+        output: "执行记录"
+        time: "持续"
+      - skill: /monitor
+        step: "4. 仓储监控"
+        output: "监控记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "配送优化"
+    flow:
+      - skill: /modeling
+        step: "1. 配送路线优化"
+        output: "路线优化"
+        time: "2h"
+      - skill: /analyze
+        step: "2. 配送数据分析"
+        output: "配送分析"
+        time: "2h"
+      - skill: /create
+        step: "3. 配送方案"
+        output: "配送方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 方案执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+  - name: "成本优化"
+    flow:
+      - skill: /analyze
+        step: "1. 物流成本分析"
+        output: "成本分析"
+        time: "2h"
+      - skill: /modeling
+        step: "2. 成本优化模型"
+        output: "优化模型"
+        time: "2h"
+      - skill: /create
+        step: "3. 降本方案"
+        output: "降本方案"
+        time: "2h"
+      - skill: /execute
+        step: "4. 方案执行"
+        output: "执行记录"
+        time: "持续"
+    total: "持续"
+
+skills:
+  - /monitor
+  - /execute
+  - /analyze
+  - /tech-compare
+  - /process
+  - /modeling
+  - /create
+  - /mark
+
+output:
+  - "运输分析"
+  - "承运商对比"
+  - "运输记录"
+  - "仓储分析"
+  - "流程设计"
+  - "路线优化"
+  - "配送分析"
+  - "配送方案"
+  - "成本分析"
+  - "优化模型"
+  - "降本方案"

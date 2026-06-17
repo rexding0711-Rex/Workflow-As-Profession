@@ -1,0 +1,163 @@
+---
+name: ceo
+description: "CEO工作流：战略规划→组织设计→资本运作→对外关系→危机管理"
+
+daily:
+  - skill: /new-info
+    trigger: "扫描行业动态、政策变化、竞品动作"
+    output: "情报摘要"
+    time: "15min"
+  - skill: /monitor
+    trigger: "监控关键业务指标、团队动态"
+    output: "仪表盘摘要"
+    time: "10min"
+  - skill: /mark
+    trigger: "标记关键决策、风险信号、承诺"
+    output: "结构化标签"
+    time: "5min"
+  - skill: /network
+    trigger: "查看核心人脉与待维护关系"
+    output: "关系提醒"
+    time: "5min"
+
+projects:
+  - name: "战略制定"
+    flow:
+      - skill: /learn
+        step: "1. 宏观趋势与行业洞察"
+        output: "趋势报告"
+        time: "3h"
+      - skill: /professional
+        step: "2. 战略分析（五力/蓝海/画布）"
+        output: "战略分析"
+        time: "4h"
+      - skill: /market-search
+        step: "3. 市场机会与威胁分析"
+        output: "市场分析"
+        time: "3h"
+      - skill: /tech-compare
+        step: "4. 技术路线与竞争格局"
+        output: "技术对比"
+        time: "2h"
+      - skill: /modeling
+        step: "5. 战略财务模型"
+        output: "财务模型"
+        time: "3h"
+      - skill: /decide
+        step: "6. 战略方向决策"
+        output: "决策矩阵"
+        time: "2h"
+      - skill: /pitch
+        step: "7. 战略汇报（董事会/投资人）"
+        output: "汇报材料"
+        time: "4h"
+    total: "2-3天"
+  - name: "融资/IPO"
+    flow:
+      - skill: /modeling
+        step: "1. 估值与财务模型"
+        output: "估值模型"
+        time: "2天"
+      - skill: /dd
+        step: "2. 内部尽调准备"
+        output: "尽调包"
+        time: "1周"
+      - skill: /pitch
+        step: "3. 路演材料与话术"
+        output: "路演方案"
+        time: "3天"
+      - skill: /network
+        step: "4. 投资人关系管理"
+        output: "IR策略"
+        time: "持续"
+      - skill: /deal
+        step: "5. 条款谈判"
+        output: "TS审查"
+        time: "1天"
+      - skill: /policy
+        step: "6. 监管政策与合规"
+        output: "合规分析"
+        time: "1天"
+    total: "2-4周"
+  - name: "组织变革"
+    flow:
+      - skill: /professional
+        step: "1. 组织诊断（六盒子/7S）"
+        output: "诊断报告"
+        time: "3h"
+      - skill: /analyze
+        step: "2. 组织数据分析"
+        output: "数据洞察"
+        time: "2h"
+      - skill: /workshop
+        step: "3. 高管对齐工作坊"
+        output: "工作坊方案"
+        time: "4h"
+      - skill: /process
+        step: "4. 新组织架构与流程"
+        output: "组织设计"
+        time: "1天"
+      - skill: /pitch
+        step: "5. 全员沟通方案"
+        output: "沟通计划"
+        time: "2h"
+      - skill: /execute
+        step: "6. 变革执行与跟踪"
+        output: "执行计划"
+        time: "持续"
+    total: "1-2周"
+  - name: "危机管理"
+    flow:
+      - skill: /new-info
+        step: "1. 实时情报与舆情监控"
+        output: "情报摘要"
+        time: "1h"
+      - skill: /analyze
+        step: "2. 危机影响分析"
+        output: "影响评估"
+        time: "2h"
+      - skill: /policy
+        step: "3. 法律与政策风险评估"
+        output: "风险矩阵"
+        time: "1h"
+      - skill: /pitch
+        step: "4. 对内对外沟通方案"
+        output: "沟通方案"
+        time: "2h"
+      - skill: /network
+        step: "5. 关键利益相关者沟通"
+        output: "沟通计划"
+        time: "2h"
+      - skill: /execute
+        step: "6. 危机响应执行"
+        output: "响应计划"
+        time: "持续"
+    total: "1-2天"
+
+skills:
+  - /professional
+  - /modeling
+  - /pitch
+  - /network
+  - /decide
+  - /learn
+  - /monitor
+  - /mark
+  - /new-info
+  - /policy
+  - /dd
+  - /deal
+  - /execute
+  - /workshop
+  - /process
+  - /analyze
+
+  - /market-search
+  - /tech-compare
+output:
+  - "战略报告"
+  - "路演材料"
+  - "组织设计方案"
+  - "危机响应计划"
+  - "董事会汇报"
+  - "投资人关系报告"
